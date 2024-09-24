@@ -1,0 +1,101 @@
+<div class="lnb" id="lnb">
+    <div class="lnb-inner">
+    <!-- 타입별 depth2 : 이동 URL 전부 수정할 예정 (현재 javascript:void(0) 되어있는 부분)-->
+    <% if (depth1 === 'foundation') { %>
+        <div class="depth2-wrap foundation">
+            <div class="depth2-head">
+                <em class="depth2-subject">Foundation</em>
+            </div>
+            <div class="depth2-body">
+                <ul class="depth2-list">
+                    <li class="depth2-item <%= depth2 === 'colors' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>foundation/colors.html" class="depth2">Colors</a></li>
+                    <li class="depth2-item <%= depth2 === 'typography' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>foundation/typography.html" class="depth2">Typography</a></li>
+                    <li class="depth2-item <%= depth2 === 'layout' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>foundation/layout.html" class="depth2">Layout</a></li>
+                    <li class="depth2-item <%= depth2 === 'object-styles' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>foundation/object-styles.html" class="depth2">Object Styles</a></li>
+                </ul>
+            </div>
+        </div>  
+    <% } else if (depth1 === 'components') { %>
+        <div class="depth2-wrap components">
+            <div class="depth2-head">
+                <em class="depth2-subject">Components</em>
+            </div>
+            <div class="depth2-body">
+                <ul class="depth2-list">
+                    <li class="depth2-item <%= depth2 === 'navigation' ? 'active open' : '' %>"><a href="javascript:void(0)" class="depth2 dropdown">Navigation</a>
+                        <div class="depth3-wrap">
+                            <ul class="depth3-list">
+                                <li class="depth3-item <%= depth3 === 'top-navigation' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/top-navigation.html" class="depth3">Top Navigation</a></li>
+                                <li class="depth3-item <%= depth3 === 'button-navigation' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/button-navigation.html" class="depth3">Button Navigation</a></li>
+                                <li class="depth3-item <%= depth3 === 'navigation-drawer' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/navigation-drawer.html" class="depth3">Navigation drawer</a></li>
+                                <li class="depth3-item <%= depth3 === 'footer' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/footer.html" class="depth3">Footer</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="depth2-item <%= depth2 === 'button' ? 'active open' : '' %>"><a href="javascript:void(0)" class="depth2 dropdown">Button</a>
+                        <div class="depth3-wrap">
+                            <ul class="depth3-list">
+                                <li class="depth3-item <%= depth3 === 'box-button' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/box-button.html" class="depth3">Box Button</a></li>
+                                <li class="depth3-item <%= depth3 === 'text-button' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/text-button.html" class="depth3">Text Button</a></li>
+                                <li class="depth3-item <%= depth3 === 'tab-button' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/tab-button.html" class="depth3">Tab Button</a></li>
+                                <li class="depth3-item <%= depth3 === 'floating-button' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/floating-button.html" class="depth3">Floating Button</a></li>
+                                <li class="depth3-item <%= depth3 === 'icon-button' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/icon-button.html" class="depth3">Icon Button</a></li>
+                                <li class="depth3-item <%= depth3 === 'select-button' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/select-button.html" class="depth3">Select Button</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="depth2-item <%= depth2 === 'tag' ? 'active open' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/tag.html" class="depth2">Tag</a></li>
+                    <li class="depth2-item"><a href="javascript:void(0)" class="depth2 dropdown">Input</a>
+                        <div class="depth3-wrap">
+                            <ul class="depth3-list">
+                                <li class="depth3-item <%= depth3 === 'text-field' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/text-field.html" class="depth3">Text Field</a></li>
+                                <li class="depth3-item <%= depth3 === 'dropdown' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/dropdown.html" class="depth3">Dropdown</a></li>
+                                <li class="depth3-item <%= depth3 === 'search' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/search.html" class="depth3">Search</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="depth2-item <%= depth2 === 'table' ? 'active open' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/table.html" class="depth2">Table</a></li>
+                    <li class="depth2-item <%= depth2 === 'list' ? 'active' : '' %>"><a href="javascript:void(0)" class="depth2 dropdown">List</a>
+                        <div class="depth3-wrap">
+                            <ul class="depth3-list">
+                                <li class="depth3-item <%= depth3 === 'text-field' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/data-list.html" class="depth3">Data List</a></li>
+                                <li class="depth3-item <%= depth3 === 'text-field' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/accordion.html" class="depth3">Accordion</a></li> 
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="depth2-item <%= depth2 === 'popup' ? 'active open' : '' %>"><a href="javascript:void(0)" class="depth2 dropdown">Popup</a>
+                        <div class="depth3-wrap">
+                            <ul class="depth3-list">
+                                <li class="depth3-item <%= depth3 === 'text-field' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/layer-popup.html" class="depth3">Layer Popup</a></li>
+                                <li class="depth3-item <%= depth3 === 'text-field' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/alert-snackbar.html" class="depth3">Alert&Snackbar</a></li> 
+                                <li class="depth3-item <%= depth3 === 'text-field' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/tooltip.html" class="depth3">Tooltip</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="depth2-item <%= depth2 === 'ui-elements' ? 'active open' : '' %>"><a href="javascript:void(0)" class="depth2 dropdown">UI Elements</a>
+                        <div class="depth3-wrap">
+                            <ul class="depth3-list">
+                                <li class="depth3-item <%= depth3 === 'text-field' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/thumbnail.html" class="depth3">Thumbnail</a></li>
+                                <li class="depth3-item <%= depth3 === 'text-field' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/loading.html" class="depth3">Loading</a></li> 
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <% } else if (depth1 === 'guidelines') { %>
+        <div class="depth2-wrap guidelines">
+            <div class="depth2-head">
+                <em class="depth2-subject">Guidelines</em>
+            </div>
+            <div class="depth2-body">
+                <ul class="depth2-list">
+                    <li class="depth2-item <%= depth2 === 'principles' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>guidelines/principles.html" class="depth2">Principles</a></li>
+                    <li class="depth2-item <%= depth2 === 'content-design' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>guidelines/content-design.html" class="depth2">Content design</a></li>
+                    <li class="depth2-item <%= depth2 === 'design-token' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>guidelines/design-tokens.html" class="depth2">Design tokens</a></li>
+                </ul>
+            </div>
+        </div>
+    <% } %>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_head.ejs') %>
+</head>
+<body>
+<div id="wrap">
+    <%-include('../_templates/_header.ejs', { type: 'foundation' , }) %>
+    <!-- page-body -->
+    <div class="main foundation" id="main">
+        <div class="main-inner">
+            <div class="local"> 
+                <div class="local-head">
+                    <div class="local-subject">
+                        <h2 class="local-name blind">Object Styles 디자인 가이드</h2>
+                    </div>
+                </div>
+                <div class="local-body">
+                    <%-include('../_templates/_lnb.ejs', { depth1: 'foundation', depth2: 'object-styles', depth3: null }) %>
+                    <div class="content">
+                        <div class="content-inner">
+                            <div class="content-head">
+                                <h3 class="content-name">Object Styles</h3>
+                                <p class="content-summary">Object Style은 세 가지 시각적 요소인 Radius, Border Width, Shadow를 분류하여 전체 UI에서 시각적 일관성을 유지합니다.<br> 버튼 및 텍스트 입력 상자와 같은 디자인 구성 요소 컨테이너에 적용되는 스타일 속성을 정의합니다.</p>
+                            </div>
+                            <div class="content-body">
+                                <div class="section">
+                                    <div class="section-wrap">
+                                        <div class="section-head"> 
+                                            <h4 class="section-subject">Radius</h4>
+                                        </div>
+                                        <div class="section-body">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <%-include('../_templates/_aside.ejs', { name: 'object-styles', }) %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //page-body -->
+    <%-include('../_templates/_footer.ejs') %>
+</div>
+</body>
+</html>

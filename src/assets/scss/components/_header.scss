@@ -1,0 +1,79 @@
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 8rem;
+    z-index: 999;
+    transition: transform 0.5s cubic-bezier(.5,0,0,1);
+    background-color: color(deep-primary,100);
+
+    &.active {
+        transform: translateY(-8rem);
+    }
+
+    .header-inner {
+        display: flex;
+        height: 100%;
+        padding: 0 3rem;
+        max-height: 8rem;
+        // justify-content: space-between;
+        align-items: center;
+        .site-logo {
+            .site-name {
+                display: block;
+                width: 10.9rem;
+                height: 3rem;
+                background-image: url('#{$img-path}logo/logo-yna-w.svg');
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+            }
+            + .site-navi {
+                margin-left: 16.1rem;
+            }
+        }
+        .site-navi {
+            .depth1-list {
+                display: flex;
+                .depth1-item {
+                    .depth1 {
+                        display: inline-block;
+                        position: relative;
+                        padding: 2.6rem 0;
+                        transition: 0.3s ease;
+                        color: color(gray,000);
+                        @include font(small-3x, medium);
+                    }
+                    + .depth1-item {
+                        margin-left: 4rem;
+                    }
+                    &.active {
+                        .depth1 {
+                            @include font(small-3x, bold);
+                        }
+                    }
+                }
+            }
+        }
+        .site-util {
+            margin-right: 0;
+            margin-left: auto;
+            .util-list {
+                display: flex;
+                .util-item {
+                    &.version {
+                        padding: 0.4rem 1rem;
+                        border-radius: 10rem;
+                        border: 1px solid color(gray,000,0.3);
+                        .text {
+                            color: color(gray,000);
+                            @include font(small-8x,regular);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.regular {
+        top: -8rem;
+    }
+}

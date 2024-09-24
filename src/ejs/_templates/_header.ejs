@@ -1,0 +1,51 @@
+<div class="skip">
+    <span class="blind">skip navigation</span>
+    <ul>
+        <li><a href="#naviMenu">메뉴 바로가기</a></li>
+        <li><a href="#main">본문 바로가기</a></li>
+        <li><a href="#footer">하단 정보(링크) 바로가기</a></li>
+    </ul>
+</div>
+<!-- page-head -->
+<div class="header" id="header">
+    <div class="header-inner">
+        <!-- 공통 로고 -->
+        <h1 class="site-logo">
+            <a href="<%= DOCUMENT_ROOT %>main/index.html" class="site-name">
+                <span class="blind">연합뉴스</span>
+            </a>
+        </h1>
+
+        <!-- 공통 네비게이션 -->
+        <div class="site-navi" id="naviMenu">
+            <div class="depth1-wrap">
+                <ul class="depth1-list">
+                    <li class="depth1-item <%= type === 'foundation' ? 'active' : '' %>">
+                        <a href="<%= DOCUMENT_ROOT %>foundation/colors.html" class="depth1">Foundation</a>
+                    </li>
+                    <li class="depth1-item <%= type === 'components' ? 'active' : '' %>">
+                        <a href="<%= DOCUMENT_ROOT %>components/top-navigation.html" class="depth1">Components</a>
+                    </li>
+                    <li class="depth1-item <%= type === 'guidelines' ? 'active' : '' %>">
+                        <a href="<%= DOCUMENT_ROOT %>guidelines/principles.html" class="depth1">Guidelines</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 공통 유틸 -->
+        <div class="site-util">
+            <div class="util-list">
+                <em class="util-item version">
+                    <span class="text">v 0.1</span>
+                </em>
+                <!-- <div class="util-item search">
+                    <div class="search-input-wrap">
+                        <input type="text" class="search-input" placeholder="Please enter the keyword" />
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //page-head -->
