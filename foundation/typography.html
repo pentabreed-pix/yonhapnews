@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="Referrer" content="origin">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>연합 뉴스 디자인 시스템</title>
+    <!-- 연합뉴스 link -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://qa-r.yna.co.kr/www/home_n/v02/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://qa-r.yna.co.kr/www/home_n/v02/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://r.yna.co.kr/www/home_n/v02/img/favicon.ico">
+    <link rel="stylesheet preload" as="style" type="text/css" href="https://qa-r.yna.co.kr/global/font/Pretendard/v01/font.css">
+    <!-- <link rel="stylesheet" href="//static.cdp.yna.co.kr/cps/css/default.css"> -->
+    <!-- <link rel="stylesheet" href="//static.cdp.yna.co.kr/cps/css/media.css"> -->
+    <link rel="stylesheet" href="https://static.cdp.yna.co.kr/cps/css/article.css">
+    <link rel="stylesheet" href="https://static.cdp.yna.co.kr/cps/css/common.css">
+    <link rel="stylesheet" href="https://static.cdp.yna.co.kr/cps/css/style.css">
+    <!-- <link rel="stylesheet" href="//static.cdp.yna.co.kr/cps/css/layout.css"> -->
+    <link rel="stylesheet" href="https://static.cdp.yna.co.kr/cps/css/weather_ui03.css">
+    <script src="https://qa-r.yna.co.kr/global/lib/v01/js/underscore-min.js"></script>
+    <script src="https://qa-r.yna.co.kr/global/lib/videojs/video-8.9.0.min.js"></script>
+    <script src="https://qa-r.yna.co.kr/global/lib/v02/js/swiper-8.4.7.min.js"></script>
+    <script src="https://qa-r.yna.co.kr/www/home_n/v03/js/lib/handlebars-4.7.8.min.js"></script>
+    <script src="https://qa-r.yna.co.kr/www/home_n/v03/js/lib/handlebars-helper.js"></script>
+    <script src="https://qa-r.yna.co.kr/www/home_n/v03/js/lib/platform-1.3.6.js"></script>
+    <script src="https://qa-r.yna.co.kr/www/home_n/v03/js/pfrt-cps-front-web-1.0.0.js"></script>
+    <script src="https://qa-r.yna.co.kr/www/home_n/v03/js/pfrt-cps-front-web-external-1.0.0.js"></script>
+    <script async src="https://qa-r.yna.co.kr/www/home_n/v03/js/lib/vanilla-lazyload-19.1.3.min.js"></script>
+    <!-- <script src="https://cdp.yna.co.kr/script/1.0.0/yna_crm_log_module.min.js"></script> -->
+    <!-- 가이드 link -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/bash.min.js"></script>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/gsap.min.js"></script>
+    <script src="../assets/js/ScrollTrigger.min.js"></script>
+    <script src="../assets/js/ScrollToPlugin.min.js"></script>
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            frontCommon.Html.reset();
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="skip">
+            <span class="blind">skip navigation</span>
+            <ul>
+                <li><a href="#naviMenu">메뉴 바로가기</a></li>
+                <li><a href="#main">본문 바로가기</a></li>
+                <li><a href="#footer">하단 정보(링크) 바로가기</a></li>
+            </ul>
+        </div>
+        <!-- page-head -->
+        <div class="header" id="header">
+            <div class="header-inner">
+                <!-- 공통 로고 -->
+                <h1 class="site-logo">
+                    <a href="/yonhapnews/main/index.html" class="site-name">
+                        <span class="blind">연합뉴스</span>
+                    </a>
+                </h1>
+
+                <!-- 공통 네비게이션 -->
+                <div class="site-navi" id="naviMenu">
+                    <div class="depth1-wrap">
+                        <ul class="depth1-list">
+                            <li class="depth1-item active">
+                                <a href="/yonhapnews/foundation/colors.html" class="depth1">Foundation</a>
+                            </li>
+                            <li class="depth1-item ">
+                                <a href="/yonhapnews/components/top-navigation.html" class="depth1">Components</a>
+                            </li>
+                            <li class="depth1-item ">
+                                <a href="/yonhapnews/guidelines/principles.html" class="depth1">Guidelines</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 공통 유틸 -->
+                <div class="site-util">
+                    <div class="util-list">
+                        <em class="util-item version">
+                            <span class="text">v 0.1</span>
+                        </em>
+                        <!-- <div class="util-item search">
+                    <div class="search-input-wrap">
+                        <input type="text" class="search-input" placeholder="Please enter the keyword" />
+                    </div>
+                </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //page-head -->
+        <!-- page-body -->
+        <div class="main foundation" id="main">
+            <div class="main-inner">
+                <div class="local">
+                    <div class="local-head">
+                        <div class="local-subject">
+                            <h2 class="local-name blind">Typography 디자인 가이드</h2>
+                        </div>
+                    </div>
+                    <div class="local-body">
+                        <div class="lnb" id="lnb">
+                            <div class="lnb-inner">
+                                <!-- 타입별 depth2 : 이동 URL 전부 수정할 예정 (현재 javascript:void(0) 되어있는 부분)-->
+
+                                <div class="depth2-wrap foundation">
+                                    <div class="depth2-head">
+                                        <em class="depth2-subject">Foundation</em>
+                                    </div>
+                                    <div class="depth2-body">
+                                        <ul class="depth2-list">
+                                            <li class="depth2-item "><a href="/yonhapnews/foundation/colors.html" class="depth2">Colors</a></li>
+                                            <li class="depth2-item active"><a href="/yonhapnews/foundation/typography.html" class="depth2">Typography</a></li>
+                                            <li class="depth2-item "><a href="/yonhapnews/foundation/layout.html" class="depth2">Layout</a></li>
+                                            <li class="depth2-item "><a href="/yonhapnews/foundation/object-styles.html" class="depth2">Object Styles</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="content-inner">
+                                <div class="content-head">
+                                    <h3 class="content-name">Typography</h3>
+                                    <p class="content-summary">웹 인증 글꼴 패밀리, 글꼴 두께, 문자 간격을 사용하여 일관된 디자인을 만들 수 있도록 합니다.<br> 타이포그래피 시스템은 제목과 텍스트 유형을 제공하고 사용법을 지정합니다.</p>
+                                </div>
+                                <div class="content-body">
+                                    <div class="section">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <h4 class="section-subject" data-link-cont="typeface">Typeface</h4>
+                                                <p class="section-summary">연합뉴스 웹/앱에서는 <span class="accent color-01">Pretendard</span>을 표준 폰트로 사용합니다.</p>
+                                            </div>
+                                            <div class="section-body">
+                                                <img src="../assets/images/foundation/typography-01.jpg" alt="가나다 ABC abc 123 @#!?*">
+                                                <p class="small design-01 style-01 gray-01">프리텐다드 서체 정보 : <a href="https://cactus.tistory.com/306" target="_blank" class="link">https://cactus.tistory.com/306</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <h4 class="section-subject" data-link-cont="components">Components</h4>
+                                            </div>
+                                            <div class="section-body">
+                                                <div class="post-list design-01">
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/foundation/typography-02-a.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="heading">Heading</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">탑뉴스 타이틀에 주로 사용합니다.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/foundation/typography-02-b.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="title">Title</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">뉴스 타이틀에 주로 사용합니다.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/foundation/typography-02-c.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="body">Body</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">뉴스 본문에 주로 사용합니다.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/foundation/typography-02-d.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="detail">Detail</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">추가 정보 또는 작은 항목 텍스트에 사용합니다.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/foundation/typography-02-e.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="label">Label</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">구성 요소 내부의 텍스트로 사용합니다.<br> (예: 버튼, 키워드 등)</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/foundation/typography-02-f.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="link">Link</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">문장 내의 몇 단어로 이루어진 텍스트 혹은 메뉴와 같이 독립적인 링크에 사용합니다.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <h4 class="section-subject" data-link-cont="fontSizes">Font sizes</h4>
+                                            </div>
+                                            <div class="section-body">
+                                                <div class="table-display design-01 align-03">
+                                                    <table>
+                                                        <caption>Font sizes</caption>
+                                                        <colgroup>
+                                                            <col width="auto">
+                                                            <col width="20.40816%">
+                                                            <col width="20.40816%">
+                                                            <col width="20.40816%">
+                                                            <col width="20.40816%">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="2">Style</th>
+                                                                <th>PC size</th>
+                                                                <th>Tablet size</th>
+                                                                <th>Mobile size</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th rowspan="4" class="align-01">Headline</th>
+                                                                <td>Large</td>
+                                                                <td class="align-03">36</td>
+                                                                <td class="align-03">26</td>
+                                                                <td class="align-03">26</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Medium</td>
+                                                                <td class="align-03">24</td>
+                                                                <td class="align-03">20</td>
+                                                                <td class="align-03">18</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Regular</td>
+                                                                <td class="align-03">18</td>
+                                                                <td class="align-03">18</td>
+                                                                <td class="align-03">18</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Small</td>
+                                                                <td class="align-03">18</td>
+                                                                <td class="align-03">16</td>
+                                                                <td class="align-03">16</td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <th rowspan="6" class="align-01">Title</th>
+                                                                <td>X Large</td>
+                                                                <td class="align-03">32</td>
+                                                                <td class="align-03">24</td>
+                                                                <td class="align-03">24</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Large</td>
+                                                                <td class="align-03">20</td>
+                                                                <td class="align-03">18</td>
+                                                                <td class="align-03">18</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Medium</td>
+                                                                <td class="align-03">18</td>
+                                                                <td class="align-03">18</td>
+                                                                <td class="align-03">18</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Regular</td>
+                                                                <td class="align-03">18</td>
+                                                                <td class="align-03">16</td>
+                                                                <td class="align-03">16</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Small</td>
+                                                                <td class="align-03">16</td>
+                                                                <td class="align-03">16</td>
+                                                                <td class="align-03">16</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>X Small</td>
+                                                                <td class="align-03">16</td>
+                                                                <td class="align-03">15</td>
+                                                                <td class="align-03">15</td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <th rowspan="5" class="align-01">Body</th>
+                                                                <td>Large</td>
+                                                                <td class="align-03">22</td>
+                                                                <td class="align-03">22</td>
+                                                                <td class="align-03">22</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Medium</td>
+                                                                <td class="align-03">20</td>
+                                                                <td class="align-03">20</td>
+                                                                <td class="align-03">20</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Regular</td>
+                                                                <td class="align-03">18(*기본)</td>
+                                                                <td class="align-03">18</td>
+                                                                <td class="align-03">18</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Small</td>
+                                                                <td class="align-03">16</td>
+                                                                <td class="align-03">16</td>
+                                                                <td class="align-03">16</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>X Small</td>
+                                                                <td class="align-03">14</td>
+                                                                <td class="align-03">14x</td>
+                                                                <td class="align-03">14</td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <th rowspan="4" class="align-01">Detail</th>
+                                                                <td>Medium</td>
+                                                                <td class="align-03">16</td>
+                                                                <td class="align-03">16</td>
+                                                                <td class="align-03">16</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Regular</td>
+                                                                <td class="align-03">14</td>
+                                                                <td class="align-03">14</td>
+                                                                <td class="align-03">14</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Small</td>
+                                                                <td class="align-03">13</td>
+                                                                <td class="align-03">13</td>
+                                                                <td class="align-03">13</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>X Small</td>
+                                                                <td class="align-03">12</td>
+                                                                <td class="align-03">12</td>
+                                                                <td class="align-03">12</td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <th rowspan="7" class="align-01">Label</th>
+                                                                <td>XX Large</td>
+                                                                <td class="align-03">18</td>
+                                                                <td class="align-03">16</td>
+                                                                <td class="align-03">16</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>X Large</td>
+                                                                <td class="align-03">17</td>
+                                                                <td class="align-03">15</td>
+                                                                <td class="align-03">15</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Large</td>
+                                                                <td class="align-03">14</td>
+                                                                <td class="align-03">14</td>
+                                                                <td class="align-03">14</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Medium</td>
+                                                                <td class="align-03">13</td>
+                                                                <td class="align-03">13</td>
+                                                                <td class="align-03">13</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Regular</td>
+                                                                <td class="align-03">12</td>
+                                                                <td class="align-03">12</td>
+                                                                <td class="align-03">12</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Small</td>
+                                                                <td class="align-03">11</td>
+                                                                <td class="align-03">11</td>
+                                                                <td class="align-03">11</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>X Small</td>
+                                                                <td class="align-03">10</td>
+                                                                <td class="align-03">10</td>
+                                                                <td class="align-03">10</td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <th rowspan="4" class="align-01">Link</th>
+                                                                <td>Large</td>
+                                                                <td class="align-03">12</td>
+                                                                <td class="align-03">12</td>
+                                                                <td class="align-03">12</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Medium</td>
+                                                                <td class="align-03">15</td>
+                                                                <td class="align-03">14</td>
+                                                                <td class="align-03">14</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Regular</td>
+                                                                <td class="align-03">14</td>
+                                                                <td class="align-03">14</td>
+                                                                <td class="align-03">13</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Small</td>
+                                                                <td class="align-03">13</td>
+                                                                <td class="align-03">13</td>
+                                                                <td class="align-03">13</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <h4 class="section-subject" data-link-cont="fontWeight">Font weight</h4>
+                                                <p class="section-summary">모든 페이지 내에서 텍스트의 두께는 <span class="accent color-01">Regular, Medium, Semibold, Bold</span> 4가지를 원칙으로 사용합니다.</p>
+                                            </div>
+                                            <div class="section-body">
+                                                <img src="../assets/images/foundation/typography-03.jpg" alt="가나다 ABC abc 123 @#!?*">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <h4 class="section-subject" data-link-cont="lineHeight">Line height</h4>
+                                            </div>
+                                            <div class="section-body">
+                                                <div class="post-list design-01">
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/foundation/typography-04-a.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="headingAndDetail">Heading and title</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        탑뉴스 헤드라인의 경우 1.3배(130%) 행간을 사용합니다.
+                                                                        그 외에는 1.5배(150%) 행간을 사용합니다.
+                                                                        이는 모든 글꼴과 대체 글꼴에 적용됩니다.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/foundation/typography-04-b.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="bodyAndCode">Body and Detail</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        뉴스 본문 태블릿, 모바일에서는 기본 행간 1.5배수가 아닌 예외 케이스로 1.7배(170%)로 행간을 사용합니다.<br>
+                                                                        이는 모든 글꼴과 대체 글꼴에 적용됩니다.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/foundation/typography-04-c.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="component">Component</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        가독성을 보장하기 위해 1.5배 행간를 사용합니다.<br>
+                                                                        이는 모든 글꼴과 대체 글꼴에 적용됩니다.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- page-aside : 페이지별 앵커 영역 마크업 추가 예정 | 소타이틀이 없는 경우 term type-01, 소타이틀이 있는 경우 term type-02 -->
+
+                        <div class="quick-nav">
+                            <ul class="nav-list">
+                                <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="typeface">Typeface</a></li>
+                                <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="components">Components</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="heading">Heading</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="title">Title</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="body">Body</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="detail">Detail</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="label">Label</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="link">Link</a></li>
+                                <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="fontSizes">Font sizes</a></li>
+                                <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="fontWeight">Font weight</a></li>
+                                <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="lineHeight">Line height</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="headingAndDetail">Heading and detail</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="bodyAndCode">Body and code</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="component">Component</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- //page-aside -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //page-body -->
+        <!-- page-foot -->
+        <div class="footer" id="footer">
+            <div class="footer-inner">
+                <div class="footer-head">
+                    <em class="footer-subject">©Pentabreed. StyleGuide Create with</em>
+                </div>
+                <div class="footer-body">
+                    <a href="https://www.pentabreed.com" target="_blank" class="company">
+                        <span class="text blind">펜타브리드</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- //page-foot -->
+    </div>
+</body>
+
+</html>
