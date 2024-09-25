@@ -445,6 +445,35 @@
 .post-list.design-01 .post-item .post-wrap .post-info .post-body .para + .para {
   margin-top: 0.8rem;
 }
+.post-list.design-02 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+.post-list.design-02 .post-item .post-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.post-list.design-02 .post-item .post-wrap .post-figure img {
+  max-width: 100%;
+}
+.post-list.design-02 .post-item .post-wrap .post-info .post-head .subject {
+  color: rgb(17, 17, 17);
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+.post-list.design-02 .post-item .post-wrap .post-info .post-head + .post-body {
+  margin-top: 0.8rem;
+}
+.post-list.design-02 .post-item .post-wrap .post-info .post-body .para {
+  color: rgb(102, 102, 102);
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+.post-list.design-02 .post-item .post-wrap .post-info .post-body .para + .para {
+  margin-top: 0.8rem;
+}
 
 .table-display.design-01 table {
   width: 100%;
@@ -474,6 +503,27 @@
   padding: 1.3rem 0;
   color: rgb(68, 68, 68);
   border-bottom: 0.1rem solid rgb(245, 245, 245);
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+.table-display.design-02 table {
+  width: 100%;
+  border-top: 0.1rem solid rgb(102, 102, 102);
+}
+.table-display.design-02 table thead {
+  background-color: rgb(249, 249, 249);
+  border-bottom: 0.1rem solid rgb(233, 233, 233);
+}
+.table-display.design-02 table thead tr th {
+  padding: 1.7rem 2rem;
+  color: rgb(102, 102, 102);
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+.table-display.design-02 table tbody tr td {
+  padding: 1.3rem 2rem;
+  color: rgb(68, 68, 68);
+  border-bottom: 0.1rem solid rgb(233, 233, 233);
   font-weight: 400;
   font-size: 1.6rem;
 }
@@ -715,6 +765,14 @@ sub {
 }
 #wrap .main .local-body .content .content-body .section .section-body img + .small {
   margin-top: 1.2rem;
+}
+#wrap .main .local-body .content .content-body .section .section-body .para {
+  color: rgb(68, 68, 68);
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+#wrap .main .local-body .content .content-body .section .section-body + .section-figure {
+  margin-top: 2rem;
 }
 #wrap .main .local-body .content .content-body .section .section-figure + .section-body {
   margin-top: 2rem;
