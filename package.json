@@ -16,7 +16,7 @@
     "gulp-jsbeautifier": "^3.0.1",
     "gulp-sass": "^5.1.0",
     "gulp-watch": "^5.0.1",
-    "sass": "^1.55.0"
+    "sass": "^1.79.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
