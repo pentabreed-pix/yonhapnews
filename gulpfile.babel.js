@@ -97,7 +97,7 @@ gulp.task("scss:compile", function () {
   return gulp
     .src(SRC_PATH.ASSETS.SCSS + "/*.scss")
     .pipe(sourcemaps.init())
-    .pipe(scss({ silenceDeprecations: ['legacy-js-api'] }).on('error', scss.logError))
+    .pipe(scss(OPTIONS).on('error', scss.logError))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(DEST_PATH.ASSETS.CSS))

@@ -1,5 +1,3 @@
-@use "sass:color";
-@use "sass:map";
 // breakpoints
 // $mobile : 320px;
 // $mobile-large : 768px;
@@ -82,12 +80,9 @@ $color-palettes: (
 
 // create color
 @function color($theme: neutral, $variant: 000, $opacity: 1) {
-    $set-color: map.get($color-palettes, $theme, $variant);
-    $red: color.channel($set-color, "red");
-    $green: color.channel($set-color, "green");
-    $blue: color.channel($set-color, "blue");
-    $create-color: rgba($red, $green, $blue, $opacity);
-    @return $create-color;
+  $set-color: map-get($color-palettes, $theme, $variant);
+  $create-color: rgba(red($set-color), green($set-color), blue($set-color), $opacity);
+  @return $create-color;
 }
 
 // font
