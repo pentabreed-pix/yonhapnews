@@ -35,6 +35,33 @@
             }
         }
     }
+    &.design-02 {
+        table {
+            width: 100%;
+            border-top: .1rem solid color(grey, 500);
+            thead {
+                background-color: color(grey, 050);
+                border-bottom: .1rem solid color(grey, 200);
+                tr {
+                    th {
+                        padding: 1.7rem 2rem;
+                        color: color(grey, 500);
+                        @include font(small-4x, regular);
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        padding: 1.3rem 2rem;
+                        color: color(grey, 600);
+                        border-bottom: .1rem solid color(grey, 200);
+                        @include font(small-4x, regular);
+                    }
+                }
+            }
+        }
+    }
     .align-01 {
         text-align: left;
     }
