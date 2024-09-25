@@ -1,5 +1,10 @@
 <div class="lnb" id="lnb">
     <div class="lnb-inner">
+        <div class="site-logo">
+            <a href="/main/index.html" class="site-name">
+                <span class="blind">연합뉴스</span>
+            </a>
+        </div>
     <!-- 타입별 depth2 : 이동 URL 전부 수정할 예정 (현재 javascript:void(0) 되어있는 부분)-->
     <% if (depth1 === 'foundation') { %>
         <div class="depth2-wrap foundation">
@@ -14,7 +19,7 @@
                     <li class="depth2-item <%= depth2 === 'object-styles' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>foundation/object-styles.html" class="depth2">Object Styles</a></li>
                 </ul>
             </div>
-        </div>  
+        </div>
     <% } else if (depth1 === 'components') { %>
         <div class="depth2-wrap components">
             <div class="depth2-head">
@@ -59,7 +64,7 @@
                         <div class="depth3-wrap">
                             <ul class="depth3-list">
                                 <li class="depth3-item <%= depth3 === 'text-field' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/data-list.html" class="depth3">Data List</a></li>
-                                <li class="depth3-item <%= depth3 === 'text-field' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/accordion.html" class="depth3">Accordion</a></li> 
+                                <li class="depth3-item <%= depth3 === 'text-field' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/accordion.html" class="depth3">Accordion</a></li>
                             </ul>
                         </div>
                     </li>
@@ -67,7 +72,7 @@
                         <div class="depth3-wrap">
                             <ul class="depth3-list">
                                 <li class="depth3-item <%= depth3 === 'text-field' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/layer-popup.html" class="depth3">Layer Popup</a></li>
-                                <li class="depth3-item <%= depth3 === 'text-field' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/alert-snackbar.html" class="depth3">Alert&Snackbar</a></li> 
+                                <li class="depth3-item <%= depth3 === 'text-field' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/alert-snackbar.html" class="depth3">Alert&Snackbar</a></li>
                                 <li class="depth3-item <%= depth3 === 'text-field' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/tooltip.html" class="depth3">Tooltip</a></li>
                             </ul>
                         </div>
@@ -76,7 +81,7 @@
                         <div class="depth3-wrap">
                             <ul class="depth3-list">
                                 <li class="depth3-item <%= depth3 === 'text-field' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/thumbnail.html" class="depth3">Thumbnail</a></li>
-                                <li class="depth3-item <%= depth3 === 'text-field' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/loading.html" class="depth3">Loading</a></li> 
+                                <li class="depth3-item <%= depth3 === 'text-field' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/loading.html" class="depth3">Loading</a></li>
                             </ul>
                         </div>
                     </li>

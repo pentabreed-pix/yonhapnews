@@ -2,7 +2,6 @@
     position: sticky;
     top: 0;
     min-width: 30rem;
-    padding-top: 12rem;
     align-self: flex-start;
     height: 100vh;
     overflow-y: auto;
@@ -29,6 +28,8 @@
         }
     }
     .depth2-wrap {
+        margin-top: 4rem;
+        
         .depth2-head {
             .depth2-subject {
                 display: block;
@@ -37,7 +38,7 @@
                 @include font(small-2x,bold);
             }
         }
-        
+
         .depth2-body {
             margin: 0 1.5rem;
             .depth2-list {
@@ -157,6 +158,20 @@
                     }
                 }
             }
+        }
+    }
+    .site-logo {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 8rem;
+        padding: 2.5rem 3rem;
+
+        .site-name {
+            display: block;
+            width: 10.9rem;
+            height: 3rem;
+            background-image: url(../../assets/images/logo/logo-yna-b.svg);
         }
     }
 }
