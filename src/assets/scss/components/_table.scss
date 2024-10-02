@@ -2,14 +2,14 @@
     &.design-01 {
         table {
             width: 100%;
-            border-top: .1rem solid color(grey, 400);
+            border-top: .1rem solid color(gray, 400);
             thead {
-                background-color: color(grey, 050);
-                border-bottom: .1rem solid color(grey, 200);
+                background-color: color(gray, 050);
+                border-bottom: .1rem solid color(gray, 200);
                 tr {
                     th {
                         padding: 1.7rem 2rem;
-                        color: color(grey, 500);
+                        color: color(gray, 500);
                         @include font(small-4x, regular);
                     }
                 }
@@ -17,18 +17,18 @@
             tbody {
                 tr {
                     th {
-                        color: color(grey, 900);
+                        color: color(gray, 900);
                         min-height: 5.2rem;
                         padding-top: 1.3rem;
                         padding-left: 2rem;
                         vertical-align: top;
-                        border-bottom: .1rem solid color(grey, 100);
+                        border-bottom: .1rem solid color(gray, 100);
                         @include font(small-3x, medium);
                     }
                     td {
                         padding: 1.3rem 0;
-                        color: color(grey, 600);
-                        border-bottom: .1rem solid color(grey, 100);
+                        color: color(gray, 600);
+                        border-bottom: .1rem solid color(gray, 100);
                         @include font(small-4x, regular);
                     }
                 }
@@ -38,14 +38,14 @@
     &.design-02 {
         table {
             width: 100%;
-            border-top: .1rem solid color(grey, 500);
+            border-top: .1rem solid color(gray, 500);
             thead {
-                background-color: color(grey, 050);
-                border-bottom: .1rem solid color(grey, 200);
+                background-color: color(gray, 050);
+                border-bottom: .1rem solid color(gray, 200);
                 tr {
                     th {
                         padding: 1.7rem 2rem;
-                        color: color(grey, 500);
+                        color: color(gray, 500);
                         @include font(small-4x, regular);
                     }
                 }
@@ -54,8 +54,8 @@
                 tr {
                     td {
                         padding: 1.3rem 2rem;
-                        color: color(grey, 600);
-                        border-bottom: .1rem solid color(grey, 200);
+                        color: color(gray, 600);
+                        border-bottom: .1rem solid color(gray, 200);
                         @include font(small-4x, regular);
                     }
                 }

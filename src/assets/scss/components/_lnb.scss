@@ -1,9 +1,9 @@
 #lnb {
     position: sticky;
     top: 0;
+    height: 100vh;
     min-width: 30rem;
     align-self: flex-start;
-    height: 100vh;
     overflow-y: auto;
     z-index: 998;
 
@@ -57,7 +57,7 @@
                                 right: 2rem;
                                 width: 2.4rem;
                                 height: 2.4rem;
-                                background: icon(line, color(grey,400)) no-repeat center center;
+                                background: icon(line, color(gray,400)) no-repeat center center;
                                 content: '';
                                 flex-shrink: 0;
                                 transform: rotate(90deg);
@@ -69,7 +69,7 @@
                                 right: 2rem;
                                 width: 2.4rem;
                                 height: 2.4rem;
-                                background: icon(line, color(grey,400)) no-repeat center center;
+                                background: icon(line, color(gray,400)) no-repeat center center;
                                 content: '';
                                 flex-shrink: 0;
                                 transition: .3s cubic-bezier(0.65, 0, 0.35, 1);
@@ -94,12 +94,12 @@
                         .depth2 {
                             &.dropdown {
                                 &::before {
+                                    background: icon(line, color(gray,900)) no-repeat center center;
                                     transform: translateY(-1rem) rotateY(0deg);
                                     opacity: 0;
-                                    background: icon(line, color(grey,900)) no-repeat center center;
                                 }
                                 &::after {
-                                    background: icon(line, color(grey,900)) no-repeat center center;
+                                    background: icon(line, color(gray,900)) no-repeat center center;
                                 }
                             }
                         }
@@ -162,10 +162,10 @@
     }
     .site-logo {
         display: flex;
-        align-items: center;
         width: 100%;
         height: 8rem;
         padding: 2.5rem 3rem;
+        align-items: center;
 
         .site-name {
             display: block;
