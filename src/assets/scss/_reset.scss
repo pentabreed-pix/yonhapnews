@@ -111,14 +111,3 @@ sub {
     font-size: smaller;
     vertical-align: text-bottom;
 }
-pre {
-    font-size: 0;
-}
-code {
-    padding: 0 !important;
-    border: .1rem solid #EEEEEE;
-    font-family: "Pretendard", sans-serif;
-    padding-left: 1.75rem !important;
-    background-color: color(gray, 000) !important;
-    @include font(small-5x, regular);
-}

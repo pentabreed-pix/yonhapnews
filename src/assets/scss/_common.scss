@@ -70,4 +70,20 @@ body {
             }
         }
     }
+        
+    // highlight
+    .highlight-js {
+        font-size: 0;
+    }
+
+    // highlight
+    .highlight-js .hljs {
+        padding: 1.5rem;
+        border: 0.1rem solid #f3f3f3;
+        background: #ffffff;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        font-family: Consolas, Courier New, monospace, 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', dotum, 돋움, sans-serif;
+        scrollbar-color: #cdcdcd #f0f0f0;
+    }
 }
