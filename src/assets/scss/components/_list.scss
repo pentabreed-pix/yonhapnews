@@ -198,4 +198,33 @@
             }
         }
     }
+    &.design-03 {
+        .post-item {
+            .post-wrap {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                .post-figure {
+                    img {
+                        max-width: 100%;
+                    }
+                }
+                .post-body {
+                    .para {
+                        color: color(gray,600);
+                        @include font(small-3x);
+                        + .para {
+                            margin-top: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+        + .post-list {
+            &.design-02 {
+                margin-top: 4rem;
+            }
+        }
+    }
 }

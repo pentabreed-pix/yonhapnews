@@ -49,28 +49,20 @@
                                     @include font(small-4x);
                                 }
                             }
-                            + .section-body,
-                            + .section-figure {
+                            + .section-body {
                                 margin-top: 2rem;
                             }
                         }
                         .section-body {
                             > img {
+                                max-width: 100%;
                                 & + .small {
                                     margin-top: 1.2rem;
                                 }
-                            }
-                            > .para {
-                                color: color(gray,600);
-                                @include font(small-3x);
-                            }
-                            + .section-figure {
-                                margin-top: 2rem;
-                            }
-                        }
-                        .section-figure {
-                            + .section-body {
-                                margin-top: 2rem;
+                                + [class*="-list"],
+                                + [class*="-display"] {
+                                    margin-top: 2rem;
+                                }
                             }
                         }
                         &.code {
