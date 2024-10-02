@@ -52,12 +52,12 @@
                             }
                         }
                         .section-body {
-                            img {
+                            > img {
                                 & + .small {
                                     margin-top: 1.2rem;
                                 }
                             }
-                            .para {
+                            > .para {
                                 color: color(gray,600);
                                 @include font(small-3x);
                             }
