@@ -78,20 +78,21 @@
         }
     }
     &.design-04 {
-        .data-item {
+        >.data-item {
             .data-head {
                 .subject {
                     color: color(gray,900);
                     @include font(small-3x,bold);
-                    +.summary {
-                        padding-top: 0.8rem;
-                    }
                 }
                 .summary {
                     color: color(gray,600);
                     @include font(small-4x)
                 }
-                + .data-figure {
+                ~.data-body {
+                    padding-top: 0.8rem;
+                }
+                
+                ~.data-figure {
                     margin-top: 2rem;
                 }
             }
