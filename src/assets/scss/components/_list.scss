@@ -72,9 +72,52 @@
             }
         }
     }
+    &.design-04 {
+        .data-item {
+            .data-head {
+                .subject {
+                    color: color(gray,900);
+                    @include font(small-3x,bold);
+                    +.summary {
+                        padding-top: 0.8rem;
+                    }
+                }
+                .summary {
+                    color: color(gray,600);
+                    @include font(small-4x)
+                }
+                + .data-figure {
+                    margin-top: 2rem;
+                }
+            }
+            +.data-item {
+                margin-top: 6rem;
+            }
+        }
+    }
 }
 
 .post-list {
+    .post-figure {
+        &.do {
+            &::after {
+                display: block;
+                color: color(info, 100);
+                content: "Do";
+                padding-top: 1.2rem;
+                @include font(small-4x, semibold);
+            }
+        }
+        &.dont {
+            &::after {
+                display: block;
+                color: color(warning, 100);
+                content: "Don't";
+                padding-top: 1.2rem;
+                @include font(small-4x, semibold);
+            }
+        }
+    }
     &.design-01 {
         display: flex;
         flex-direction: column;
