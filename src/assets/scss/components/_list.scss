@@ -1,6 +1,6 @@
 .data-list {
     &.design-01 {
-        .data-item {
+        > .data-item {
             .data-head {
                 .subject {
                     color: color(gray,900);
@@ -26,7 +26,7 @@
         }
     }
     &.design-02 {
-        .data-item {
+        > .data-item {
             .data-head {
                 .subject {
                     color: color(gray,900);
@@ -45,7 +45,7 @@
         }
     }
     &.design-03 {
-        .data-item {
+        > .data-item {
             .data-head {
                 .subject {
                     color: color(gray,900);
@@ -69,6 +69,11 @@
             }
             + .data-item {
                 margin-top: 6rem;
+            }
+            .data-list.bullet-01 {
+                + .table-display {
+                    margin-top: 2rem;
+                }
             }
         }
     }
@@ -95,6 +100,15 @@
             }
         }
     }
+
+    // bullet
+    &.bullet-01 {
+        > .data-item {
+            color: color(gray,500);
+            @include font(small-4x);
+        }
+    }
+    
 }
 
 .post-list {

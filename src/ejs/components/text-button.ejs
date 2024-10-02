@@ -7,7 +7,7 @@
 <div id="wrap">
     <%-include('../_templates/_header.ejs', { type: 'components' , }) %>
     <!-- page-body -->
-    <div class="main components button" id="main">
+    <div class="main components button" id="main"> 
         <div class="main-inner">
             <div class="local"> 
                 <div class="local-head">
@@ -21,16 +21,80 @@
                         <div class="content-inner">
                             <div class="content-head">
                                 <h3 class="content-name">Text Button</h3>
-                                <p class="content-summary">박스 버튼은 상자 형태의 가장 일반적인 버튼입니다.<br> 화면의 콘텐츠 영역이나 하단 영역에 배치되어 화면에서 중요한 작업을 실행하기 위한 버튼으로 사용됩니다.</p>
+                                <p class="content-summary">링크는 다른 서비스/애플리케이션, 한 서비스 내의 다른 화면, 한 화면 내의 다른 섹션 등으로 이동하는 데 사용됩니다.<br> 중요도에 따라 컬러와 사이즈(높이값)를 다르게 사용하고 선택적으로 아이콘과 결합해 사용합니다.</p>
                             </div>
                             <div class="content-body">
                                 <div class="section">
                                     <div class="section-wrap">
                                         <div class="section-head">
-                                            <h4 class="section-subject">Anatomy</h4>
+                                            <h4 class="section-subject" data-link-cont="anatomy">Anatomy</h4>
                                         </div>
-                                        <div class="section-body"> 
-                                            
+                                        <div class="section-body">
+                                            <img src="../assets/images/components/textButton-01.jpg" alt=" ">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section">
+                                    <div class="section-wrap">
+                                        <div class="section-head">
+                                            <h4 class="section-subject" data-link-cont="options">Options</h4>
+                                        </div>
+                                        <div class="section-body">
+                                            <div class="post-list design-01">
+                                                <div class="post-item">
+                                                    <div class="post-wrap">
+                                                        <div class="post-figure">
+                                                            <img src="../assets/images/components/textButton-02-a.jpg" alt=" ">
+                                                        </div>
+                                                        <div class="post-info">
+                                                            <div class="post-head">
+                                                                <em class="subject" data-link-cont="textOnly">Text Only</em>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <p class="para">
+                                                                    레이블만 사용하는 버튼으로 너비는 버튼 레이블에<br> 
+                                                                    따라 결정되며, 필요에 따라 사이즈를 사용합니다. 
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-item">
+                                                    <div class="post-wrap">
+                                                        <div class="post-figure">
+                                                            <img src="../assets/images/components/textButton-02-b.jpg" alt=" ">
+                                                        </div>
+                                                        <div class="post-info">
+                                                            <div class="post-head">
+                                                                <em class="subject" data-link-cont="textIcon">Text + Icon</em>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <p class="para">
+                                                                    레이블과 아이콘을 결합해 사용하는 버튼으로,<br> 
+                                                                    아이콘은 레이블의 좌측과 우측에 모두 위치할 수 있습니다.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-item">
+                                                    <div class="post-wrap">
+                                                        <div class="post-figure">
+                                                            <img src="../assets/images/components/textButton-02-c.jpg" alt=" ">
+                                                        </div>
+                                                        <div class="post-info">
+                                                            <div class="post-head">
+                                                                <em class="subject" data-link-cont="visualHierarchy">Underlined</em>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <p class="para">
+                                                                    텍스트(레이블)에 밑줄을 사용하는 버튼으로,<br> 강조돼야 할 버튼에 사용합니다.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
