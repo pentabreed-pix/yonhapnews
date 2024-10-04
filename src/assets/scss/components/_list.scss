@@ -96,6 +96,19 @@
                     margin-top: 2rem;
                 }
             }
+            .data-body {
+                > .para {
+                    color: color(gray,500);
+                    @include font(small-4x);
+                }
+            }
+            .data-figure {
+                img {
+                    + .post-list {
+                        margin-top: 4rem;
+                    }
+                }
+            }
             +.data-item {
                 margin-top: 6rem;
             }
@@ -180,6 +193,7 @@
         gap: 4rem;
 
         .post-item {
+            width: calc(100% / 2 - 2rem);
             .post-wrap {
                 display: flex;
                 flex-direction: column;
