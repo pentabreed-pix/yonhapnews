@@ -89,7 +89,7 @@
                     @include font(small-4x)
                 }
                 ~.data-body {
-                    padding-top: 0.8rem;
+                    margin-top: 0.8rem;
                 }
                 
                 ~.data-figure {
@@ -192,8 +192,18 @@
         flex-wrap: wrap;
         gap: 4rem;
 
+        &.style-01 {
+            .post-item {
+                width: calc(100% / 2 - 2rem);
+            }
+        }
+        &.style-02 {
+            .post-item {
+                width: 100%;
+            }
+        }
+        
         .post-item {
-            width: calc(100% / 2 - 2rem);
             .post-wrap {
                 display: flex;
                 flex-direction: column;
