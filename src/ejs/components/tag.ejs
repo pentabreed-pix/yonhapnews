@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_head.ejs') %>
+</head>
+<body> 
+<div id="wrap">
+    <%-include('../_templates/_header.ejs', { type: 'components' , }) %>
+    <!-- page-body -->
+    <div class="main components button" id="main">
+        <div class="main-inner">
+            <div class="local"> 
+                <div class="local-head">
+                    <div class="local-subject">
+                        <h2 class="local-name blind">Tab Button 디자인 가이드</h2>
+                    </div>
+                </div>
+                <div class="local-body">
+                    <%-include('../_templates/_lnb.ejs', { depth1: 'components', depth2: 'tag', depth3: null }) %>
+                    <div class="content">
+                        <div class="content-inner">
+                            <div class="content-head">
+                                <h3 class="content-name">Tag</h3>
+                                <p class="content-summary">키워드 또는 레이블을 사용하여 콘텐츠를 분류하는 수단입니다. 콘텐츠 항목에 직접 관련 분류 체계, 데이터 속성을 표시하거나,<br> 목록에서 특정 분류 체계, 데이터 속성을 가진 항목이 선택되었음을 보여주기 위한 태그 그룹으로 사용됩니다.</p>
+                            </div>
+                            <div class="content-body">
+                                <div class="section">
+                                    <div class="section-wrap">
+                                        <div class="section-head">
+                                            <h4 class="section-subject" data-link-cont="anatomy">Anatomy</h4>
+                                        </div>
+                                        <div class="section-body"> 
+                                            <img src="../assets/images/components/tag-01.jpg" alt=" ">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section">
+                                    <div class="section-wrap">
+                                        <div class="section-head">
+                                            <h4 class="section-subject" data-link-cont="options">Options</h4>
+                                        </div>
+                                        <div class="section-body">
+                                            <div class="post-list design-01">
+                                                <div class="post-item">
+                                                    <div class="post-wrap">
+                                                        <div class="post-figure">
+                                                            <img src="../assets/images/components/tag-02-a.jpg" alt=" ">
+                                                        </div>
+                                                        <div class="post-info">
+                                                            <div class="post-head">
+                                                                <em class="subject" data-link-cont="labelAndIcon">Label and icon</em>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <p class="para">
+                                                                    탭 항목에는 접근성을 위한 레이블이 있어야 합니다.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-item">
+                                                    <div class="post-wrap">
+                                                        <div class="post-figure">
+                                                            <img src="../assets/images/components/tag-02-b.jpg" alt=" ">
+                                                        </div>
+                                                        <div class="post-info">
+                                                            <div class="post-head">
+                                                                <em class="subject" data-link-cont="keyword">Keyword</em>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <p class="para">
+                                                                    페이지 내에서 중요도의 계층을 만드는 데 사용해야 합니다.<br> 
+                                                                    Depth의 숫자가 작을수록 중요도가 높아집니다.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-item">
+                                                    <div class="post-wrap">
+                                                        <div class="post-figure">
+                                                            <img src="../assets/images/components/tag-02-c.jpg" alt=" ">
+                                                        </div>
+                                                        <div class="post-info">
+                                                            <div class="post-head">
+                                                                <em class="subject" data-link-cont="icon">Icon</em>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <p class="para">
+                                                                    선택된 상태의 탭 항목은 현재 탭 항목을 보여줍니다.<br> 
+                                                                    한 번에 탭 항목 하나만 선택할 수 있습니다.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-item">
+                                                    <div class="post-wrap">
+                                                        <div class="post-figure">
+                                                            <img src="../assets/images/components/tag-02-d.jpg" alt=" ">
+                                                        </div>
+                                                        <div class="post-info">
+                                                            <div class="post-head">
+                                                                <em class="subject" data-link-cont="group">group</em>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <p class="para">
+                                                                    탭 항목 컨테이너로 탭의 영역을 나타냅니다.<br> 
+                                                                    사용자가 클릭 가능한 범위로 설정 되어야 합니다.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-item">
+                                                    <div class="post-wrap">
+                                                        <div class="post-figure">
+                                                            <img src="../assets/images/components/tag-02-e.jpg" alt=" ">
+                                                        </div>
+                                                        <div class="post-info">
+                                                            <div class="post-head">
+                                                                <em class="subject" data-link-cont="textOverflow">Text overflow</em>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <p class="para">
+                                                                    태그 텍스트가 사용 가능한 수평 공간에 비해<br> 
+                                                                    너무 길면 말줄임 표시로 줄여줍니다.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section code">
+                                    <div class="section-wrap">
+                                        <div class="section-head">
+                                            <h4 class="section-subject" data-link-cont="code">Code</h4>
+                                            <div class="btn-display">
+                                                <a href="https://codepen.io/PIX-the-bold/pen/YzmqLgJ" target="_blank" class="btn view-code design-01">
+                                                    View Code
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="section-body">
+                                            <pre class="highlight-js">
+                                                <code class="html">&lt;div class="btns"&gt;
+    &lt;button type="button" class="btn-type205"&gt;
+        &lt;span class="txt01"&gt;자동완성 끄기&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+
+
+&lt;div class="title-con01"&gt;
+    &lt;h3 class="title-type001 arr01"&gt;
+        &lt;a href="#" class="tit01" data-stat-code="travel_festival_btn_more"&gt;핫뉴스&lt;/a&gt;
+    &lt;/h3&gt;
+&lt;/div&gt;
+
+
+</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <%-include('../_templates/_aside.ejs', { name: 'tag', }) %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //page-body -->
+    <%-include('../_templates/_footer.ejs') %>
+</div>
+</body>
+</html>
