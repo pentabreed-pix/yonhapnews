@@ -91,7 +91,7 @@
                 ~.data-body {
                     margin-top: 0.8rem;
                 }
-                
+
                 ~.data-figure {
                     margin-top: 2rem;
                 }
@@ -122,7 +122,7 @@
             @include font(small-4x);
         }
     }
-    
+
 }
 
 .post-list {
@@ -182,6 +182,10 @@
                                 margin-top: 0.8rem;
                             }
                         }
+
+                        & + .post-aside {
+                            margin-top: 30px;
+                        }
                     }
                 }
             }
@@ -202,7 +206,7 @@
                 width: 100%;
             }
         }
-        
+
         .post-item {
             .post-wrap {
                 display: flex;
