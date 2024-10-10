@@ -118,8 +118,16 @@
     // bullet
     &.bullet-01 {
         > .data-item {
+            position: relative;
+            padding-left: 1.2rem;
             color: color(gray,500);
             @include font(small-4x);
+            &::before {
+                content: '•';
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
         }
     }
 
@@ -253,13 +261,26 @@
                         max-width: 100%;
                     }
                 }
-                .post-body {
-                    .para {
-                        color: color(gray,600);
-                        @include font(small-3x);
-                        + .para {
-                            margin-top: 0.8rem;
-                        }
+            }
+        }
+        &.style-01 {
+            .post-body {
+                .para {
+                    color: color(gray,600);
+                    @include font(small-3x);
+                    + .para {
+                        margin-top: 0.8rem;
+                    }
+                }
+            }
+        }
+        &.style-02 {
+            .post-body {
+                .para {
+                    color: color(gray,600);
+                    @include font(small-4x);
+                    + .para {
+                        margin-top: 0.8rem;
                     }
                 }
             }

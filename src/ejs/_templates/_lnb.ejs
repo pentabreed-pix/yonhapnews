@@ -50,7 +50,7 @@
                         </div>
                     </li>
                     <li class="depth2-item <%= depth2 === 'tag' ? 'active open' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/tag.html" class="depth2">Tag</a></li>
-                    <li class="depth2-item"><a href="javascript:void(0)" class="depth2 dropdown">Input</a>
+                    <li class="depth2-item <%= depth2 === 'input' ? 'active open' : '' %>"><a href="javascript:void(0)" class="depth2 dropdown">Input</a>
                         <div class="depth3-wrap">
                             <ul class="depth3-list">
                                 <li class="depth3-item <%= depth3 === 'text-field' ? 'active' : '' %>"><a href="<%= DOCUMENT_ROOT %>components/text-field.html" class="depth3">Text Field</a></li>
