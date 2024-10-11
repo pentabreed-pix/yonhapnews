@@ -1,1 +1,245 @@
-data-list 페이지입니다.
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_head.ejs') %>
+</head>
+<body> 
+<div id="wrap">
+    <%-include('../_templates/_header.ejs', { type: 'components' , }) %>
+    <!-- page-body -->
+    <div class="main components button" id="main">
+        <div class="main-inner">
+            <div class="local"> 
+                <div class="local-head">
+                    <div class="local-subject">
+                        <h2 class="local-name blind">Data List 디자인 가이드</h2>
+                    </div>
+                </div>
+                <div class="local-body">
+                    <%-include('../_templates/_lnb.ejs', { depth1: 'components', depth2: 'list', depth3: 'data-list' }) %>
+                    <div class="content">
+                        <div class="content-inner">
+                            <div class="content-head">
+                                <h3 class="content-name">Data List</h3>
+                                <p class="content-summary">
+                                    목록은 텍스트와 이미지의 연속적이고 수직적인 데이터를 나타냅니다.<br>
+                                    PC와 모바일의 화면 크기 및 브라우저의 크기에 따라 반응형으로 최적화될 수 있도록 노출합니다.
+                                </p>
+                            </div>
+                            <div class="content-body">
+                                <div class="section">
+                                    <div class="section-wrap">
+                                        <div class="section-head">
+                                            <h4 class="section-subject" data-link-cont="anatomy">Anatomy</h4>
+                                        </div>
+                                        <div class="section-body"> 
+                                            <img src="../assets/images/components/dataList-01-a.jpg" alt=" ">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section">
+                                    <div class="section-wrap">
+                                        <div class="section-head">
+                                            <h4 class="section-subject" data-link-cont="options">Options</h4>
+                                        </div>
+                                        <div class="section-body"> 
+                                            <div class="post-list design-01">
+                                                <div class="post-item">
+                                                    <div class="post-wrap">
+                                                        <div class="post-figure">
+                                                            <img src="../assets/images/components/dataList-02-a.jpg" alt=" ">
+                                                        </div>
+                                                        <div class="post-info">
+                                                            <div class="post-head">
+                                                                <em class="subject" data-link-cont="totalValue">Total value</em>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <p class="para">
+                                                                    총 항목 수와 현재 포커스가 있는 항목이 표시됩니다.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-item">
+                                                    <div class="post-wrap">
+                                                        <div class="post-figure">
+                                                            <img src="../assets/images/components/dataList-02-b.jpg" alt=" ">
+                                                        </div>
+                                                        <div class="post-info">
+                                                            <div class="post-head">
+                                                                <em class="subject" data-link-cont="sorting">Sorting</em>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <p class="para">
+                                                                    정렬 방법을 업데이트순으로 선택할 경우 최근에<br> 
+                                                                    업데이트된 데이터부터 위에서 아래로 정렬됩니다.<br>
+                                                                    가나다순으로 할 경우 업데이트된 지 오래된<br>
+                                                                    데이터부터 위에서 아래로 정렬됩니다.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-item">
+                                                    <div class="post-wrap" data-link-cont="contextualHelp">
+                                                        <div class="post-figure">
+                                                            <img src="../assets/images/components/dataList-02-c.jpg" alt=" ">
+                                                        </div>
+                                                        <div class="post-info">
+                                                            <div class="post-head">
+                                                                <em class="subject" data-link-cont="icon">Icon</em>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <p class="para">
+                                                                    사용자가 로그인을 했을 경우에 나타는 기사 스크랩 관련 아이콘입니다. 외부 공유 아이콘과 사용자 개인이 보관할 수 있는 북마크 아이콘이 있습니다.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-item">
+                                                    <div class="post-wrap">
+                                                        <div class="post-figure">
+                                                            <img src="../assets/images/components/dataList-02-d.jpg" alt=" ">
+                                                        </div>
+                                                        <div class="post-info">
+                                                            <div class="post-head">
+                                                                <em class="subject" data-link-cont="hover">Hover</em>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <p class="para">
+                                                                    PC 디바이스에서 사용할 때 마우스 오버 시 제목은<br> 
+                                                                    밑줄과 회색 컬러로 표시해 줍니다.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section">
+                                    <div class="section-wrap">
+                                        <div class="section-head">
+                                            <h4 class="section-subject" data-link-cont="usage">Usage</h4>
+                                        </div>
+                                        <div class="section-body"> 
+                                            <div class="data-list design-04">
+                                                <div class="data-item">
+                                                    <div class="data-wrap">
+                                                        <div class="data-head">
+                                                            <em class="subject" data-link-cont="titleLength">Title length</em>
+                                                        </div>
+                                                        <div class="data-body">
+                                                            <ul class="data-list bullet-01">
+                                                                <li class="data-item">
+                                                                    뉴스 제목은 전체 노출할 수 있도록 최대 2줄에서 3줄까지 노출합니다.
+                                                                </li>
+                                                                <li class="data-item">
+                                                                    게시물 제목의 경우에는 노출 가능한 범위를 넘어가면 말줄임 표시합니다.
+                                                                </li>
+                                                                <li class="data-item">
+                                                                    모바일에서는 제목은 최대 3줄로 하고 본문은 노출하지 않습니다.
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="data-figure">
+                                                            <img src="../assets/images/components/dataList-03-a.jpg" alt=" ">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section code">
+                                    <div class="section-wrap">
+                                        <div class="section-head">
+                                            <h4 class="section-subject" data-link-cont="code">Code</h4>
+                                            <div class="btn-display">
+                                                <a href="https://codepen.io/PIX-the-bold/pen/ZEgLEBy" target="_blank" class="btn view-code design-01">
+                                                    View Code
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="section-body">
+                                            <pre class="highlight-js">
+                                                <code class="html">&lt;div class="list-type212"&gt;
+    &lt;ul class="list01"&gt;
+        &lt;li&gt;
+            &lt;div class="item-box01"&gt;
+                &lt;figure class="img-con01"&gt;
+                    &lt;a href="javascript:void(0)" class="img colW show"&gt;
+                        &lt;img src="https://qa-img9.yna.co.kr/photo/cms/2024/06/29/08/PCM20240629000108990_T2.jpg" alt="[이미지 있는 케이스] 동해물과 백두산이 마르고 닳도록" loading="lazy" data-ll-status="loaded" class="loaded"&gt;
+                    &lt;/a&gt;
+                &lt;/figure&gt;
+                &lt;div class="news-con"&gt;
+                    &lt;strong class="tit-wrap"&gt;
+                        &lt;a href="https://re-qa-www.yna.co.kr/view/AKR20240910056000008?section=market-plus/all" class="tit-news"&gt;
+                            &lt;span class="title01"&gt;[이미지 있는 케이스] 동해물과 백두산이 마르고 닳도록&lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/strong&gt;
+                    &lt;p class="lead"&gt;동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려 강산 대한 사람 대한으로 길이 보전하세&lt;/p&gt;
+                    &lt;span class="txt-time"&gt;09-10 10:14&lt;/span&gt;
+                    &lt;div class="btns-wrap01"&gt;
+                        &lt;div class="tooltip-type01 tlp-share01"&gt;
+                            &lt;button type="button" class="btn-type001 share01" data-cid="AKR20240910056000008" data-tool-open="tlp-share01"&gt;&lt;span class="ir-txt01"&gt;공유&lt;/span&gt;&lt;/button&gt;
+                            &lt;div class="tlp-content"&gt;
+                                &lt;strong class="tit01"&gt;공유하기&lt;/strong&gt;
+                                &lt;div class="list01 share-script"&gt;
+                                    &lt;button type="button" class="btn-type101 kkt"&gt;
+                                        &lt;strong class="txt01"&gt;카카오톡&lt;/strong&gt;
+                                    &lt;/button&gt;
+                                    &lt;button type="button" class="btn-type101 fb"&gt;
+                                        &lt;strong class="txt01"&gt;페이스북&lt;/strong&gt;
+                                    &lt;/button&gt;
+                                    &lt;button type="button" class="btn-type101 tw"&gt;
+                                        &lt;strong class="txt01"&gt;X&lt;/strong&gt;
+                                    &lt;/button&gt;
+                                    &lt;button type="button" class="btn-type101 fbm"&gt;
+                                        &lt;strong class="txt01"&gt;페이스북 메신저&lt;/strong&gt;
+                                    &lt;/button&gt;
+                                    &lt;button type="button" class="btn-type101 band"&gt;
+                                        &lt;strong class="txt01"&gt;네이버 밴드&lt;/strong&gt;
+                                    &lt;/button&gt;
+                                    &lt;button type="button" class="btn-type101 copy"&gt;
+                                        &lt;strong class="txt01"&gt;URL 복사&lt;/strong&gt;
+                                    &lt;/button&gt;
+                                    &lt;div class="share-data-AKR20240910056000008 display-none" data-share-title="[이미지 있는 케이스] 동해물과 백두산이 마르고 닳도록" data-share-body="동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려 강산 대한 사람 대한으로 길이 보전하세" data-share-url="javascript:void(0)" data-share-cid=" " data-share-img="https://qa-img7.yna.co.kr/photo/cms/2024/06/29/08/PCM20240629000108990_T.jpg"&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;button type="button" class="btn-type004 close01" data-tool-close="tlp-share01"&gt;&lt;span class="ir-txt01"&gt;닫기&lt;/span&gt;&lt;/button&gt;
+                                &lt;div class="tlp-copy"&gt;
+                                    &lt;span class="txt01"&gt;URL이 복사되었습니다.&lt;/span&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;button data-cid="AKR20240910056000008" type="button" class="btn-type001 scrap01" data-status="loaded"&gt;
+                            &lt;span class="ir-txt01"&gt;북마크&lt;/span&gt;
+                        &lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <%-include('../_templates/_aside.ejs', { name: 'data-list', }) %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //page-body -->
+    <%-include('../_templates/_footer.ejs') %>
+</div>
+</body>
+</html>
