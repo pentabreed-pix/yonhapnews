@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="Referrer" content="origin">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>연합 뉴스 디자인 시스템</title>
+    <!-- 연합뉴스 link -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://qa-r.yna.co.kr/www/home_n/v02/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://qa-r.yna.co.kr/www/home_n/v02/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://r.yna.co.kr/www/home_n/v02/img/favicon.ico">
+    <!-- 가이드 link -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/bash.min.js"></script>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/gsap.min.js"></script>
+    <script src="../assets/js/ScrollTrigger.min.js"></script>
+    <script src="../assets/js/ScrollToPlugin.min.js"></script>
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            frontCommon.Html.reset();
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="skip">
+            <span class="blind">skip navigation</span>
+            <ul>
+                <li><a href="#naviMenu">메뉴 바로가기</a></li>
+                <li><a href="#main">본문 바로가기</a></li>
+                <li><a href="#footer">하단 정보(링크) 바로가기</a></li>
+            </ul>
+        </div>
+        <!-- page-head -->
+        <div class="header" id="header">
+            <div class="header-inner">
+                <!-- 공통 로고 -->
+                <h1 class="site-logo">
+                    <a href="/yonhapnews/main/index.html" class="site-name">
+                        <span class="blind">연합뉴스</span>
+                    </a>
+                </h1>
+
+                <!-- 공통 네비게이션 -->
+                <div class="site-navi" id="naviMenu">
+                    <div class="depth1-wrap">
+                        <ul class="depth1-list">
+                            <li class="depth1-item ">
+                                <a href="/yonhapnews/foundation/colors.html" class="depth1">Foundation</a>
+                            </li>
+                            <li class="depth1-item active">
+                                <a href="/yonhapnews/components/top-navigation.html" class="depth1">Components</a>
+                            </li>
+                            <li class="depth1-item ">
+                                <a href="/yonhapnews/guidelines/principles.html" class="depth1">Guidelines</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 공통 유틸 -->
+                <div class="site-util">
+                    <div class="util-list">
+                        <em class="util-item version">
+                            <span class="text">v 0.1</span>
+                        </em>
+                        <!-- <div class="util-item search">
+                    <div class="search-input-wrap">
+                        <input type="text" class="search-input" placeholder="Please enter the keyword" />
+                    </div>
+                </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //page-head -->
+        <!-- page-body -->
+        <div class="main components button" id="main">
+            <div class="main-inner">
+                <div class="local">
+                    <div class="local-head">
+                        <div class="local-subject">
+                            <h2 class="local-name blind">Tab Button 디자인 가이드</h2>
+                        </div>
+                    </div>
+                    <div class="local-body">
+                        <div class="lnb" id="lnb">
+                            <div class="lnb-inner">
+                                <div class="site-logo">
+                                    <a href="/main/index.html" class="site-name">
+                                        <span class="blind">연합뉴스</span>
+                                    </a>
+                                </div>
+                                <!-- 타입별 depth2 : 이동 URL 전부 수정할 예정 (현재 javascript:void(0) 되어있는 부분)-->
+
+                                <div class="depth2-wrap components">
+                                    <div class="depth2-head">
+                                        <em class="depth2-subject">Components</em>
+                                    </div>
+                                    <div class="depth2-body">
+                                        <ul class="depth2-list">
+                                            <li class="depth2-item "><a href="javascript:void(0)" class="depth2 dropdown">Navigation</a>
+                                                <div class="depth3-wrap">
+                                                    <ul class="depth3-list">
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/top-navigation.html" class="depth3">Top Navigation</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/button-navigation.html" class="depth3">Button Navigation</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/navigation-drawer.html" class="depth3">Navigation drawer</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/footer.html" class="depth3">Footer</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="depth2-item "><a href="javascript:void(0)" class="depth2 dropdown">Button</a>
+                                                <div class="depth3-wrap">
+                                                    <ul class="depth3-list">
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/box-button.html" class="depth3">Box Button</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/text-button.html" class="depth3">Text Button</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/tab-button.html" class="depth3">Tab Button</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/floating-button.html" class="depth3">Floating Button</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/icon-button.html" class="depth3">Icon Button</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/select-button.html" class="depth3">Select Button</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="depth2-item "><a href="/yonhapnews/components/tag.html" class="depth2">Tag</a></li>
+                                            <li class="depth2-item active open"><a href="javascript:void(0)" class="depth2 dropdown">Input</a>
+                                                <div class="depth3-wrap">
+                                                    <ul class="depth3-list">
+                                                        <li class="depth3-item active"><a href="/yonhapnews/components/text-field.html" class="depth3">Text Field</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/dropdown.html" class="depth3">Dropdown</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/search.html" class="depth3">Search</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="depth2-item "><a href="/yonhapnews/components/table.html" class="depth2">Table</a></li>
+                                            <li class="depth2-item "><a href="javascript:void(0)" class="depth2 dropdown">List</a>
+                                                <div class="depth3-wrap">
+                                                    <ul class="depth3-list">
+                                                        <li class="depth3-item active"><a href="/yonhapnews/components/data-list.html" class="depth3">Data List</a></li>
+                                                        <li class="depth3-item active"><a href="/yonhapnews/components/accordion.html" class="depth3">Accordion</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="depth2-item "><a href="javascript:void(0)" class="depth2 dropdown">Popup</a>
+                                                <div class="depth3-wrap">
+                                                    <ul class="depth3-list">
+                                                        <li class="depth3-item active"><a href="/yonhapnews/components/layer-popup.html" class="depth3">Layer Popup</a></li>
+                                                        <li class="depth3-item active"><a href="/yonhapnews/components/alert-snackbar.html" class="depth3">Alert&Snackbar</a></li>
+                                                        <li class="depth3-item active"><a href="/yonhapnews/components/tooltip.html" class="depth3">Tooltip</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="depth2-item "><a href="javascript:void(0)" class="depth2 dropdown">UI Elements</a>
+                                                <div class="depth3-wrap">
+                                                    <ul class="depth3-list">
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/thumbnail.html" class="depth3">Thumbnail</a></li>
+                                                        <li class="depth3-item active"><a href="/yonhapnews/components/loading.html" class="depth3">Loading</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="content-inner">
+                                <div class="content-head">
+                                    <h3 class="content-name">Text Field</h3>
+                                    <p class="content-summary">사용자가 키보드로 사용자 지정 텍스트 항목을 입력할 수 있습니다.<br> 다양한 옵션을 필드에 표시하여 입력 요구 사항을 전달할 수 있습니다.</p>
+                                </div>
+                                <div class="content-body">
+                                    <div class="section">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <h4 class="section-subject" data-link-cont="anatomy">Anatomy</h4>
+                                            </div>
+                                            <div class="section-body">
+                                                <img src="../assets/images/components/textField-01.jpg" alt=" ">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <h4 class="section-subject" data-link-cont="options">Options</h4>
+                                            </div>
+                                            <div class="section-body">
+                                                <div class="post-list design-01">
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/textField-02-a.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="label">Label</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        사용자가 입력해야 하는 세부정보를 표시합니다.<br> 레이블 값은 컨텍스트가 충분하고 접근성 전문가가 디자인을 검토한 드문 경우 레이블이 정의되지 않을 수 있습니다.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/textField-02-b.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="value">Value</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        입력하기 전에 플레이스 홀더가 노출되고, 사용자가 입력한 세부 정보는 입력 중과 입력 후에 표시됩니다.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/textField-02-c.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="error">Error</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        오류 메시지에 수정에 대한 지침이 표시됩니다.<br>
+                                                                        오류 메시지는 수정될 때까지 입력 줄 아래에 표시됩니다.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/textField-02-d.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="info">Info</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        사용자가 텍스트 필드에 입력해야 하는 세부 정보에 대한 추가 설명이 필요한 경우 사용할 수 있는 영역입니다.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/textField-02-e.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="closeIcon">Close Icon</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        입력 값을 한번에 지울 수 있는 아이콘입니다.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/textField-02-f.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="textOverflow">Text Icon</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        상태 값에 따라 변경되는 텍스트 버튼입니다.<br> 중요도에 따라서 버튼 컬러 값으로 강조할 수 있습니다.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/textField-02-g.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="textOverflow">Focus On</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        입력을 위해 탭하여 텍스트 필드를 활성화한 상태입니다.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/textField-02-h.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="textOverflow">Typing</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        텍스트 필드를 활성화한 후 입력을 입력합니다.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/textField-02-i.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="textOverflow">Disabled</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        입력 불가능한 텍스트 필드입니다.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/textField-02-j.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="textOverflow">Disabled(Read only)</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        입력 불가능한 텍스트 필드로 고정값이 노출됩니다.<br> 복사나 드래그는 가능하지만 상호 작용이나 텍스트 입력, 변경은 불가능한 상태입니다.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/textField-02-k.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="textOverflow">Text Area</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        텍스트 영역은 오버플로 텍스트를 새 줄로 래핑 합니다.<br> 고정된 높이이며 커서가 필드 하단에 도달하면 스크롤 됩니다.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/textField-02-l.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="textOverflow">Security Number (Trailing ON / OFF)</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        사용자가 버튼을 탭하면 입력한 세부 정보를 볼 수 있으며, 다시 탭하면 숨겨진 상태로 돌아갑니다.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/textField-02-m.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="textOverflow">Combination (Drop Down)</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        필요한 경우 다른 컴포넌트와 조합해 사용할 수 있습니다.<br> 드롭다운 화살표는 텍스트 필드에 중첩된 선택 구성 요소가 있음을 나타냅니다.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/textField-02-n.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="textOverflow">Combination (Box Button)</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        필요한 경우 다른 컴포넌트와 조합해 사용할 수 있습니다.<br> 버튼 레이블은 명확하고 간결하게 작성합니다.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <h4 class="section-subject" data-link-cont="usage">Usage</h4>
+                                            </div>
+                                            <div class="section-body">
+                                                <div class="data-list design-04">
+                                                    <div class="data-item">
+                                                        <div class="data-wrap">
+                                                            <div class="data-head">
+                                                                <em class="subject" data-link-cont="guideline">플레이스홀더 사용</em>
+                                                            </div>
+                                                            <div class="data-body">
+                                                                <ul class="data-list bullet-01">
+                                                                    <li class="data-item">
+                                                                        플레이스홀더는 입력 필드 내부에 간략하게 표시되는 문구입니다.
+                                                                    </li>
+                                                                    <li class="data-item">
+                                                                        필드에 입력해야 하는 세부 정보나 입력을 위한 참고 세부 정보를 간략하게 표시하여 사용자가 쉽게 정보를 입력할 수 있도록 안내하는 역할을 할 수 있습니다.
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="data-figure">
+                                                                <img src="../assets/images/components/textField-03-a.jpg" alt=" ">
+                                                                <ul class="post-list design-02 style-01">
+                                                                    <li class="post-item">
+                                                                        <div class="post-wrap">
+                                                                            <div class="post-figure do">
+                                                                                <img src="../assets/images/components/textField-03-b.jpg" alt=" ">
+                                                                            </div>
+                                                                            <div class="post-info">
+                                                                                <div class="post-body">
+                                                                                    <p class="para">
+                                                                                        레이블을 사용하지 않고 플레이스홀더로만 안내하는 경우 세부 정보를 더 명확하게 입력하는 것이 좋습니다.
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="post-item">
+                                                                        <div class="post-wrap">
+                                                                            <div class="post-figure dont">
+                                                                                <img src="../assets/images/components/textField-03-c.jpg" alt=" ">
+                                                                            </div>
+                                                                            <div class="post-info">
+                                                                                <div class="post-body">
+                                                                                    <p class="para">
+                                                                                        가능하면 레이블과 플레이스홀더에 겹치는 세부 정보를 삽입하지 마십시오. 텍스트 양이 두 배가 되어 입력하기 복잡하고 어려울 것입니다. 공간을 채우기 위한 플레이스홀더는 불필요합니다.
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="data-item">
+                                                        <div class="data-wrap">
+                                                            <div class="data-head">
+                                                                <em class="subject" data-link-cont="guideline">입력 필드 내에서 스크롤</em>
+                                                            </div>
+                                                            <div class="data-figure">
+                                                                <ul class="post-list design-03 style-02">
+                                                                    <li class="post-item">
+                                                                        <div class="post-wrap">
+                                                                            <div class="post-figure">
+                                                                                <img src="../assets/images/components/textField-03-d.jpg" alt=" ">
+                                                                            </div>
+                                                                            <div class="post-body">
+                                                                                <p class="para">
+                                                                                    입력 필드가 확장되지 않은 한 줄 입력 항목의 경우 입력된 내용의 양에 따라 가로 스크롤이 생성될 수 있습니다.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                                <ul class="post-list design-02 style-01">
+                                                                    <li class="post-item">
+                                                                        <div class="post-wrap">
+                                                                            <div class="post-figure do">
+                                                                                <img src="../assets/images/components/textField-03-e.jpg" alt=" ">
+                                                                            </div>
+                                                                            <div class="post-info">
+                                                                                <div class="post-body">
+                                                                                    <p class="para">
+                                                                                        입력 필드 영역은 입력한 문자 수에 따라 수평으로 스크롤될 수 있습니다.
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="post-item">
+                                                                        <div class="post-wrap">
+                                                                            <div class="post-figure do">
+                                                                                <img src="../assets/images/components/textField-03-f.jpg" alt=" ">
+                                                                            </div>
+                                                                            <div class="post-info">
+                                                                                <div class="post-body">
+                                                                                    <p class="para">
+                                                                                        여러 열을 허용하는 입력 필드의 경우, 입력한 문자 수가 입력 필드의 오른쪽 끝에 도달하면 자동으로 줄 바꿈이 적용됩니다.
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="data-item">
+                                                        <div class="data-wrap">
+                                                            <div class="data-head">
+                                                                <em class="subject" data-link-cont="guideline">필수 표시 사용</em>
+                                                            </div>
+                                                            <div class="data-body">
+                                                                <ul class="data-list bullet-01">
+                                                                    <li class="data-item">
+                                                                        사용자에게 정보를 요청할 때 필수로 작성해야 하는 항목에는 라벨의 오른쪽에 빨간색 * 표시를 할 수 있습니다.
+                                                                    </li>
+                                                                    <li class="data-item">
+                                                                        이 표시를 사용하면 사용자가 입력을 놓치는 것을 방지할 수 있으며, 사용자가 정보를 입력하지 않고 진행할 경우 빨간색 밑줄과 도우미 데스크를 통해<br> 입력이 필요하다는 것을 알릴 수도 있습니다.
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="data-figure">
+                                                                <ul class="post-list design-03 style-02">
+                                                                    <li class="post-item">
+                                                                        <div class="post-wrap">
+                                                                            <div class="post-figure">
+                                                                                <img src="../assets/images/components/textField-03-g.jpg" alt=" ">
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section code">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <h4 class="section-subject" data-link-cont="code">Code</h4>
+                                                <div class="btn-display">
+                                                    <a href="https://codepen.io/PIX-the-bold/pen/mdNOqoV" target="_blank" class="btn view-code design-01">
+                                                        View Code
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="section-body">
+                                                <pre class="highlight-js">
+                                                <code class="html">&lt;fieldset class=&quot;board-write01&quot;&gt;
+    &lt;form&gt;
+        &lt;div class=&quot;form-group01&quot;&gt;
+            &lt;div class=&quot;form-row01&quot;&gt;
+                &lt;div class=&quot;input-text01&quot;&gt;
+                    &lt;label for=&quot;inputTitle&quot; class=&quot;ir-txt01&quot;&gt;&#51228;&#47785;&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; name=&quot;inputTitle&quot; id=&quot;inputTitle&quot; class=&quot;text01&quot; maxlength=&quot;100&quot; placeholder=&quot;&#51228;&#47785;&#51012; &#51077;&#47141;&#54644; &#51452;&#49464;&#50836;.&quot; value=&quot;&quot;&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/fieldset&gt;
+</code>
+                                            </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- page-aside : 페이지별 앵커 영역 마크업 추가 예정 | 소타이틀이 없는 경우 term type-01, 소타이틀이 있는 경우 term type-02 -->
+
+                        <div class="quick-nav">
+                            <ul class="nav-list">
+                                <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="anatomy">Anatomy</a></li>
+                                <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="options">Options</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="label">Label</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="value">Value</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="error">Error</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="info">Info</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="closeIcon">Close Icon</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="textIcon">Text Icon</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="focusOn">Focus On</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="typing">Typing</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="disabled">Disabled</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="disabledReadOnly">Disabled(Read only)</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="textArea">Text Area</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="securityNumber">Security Number</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="combinationDropDown">Combination (Drop Down)</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="combinationBoxButton">Combination (Box Button)</a></li>
+                                <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="usage">Usage</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="placeholder">플레이스홀더 사용</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="ScrollableInputField">입력 필드 내에서 스크롤</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="RequiredFieldIndicator">필수 표시 사용</a></li>
+                                <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="code">Code</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- //page-aside -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //page-body -->
+        <!-- page-foot -->
+        <div class="footer" id="footer">
+            <div class="footer-inner">
+                <div class="footer-head">
+                    <em class="footer-subject">©Pentabreed. StyleGuide Create with</em>
+                </div>
+                <div class="footer-body">
+                    <a href="https://www.pentabreed.com" target="_blank" class="company">
+                        <span class="text blind">펜타브리드</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- //page-foot -->
+    </div>
+</body>
+
+</html>

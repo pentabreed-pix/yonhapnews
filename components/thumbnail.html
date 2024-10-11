@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="Referrer" content="origin">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>연합 뉴스 디자인 시스템</title>
+    <!-- 연합뉴스 link -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://qa-r.yna.co.kr/www/home_n/v02/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://qa-r.yna.co.kr/www/home_n/v02/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://r.yna.co.kr/www/home_n/v02/img/favicon.ico">
+    <!-- 가이드 link -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/bash.min.js"></script>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/gsap.min.js"></script>
+    <script src="../assets/js/ScrollTrigger.min.js"></script>
+    <script src="../assets/js/ScrollToPlugin.min.js"></script>
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            frontCommon.Html.reset();
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="skip">
+            <span class="blind">skip navigation</span>
+            <ul>
+                <li><a href="#naviMenu">메뉴 바로가기</a></li>
+                <li><a href="#main">본문 바로가기</a></li>
+                <li><a href="#footer">하단 정보(링크) 바로가기</a></li>
+            </ul>
+        </div>
+        <!-- page-head -->
+        <div class="header" id="header">
+            <div class="header-inner">
+                <!-- 공통 로고 -->
+                <h1 class="site-logo">
+                    <a href="/yonhapnews/main/index.html" class="site-name">
+                        <span class="blind">연합뉴스</span>
+                    </a>
+                </h1>
+
+                <!-- 공통 네비게이션 -->
+                <div class="site-navi" id="naviMenu">
+                    <div class="depth1-wrap">
+                        <ul class="depth1-list">
+                            <li class="depth1-item active">
+                                <a href="/yonhapnews/foundation/colors.html" class="depth1">Foundation</a>
+                            </li>
+                            <li class="depth1-item ">
+                                <a href="/yonhapnews/components/top-navigation.html" class="depth1">Components</a>
+                            </li>
+                            <li class="depth1-item ">
+                                <a href="/yonhapnews/guidelines/principles.html" class="depth1">Guidelines</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 공통 유틸 -->
+                <div class="site-util">
+                    <div class="util-list">
+                        <em class="util-item version">
+                            <span class="text">v 0.1</span>
+                        </em>
+                        <!-- <div class="util-item search">
+                    <div class="search-input-wrap">
+                        <input type="text" class="search-input" placeholder="Please enter the keyword" />
+                    </div>
+                </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //page-head -->
+        <!-- page-body -->
+        <div class="main foundation" id="main">
+            <div class="main-inner">
+                <div class="local">
+                    <div class="local-head">
+                        <div class="local-subject">
+                            <h2 class="local-name blind">Thumbnail 디자인 가이드</h2>
+                        </div>
+                    </div>
+                    <div class="local-body">
+                        <div class="lnb" id="lnb">
+                            <div class="lnb-inner">
+                                <div class="site-logo">
+                                    <a href="/main/index.html" class="site-name">
+                                        <span class="blind">연합뉴스</span>
+                                    </a>
+                                </div>
+                                <!-- 타입별 depth2 : 이동 URL 전부 수정할 예정 (현재 javascript:void(0) 되어있는 부분)-->
+
+                                <div class="depth2-wrap components">
+                                    <div class="depth2-head">
+                                        <em class="depth2-subject">Components</em>
+                                    </div>
+                                    <div class="depth2-body">
+                                        <ul class="depth2-list">
+                                            <li class="depth2-item "><a href="javascript:void(0)" class="depth2 dropdown">Navigation</a>
+                                                <div class="depth3-wrap">
+                                                    <ul class="depth3-list">
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/top-navigation.html" class="depth3">Top Navigation</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/button-navigation.html" class="depth3">Button Navigation</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/navigation-drawer.html" class="depth3">Navigation drawer</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/footer.html" class="depth3">Footer</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="depth2-item "><a href="javascript:void(0)" class="depth2 dropdown">Button</a>
+                                                <div class="depth3-wrap">
+                                                    <ul class="depth3-list">
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/box-button.html" class="depth3">Box Button</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/text-button.html" class="depth3">Text Button</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/tab-button.html" class="depth3">Tab Button</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/floating-button.html" class="depth3">Floating Button</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/icon-button.html" class="depth3">Icon Button</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/select-button.html" class="depth3">Select Button</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="depth2-item "><a href="/yonhapnews/components/tag.html" class="depth2">Tag</a></li>
+                                            <li class="depth2-item "><a href="javascript:void(0)" class="depth2 dropdown">Input</a>
+                                                <div class="depth3-wrap">
+                                                    <ul class="depth3-list">
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/text-field.html" class="depth3">Text Field</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/dropdown.html" class="depth3">Dropdown</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/search.html" class="depth3">Search</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="depth2-item "><a href="/yonhapnews/components/table.html" class="depth2">Table</a></li>
+                                            <li class="depth2-item "><a href="javascript:void(0)" class="depth2 dropdown">List</a>
+                                                <div class="depth3-wrap">
+                                                    <ul class="depth3-list">
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/data-list.html" class="depth3">Data List</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/accordion.html" class="depth3">Accordion</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="depth2-item "><a href="javascript:void(0)" class="depth2 dropdown">Popup</a>
+                                                <div class="depth3-wrap">
+                                                    <ul class="depth3-list">
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/layer-popup.html" class="depth3">Layer Popup</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/alert-snackbar.html" class="depth3">Alert&Snackbar</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/tooltip.html" class="depth3">Tooltip</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="depth2-item active open"><a href="javascript:void(0)" class="depth2 dropdown">UI Elements</a>
+                                                <div class="depth3-wrap">
+                                                    <ul class="depth3-list">
+                                                        <li class="depth3-item active"><a href="/yonhapnews/components/thumbnail.html" class="depth3">Thumbnail</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/loading.html" class="depth3">Loading</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="content-inner">
+                                <div class="content-head">
+                                    <h3 class="content-name">Thumbnail</h3>
+                                    <p class="content-summary">이미지 그리드는 여러 개의 썸네일 이미지로 구성됩니다.<br> 이미지에 포함된 추가 정보와 링크는 사용자가 작업을 수행하는 데 도움이 됩니다.</p>
+                                </div>
+                                <div class="content-body">
+                                    <div class="section">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <h4 class="section-subject" data-link-cont="anatomy">anatomy</h4>
+                                            </div>
+                                            <div class="section-body">
+                                                <img src="../assets/images/components/thumbnail-01.jpg" alt=" ">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <h4 class="section-subject" data-link-cont="components">Options</h4>
+                                            </div>
+                                            <div class="section-body">
+                                                <div class="post-list design-01">
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/thumbnail-02-a.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="heading">Time line</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">영상 재생 시간을 표시한 것으로 영상 썸네일 왼쪽 하단에 위치합니다. 카테고리에 따라 DIM 박스를 넣고 빼는 게 가능합니다.</p>
+                                                                </div>
+                                                                <div class="post-aside">
+                                                                    <ul class="data-list design-05">
+                                                                        <li class="data-item">
+                                                                            <img src="../assets/images/components/thumbnail-02-a1.png" alt=" ">
+                                                                        </li>
+                                                                        <li class="data-item">
+                                                                            <img src="../assets/images/components/thumbnail-02-a2.png" alt=" ">
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/thumbnail-02-b.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="heading">Icon Area</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">오른쪽 하단에 위치하게 되는 이미지 형태 아이콘입니다. 아래 순서대로 포토, 화보, 영상, 그래픽 그리고 전체 보기 아이콘으로 구성되어 있습니다.</p>
+                                                                </div>
+                                                                <div class="post-aside">
+                                                                    <ul class="data-list design-05">
+                                                                        <li class="data-item">
+                                                                            <img src="../assets/images/components/thumbnail-02-b1.png" alt=" ">
+                                                                        </li>
+                                                                        <li class="data-item">
+                                                                            <img src="../assets/images/components/thumbnail-02-b2.png" alt=" ">
+                                                                        </li>
+                                                                        <li class="data-item">
+                                                                            <img src="../assets/images/components/thumbnail-02-b3.png" alt=" ">
+                                                                        </li>
+                                                                        <li class="data-item">
+                                                                            <img src="../assets/images/components/thumbnail-02-b4.png" alt=" ">
+                                                                        </li>
+                                                                        <li class="data-item">
+                                                                            <img src="../assets/images/components/thumbnail-02-b5.png" alt=" ">
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/thumbnail-02-c.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="heading">Text Area</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">이미지 위에 텍스트 사용하는 것은 권장되지 않습니다. 다만 필요한 경우에 따라 적용 할 수 있습니다.</p>
+                                                                </div>
+                                                                <div class="post-aside">
+                                                                    <ul class="data-list bullet-01">
+                                                                        <li class="data-item">Font color : #FFFFFF</li>
+                                                                        <li class="data-item">Font weight : Medium More than</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/thumbnail-02-d.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="heading">Dimmer</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">딤에는 Full과 Gradient 두 가지가 있습니다. Full 딤처리 적용은 영상에 주로 사용하고 있습니다. 하단 고정되는 Gradient는 텍스트 또는 하단에 주요 요소가 배치 되는 경우에 사용합니다.</p>
+                                                                </div>
+                                                                <div class="post-aside">
+                                                                    <ul class="data-list bullet-01">
+                                                                        <li class="data-item">Full BG : #000000,40%</li>
+                                                                        <li class="data-item">Gradient : #000000,0% - #000000,100%</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/thumbnail-02-e.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="heading">Border</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">흰배경의 이미지와 배경을 구분하기 위해서 이미지에는 라인이 필수로 들어가야 합니다.</p>
+                                                                </div>
+                                                                <div class="post-aside">
+                                                                    <div class="data-list bullet-01">
+                                                                        <div class="data-item">Line : #000000,4% (1px)</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <h4 class="section-subject" data-link-cont="behaviors">Behaviors</h4>
+                                            </div>
+                                            <div class="section-body">
+                                                <div class="post-list design-01">
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/thumbnail-03-a.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="heading">Video</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">영상 썸네일에 마우스 오버 했을 때 나타나는 영상 플레이 버튼입니다.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/thumbnail-03-b.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="heading">keyword</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">메인 톱뉴스에 노출되는 키워드로 썸네일 오른쪽 하단에 위치합니다. PC에서 마우스 오버 시 키워드 배경 컬러가 포인트 됩니다.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/thumbnail-03-c.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="heading">Time line + keyword</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">메인 톱뉴스에서 영상 썸네일일 경우에는 영상 재생시간과 키워드를 같이 노출할 수 있습니다.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <h4 class="section-subject" data-link-cont="anatomy">Aspect Ratio</h4>
+                                                <p class="section-summary">노출되는 뉴스 이미지 비율은 6:4(3:2)비율을 고정으로 사용 하고 있고, 영상 비율은 16:9를 사용하고 있습니다.<br>
+                                                    비율이 맞지 않는 이미지의 경우 아래 방식으로 노출 됩니다.</p>
+                                            </div>
+                                            <div class="section-body">
+                                                <img src="../assets/images/components/thumbnail-04.jpg" alt=" ">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <h4 class="section-subject" data-link-cont="image-exposure-method">Image Exposure Method</h4>
+                                            </div>
+                                            <div class="section-body">
+                                                <div class="post-list design-01">
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/thumbnail-05-a.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="heading">가로형 이미지</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">가로형 이미지를 등록한다면 양 옆이 잘려 노출됩니다.<br> (4:3), (3:2), (16:9), (7:3), (3:1) 비율이 이에 속합니다.</p>
+                                                                </div>
+                                                                <div class="post-aside">
+                                                                    <div class="data-list bullet-01">
+                                                                        <li class="data-item">Line : #000000,4% (1px)</li>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/thumbnail-05-b.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="heading">세로형 이미지</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">세로형 이미지를 등록한다면 높이를 기준으로<br> 이미지 노출하고 배경 컬러를 넣어줍니다.<br> (2:3), (3:4), (1:1) 비율이 이에 속합니다.</p>
+                                                                </div>
+                                                                <div class="post-aside">
+                                                                    <div class="data-list bullet-01">
+                                                                        <li class="data-item">BG : #F9F9F9</li>
+                                                                        <li class="data-item">Line : #000000,4% (1px)</li>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/thumbnail-05-c.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="heading">이미지 없는 경우</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">이미지 없는 경우에는 로고 심볼만 노출합니다.<br> 인물 등 특수한 경우에 사용됩니다.</p>
+                                                                </div>
+                                                                <div class="post-aside">
+                                                                    <div class="data-list bullet-01">
+                                                                        <li class="data-item">BG : #F5F5F5</li>
+                                                                        <li class="data-item">Line : #000000,4% (1px)</li>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/thumbnail-05-d.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="heading">뉴스 속보 이미지</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">긴급 속보 사진 없는 케이스에 사용됩니다.<br> 지원하는 언어 7개 국어 대응 가능합니다.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- page-aside : 페이지별 앵커 영역 마크업 추가 예정 | 소타이틀이 없는 경우 term type-01, 소타이틀이 있는 경우 term type-02 -->
+
+                        <div class="quick-nav">
+                            <ul class="nav-list">
+                                <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="typeface">Typeface</a></li>
+                                <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="components">Components</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="heading">Heading</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="title">Title</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="body">Body</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="detail">Detail</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="label">Label</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="link">Link</a></li>
+                                <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="fontSizes">Font sizes</a></li>
+                                <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="fontWeight">Font weight</a></li>
+                                <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="lineHeight">Line height</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="headingAndDetail">Heading and detail</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="bodyAndCode">Body and code</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="component">Component</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- //page-aside -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //page-body -->
+        <!-- page-foot -->
+        <div class="footer" id="footer">
+            <div class="footer-inner">
+                <div class="footer-head">
+                    <em class="footer-subject">©Pentabreed. StyleGuide Create with</em>
+                </div>
+                <div class="footer-body">
+                    <a href="https://www.pentabreed.com" target="_blank" class="company">
+                        <span class="text blind">펜타브리드</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- //page-foot -->
+    </div>
+</body>
+
+</html>

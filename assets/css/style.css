@@ -460,10 +460,23 @@
 .data-list.design-04 > .data-item + .data-item {
   margin-top: 6rem;
 }
+.data-list.design-05 {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
 .data-list.bullet-01 > .data-item {
+  position: relative;
+  padding-left: 1.2rem;
   color: rgb(102, 102, 102);
   font-weight: 400;
   font-size: 1.6rem;
+}
+.data-list.bullet-01 > .data-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .post-list .post-figure.do::after {
@@ -515,6 +528,9 @@
 .post-list.design-01 .post-item .post-wrap .post-info .post-body .para + .para {
   margin-top: 0.8rem;
 }
+.post-list.design-01 .post-item .post-wrap .post-info .post-body + .post-aside {
+  margin-top: 30px;
+}
 .post-list.design-02 {
   display: flex;
   flex-wrap: wrap;
@@ -558,12 +574,20 @@
 .post-list.design-03 .post-item .post-wrap .post-figure img {
   max-width: 100%;
 }
-.post-list.design-03 .post-item .post-wrap .post-body .para {
+.post-list.design-03.style-01 .post-body .para {
   color: rgb(68, 68, 68);
   font-weight: 400;
   font-size: 1.8rem;
 }
-.post-list.design-03 .post-item .post-wrap .post-body .para + .para {
+.post-list.design-03.style-01 .post-body .para + .para {
+  margin-top: 0.8rem;
+}
+.post-list.design-03.style-02 .post-body .para {
+  color: rgb(68, 68, 68);
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+.post-list.design-03.style-02 .post-body .para + .para {
   margin-top: 0.8rem;
 }
 .post-list.design-03 + .post-list.design-02 {
