@@ -1,155 +1,174 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<%-include("../_templates/_head.ejs") %>
+<%-include('../_templates/_head.ejs') %>
 </head>
-<body> 
+<body>
 <div id="wrap">
-    <%-include("../_templates/_header.ejs", { type: "components" , }) %>
+    <%-include('../_templates/_header.ejs', { type: 'components' , }) %>
     <!-- page-body -->
-    <div class="main components button" id="main">
+    <div class="main foundation" id="main">
         <div class="main-inner">
-            <div class="local"> 
+            <div class="local">
                 <div class="local-head">
                     <div class="local-subject">
                         <h2 class="local-name blind">Table 디자인 가이드</h2>
                     </div>
                 </div>
                 <div class="local-body">
-                    <%-include("../_templates/_lnb.ejs", { depth1: "components", depth2: "table", depth3: ""}) %>
+                    <%-include('../_templates/_lnb.ejs', { depth1: 'components', depth2: 'table', depth3: ' ' }) %>
                     <div class="content">
                         <div class="content-inner">
                             <div class="content-head">
                                 <h3 class="content-name">Table</h3>
-                                <p class="content-summary">박스 버튼은 상자 형태의 가장 일반적인 버튼입니다.<br> 화면의 콘텐츠 영역이나 하단 영역에 배치되어 화면에서 중요한 작업을 실행하기 위한 버튼으로 사용됩니다.</p>
+                                <p class="content-summary">테이블은 정보를 표시하기 위한 컨테이너입니다. 이를 통해 사용자는 많은 정보를 빠르게 스캔, 정렬, 비교하고 조치를 취할 수 있습니다.</p>
                             </div>
                             <div class="content-body">
                                 <div class="section">
                                     <div class="section-wrap">
                                         <div class="section-head">
-                                            <h4 class="section-subject">Anatomy</h4>
+                                            <h4 class="section-subject" data-link-cont="anatomy">Anatomy</h4>
                                         </div>
-                                        <div class="section-body"> 
-                                            <div class="table-display design-01">
-                                                <table>
-                                                    <caption>해당 table의 알맞는 caption을 작성해주세요.</caption>
-                                                    <colgroup>
-                                                        <col width="20.41%">
-                                                        <col width="18.37%">
-                                                        <col width="auto">
-                                                        <col width="auto">
-                                                        <col width="auto">
-                                                    </colgroup>
-                                                    <thead>
-                                                        <tr>
-                                                            <th colspan="2">head</th>
-                                                            <th>head</th>
-                                                            <th>head</th>
-                                                            <th>head</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <th rowspan="4" class="align-01">head</th>
-                                                            <td>body</td>
-                                                            <td class="align-03">body</td>
-                                                            <td class="align-03">body</td>
-                                                            <td class="align-03">body</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>body</td>
-                                                            <td class="align-03">body</td>
-                                                            <td class="align-03">body</td>
-                                                            <td class="align-03">body</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>body</td>
-                                                            <td class="align-03">body</td>
-                                                            <td class="align-03">body</td>
-                                                            <td class="align-03">body</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>body</td>
-                                                            <td class="align-03">body</td>
-                                                            <td class="align-03">body</td>
-                                                            <td class="align-03">body</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                            <div class="table-display design-01">
-                                                <table>
-                                                    <caption>해당 table의 알맞는 caption을 작성해주세요.</caption>
-                                                    <colgroup>
-                                                        <col width="auto">
-                                                        <col width="auto">
-                                                        <col width="auto">
-                                                    </colgroup>
-                                                    <thead>
-                                                        <tr>
-                                                            <th>head</th>
-                                                            <th>head</th>
-                                                            <th>head</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr class="align-03">
-                                                            <td>body</td>
-                                                            <td>body</td>
-                                                            <td>body</td>
-                                                        </tr>
-                                                        <tr class="align-03">
-                                                            <td>body</td>
-                                                            <td>body</td>
-                                                            <td>body</td>
-                                                        </tr>
-                                                        <tr class="align-03">
-                                                            <td>body</td>
-                                                            <td>body</td>
-                                                            <td>body</td>
-                                                        </tr>
-                                                        <tr class="align-03">
-                                                            <td>body</td>
-                                                            <td>body</td>
-                                                            <td>body</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                            <div class="table-display design-02">
-                                                <table>
-                                                    <caption>해당 table의 알맞는 caption을 작성해주세요.</caption>
-                                                    <colgroup>
-                                                        <col width="18.37%">
-                                                        <col width="auto">
-                                                    </colgroup>
-                                                    <thead>
-                                                        <tr class="align-01">
-                                                            <th>head</th>
-                                                            <th>head</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>body</td>
-                                                            <td>body</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
+                                        <div class="section-body">
+                                            <img src="../assets/images/components/table-01.png" alt=" ">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section">
+                                    <div class="section-wrap">
+                                        <div class="section-head">
+                                            <h4 class="section-subject" data-link-cont="options">Options</h4>
+                                        </div>
+                                        <div class="section-body">
+                                            <div class="post-list design-01">
+                                                <div class="post-item">
+                                                    <div class="post-wrap">
+                                                        <div class="post-figure">
+                                                            <img src="../assets/images/components/table-02-a.png" alt=" ">
+                                                        </div>
+                                                        <div class="post-info">
+                                                            <div class="post-head">
+                                                                <em class="subject" data-link-cont="standardTable">표준형</em>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <p class="para">테이블이 주요 초점일 때는 표준 테이블을 사용합니다.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-item">
+                                                    <div class="post-wrap">
+                                                        <div class="post-figure">
+                                                            <img src="../assets/images/components/table-02-b.png" alt=" ">
+                                                        </div>
+                                                        <div class="post-info">
+                                                            <div class="post-head">
+                                                                <em class="subject" data-link-cont="lineTable">라인형</em>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <p class="para">라인형 테이블은 테이블이 보충적이거나<br> 가벼운 내용을 전달할 때 사용합니다.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-item">
+                                                    <div class="post-wrap">
+                                                        <div class="post-figure">
+                                                            <img src="../assets/images/components/table-02-c.png" alt=" ">
+                                                        </div>
+                                                        <div class="post-info">
+                                                            <div class="post-head">
+                                                                <em class="subject" data-link-cont="columnSeparator">열 구분</em>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <p class="para">열 구분선은 테이블 내용을 구성하고 사용자가<br> 관련 데이터를 구문 분석하는 데 도움이 됩니다.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="section code">
+                                  <div class="section-wrap">
+                                      <div class="section-head">
+                                          <h4 class="section-subject" data-link-cont="code">Code</h4>
+                                          <div class="btn-display">
+                                              <a href="https://codepen.io/PIX-the-bold/pen/PoMWYBX" target="_blank" class="btn view-code design-01">
+                                                  View Code
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="section-body">
+                                          <pre class="highlight-js">
+                                              <code class="html">&lt;div class=&quot;colum-box20&quot;&gt;
+    &lt;div class=&quot;table-unit01&quot;&gt;
+        &lt;table summary=&quot;&#39;6. 수집한 정보의 위탁&#39;에 대한 별첨된 정보로 위탁업체 안내 표 &quot;&gt;
+            &lt;caption&gt;위탁업체 안내&lt;/caption&gt;
+            &lt;colgroup&gt;
+                &lt;col width=&quot;*&quot;&gt;
+                &lt;col width=&quot;*&quot;&gt;
+                &lt;col width=&quot;*&quot;&gt;
+            &lt;/colgroup&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th scope=&quot;col&quot;&gt;수탁업체&lt;/th&gt;
+                    &lt;th scope=&quot;col&quot;&gt;위탁업무 내용&lt;/th&gt;
+                    &lt;th scope=&quot;col&quot;&gt;개인정보의 보유 및 이용기간&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;th scope=&quot;row&quot;&gt;
+                        &lt;div class=&quot;con text-c&quot;&gt;NICE평가정보(주)&lt;/div&gt;
+                    &lt;/th&gt;
+                    &lt;td class=&quot;vt-m&quot;&gt;
+                        &lt;div class=&quot;con text-c&quot;&gt;본인확인&lt;/div&gt;
+                    &lt;/td&gt;
+                    &lt;td&gt;
+                        &lt;div class=&quot;con text-l&quot;&gt;해당 업체에서 이미 보유하고 있는 개인정보이기 때문에 별도로 저장하지 않음&lt;br&gt;(일반회원에 한함)&lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;th scope=&quot;row&quot;&gt;
+                        &lt;div class=&quot;con text-c&quot;&gt;(주)시지온&lt;/div&gt;
+                    &lt;/th&gt;
+                    &lt;td class=&quot;vt-m&quot;&gt;
+                        &lt;div class=&quot;con text-c&quot;&gt;소셜네트워크서비스와 연계정보&lt;/div&gt;
+                    &lt;/td&gt;
+                    &lt;td&gt;
+                        &lt;div class=&quot;con text-l&quot;&gt;해당업체에서 이미 보유하고 있는 개인정보이기 때문에 별도로 저장하지 않음&lt;br&gt;(소셜회원에 한함)&lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;th scope=&quot;row&quot;&gt;
+                        &lt;div class=&quot;con text-c&quot;&gt;(주)엔씨소프트&lt;/div&gt;
+                    &lt;/th&gt;
+                    &lt;td class=&quot;vt-m&quot;&gt;
+                        &lt;div class=&quot;con text-c&quot;&gt;과학적 연구 및 통계 작성(AI 큐레이션을 위한 데이터 분석 및 정확도와 성능 개선)&lt;/div&gt;
+                    &lt;/td&gt;
+                    &lt;td&gt;
+                        &lt;div class=&quot;con text-l&quot;&gt;가명정보를 활용한 연구 및 통계 작성 완료 또는 위탁 계약 종료 시까지&lt;br&gt;(모바일앱 이용자에 한함)&lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                      </div>
+                                  </div>
+                              </div>
                             </div>
                         </div>
                     </div>
-                    <%-include("../_templates/_aside.ejs", { name: "box-button", }) %>
+                    <%-include('../_templates/_aside.ejs', { name: 'table', }) %>
                 </div>
             </div>
         </div>
     </div>
     <!-- //page-body -->
-    <%-include("../_templates/_footer.ejs") %>
+    <%-include('../_templates/_footer.ejs') %>
 </div>
 </body>
 </html>
