@@ -101,6 +101,9 @@
                     color: color(gray,500);
                     @include font(small-4x);
                 }
+                + .data-figure {
+                    margin-top: 2rem;
+                }
             }
             .data-figure {
                 img {
@@ -112,6 +115,9 @@
             +.data-item {
                 margin-top: 6rem;
             }
+        }
+        + .data-list.design-03 {
+            margin-top: 6rem;
         }
     }
     &.design-05 {
