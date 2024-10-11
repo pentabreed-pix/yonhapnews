@@ -1,1 +1,182 @@
- 
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_head.ejs') %>
+</head>
+<body>
+<div id="wrap">
+    <%-include('../_templates/_header.ejs', { type: 'components' , }) %>
+    <!-- page-body -->
+    <div class="main foundation" id="main">
+        <div class="main-inner">
+            <div class="local">
+                <div class="local-head">
+                    <div class="local-subject">
+                        <h2 class="local-name blind">Loading 디자인 가이드</h2>
+                    </div>
+                </div>
+                <div class="local-body">
+                    <%-include('../_templates/_lnb.ejs', { depth1: 'components', depth2: 'ui-elements', depth3: 'loading' }) %>
+                    <div class="content">
+                        <div class="content-inner">
+                            <div class="content-head">
+                                <h3 class="content-name">Loading</h3>
+                                <p class="content-summary">진행률 표시기는 사용자에게 업로드 또는 다운로드의 진행 상황을 실시간으로 보여주고 100%가 되면 자동으로 없어집니다.<br> 지표와 함께 사용되는 컨텍스트 및 구성 요소에 따라 적절한 유형을 사용합니다.</p>
+                            </div>
+                            <div class="content-body">
+                              <div class="section">
+                                  <div class="section-wrap">
+                                      <div class="section-head">
+                                          <h4 class="section-subject" data-link-cont="anatomy">Anatomy</h4>
+                                      </div>
+                                      <div class="section-body">
+                                        <img src="../assets/images/components/loading-01.jpg" alt=" ">
+                                        <div class="table-display design-02">
+                                          <table>
+                                              <caption>해당 table의 알맞는 caption을 작성해주세요.</caption>
+                                              <colgroup>
+                                                  <col width="18.37%">
+                                                  <col width="auto">
+                                              </colgroup>
+                                              <thead>
+                                                  <tr class="align-01">
+                                                      <th>Value</th>
+                                                      <th>Usage</th>
+                                                  </tr>
+                                              </thead>
+                                              <tbody>
+                                                  <tr>
+                                                      <td>Circular Type</td>
+                                                      <td>기본적인 로딩로 원형의 반복 애니메이션 단일 형태이며 각 사용처에 맞게 로딩 사이즈를 사용합니다.</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Linear Type</td>
+                                                    <td>웹뷰에서 사용되며, 화면 상단에서 얇은 바 형태의 로딩 애니메이션입니다.</td>
+                                                </tr>
+                                              </tbody>
+                                          </table>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="section">
+                                <div class="section-wrap">
+                                    <div class="section-head">
+                                        <h4 class="section-subject" data-link-cont="usage">Usage</h4>
+                                    </div>
+                                    <div class="section-body">
+                                        <div class="data-list design-04">
+                                            <div class="data-item">
+                                                <div class="data-wrap">
+                                                    <div class="data-head">
+                                                        <em class="subject" data-link-cont="circularType">Circular Type</em>
+                                                    </div>
+                                                    <div class="data-figure">
+                                                        <ul class="post-list design-02">
+                                                            <li class="post-item">
+                                                                <div class="post-wrap">
+                                                                    <div class="post-figure do">
+                                                                      <img src="../assets/images/components/loading-02-a.jpg" alt=" ">
+                                                                    </div>
+                                                                    <div class="post-info">
+                                                                        <div class="post-body">
+                                                                            <p class="para">
+                                                                              전체 데이터 로딩이 필요한 새로고침 또는 페이지 이동 할 경우에는<br>
+                                                                              브라우저 센터에 노출됩니다.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="post-item">
+                                                                <div class="post-wrap">
+                                                                    <div class="post-figure do">
+                                                                        <img src="../assets/images/components/loading-02-b.jpg" alt=" ">
+                                                                    </div>
+                                                                    <div class="post-info">
+                                                                        <div class="post-body">
+                                                                            <p class="para">
+                                                                              게시물을 등록 중인 경우 버튼에서 노출됩니다.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="data-item">
+                                              <div class="data-wrap">
+                                                  <div class="data-head">
+                                                      <em class="subject" data-link-cont="linearType">Linear Type</em>
+                                                  </div>
+                                                  <div class="data-figure">
+                                                      <ul class="post-list design-02">
+                                                          <li class="post-item">
+                                                              <div class="post-wrap">
+                                                                  <div class="post-figure do">
+                                                                    <img src="../assets/images/components/loading-02-c.jpg" alt=" ">
+                                                                  </div>
+                                                                  <div class="post-info">
+                                                                      <div class="post-body">
+                                                                          <p class="para">
+                                                                            웹 뷰에서 노출될 때에는 브라우저 상단 GNB 위에 노출됩니다.
+                                                                          </p>
+                                                                      </div>
+                                                                  </div>
+                                                              </div>
+                                                          </li>
+                                                          <li class="post-item">
+                                                              <div class="post-wrap">
+                                                                  <div class="post-figure do">
+                                                                      <img src="../assets/images/components/loading-02-d.jpg" alt=" ">
+                                                                  </div>
+                                                                  <div class="post-info">
+                                                                      <div class="post-body">
+                                                                          <p class="para">
+                                                                            진행 상태를 나타낼 때에도 사용합니다.
+                                                                          </p>
+                                                                      </div>
+                                                                  </div>
+                                                              </div>
+                                                          </li>
+                                                      </ul>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                              <div class="section code">
+                                <div class="section-wrap">
+                                    <div class="section-head">
+                                        <h4 class="section-subject" data-link-cont="code">Code</h4>
+                                        <div class="btn-display">
+                                            <a href="https://codepen.io/PIX-the-bold/pen/QWeGePJ" target="_blank" class="btn view-code design-01">
+                                                View Code
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="section-body">
+                                        <pre class="highlight-js">
+                                            <code class="html">&lt;div class=&quot;loading-type01&quot;&gt;
+  &lt;span&gt;&lt;i class=&quot;ir-txt01&quot;&gt;로딩중&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <%-include('../_templates/_aside.ejs', { name: 'loading', }) %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //page-body -->
+    <%-include('../_templates/_footer.ejs') %>
+</div>
+</body>
+</html>
