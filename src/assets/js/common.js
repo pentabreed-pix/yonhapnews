@@ -70,6 +70,8 @@ function quickMenuUI() {
     }
 
     var ignoreScroll = false;
+    var scrollOffset = 400; // 스크롤 이벤트에서 사용할 오프셋
+    var clickOffset = 200; // 클릭 이벤트에서 사용할 오프셋
 
     var firstSection = $('[data-link-cont]').first();
     var firstDataLink = firstSection.attr('data-link-cont');
@@ -81,22 +83,31 @@ function quickMenuUI() {
     }
 
     $(window).off('scroll.scrollQuick').on('scroll.scrollQuick', function() {
-        var sct = $(this).scrollTop();
-
         if (ignoreScroll) {
-            return;
+            return; // ignoreScroll이 true이면 스크롤 이벤트를 무시
         }
+
+        var sct = $(this).scrollTop();
+        var windowHeight = $(window).height();
+        var documentHeight = $(document).height();
+        var isAtBottom = sct + windowHeight >= documentHeight - 10; // 페이지 끝에 거의 도달했는지 확인
 
         el.find('.nav-list .nav-item').each(function(idx, obj) {
             var dataLink = $(obj).find('a').attr('data-link');
             var targetSection = $('[data-link-cont="' + dataLink + '"]');
             
-            if (targetSection.length > 0 && sct >= targetSection.offset().top - 400) {
+            if (targetSection.length > 0 && sct >= targetSection.offset().top - scrollOffset) {
                 el.find('.nav-list .nav-item').removeClass('active');
                 $(obj).addClass('active');
                 activateClosestTerm($(obj));
             }
         });
+
+        if (isAtBottom) {
+            // 브라우저가 페이지 끝에 도달했을 때 마지막 nav-item에 active 클래스 추가
+            el.find('.nav-list .nav-item').removeClass('active');
+            el.find('.nav-list .nav-item').last().addClass('active');
+        }
 
         var boxName = el.find('.nav-list').find('.nav-item.active').find('a').attr('data-link');
         
@@ -107,13 +118,13 @@ function quickMenuUI() {
     quickMenu.find('a').on('click', function(e) {
         e.preventDefault();
 
-        ignoreScroll = true;
+        ignoreScroll = true; // 클릭 시 스크롤 무시 시작
 
         var dataType = $(this).attr('data-link');
         var targetSection = $('[data-link-cont="' + dataType + '"]');
 
         if (targetSection.length > 0) {
-            var posMove = targetSection.offset().top - 200;
+            var posMove = targetSection.offset().top - clickOffset; // 클릭 시 사용할 오프셋
 
             quickMenu.find('.item a').removeClass('active');
             quickMenu.find('.item a[data-link="' + dataType + '"]').addClass('active');
@@ -125,7 +136,7 @@ function quickMenuUI() {
             $('body, html').stop().animate({
                 scrollTop: posMove
             }, function() {
-                ignoreScroll = false;
+                ignoreScroll = false; // 애니메이션이 완료된 후에 스크롤을 다시 활성화
             });
         } else {
             // console.error('해당 섹션을 찾을 수 없습니다: ' + dataType);
@@ -141,6 +152,7 @@ function quickMenuUI() {
         }
     }
 }
+
 
 function dropdown() {
     $('.dropdown').click(function () {
@@ -159,7 +171,7 @@ function quickLink() {
 
             if (targetElement) {
                 targetElement.scrollIntoView({
-                    behavior: 'smooth'
+                    behavior: 'smooth', // 스무스 스크롤
                 });
             }
         })
