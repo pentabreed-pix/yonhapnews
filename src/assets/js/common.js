@@ -148,3 +148,20 @@ function dropdown() {
         $(this).parent().toggleClass('open');
     });
 }
+
+function quickLink() {
+    document.querySelectorAll('.quick-link').forEach(quickLink => {
+        quickLink.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        })
+    })
+}

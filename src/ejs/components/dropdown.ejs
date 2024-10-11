@@ -2,6 +2,11 @@
 <html lang="ko">
 <head>
 <%-include('../_templates/_head.ejs') %>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        quickLink();
+    });
+</script>
 </head>
 <body> 
 <div id="wrap">
@@ -156,9 +161,9 @@
                                                             <div class="post-body">
                                                                 <p class="para">
                                                                     모바일에서는 메뉴가 다음 중 하나로 노출될 수 있습니다.<br> 
-                                                                    Popover 또는 Tray로 선택할 수 있는 옵션을 사용합니다.
+                                                                    <a href="#popover" class="link quick-link accent color-01">Popover</a> 또는 <a href="#tray" class="link quick-link accent color-01">Tray</a>로 선택할 수 있는 옵션을 사용합니다.
                                                                 </p>
-                                                            </div>
+                                                            </div> 
                                                         </div>
                                                     </div>
                                                 </div>
@@ -223,7 +228,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="section">
+                                <div class="section" id="popover">
                                     <div class="section-wrap">
                                         <div class="section-head">
                                             <h4 class="section-subject" data-link-cont="popover">Popover</h4>
@@ -244,7 +249,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="section">
+                                <div class="section" id="tray">
                                     <div class="section-wrap">
                                         <div class="section-head">
                                             <h4 class="section-subject" data-link-cont="tray">Tray</h4>
