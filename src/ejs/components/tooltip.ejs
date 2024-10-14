@@ -1,1 +1,346 @@
- 
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_head.ejs') %>
+</head>
+<body> 
+<div id="wrap">
+    <%-include('../_templates/_header.ejs', { type: 'components' , }) %>
+    <!-- page-body -->
+    <div class="main components input" id="main">
+        <div class="main-inner">
+            <div class="local"> 
+                <div class="local-head">
+                    <div class="local-subject">
+                        <h2 class="local-name blind">Tooltip 디자인 가이드</h2>
+                    </div>
+                </div>
+                <div class="local-body">
+                    <%-include('../_templates/_lnb.ejs', { depth1: 'components', depth2: 'popup', depth3: 'tooltip' }) %>
+                    <div class="content">
+                        <div class="content-inner">
+                            <div class="content-head">
+                                <h3 class="content-name">Tooltip</h3>
+                                <p class="content-summary">사용자가 마우스로 가리킬 때 특정 요소에 대한 도움말이나 정보가 표출됩니다.<br> 이미지나 간략한 문구만으로 설명이 부족한 경우, 단독아이콘의 기표를 보여주거나 정보를 표출하여 보조 설명장치로 사용합니다.</p>
+                            </div>
+                            <div class="content-body">
+                                <div class="section">
+                                    <div class="section-wrap">
+                                        <div class="section-head">
+                                            <h4 class="section-subject" data-link-cont="anatomy">Anatomy</h4>
+                                        </div>
+                                        <div class="section-body"> 
+                                            <img src="../assets/images/components/tooltip-01.jpg" alt=" ">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section">
+                                    <div class="section-wrap">
+                                        <div class="section-head">
+                                            <h4 class="section-subject" data-link-cont="options">Options</h4>
+                                        </div>
+                                        <div class="section-body">
+                                            <div class="post-list design-01">
+                                                <div class="post-item">
+                                                    <div class="post-wrap">
+                                                        <div class="post-figure">
+                                                            <img src="../assets/images/components/tooltip-02-a.jpg" alt=" ">
+                                                        </div>
+                                                        <div class="post-info">
+                                                            <div class="post-head"> 
+                                                                <em class="subject" data-link-cont="title">Title</em>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <p class="para">
+                                                                    제목은 대화 상자 상단에 굵은 글씨로 표시되며, <br>타이틀은 정의 되지 않을 수 있습니다.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-item">
+                                                    <div class="post-wrap">
+                                                        <div class="post-figure">
+                                                            <img src="../assets/images/components/tooltip-02-b.jpg" alt=" ">
+                                                        </div>
+                                                        <div class="post-info">
+                                                            <div class="post-head">
+                                                                <em class="subject" data-link-cont="closeButton">Close Button</em>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <p class="para">
+                                                                    오른쪽 상단 모서리에 닫기 버튼을 제공할지 여부를 
+                                                                    선택할 수 있습니다. 
+                                                                </p>
+                                                                <p class="para">
+                                                                    닫기 버튼이 제공되지 않으면 사용자는 툴팁 외부의 영역을 클릭하여 툴팁을 닫을 수 있습니다.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-item">
+                                                    <div class="post-wrap">
+                                                        <div class="post-figure">
+                                                            <img src="../assets/images/components/tooltip-02-c.jpg" alt=" ">
+                                                        </div>
+                                                        <div class="post-info">
+                                                            <div class="post-head">
+                                                                <em class="subject" data-link-cont="size">Size</em>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <p class="para">
+                                                                    크고 작은 크기가 제공됩니다. <br>
+                                                                    기본 및 보조 버튼은 큰 툴팁에서만 사용할 수 있습니다. <br>
+                                                                    작은 툴팁의 너비는 텍스트 길이에 따라 변경됩니다.
+                                                                </p>
+                                                                <p class="para">
+                                                                    툴팁은 보통 마우스 오버 시 노출되지만,<br> 
+                                                                    큰 툴팁의 경우만 클릭 시 노출됩니다.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-item">
+                                                    <div class="post-wrap">
+                                                        <div class="post-figure">
+                                                            <img src="../assets/images/components/tooltip-02-d.jpg" alt=" ">
+                                                        </div>
+                                                        <div class="post-info">
+                                                            <div class="post-head">
+                                                                <em class="subject" data-link-cont="popoverPlacement">Popover placement</em>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <p class="para">
+                                                                    상각형 포인트 위치는 변경이 가능합니다.
+                                                                </p>
+                                                                <p class="para">
+                                                                    아이콘 클릭 시 아이콘과 삼각형을 기준으로 <br>정렬되어서 노출합니다.
+                                                                </p>
+                                                                <p class="para">
+                                                                    작은 툴팁의 경우 아이콘과 센터 정렬로 노출됩니다.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-item">
+                                                    <div class="post-wrap">
+                                                        <div class="post-figure">
+                                                            <img src="../assets/images/components/tooltip-02-e.jpg" alt=" ">
+                                                        </div>
+                                                        <div class="post-info">
+                                                            <div class="post-head">
+                                                                <em class="subject" data-link-cont="popoverOffset">Popover offset</em>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <p class="para">
+                                                                    오프셋은 액션 버튼과 팝오버 가장자리 사이의 거리입니다. <br>기본값은 데스크톱에서는 4px, 모바일에서는 8px이지만 <br>
+                                                                    상황에 따라 조정될 수 있습니다.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-item">
+                                                    <div class="post-wrap">
+                                                        <div class="post-figure">
+                                                            <img src="../assets/images/components/tooltip-02-f.jpg" alt=" ">
+                                                        </div>
+                                                        <div class="post-info">
+                                                            <div class="post-head">
+                                                                <em class="subject" data-link-cont="passwordValidation">Password validation</em>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <p class="para">
+                                                                    비밀번호 유효성 검사를 안내하는 툴팁입니다.<br>조건이 충족할 경우 파란색으로 표시됩니다.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-item">
+                                                    <div class="post-wrap">
+                                                        <div class="post-figure">
+                                                            <img src="../assets/images/components/tooltip-02-g.jpg" alt=" ">
+                                                        </div>
+                                                        <div class="post-info">
+                                                            <div class="post-head">
+                                                                <em class="subject" data-link-cont="iconToolDescription">Icon Tool Description</em>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <p class="para">
+                                                                    사용자가 마우스 오버 시 클릭한 요소에 대한 간략한 정보를 보여줍니다.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section">
+                                    <div class="section-wrap">
+                                        <div class="section-head">
+                                            <h4 class="section-subject" data-link-cont="usage">Usage</h4>
+                                        </div>
+                                        <div class="section-body"> 
+                                            <div class="data-list design-04">
+                                                <div class="data-item">
+                                                    <div class="data-wrap">
+                                                        <div class="data-head">
+                                                            <em class="subject" data-link-cont="textOverflow">Text overflow</em>
+                                                        </div>
+                                                        <div class="data-figure">
+                                                            <ul class="post-list design-02 style-01">
+                                                                <li class="post-item">
+                                                                    <div class="post-wrap">
+                                                                        <div class="post-figure do">
+                                                                            <img src="../assets/images/components/tooltip-03-a.jpg" alt=" ">
+                                                                        </div>
+                                                                        <div class="post-info">
+                                                                            <div class="post-body">
+                                                                                <p class="para">
+                                                                                    너비를 조정할 수 있습니다. <br>텍스트의 줄 수는 설정된 너비에 따라 변경됩니다.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="post-item">
+                                                                    <div class="post-wrap">
+                                                                        <div class="post-figure do">
+                                                                            <img src="../assets/images/components/tooltip-03-b.jpg" alt=" ">
+                                                                        </div>
+                                                                        <div class="post-info">
+                                                                            <div class="post-body">
+                                                                                <p class="para">
+                                                                                    텍스트가 길어질수록 높이는 증가하고 너비는 고정됩니다. <br>길이에 제한은 없지만 행 수는 2개로 유지하는 것이 좋습니다.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="data-item">
+                                                    <div class="data-wrap">
+                                                        <div class="data-head">
+                                                            <em class="subject" data-link-cont="usageGuidelines">Usage guidelines</em>
+                                                        </div>
+                                                        <div class="data-figure">
+                                                            <div class="post-list design-02 style-01">
+                                                                <div class="post-item">
+                                                                    <div class="post-wrap">
+                                                                        <div class="post-figure do">
+                                                                            <img src="../assets/images/components/tooltip-04-a.jpg" alt=" ">
+                                                                        </div>
+                                                                        <div class="post-info">
+                                                                            <div class="post-body">
+                                                                                <p class="para">
+                                                                                    특정 기능이나 프로모션 정보에 대한 설명을 제공할 수 있습니다.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="post-item">
+                                                                    <div class="post-wrap">
+                                                                        <div class="post-figure do">
+                                                                            <img src="../assets/images/components/tooltip-04-b.jpg" alt=" ">
+                                                                        </div>
+                                                                        <div class="post-info">
+                                                                            <div class="post-body">
+                                                                                <p class="para">
+                                                                                    큰 툴팁의 경우 디바이스에 따라 툴팁의 넓이를 축소할 수 있습니다.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="post-item">
+                                                                    <div class="post-wrap">
+                                                                        <div class="post-figure dont">
+                                                                            <img src="../assets/images/components/tooltip-04-c.jpg" alt=" ">
+                                                                        </div>
+                                                                        <div class="post-info">
+                                                                            <div class="post-body">
+                                                                                <p class="para">
+                                                                                    툴팁을 강조할 필요가 없는 한 배경의 어두운 부분에 툴팁을 제공하지 않는 것이 좋습니다.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="post-item">
+                                                                    <div class="post-wrap">
+                                                                        <div class="post-figure dont">
+                                                                            <img src="../assets/images/components/tooltip-04-d.jpg" alt=" ">
+                                                                        </div>
+                                                                        <div class="post-info">
+                                                                            <div class="post-body">
+                                                                                <p class="para">
+                                                                                    텍스트가 길다면 작은 툴팁 보다는 큰 툴팁을 사용하는 것을 권장합니다.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section code">
+                                    <div class="section-wrap">
+                                        <div class="section-head">
+                                            <h4 class="section-subject" data-link-cont="code">Code</h4>
+                                            <div class="btn-display">
+                                                <a href="https://codepen.io/PIX-the-bold/pen/poMNXKr" target="_blank" class="btn view-code design-01">
+                                                    View Code
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="section-body">
+                                            <pre class="highlight-js">
+                                                <code class="html">
+    &lt;div class=&quot;tooltip-type02&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn-type005 active&quot; data-tool-open=&quot;tooltip-type02&quot;&gt;
+            &lt;i class=&quot;ico-type91-info01&quot;&gt;
+                &lt;span class=&quot;ir-txt01&quot;&gt;설명 보기&lt;/span&gt;
+            &lt;/i&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;tlp-content show&quot;&gt;
+            &lt;div class=&quot;info-box01&quot;&gt;
+                &lt;strong class=&quot;tit01&quot;&gt;Y스코어 란?&lt;/strong&gt;
+                &lt;p class=&quot;txt01 color03&quot;&gt;
+                    연합뉴스 회원활동을 통해 적립할 수 있는 활동 점수 입니다.
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <%-include('../_templates/_aside.ejs', { name: 'tooltip', }) %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //page-body -->
+    <%-include('../_templates/_footer.ejs') %>
+</div>
+</body>
+</html>
