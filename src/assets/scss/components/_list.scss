@@ -106,6 +106,12 @@
                 }
                 + .data-figure {
                     margin-top: 2rem;
+
+                    img {
+                        & + img {
+                            margin-top: 2rem;
+                        }
+                    }
                 }
             }
             .data-figure {
