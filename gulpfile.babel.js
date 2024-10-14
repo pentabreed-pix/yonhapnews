@@ -165,16 +165,12 @@ gulp.task("browserSync", function () {
 });
 
 function clean() {
-    return del([DIST_FOLDER]);
+    return del([DIST_FOLDER, ".publish"])
 }
 
 gulp.task('gh', function () {
     return gulp.src(DIST_FOLDER + '/**/*')
     .pipe(ghPages());
-});
-
-gulp.task('cleanDeploy', function () {
-    return del([".publish"]);
 });
 
 const prepare = gulp.series(clean);
@@ -198,7 +194,7 @@ const defaultTask = gulp.series(clean, build, gulp.parallel("browserSync", watch
 
 const dev = gulp.series(build, gulp.parallel("browserSync", watchFiles));
 
-const deploy = gulp.series('ejs-prod', 'gh', 'cleanDeploy');
+const deploy = gulp.series('ejs-prod', 'gh');
 
 module.exports = {
   clean,
