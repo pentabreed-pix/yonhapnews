@@ -454,10 +454,16 @@
   font-weight: 400;
   font-size: 1.6rem;
 }
+.data-list.design-04 > .data-item .data-body + .data-figure {
+  margin-top: 2rem;
+}
 .data-list.design-04 > .data-item .data-figure img + .post-list {
   margin-top: 4rem;
 }
 .data-list.design-04 > .data-item + .data-item {
+  margin-top: 6rem;
+}
+.data-list.design-04 + .data-list.design-03 {
   margin-top: 6rem;
 }
 .data-list.design-05 {
@@ -888,7 +894,7 @@ sub {
   width: 98rem;
 }
 #wrap .main .local-body .content .content-body .section + .section {
-  margin-top: 8rem;
+  padding-top: 8rem;
 }
 #wrap .main .local-body .content .content-body .section .section-head .section-subject {
   color: rgb(17, 17, 17);
