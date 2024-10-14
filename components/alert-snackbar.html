@@ -1,1 +1,501 @@
-alert-snackbar 페이지입니다
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="Referrer" content="origin">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>연합 뉴스 디자인 시스템</title>
+    <!-- 연합뉴스 link -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://qa-r.yna.co.kr/www/home_n/v02/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://qa-r.yna.co.kr/www/home_n/v02/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://r.yna.co.kr/www/home_n/v02/img/favicon.ico">
+    <!-- 가이드 link -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/bash.min.js"></script>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/gsap.min.js"></script>
+    <script src="../assets/js/ScrollTrigger.min.js"></script>
+    <script src="../assets/js/ScrollToPlugin.min.js"></script>
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            frontCommon.Html.reset();
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="skip">
+            <span class="blind">skip navigation</span>
+            <ul>
+                <li><a href="#naviMenu">메뉴 바로가기</a></li>
+                <li><a href="#main">본문 바로가기</a></li>
+                <li><a href="#footer">하단 정보(링크) 바로가기</a></li>
+            </ul>
+        </div>
+        <!-- page-head -->
+        <div class="header" id="header">
+            <div class="header-inner">
+                <!-- 공통 로고 -->
+                <h1 class="site-logo">
+                    <a href="/yonhapnews/main/index.html" class="site-name">
+                        <span class="blind">연합뉴스</span>
+                    </a>
+                </h1>
+
+                <!-- 공통 네비게이션 -->
+                <div class="site-navi" id="naviMenu">
+                    <div class="depth1-wrap">
+                        <ul class="depth1-list">
+                            <li class="depth1-item ">
+                                <a href="/yonhapnews/foundation/colors.html" class="depth1">Foundation</a>
+                            </li>
+                            <li class="depth1-item active">
+                                <a href="/yonhapnews/components/top-navigation.html" class="depth1">Components</a>
+                            </li>
+                            <li class="depth1-item ">
+                                <a href="/yonhapnews/guidelines/principles.html" class="depth1">Guidelines</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 공통 유틸 -->
+                <div class="site-util">
+                    <div class="util-list">
+                        <em class="util-item version">
+                            <span class="text">v 0.1</span>
+                        </em>
+                        <!-- <div class="util-item search">
+                    <div class="search-input-wrap">
+                        <input type="text" class="search-input" placeholder="Please enter the keyword" />
+                    </div>
+                </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //page-head -->
+        <!-- page-body -->
+        <div class="main components input" id="main">
+            <div class="main-inner">
+                <div class="local">
+                    <div class="local-head">
+                        <div class="local-subject">
+                            <h2 class="local-name blind">Alert&Snackbar 디자인 가이드</h2>
+                        </div>
+                    </div>
+                    <div class="local-body">
+                        <div class="lnb" id="lnb">
+                            <div class="lnb-inner">
+                                <div class="site-logo">
+                                    <a href="/main/index.html" class="site-name">
+                                        <span class="blind">연합뉴스</span>
+                                    </a>
+                                </div>
+                                <!-- 타입별 depth2 : 이동 URL 전부 수정할 예정 (현재 javascript:void(0) 되어있는 부분)-->
+
+                                <div class="depth2-wrap components">
+                                    <div class="depth2-head">
+                                        <em class="depth2-subject">Components</em>
+                                    </div>
+                                    <div class="depth2-body">
+                                        <ul class="depth2-list">
+                                            <li class="depth2-item "><a href="javascript:void(0)" class="depth2 dropdown">Navigation</a>
+                                                <div class="depth3-wrap">
+                                                    <ul class="depth3-list">
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/top-navigation.html" class="depth3">Top Navigation</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/button-navigation.html" class="depth3">Button Navigation</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/navigation-drawer.html" class="depth3">Navigation drawer</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/footer.html" class="depth3">Footer</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="depth2-item "><a href="javascript:void(0)" class="depth2 dropdown">Button</a>
+                                                <div class="depth3-wrap">
+                                                    <ul class="depth3-list">
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/box-button.html" class="depth3">Box Button</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/text-button.html" class="depth3">Text Button</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/tab-button.html" class="depth3">Tab Button</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/floating-button.html" class="depth3">Floating Button</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/icon-button.html" class="depth3">Icon Button</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/select-button.html" class="depth3">Select Button</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="depth2-item "><a href="/yonhapnews/components/tag.html" class="depth2">Tag</a></li>
+                                            <li class="depth2-item "><a href="javascript:void(0)" class="depth2 dropdown">Input</a>
+                                                <div class="depth3-wrap">
+                                                    <ul class="depth3-list">
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/text-field.html" class="depth3">Text Field</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/dropdown.html" class="depth3">Dropdown</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/search.html" class="depth3">Search</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="depth2-item "><a href="/yonhapnews/components/table.html" class="depth2">Table</a></li>
+                                            <li class="depth2-item "><a href="javascript:void(0)" class="depth2 dropdown">List</a>
+                                                <div class="depth3-wrap">
+                                                    <ul class="depth3-list">
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/data-list.html" class="depth3">Data List</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/accordion.html" class="depth3">Accordion</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="depth2-item active open"><a href="javascript:void(0)" class="depth2 dropdown">Popup</a>
+                                                <div class="depth3-wrap">
+                                                    <ul class="depth3-list">
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/layer-popup.html" class="depth3">Layer Popup</a></li>
+                                                        <li class="depth3-item active"><a href="/yonhapnews/components/alert-snackbar.html" class="depth3">Alert&Snackbar</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/tooltip.html" class="depth3">Tooltip</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="depth2-item "><a href="javascript:void(0)" class="depth2 dropdown">UI Elements</a>
+                                                <div class="depth3-wrap">
+                                                    <ul class="depth3-list">
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/thumbnail.html" class="depth3">Thumbnail</a></li>
+                                                        <li class="depth3-item "><a href="/yonhapnews/components/loading.html" class="depth3">Loading</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="content-inner">
+                                <div class="content-head">
+                                    <h3 class="content-name">Alert&Snackbar</h3>
+                                    <p class="content-summary">사용자에게 중요한 정보 또는 페이지 전환 없이 정보를 보여줄 때 사용합니다.<br>
+                                        PC에서는 딤드 없이 알럿 영역에만 그림자 적용하고 모바일에서는 그림자 없이 전체 화면에 딤드 적용합니다.</p>
+                                </div>
+                                <div class="content-body">
+                                    <div class="section">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <h4 class="section-subject" data-link-cont="anatomy">Anatomy</h4>
+                                            </div>
+                                            <div class="section-body">
+                                                <img src="../assets/images/components/alertSnackbar-01.jpg" alt=" ">
+                                                <div class="table-display design-02">
+                                                    <table>
+                                                        <caption>Border width</caption>
+                                                        <colgroup>
+                                                            <col width="18.37%">
+                                                            <col width="auto">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr class="align-01">
+                                                                <th>Value</th>
+                                                                <th>Usage</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Alert</td>
+                                                                <td>알림 대화 상자는 사용자가 확인해야 하는 중요한 정보를 표시합니다.<br>
+                                                                    인터페이스 위에 나타나며 작업을 선택할 때까지 추가 상호 작용을 차단합니다.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Snackbar</td>
+                                                                <td>스낵바는 일반적으로 화면 하단에 배치되어 사용자 동작에 대한 일시적인 피드백을 제공합니다.<br> 링크 역할을 하거나 동작도 제공할 수 있습니다. 스낵바는 팝업에 비해 주의가 덜 필요한 피드백으로 사용됩니다.</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <h4 class="section-subject" data-link-cont="options">Options</h4>
+                                            </div>
+                                            <div class="section-body">
+                                                <div class="post-list design-01">
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/alertSnackbar-02-a.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="title">Title</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        제목은 대화 상자 상단에 굵은 글씨로 표시되며, 사용자가 작업을 계속할 경우 어떤 일이 일어날지 결과를 전달하기 위해 몇 단어를 사용합니다.
+                                                                    </p>
+                                                                    <p class="para">
+                                                                        제목을 포함할지 여부를 선택할 수 있습니다.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/alertSnackbar-02-b.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="description">Description</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        설명은 사용자가 버튼에서 제공하는 결정을 내리기 위해<br>
+                                                                        알아야 하는 추가 정보나 맥락을 간략하게 전달합니다.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/alertSnackbar-02-c.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="confirmationVariant">Confirmation variant</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        사용자에게 선택 사항을 확인하도록 요청하는<br>
+                                                                        경우 사용합니다. 이 알림 버튼에는 어떤 조치를 취할<br>
+                                                                        것인지에 대한 명확한 버튼명이 필요합니다.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/alertSnackbar-02-d.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="warning">Warning</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        경고 알림 대화 상자는 사용자에게 인식해야 할<br>
+                                                                        문제와 관련하여 중요한 정보를 전달하지만,<br>
+                                                                        사용자가 계속 진행하는 것을 막지는 않습니다.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/components/alertSnackbar-02-e.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="input">Input</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        팝업 내에 정보 입력을 해야 하는 경우에 사용합니다.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <h4 class="section-subject" data-link-cont="usage">Usage</h4>
+                                            </div>
+                                            <div class="section-body">
+                                                <div class="data-list design-03">
+                                                    <div class="data-item">
+                                                        <div class="data-wrap">
+                                                            <div class="data-head">
+                                                                <em class="subject" data-link-cont="textOverflow">Text overflow</em>
+                                                            </div>
+                                                            <div class="data-body">
+                                                                <p class="para">제목과 설명 텍스트가 사용 가능한 수평 공간에 비해 너무 길면 다른 줄로 줄바꿈됩니다.</p>
+                                                            </div>
+                                                            <div class="data-figure">
+                                                                <img src="../assets/images/components/alertSnackbar-03.jpg" alt=" ">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="data-item">
+                                                        <div class="data-wrap">
+                                                            <div class="data-head">
+                                                                <em class="subject" data-link-cont="overlappingButtons">Overlapping buttons</em>
+                                                            </div>
+                                                            <div class="data-body">
+                                                                <p class="para">세 개의 버튼을 사용하는 것은 권장되지 않습니다. 다만 필요한 경우에 따라 레벨이 다른 버튼을 적용 할 수 있습니다.</p>
+                                                            </div>
+                                                            <div class="data-figure">
+                                                                <img src="../assets/images/components/alertSnackbar-04.jpg" alt=" ">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="data-list design-04">
+                                                    <div class="data-item">
+                                                        <div class="data-wrap">
+                                                            <div class="data-head">
+                                                                <em class="subject" data-link-cont="usageGuidelines">Usage guidelines</em>
+                                                            </div>
+                                                            <div class="data-figure">
+                                                                <div class="post-list design-02 style-01">
+                                                                    <div class="post-item">
+                                                                        <div class="post-wrap">
+                                                                            <div class="post-figure dont">
+                                                                                <img src="../assets/images/components/alertSnackbar-03-c.jpg" alt=" ">
+                                                                            </div>
+                                                                            <div class="post-info">
+                                                                                <div class="post-body">
+                                                                                    <p class="para">
+                                                                                        알림 대화 상자는 방해가 되므로 사용자가 확인해야 하는<br>
+                                                                                        중요한 정보를 표시해야 할 때 가장 좋습니다.
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="post-item">
+                                                                        <div class="post-wrap">
+                                                                            <div class="post-figure dont">
+                                                                                <img src="../assets/images/components/alertSnackbar-03-d.jpg" alt=" ">
+                                                                            </div>
+                                                                            <div class="post-info">
+                                                                                <div class="post-body">
+                                                                                    <p class="para">
+                                                                                        알림 대화 상자는 해결책에 도달할 때까지 경험을 방해하기 위한 것이므로<br>
+                                                                                        한 번에 하나만 표시되어야 합니다.
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section code">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <h4 class="section-subject" data-link-cont="code">Code</h4>
+                                                <div class="btn-display">
+                                                    <a href="https://codepen.io/PIX-the-bold/pen/eYqvmQx" target="_blank" class="btn view-code design-01">
+                                                        View Code
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="section-body">
+                                                <pre class="highlight-js">
+                                                <code class="html">&lt;div class=&quot;popup-type50&quot;&gt;
+    &lt;div class=&quot;pop-wrap&quot;&gt;
+        &lt;div class=&quot;pop-content&quot;&gt;
+            &lt;strong class=&quot;tit01&quot;&gt;알럿 타이틀&lt;/strong&gt;
+            &lt;span class=&quot;txt01&quot;&gt;동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려 강산&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;btns-wrap03&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn-type304 style01&quot;&gt;
+                &lt;span class=&quot;txt01&quot;&gt;닫기&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;popup-type52&quot;&gt;
+    &lt;div class=&quot;pop-wrap&quot;&gt;
+        &lt;div class=&quot;pop-content&quot;&gt;
+            &lt;div class=&quot;info-box01&quot;&gt;
+                &lt;span class=&quot;subtitle01&quot;&gt;날씨 알림&lt;/span&gt;
+                &lt;span class=&quot;tit01&quot;&gt;오늘 오전 09시 서울 호우주의보 발효&lt;/span&gt;
+                &lt;a href=&quot;#none&quot; class=&quot;btn-type216 arr01&quot;&gt;&lt;span class=&quot;txt01&quot;&gt;날씨 확인하기&lt;/span&gt;&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;figure class=&quot;img-con01&quot;&gt;
+                &lt;div class=&quot;img colW show&quot;&gt;
+                    &lt;img src=&quot;https://static.cdp.yna.co.kr/cps/img/ico_weather03.svg&quot; alt=&quot;이미지&quot; loading=&quot;lazy&quot; data-ll-status=&quot;loaded&quot;&gt;
+                &lt;/div&gt;
+            &lt;/figure&gt;
+        &lt;/div&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn-type039&quot; title=&quot;닫기&quot;&gt;
+            &lt;span class=&quot;ir-txt01&quot;&gt;닫기&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+                                            </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- page-aside : 페이지별 앵커 영역 마크업 추가 예정 | 소타이틀이 없는 경우 term type-01, 소타이틀이 있는 경우 term type-02 -->
+
+                        <div class="quick-nav">
+                            <ul class="nav-list">
+                                <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="anatomy">Anatomy</a></li>
+                                <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="options">Options</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="title">Title</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="description">Description</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="confirmationVariant">Confirmation variant</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="warning">Warning</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="input">Input</a></li>
+                                <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="usage">Usage</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="textOverflow">Text overflow</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="overlappingButtons">Overlapping buttons</a></li>
+                                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="usageGuidelines">Usage guidelines</a></li>
+                                <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="code">Code</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- //page-aside -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //page-body -->
+        <!-- page-foot -->
+        <div class="footer" id="footer">
+            <div class="footer-inner">
+                <div class="footer-head">
+                    <em class="footer-subject">©Pentabreed. StyleGuide Create with</em>
+                </div>
+                <div class="footer-body">
+                    <a href="https://www.pentabreed.com" target="_blank" class="company">
+                        <span class="text blind">펜타브리드</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- //page-foot -->
+    </div>
+</body>
+
+</html>

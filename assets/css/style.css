@@ -433,6 +433,9 @@
 .data-list.design-03 > .data-item .data-list.bullet-01 + .table-display {
   margin-top: 2rem;
 }
+.data-list.design-03 + .data-list.design-04 {
+  margin-top: 6rem;
+}
 .data-list.design-04 > .data-item .data-head .subject {
   color: rgb(17, 17, 17);
   font-weight: 700;
