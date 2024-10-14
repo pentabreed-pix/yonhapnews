@@ -65,7 +65,6 @@ desktop.ini
 **/node_modules
 .history
 node_modules
-package-lock.json
 dist
 .publish
 
