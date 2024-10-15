@@ -2,7 +2,7 @@ const gulp = require("gulp");
 const scss = require("gulp-sass")(require("sass"));
 const babel = require("gulp-babel");
 const sourcemaps = require("gulp-sourcemaps");
-const fileinclude = require("gulp-file-include");
+const fileinclude = require("gulp-file-include"); //변수전달 기능이 안됨. 사용안함
 const htmlbeautify = require("gulp-html-beautify");
 const ejs = require("gulp-ejs");
 const concat = require("gulp-concat");
@@ -61,7 +61,7 @@ gulp.task("ejs", function () {
   return gulp
     .src([SRC_PATH.EJS + "/**/!(_)*.ejs", SRC_PATH.EJS + "/*.ejs"])
     .pipe(ejs({
-      DOCUMENT_ROOT: '/'  // 로컬 환경에서는 기본적으로 / 사용
+      DOCUMENT_ROOT: '/' // 로컬 환경에서는 기본적으로 / 사용
     }))
     .pipe(rename({ extname: ".html" }))
     .pipe(
@@ -82,12 +82,6 @@ gulp.task("ejs-prod", function () {
       DOCUMENT_ROOT: '/yonhapnews/'  // 배포 환경에서는 /yonhapnews/ 사용
     }))
     .pipe(rename({ extname: ".html" }))
-    .pipe(
-      fileinclude({
-        prefix: "@@", // 사용할 때 @@ 붙이면 됨
-        basepath: "@file",
-      })
-    )
     .pipe(htmlbeautify({ indentSize: 2 }))
     .pipe(gulp.dest(DIST_FOLDER))
     .pipe(browserSync.stream());
