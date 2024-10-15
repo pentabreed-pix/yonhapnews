@@ -76,7 +76,7 @@ function quickMenuUI() {
     var firstSection = $('[data-link-cont]').first();
     var firstDataLink = firstSection.attr('data-link-cont');
     if (firstDataLink) {
-        quickMenu.find('.item a[data-link="' + firstDataLink + '"]').addClass('active');
+        quickMenu.find('.nav-item .anchor[data-link="' + firstDataLink + '"]').addClass('active');
         el.find('.nav-list .nav-item').removeClass('active');
         el.find('.nav-list .nav-item a[data-link="' + firstDataLink + '"]').closest('.nav-item').addClass('active');
         activateClosestTerm(el.find('.nav-list .nav-item a[data-link="' + firstDataLink + '"]').closest('.nav-item'));
@@ -104,15 +104,18 @@ function quickMenuUI() {
         });
 
         if (isAtBottom) {
-            // 브라우저가 페이지 끝에 도달했을 때 마지막 nav-item에 active 클래스 추가
             el.find('.nav-list .nav-item').removeClass('active');
-            el.find('.nav-list .nav-item').last().addClass('active');
+
+            var lastItem = el.find('.nav-list .nav-item').last();
+            lastItem.addClass('active');
+            
+            activateClosestTerm(lastItem);
         }
 
         var boxName = el.find('.nav-list').find('.nav-item.active').find('a').attr('data-link');
         
-        quickMenu.find('.item a').removeClass('active');
-        quickMenu.find('.item a[data-link="' + boxName + '"]').addClass('active');
+        quickMenu.find('.nav-item .anchor').removeClass('active');
+        quickMenu.find('.nav-item .anchor[data-link="' + boxName + '"]').addClass('active');
     }).trigger('scroll.scrollQuick');
 
     quickMenu.find('a').on('click', function(e) {
@@ -126,8 +129,8 @@ function quickMenuUI() {
         if (targetSection.length > 0) {
             var posMove = targetSection.offset().top - clickOffset; // 클릭 시 사용할 오프셋
 
-            quickMenu.find('.item a').removeClass('active');
-            quickMenu.find('.item a[data-link="' + dataType + '"]').addClass('active');
+            quickMenu.find('.nav-item .anchor').removeClass('active');
+            quickMenu.find('.nav-item .anchor[data-link="' + dataType + '"]').addClass('active');
 
             el.find('.nav-list .nav-item').removeClass('active');
             $(this).closest('.nav-item').addClass('active');
@@ -145,7 +148,7 @@ function quickMenuUI() {
 
     function activateClosestTerm(currentItem) {
         if (currentItem.hasClass('desc')) {
-            var closestTerm = currentItem.prevAll('.nav-item.term').first();
+            var closestTerm = currentItem.closest('.nav-item.term');
             if (closestTerm.length > 0) {
                 closestTerm.addClass('active');
             }

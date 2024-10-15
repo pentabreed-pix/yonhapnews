@@ -1,80 +1,115 @@
-<!-- page-aside : 페이지별 앵커 영역 마크업 추가 예정 | 소타이틀이 없는 경우 term type-01, 소타이틀이 있는 경우 term type-02 -->
 <% if (name === 'colors') { %>
 <div class="quick-nav">
     <ul class="nav-list">
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="principle">Principle</a></li>
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="lightAndDarkMode">Light and Dark mode</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="basicColor">Basic Color</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="mainColor">Main Color</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="subColor">Sub Color</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="greyscale">Greyscale</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="semanticColor">Semantic Color</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="background">Background</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="popupBox">Popup box</a></li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="basicColor">Basic Color</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="mainColor">Main Color</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="subColor">Sub Color</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="greyscale">Greyscale</a></li>
+            </ul>
+        </li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="semanticColor">Semantic Color</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="background">Background</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="popupBox">Popup box</a></li>
+            </ul>
+        </li>
     </ul>
 </div>
 <% } else if (name === 'typography') { %>
 <div class="quick-nav">
     <ul class="nav-list">
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="typeface">Typeface</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="components">Components</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="heading">Heading</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="title">Title</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="body">Body</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="detail">Detail</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="label">Label</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="link">Link</a></li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="components">Components</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="heading">Heading</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="title">Title</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="body">Body</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="detail">Detail</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="label">Label</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="link">Link</a></li>
+            </ul>
+        </li>
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="fontSizes">Font sizes</a></li>
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="fontWeight">Font weight</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="lineHeight">Line height</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="headingAndDetail">Heading and detail</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="bodyAndCode">Body and code</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="component">Component</a></li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="lineHeight">Line height</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="headingAndDetail">Heading and detail</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="bodyAndCode">Body and code</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="component">Component</a></li>
+            </ul>
+        </li>
     </ul>
 </div>
 <% } else if (name === 'layout') { %>
 <div class="quick-nav">
     <ul class="nav-list">
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="responsiveLayoutGrid">Responsive layout grid</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="breakPoint">Break point</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="contentsArea">Contents area</a></li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="responsiveLayoutGrid">Responsive layout grid</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="breakPoint">Break point</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="contentsArea">Contents area</a></li>
+            </ul>
+        </li>
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="spacing">Spacing</a></li>
     </ul>
 </div>
 <% } else if (name === 'object-styles') { %>
 <div class="quick-nav">
     <ul class="nav-list">
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="radius">Radius</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="smallRounding">Small rounding</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="defaultRounding">Default rounding</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="etcRounding">ETC rounding</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="fullRounding">Full rounding</a></li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="radius">Radius</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="smallRounding">Small rounding</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="defaultRounding">Default rounding</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="etcRounding">ETC rounding</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="fullRounding">Full rounding</a></li>
+            </ul>
+        </li>
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="borderWidth">Border width</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="shadow">Shadow</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="defaultShadow">Default shadow</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="onLightGray">On Light Gray</a></li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="shadow">Shadow</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="defaultShadow">Default shadow</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="onLightGray">On Light Gray</a></li>
+            </ul>
+        </li>
     </ul>
 </div>
 <% } else if (name === 'principles') { %>
 <div class="quick-nav">
     <ul class="nav-list">
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="designPrinciples">디자인 원칙</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="planOfPrinciple">원칙을 따르기 위한 주요 방안</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="responsive">Responsive</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="accessibility">Accessibility</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="visualHierarchy">Visual Hierarchy</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="meaningfulText">Meaningful text</a></li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="planOfPrinciple">원칙을 따르기 위한 주요 방안</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="responsive">Responsive</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="accessibility">Accessibility</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="visualHierarchy">Visual Hierarchy</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="meaningfulText">Meaningful text</a></li>
+            </ul>
+        </li>
     </ul>
 </div>
 <% } else if (name === 'content-design') { %>
 <div class="quick-nav">
     <ul class="nav-list">
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="contentDesign">콘텐츠 디자인이란?</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="bestPractice">모범 사례</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="altTextShort">대체 텍스트는 짧게</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="chartSummary">차트와 그래프는 요약해서 작성</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="plainLanguage">평범한 언어를 사용</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="userFlow">사용자 시각의 흐름</a></li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="bestPractice">모범 사례</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="altTextShort">대체 텍스트는 짧게</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="chartSummary">차트와 그래프는 요약해서 작성</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="plainLanguage">평범한 언어를 사용</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="userFlow">사용자 시각의 흐름</a></li>
+            </ul>
+        </li>
     </ul>
 </div>
 <% } else if (name === 'design-tokens') { %>
@@ -97,13 +132,21 @@
     <ul class="nav-list">
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="mainBottomNavigation">Main Bottom navigation</a></li>
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="newsBottomNavigation">News Bottom navigation</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="options">Options</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="updateBadge">Update Badge</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="case">Case</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="usage">Usage</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="placement">Placement</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="itemDistribution">Item distribution</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="usageGuidelines">Usage guidelines</a></li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="options">Options</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="updateBadge">Update Badge</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="case">Case</a></li>
+            </ul>
+        </li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="usage">Usage</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="placement">Placement</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="itemDistribution">Item distribution</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="usageGuidelines">Usage guidelines</a></li>
+            </ul>
+        </li>
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="code">Code</a></li>
     </ul>
 </div>
@@ -117,14 +160,22 @@
 <div class="quick-nav">
     <ul class="nav-list">
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="anatomy">Anatomy</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="options">Options</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="notice">Notice</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="siteMap">Site Map</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="businessInformation">Business information</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="customerService">Customer Service</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="usage">Usage</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="placement">Placement</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="responsiveDesign">Responsive Design</a></li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="options">Options</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="notice">Notice</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="siteMap">Site Map</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="businessInformation">Business information</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="customerService">Customer Service</a></li>
+            </ul>
+        </li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="usage">Usage</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="placement">Placement</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="responsiveDesign">Responsive Design</a></li>
+            </ul>
+        </li>
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="code">Code</a></li>
     </ul>
 </div>
@@ -132,25 +183,37 @@
 <div class="quick-nav">
     <ul class="nav-list">
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="anatomy">Anatomy</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="options">Options</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="labelAndIcon">Label and icon</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="variant">variant</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="primaryVariant">Primary variant</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="secondaryVariant">Secondary variant</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="actionVariant">Action Variant</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="disabled">Disabled</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="loading">Loading</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="icon">Icon</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="onOffStates">On/Off states</a></li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="options">Options</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="labelAndIcon">Label and icon</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="variant">variant</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="primaryVariant">Primary variant</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="secondaryVariant">Secondary variant</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="actionVariant">Action Variant</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="disabled">Disabled</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="loading">Loading</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="icon">Icon</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="onOffStates">On/Off states</a></li>
+            </ul>
+        </li>
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="size">Size</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="behaviors">Behaviors</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="focus">Focus</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="flexibleWidth">Flexible width</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="overflow">Overflow</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="usage">Usage</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="guideline">Guideline</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="highContrastMode">High-contrast mode</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="fixingTheBottom">Fixing the bottom</a></li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="behaviors">Behaviors</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="focus">Focus</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="flexibleWidth">Flexible width</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="overflow">Overflow</a></li>
+            </ul>
+        </li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="usage">Usage</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="guideline">Guideline</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="highContrastMode">High-contrast mode</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="fixingTheBottom">Fixing the bottom</a></li>
+            </ul>
+        </li>
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="code">Code</a></li>
     </ul>
 </div>
@@ -158,14 +221,22 @@
 <div class="quick-nav">
     <ul class="nav-list">
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="anatomy">Anatomy</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="options">Options</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="textOnly">Text Only</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="textIcon">Text + Icon</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="underlined">Underlined</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="UsageGuidelines">Usage guidelines</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="screenReaderSupport">화면 판독기 지원</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="useInSentence">문장 내 사용</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="intuitiveExperience">직관적인 경험</a></li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="options">Options</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="textOnly">Text Only</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="textIcon">Text + Icon</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="underlined">Underlined</a></li>
+            </ul>
+        </li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="UsageGuidelines">Usage guidelines</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="screenReaderSupport">화면 판독기 지원</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="useInSentence">문장 내 사용</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="intuitiveExperience">직관적인 경험</a></li>
+            </ul>
+        </li>
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="code">Code</a></li>
     </ul>
 </div>
@@ -173,19 +244,31 @@
 <div class="quick-nav">
     <ul class="nav-list">
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="anatomy">Anatomy</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="options">Options</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="label">Label</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="stage">Stage</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="states">States</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="padding">Padding</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="margin">Margin</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="elementType">Element Type</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="numberitems">항목 수</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="sideMargin">측면 여백</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="usage">Usage</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="noContent">표시될 콘텐츠가 없는 경우</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="multipleTabs">여러 개의 탭을 중첩하는 경우</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="largeNumberItemsTab">탭의 항목 수가 많을 경우</a></li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="options">Options</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="label">Label</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="stage">Stage</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="states">States</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="padding">Padding</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="margin">Margin</a></li>
+            </ul>
+        </li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="elementType">Element Type</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="numberitems">항목 수</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="sideMargin">측면 여백</a></li>
+            </ul>
+        </li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="usage">Usage</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="noContent">표시될 콘텐츠가 없는 경우</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="multipleTabs">여러 개의 탭을 중첩하는 경우</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="largeNumberItemsTab">탭의 항목 수가 많을 경우</a></li>
+            </ul>
+        </li>
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="code">Code</a></li>
     </ul>
 </div>
@@ -193,18 +276,26 @@
 <div class="quick-nav">
     <ul class="nav-list">
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="anatomy">Anatomy</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="options">Options</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="gnb">GNB</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="close">Close</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="contextualHelp">Contextual help</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="mobileTapbar">Mobile Tapbar</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="stickyMenu">Sticky Menu</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="dropDownArrow">Drop down Arrow</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="player">Player</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="badge">Badge</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="usage">Usage</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="layoutAndDensity">Layout and density</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="usageGuidelines">Usage guidelines</a></li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="options">Options</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="gnb">GNB</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="close">Close</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="contextualHelp">Contextual help</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="mobileTapbar">Mobile Tapbar</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="stickyMenu">Sticky Menu</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="dropDownArrow">Drop down Arrow</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="player">Player</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="badge">Badge</a></li>
+            </ul>
+        </li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="usage">Usage</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="layoutAndDensity">Layout and density</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="usageGuidelines">Usage guidelines</a></li>
+            </ul>
+        </li>
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="code">Code</a></li>
     </ul>
 </div>
@@ -212,17 +303,25 @@
 <div class="quick-nav">
     <ul class="nav-list">
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="anatomy">Anatomy</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="options">Options</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="checkbox">Checkbox</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="checkboxGroup">Checkbox group</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="radioButton">Radio button</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="radioButtonLayout">Radio button Layout</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="toggleButton">Toggle Button</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="toggleButtonLayout">Toggle Button Layout</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="usage">Usage</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="RequiredNotice">필수 사항</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="usageGuidelines">Usage guidelines</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="Internationalization">Internationalization</a></li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="options">Options</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="checkbox">Checkbox</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="checkboxGroup">Checkbox group</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="radioButton">Radio button</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="radioButtonLayout">Radio button Layout</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="toggleButton">Toggle Button</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="toggleButtonLayout">Toggle Button Layout</a></li>
+            </ul>
+        </li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="usage">Usage</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="RequiredNotice">필수 사항</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="usageGuidelines">Usage guidelines</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="Internationalization">Internationalization</a></li>
+            </ul>
+        </li>
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="code">Code</a></li>
     </ul>
 </div>
@@ -230,12 +329,16 @@
 <div class="quick-nav">
     <ul class="nav-list">
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="anatomy">Anatomy</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="options">Options</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="labelAndIcon">Label and icon</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="keyword">Keyword</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="icon">Icon</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="group">group</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="textOverflow">Text overflow</a></li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="options">Options</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="labelAndIcon">Label and icon</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="keyword">Keyword</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="icon">Icon</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="group">group</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="textOverflow">Text overflow</a></li>
+            </ul>
+        </li>
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="code">Code</a></li>
     </ul>
 </div>
@@ -243,25 +346,33 @@
 <div class="quick-nav">
     <ul class="nav-list">
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="anatomy">Anatomy</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="options">Options</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="label">Label</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="value">Value</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="error">Error</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="info">Info</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="closeIcon">Close Icon</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="textIcon">Text Icon</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="focusOn">Focus On</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="typing">Typing</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="disabled">Disabled</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="disabledReadOnly">Disabled(Read only)</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="textArea">Text Area</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="securityNumber">Security Number</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="combinationDropDown">Combination (Drop Down)</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="combinationBoxButton">Combination (Box Button)</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="usage">Usage</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="placeholder">플레이스홀더 사용</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="ScrollableInputField">입력 필드 내에서 스크롤</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="RequiredFieldIndicator">필수 표시 사용</a></li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="options">Options</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="label">Label</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="value">Value</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="error">Error</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="info">Info</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="closeIcon">Close Icon</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="textIcon">Text Icon</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="focusOn">Focus On</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="typing">Typing</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="disabled">Disabled</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="disabledReadOnly">Disabled(Read only)</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="textArea">Text Area</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="securityNumber">Security Number</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="combinationDropDown">Combination (Drop Down)</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="combinationBoxButton">Combination (Box Button)</a></li>
+            </ul>
+        </li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="usage">Usage</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="placeholder">플레이스홀더 사용</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="ScrollableInputField">입력 필드 내에서 스크롤</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="RequiredFieldIndicator">필수 표시 사용</a></li>
+            </ul>
+        </li>
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="code">Code</a></li>
     </ul>
 </div>
@@ -269,24 +380,36 @@
 <div class="quick-nav">
     <ul class="nav-list">
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="anatomy">Anatomy</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="options">Options</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="label">Label</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="placeholder">Placeholder</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="value">Value</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="width">Width</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="size">Size</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="quiet">Quiet</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="menuContainer">Menu container</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="requiredOrOptional">Required or optional</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="disabled">Disabled</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="info">Info</a></li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="options">Options</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="label">Label</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="placeholder">Placeholder</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="value">Value</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="width">Width</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="size">Size</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="quiet">Quiet</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="menuContainer">Menu container</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="requiredOrOptional">Required or optional</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="disabled">Disabled</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="info">Info</a></li>
+            </ul>
+        </li>
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="popover">Popover</a></li>
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="tray">Tray</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="behaviors">Behaviors</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="overflow">Overflow</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="menuHeight">Menu height</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="usage">Usage</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="internationalization">Internationalization</a></li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="behaviors">Behaviors</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="overflow">Overflow</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="menuHeight">Menu height</a></li>
+            </ul>
+        </li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="usage">Usage</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="internationalization">Internationalization</a></li>
+            </ul>
+        </li>
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="code">Code</a></li>
     </ul>
 </div>
@@ -294,13 +417,17 @@
 <div class="quick-nav">
     <ul class="nav-list">
         <li class="nav-item term type-01"><a href="javascript:void(0)" class="anchor" data-link="anatomy">Anatomy</a></li>
-        <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="options">Options</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="labelAndIcon">Label and icon</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="typing">Typing</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="value">Value</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="closeIcon">Close Icon</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="width">Width</a></li>
-        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="usedForGnb">Used for GNB</a></li>
+        <li class="nav-item term type-02">
+            <a href="javascript:void(0)" class="anchor" data-link="options">Options</a>
+            <ul class="sub-nav-list">
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="labelAndIcon">Label and icon</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="typing">Typing</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="value">Value</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="closeIcon">Close Icon</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="width">Width</a></li>
+                <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="usedForGnb">Used for GNB</a></li>
+            </ul>
+        </li>
         <li class="nav-item term type-02"><a href="javascript:void(0)" class="anchor" data-link="behaviors">Behaviors</a></li>
         <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="overflow">Overflow</a></li>
         <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="responsiveLayout">Responsive layout</a></li>
