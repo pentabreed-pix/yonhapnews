@@ -3,13 +3,13 @@
 <head>
 <%-include('../_templates/_head.ejs') %>
 </head>
-<body> 
+<body>
 <div id="wrap">
     <%-include('../_templates/_header.ejs', { type: 'components' , }) %>
     <!-- page-body -->
     <div class="main components navigation" id="main">
         <div class="main-inner">
-            <div class="local"> 
+            <div class="local">
                 <div class="local-head">
                     <div class="local-subject">
                         <h2 class="local-name blind">Navigation drawer 디자인 가이드</h2>
@@ -21,25 +21,896 @@
                         <div class="content-inner">
                             <div class="content-head">
                                 <h3 class="content-name">Navigation drawer</h3>
-                                <p class="content-summary">박스 버튼은 상자 형태의 가장 일반적인 버튼입니다.<br> 화면의 콘텐츠 영역이나 하단 영역에 배치되어 화면에서 중요한 작업을 실행하기 위한 버튼으로 사용됩니다.</p>
+                                <p class="content-summary">탐색 서랍은 앱 내 목적지에 대한 액세스를 제공합니다.</p>
                             </div>
                             <div class="content-body">
                                 <div class="section">
                                     <div class="section-wrap">
                                         <div class="section-head">
                                             <div class="section-subject">
-                                                <h4 class="section-name">Anatomy</h4>
+                                                <h4 class="section-name" data-link-cont="anatomy">Anatomy</h4>
                                             </div>
                                         </div>
-                                        <div class="section-body"> 
-                                            
+                                        <div class="section-body">
+                                            <img src="../assets/images/components/navDrawer-01.png" alt=" ">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section">
+                                    <div class="section-wrap">
+                                        <div class="section-head">
+                                            <h4 class="section-subject" data-link-cont="options">Options</h4>
+                                        </div>
+                                        <div class="section-body">
+                                            <div class="post-list design-01">
+                                                <div class="post-item">
+                                                    <div class="post-wrap">
+                                                        <div class="post-figure">
+                                                            <img src="../assets/images/components/navDrawer-02-a.png" alt=" ">
+                                                        </div>
+                                                        <div class="post-info">
+                                                            <div class="post-head">
+                                                                <em class="subject" data-link-cont="standardTable">Update Badge</em>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <p class="para">새로운 뉴스 섹션이 생겼을 경우에 배지가 붙습니다.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-item">
+                                                    <div class="post-wrap">
+                                                        <div class="post-figure">
+                                                            <img src="../assets/images/components/navDrawer-02-b.png" alt=" ">
+                                                        </div>
+                                                        <div class="post-info">
+                                                            <div class="post-head">
+                                                                <em class="subject" data-link-cont="lineTable">Member information</em>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <p class="para">전체메뉴 클릭 시 로그인 전, 후로 다르게 노출됩니다.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-item">
+                                                    <div class="post-wrap">
+                                                        <div class="post-figure">
+                                                            <img src="../assets/images/components/navDrawer-02-c.png" alt=" ">
+                                                        </div>
+                                                        <div class="post-info">
+                                                            <div class="post-head">
+                                                                <em class="subject" data-link-cont="columnSeparator">Settings icon</em>
+                                                            </div>
+                                                            <div class="post-body">
+                                                                <p class="para">APP에서는 알림 및 다크모드를 설정 할 수 있는<br> 설정 아이콘이 추가됩니다.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section code">
+                                    <div class="section-wrap">
+                                        <div class="section-head">
+                                            <h4 class="section-subject" data-link-cont="code">Code</h4>
+                                            <div class="btn-display">
+                                                <a href="https://codepen.io/PIX-the-bold/pen/rNXydxM" target="_blank" class="btn view-code design-01">
+                                                    View Code
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="section-body">
+                                            <pre class="highlight-js">
+                                                <code class="html">&lt;body class=&quot;page-main site-home-web body-urgent &quot;&gt;&lt;!-- popup dim &#45432;&#52636; : popup-mode / &#53685;&#44160; &#47112;&#51060;&#50612; &#45432;&#52636;&#49884; : search-open / &#49549;&#48372;&#53440;&#51077; : body-urgent --&gt;
+&lt;div id=&quot;skipNav&quot;&gt;
+    &lt;a href=&quot;//www.yna.co.kr/&quot;&gt;&#50672;&#54633;&#45684;&#49828;&lt;/a&gt;
+    &lt;a href=&quot;#container&quot;&gt;&#48376;&#47928; &#48148;&#47196;&#44032;&#44592;&lt;/a&gt;
+    &lt;a href=&quot;#nav01&quot;&gt;&#47700;&#45684; &#48148;&#47196;&#44032;&#44592;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;wrapper&quot;&gt;
+    &lt;!-- #### &#54756;&#45908;01 : wrap-header01 --&gt;
+    &lt;div class=&quot;wrap-header01&quot;&gt;
+        &lt;div class=&quot;header01&quot;&gt;
+            &lt;!-- PC &#49436;&#48652; &#49345;&#45800; &#44277;&#53685; &#44305;&#44256; --&gt;
+            &lt;div class=&quot;aside-top-bnr01&quot;&gt;
+                &lt;aside class=&quot;aside-box001 bnr-mktg-top01&quot;&gt;
+                    &lt;span class=&quot;ir-txt01&quot;&gt;&#44305;&#44256;&lt;/span&gt;
+                    &lt;div class=&quot;area01 ads-top01&quot;&gt;
+                        &lt;div class=&quot;ads-box&quot; style=&quot;background-color:pink;&quot;&gt;&#47560;&#52992;&#54021;&#44397; &#44305;&#44256;&#50689;&#50669; : ads-top01&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;span class=&quot;ir-txt01&quot;&gt;&#44305;&#44256;&lt;/span&gt;
+                    &lt;div class=&quot;area01 ads-top02&quot;&gt;
+                        &lt;div class=&quot;ads-box&quot; style=&quot;background-color:darkseagreen;&quot;&gt;&#47560;&#52992;&#54021;&#44397; &#44305;&#44256;&#50689;&#50669; : ads-top02&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/aside&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- #### &#54756;&#45908;02 : wrap-header02 --&gt;
+    &lt;header class=&quot;wrap-header02&quot;&gt;
+        &lt;div class=&quot;header02&quot;&gt;
+            &lt;a class=&quot;logo-yna01&quot; href=&quot;#none&quot;&gt;
+                &lt;strong class=&quot;ir-txt01&quot;&gt;&#44397;&#44032;&#44592;&#44036;&#45684;&#49828; &#53685;&#49888;&#49324; &#50672;&#54633;&#45684;&#49828;&lt;/strong&gt;
+            &lt;/a&gt;
+            &lt;span class=&quot;lang-zone01&quot;&gt;
+                &lt;ul class=&quot;lang-list&quot;&gt;
+                    &lt;li class=&quot;en&quot;&gt;&lt;a href=&quot;https://en.yna.co.kr/index&quot; target=&quot;_blank&quot; title=&quot;(&#49352;&#52285;)English&quot; rel=&quot;nofollow&quot;&gt;English&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;zh cg&quot;&gt;&lt;a href=&quot;https://cn.yna.co.kr/index&quot; target=&quot;_blank&quot; title=&quot;(&#49352;&#52285;)Chinese Simplified Chinese characters&quot; rel=&quot;nofollow&quot;&gt;&#20013;&#25991;&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;ja&quot;&gt;&lt;a href=&quot;https://jp.yna.co.kr/index&quot; target=&quot;_blank&quot; title=&quot;(&#49352;&#52285;)Japanese&quot; rel=&quot;nofollow&quot;&gt;&#26085;&#25991;&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;ar&quot;&gt;&lt;a href=&quot;https://ar.yna.co.kr/index&quot; target=&quot;_blank&quot; title=&quot;(&#49352;&#52285;)Arabic&quot; rel=&quot;nofollow&quot;&gt;&#1593;&#1585;&#1576;&#1610;&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;es&quot;&gt;&lt;a href=&quot;https://sp.yna.co.kr/index&quot; target=&quot;_blank&quot; title=&quot;(&#49352;&#52285;)Spanish&quot; rel=&quot;nofollow&quot;&gt;Espa&ntilde;ol&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;fr&quot;&gt;&lt;a href=&quot;https://fr.yna.co.kr/index&quot; target=&quot;_blank&quot; title=&quot;(&#49352;&#52285;)French&quot; rel=&quot;nofollow&quot;&gt;Fran&ccedil;ais&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/span&gt;
+            &lt;span class=&quot;today-zone&quot;&gt;
+                &lt;strong class=&quot;txt-date&quot;&gt;2024.04.02&lt;/strong&gt;
+                &lt;em class=&quot;txt-week&quot;&gt;(&#54868;)&lt;/em&gt;
+            &lt;/span&gt;
+            &lt;span class=&quot;utility-zone&quot;&gt;
+                &lt;a href=&quot;#none&quot; class=&quot;btn-type200 my01 active&quot;&gt;&lt;span class=&quot;txt01&quot;&gt;&#47560;&#51060;&#45684;&#49828;&lt;/span&gt;&lt;/a&gt;
+                &lt;a href=&quot;#none&quot; class=&quot;btn-type004 login01&quot;&gt;
+                    &lt;span class=&quot;ir-txt01&quot;&gt;&#47196;&#44536;&#51064;&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn-type004-toggle btn-srch-switch&quot;&gt;&lt;!-- active &#49884; &#44160;&#49353;&#52285; &#45803;&#44592; --&gt;
+                    &lt;span class=&quot;ir-txt01&quot;&gt;&#44160;&#49353;&#52285; &#50676;&#44592;/&#45803;&#44592;&lt;/span&gt;
+                    &lt;i class=&quot;pick01 ico-type01-srch01&quot;&gt;&lt;/i&gt;
+                    &lt;i class=&quot;pick02 ico-type01-close01&quot;&gt;&lt;/i&gt;
+                &lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn-type004-toggle menu01&quot;&gt;
+                    &lt;span class=&quot;ir-txt01&quot;&gt;&#47700;&#45684; &#50676;&#44592;/&#45803;&#44592;&lt;/span&gt;
+                    &lt;i class=&quot;pick01 ico-type01-menu01&quot;&gt;&lt;/i&gt;
+                    &lt;i class=&quot;pick02 ico-type01-close02&quot;&gt;&lt;/i&gt;
+                &lt;/button&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;nav-type01 main-navigation&quot;&gt;
+            &lt;nav id=&quot;nav01&quot; class=&quot;gnb-menu01 swiper-area&quot;&gt;
+                &lt;!-- ##&#52980;&#54252;&#45324;&#53944; &#46041;&#51068;&#54868; &#45236;&#48708;&#44172;&#51060;&#49496;01 --&gt;
+                &lt;ul class=&quot;list01 swiper-wrapper&quot;&gt;
+                    &lt;li class=&quot;swiper-slide latest&quot; data-nav-section=&quot;latest&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#52572;&#49888;&#45684;&#49828;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide politics&quot; data-nav-section=&quot;politics&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#51221;&#52824;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide nk active&quot; data-nav-section=&quot;nk&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#48513;&#54620;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide economy&quot; data-nav-section=&quot;economy&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#44221;&#51228;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide market&quot; data-nav-section=&quot;market&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#47560;&#53011; +&lt;span class=&quot;ico-type08-new01&quot;&gt;&lt;i class=&quot;ir-txt01&quot;&gt;new&lt;/i&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide industry&quot; data-nav-section=&quot;industry&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#49328;&#50629;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide society&quot; data-nav-section=&quot;society&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#49324;&#54924;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide local&quot; data-nav-section=&quot;local&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#51204;&#44397;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide intrnal&quot; data-nav-section=&quot;intrnal&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#49464;&#44228;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide culture&quot; data-nav-section=&quot;culture&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#47928;&#54868;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide health&quot; data-nav-section=&quot;health&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#44148;&#44053;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide ent&quot; data-nav-section=&quot;ent&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#50672;&#50696;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide sports&quot; data-nav-section=&quot;sports&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#49828;&#54252;&#52768;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide opinion&quot; data-nav-section=&quot;opinion&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#50724;&#54588;&#45768;&#50616;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide people&quot; data-nav-section=&quot;people&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#49324;&#46988;&#46308;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide visual&quot; data-nav-section=&quot;people&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#48708;&#51452;&#50620;&#45684;&#49828;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide jebo no-depth&quot; data-nav-section=&quot;jebo&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#51228;&#48372;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide safe no-depth&quot; data-nav-section=&quot;safe&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#51116;&#45212;&#54252;&#53560;&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;!-- //##&#52980;&#54252;&#45324;&#53944; &#46041;&#51068;&#54868; &#45236;&#48708;&#44172;&#51060;&#49496;01 --&gt;
+            &lt;/nav&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+    &lt;!-- #### //&#54756;&#45908;02 : wrap-header02 --&gt;
+
+    &lt;!-- #### &#54589;&#49828;&#46300;&#45236;&#48708;&#44172;&#51060;&#49496; : wrap-header21 --&gt;
+    &lt;div class=&quot;wrap-header21&quot;&gt;
+        &lt;div class=&quot;nav-type11 fixed-navigation01&quot;&gt;
+            &lt;a class=&quot;logo-yna21&quot; href=&quot;#none&quot;&gt;
+                &lt;strong class=&quot;ir-txt01&quot;&gt;&#44397;&#44032;&#44592;&#44036;&#45684;&#49828; &#53685;&#49888;&#49324; &#50672;&#54633;&#45684;&#49828;&lt;/strong&gt;
+            &lt;/a&gt;
+            &lt;a class=&quot;logo-yna03&quot; href=&quot;#none&quot;&gt;
+                &lt;strong class=&quot;ir-txt01&quot;&gt;&#44397;&#44032;&#44592;&#44036;&#45684;&#49828; &#53685;&#49888;&#49324; &#50672;&#54633;&#45684;&#49828;&lt;/strong&gt;
+            &lt;/a&gt;
+            &lt;nav id=&quot;nav02&quot; class=&quot;gnb-menu01 swiper-area&quot;&gt;
+                &lt;!-- ##&#52980;&#54252;&#45324;&#53944; &#46041;&#51068;&#54868; &#45236;&#48708;&#44172;&#51060;&#49496;01 --&gt;
+                &lt;ul class=&quot;list01 swiper-wrapper&quot;&gt;
+                    &lt;li class=&quot;swiper-slide latest&quot; data-nav-section=&quot;latest&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#52572;&#49888;&#45684;&#49828;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide politics&quot; data-nav-section=&quot;politics&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#51221;&#52824;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide nk active&quot; data-nav-section=&quot;nk&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#48513;&#54620;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide economy&quot; data-nav-section=&quot;economy&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#44221;&#51228;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide market&quot; data-nav-section=&quot;market&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#47560;&#53011; +&lt;span class=&quot;ico-type08-new01&quot;&gt;&lt;i class=&quot;ir-txt01&quot;&gt;new&lt;/i&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide industry&quot; data-nav-section=&quot;industry&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#49328;&#50629;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide society&quot; data-nav-section=&quot;society&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#49324;&#54924;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide local&quot; data-nav-section=&quot;local&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#51204;&#44397;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide intrnal&quot; data-nav-section=&quot;intrnal&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#49464;&#44228;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide culture&quot; data-nav-section=&quot;culture&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#47928;&#54868;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide health&quot; data-nav-section=&quot;health&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#44148;&#44053;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide ent&quot; data-nav-section=&quot;ent&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#50672;&#50696;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide sports&quot; data-nav-section=&quot;sports&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#49828;&#54252;&#52768;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide opinion&quot; data-nav-section=&quot;opinion&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#50724;&#54588;&#45768;&#50616;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide people&quot; data-nav-section=&quot;people&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#49324;&#46988;&#46308;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide visual&quot; data-nav-section=&quot;people&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#48708;&#51452;&#50620;&#45684;&#49828;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide jebo&quot; data-nav-section=&quot;jebo&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#51228;&#48372;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;swiper-slide safe&quot; data-nav-section=&quot;safe&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#51116;&#45212;&#54252;&#53560;&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;!-- //##&#52980;&#54252;&#45324;&#53944; &#46041;&#51068;&#54868; &#45236;&#48708;&#44172;&#51060;&#49496;01 --&gt;
+            &lt;/nav&gt;
+            &lt;span class=&quot;utility-zone&quot;&gt;
+                &lt;a href=&quot;#none&quot; class=&quot;btn-type200 my01 active&quot;&gt;&lt;span class=&quot;txt01&quot;&gt;&#47560;&#51060;&#45684;&#49828;&lt;/span&gt;&lt;/a&gt;
+                &lt;a href=&quot;#none&quot; class=&quot;btn-type004 login01&quot;&gt;
+                    &lt;span class=&quot;ir-txt01&quot;&gt;&#47196;&#44536;&#51064;&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn-type004-toggle btn-srch-switch&quot;&gt;&lt;!-- active &#49884; &#44160;&#49353;&#52285; &#45803;&#44592; --&gt;
+                    &lt;span class=&quot;ir-txt01&quot;&gt;&#44160;&#49353;&#52285; &#50676;&#44592;/&#45803;&#44592;&lt;/span&gt;
+                    &lt;i class=&quot;pick01 ico-type01-srch01&quot;&gt;&lt;/i&gt;
+                    &lt;i class=&quot;pick02 ico-type01-close01&quot;&gt;&lt;/i&gt;
+                &lt;/button&gt;
+                &lt;!--&lt;button type=&quot;button&quot; class=&quot;btn-type004 menu01&quot; data-pop-open=&quot;popup-whole-menu&quot;&gt;
+                    &lt;span class=&quot;ir-txt01&quot;&gt;&#51204;&#52404;&#47700;&#45684; &#54204;&#52824;&#44592;&lt;/span&gt;
+                &lt;/button&gt;--&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn-type004-toggle menu01&quot;&gt;
+                    &lt;span class=&quot;ir-txt01&quot;&gt;&#47700;&#45684; &#50676;&#44592;/&#45803;&#44592;&lt;/span&gt;
+                    &lt;i class=&quot;pick01 ico-type01-menu01&quot;&gt;&lt;/i&gt;
+                    &lt;i class=&quot;pick02 ico-type01-close02&quot;&gt;&lt;/i&gt;
+                &lt;/button&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- #### //&#54589;&#49828;&#46300;&#45236;&#48708;&#44172;&#51060;&#49496; : wrap-header21 --&gt;
+    &lt;!-- #### &#44596;&#44553;&#54000;&#52964; : wrap-header23 --&gt;
+    &lt;div class=&quot;wrap-header23&quot;&gt;
+        &lt;!-- &#44596;&#44553;&#54000;&#52964; --&gt;
+        &lt;div class=&quot;ticker-type02 ticker-urgent&quot;&gt;
+            &lt;div class=&quot;ticker-area&quot;&gt;
+                &lt;em class=&quot;ico-label-ticker01&quot;&gt;&lt;span class=&quot;txt01&quot;&gt;&#49549;&#48372;&lt;/span&gt;&lt;/em&gt;
+                &lt;strong class=&quot;tit-news&quot;&gt;
+                    &lt;a href=&quot;#none&quot; class=&quot;tit01&quot;&gt;&quot;&#44608;&#51221;&#51008;, &#54616;&#45432;&#51060;&#21069; &#52828;&#49436;&#47196; &#53944;&#47100;&#54532;&#50640; &#52845;&#52268;&#49464;&#47168;&hellip;&#51649;&#51217;&#45812;&#54032; &#50896;&#54664;&#45796;&quot; &#54645;&#54801;&#49345;&#49436; &#54268;&#54168;&#51060;&#50724;&middot;&#48708;&#44148; &#48176;&#51228; &#50896;&#54644; &#54645;&#54801;&#49345;&#49436; &#54268;&#54168;&#51060;&#50724;&middot;&#48708;&#44148; &#48176;&#51228; &#50896;&#54644; &#54645;&#54801;&#49345;&#49436; &#54268;&#54168;&#51060;&#50724;&middot;&#48708;&#44148; &#48176;&#51228; &#50896;&#54644;&lt;/a&gt;
+                &lt;/strong&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn-type034&quot; title=&quot;&#49549;&#48372; &#45803;&#44592;&quot;&gt;&lt;span class=&quot;ir-txt01&quot;&gt;&#49549;&#48372; &#45803;&#44592;&lt;/span&gt;&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- //&#44596;&#44553;&#54000;&#52964; --&gt;
+    &lt;/div&gt;
+    &lt;!-- #### //&#44596;&#44553;&#54000;&#52964; : wrap-header23 --&gt;
+    &lt;!-- #### &#52968;&#53580;&#51060;&#45320; : wrap-container --&gt;
+    &lt;div id=&quot;container&quot; class=&quot;wrap-container&quot;&gt;
+        &lt;div class=&quot;container501&quot;&gt;
+            &lt;header class=&quot;title-page01 blind01&quot;&gt;
+                &lt;h1&gt;&#50672;&#54633;&#45684;&#49828;&lt;/h1&gt;
+            &lt;/header&gt;
+            &lt;div class=&quot;content$$&quot; style=&quot;height:1000px; background-color:#f4f4f4;&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- #### //&#52968;&#53580;&#51060;&#45320; : wrap-container --&gt;
+
+    &lt;!-- #### &#51204;&#52404;&#47700;&#45684; : popup-whole-menu01 --&gt;
+    &lt;div id=&quot;wholeMenu01&quot; class=&quot;popup-whole-menu01&quot;&gt;&lt;!-- active &#49884; &#54204;&#52840; --&gt;
+        &lt;!-- layer : &#54756;&#45908; (&#47784;&#48148;&#51068;) --&gt;
+        &lt;header class=&quot;pop-header&quot;&gt;
+            &lt;a class=&quot;logo-yna02&quot; href=&quot;#none&quot;&gt;&lt;strong class=&quot;ir-txt01&quot;&gt;&#50672;&#54633;&#45684;&#49828; &#54856;&#54168;&#51060;&#51648;&lt;/strong&gt;&lt;/a&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn-type004 alert01 active&quot;&gt;
+                &lt;span class=&quot;ir-txt01&quot;&gt;&#50508;&#46988;&lt;/span&gt;
+                &lt;span class=&quot;ico-type08-new01 style01&quot;&gt;&lt;i class=&quot;ir-txt01&quot;&gt;new&lt;/i&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn-type004 setting01&quot;&gt;&lt;span class=&quot;ir-txt01&quot;&gt;&#50545;&#49444;&#51221;&lt;/span&gt;&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn-type004 close01&quot;&gt;&lt;span class=&quot;ir-txt01&quot;&gt;&#51204;&#52404;&#47700;&#45684; &#45803;&#44592;&lt;/span&gt;&lt;/button&gt;
+        &lt;/header&gt;
+        &lt;!-- layer : &#47196;&#44536;&#51064; (&#47784;&#48148;&#51068;) --&gt;
+        &lt;div class=&quot;pop-content&quot;&gt;
+            &lt;div class=&quot;mem-zone01 show active&quot;&gt;&lt;!-- hide &#51228;&#44144; &#54980; show &#52628;&#44032; --&gt;&lt;!-- active&#49884; &#47196;&#44536;&#51064; &#54868;&#47732; &#45432;&#52636; --&gt;
+                &lt;!-- &#47196;&#44536;&#51064;&#51204; --&gt;
+                &lt;div class=&quot;info-box01 login-before&quot;&gt;
+                    &lt;a href=&quot;#none&quot; class=&quot;btn-type207 arr01&quot;&gt;&lt;span class=&quot;txt01&quot;&gt;&#47196;&#44536;&#51064;/&#54924;&#50896;&#44032;&#51077;&lt;/span&gt;&lt;/a&gt;
+                    &lt;p class=&quot;txt01&quot;&gt;&#50672;&#54633;&#45684;&#49828;&#47564;&#51032; &#53945;&#48324;&#54620; &#45684;&#49828; &#49436;&#48708;&#49828;&#47484; &#44221;&#54744;&#54644;&#48372;&#49464;&#50836;!&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;!-- &#47196;&#44536;&#51064;&#54980; --&gt;
+                &lt;div class=&quot;info-box01 login-after&quot;&gt;
+                    &lt;span class=&quot;img-con01&quot;&gt;
+                        &lt;img src=&quot;../img/bg_none_profile01.svg&quot; alt=&quot;&quot; loading=&quot;lazy&quot;&gt;
+                    &lt;/span&gt;
+                    &lt;a href=&quot;#none&quot; class=&quot;btn-type207 arr01&quot;&gt;
+                        &lt;span class=&quot;txt01 color21&quot;&gt;&#54861;&#44600;&#46041;&lt;/span&gt;
+                        &lt;span class=&quot;txt02 color21&quot;&gt;&#45784;&lt;/span&gt;
+                        &lt;span class=&quot;txt03&quot;&gt;&#47560;&#51060;&#45684;&#49828;&lt;/span&gt;
+                    &lt;/a&gt;
+                    &lt;span class=&quot;txt01&quot;&gt;#&#49324;&#50857;&#51088;&#50976;&#54805;A&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn-type201&quot;&gt;&lt;span class=&quot;txt01&quot;&gt;&#47196;&#44536;&#50500;&#50883;&lt;/span&gt;&lt;/button&gt;
+            &lt;/div&gt;
+
+            &lt;!-- ##&#52980;&#54252;&#45324;&#53944; &#46041;&#51068;&#54868; &#51204;&#52404;&#47700;&#45684;&#54392;&#53552;01 --&gt;
+            &lt;!-- layer : &#47700;&#51064; &#47700;&#45684; --&gt;
+            &lt;div class=&quot;nav-major01&quot;&gt;
+                &lt;span class=&quot;tit-nav01&quot;&gt;&#45684;&#49828;&lt;/span&gt;
+                &lt;ul class=&quot;nav-menu01&quot;&gt;
+                    &lt;li class=&quot;latest&quot; data-nav-section=&quot;latest&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#52572;&#49888;&#45684;&#49828;&lt;/a&gt;
+                        &lt;span class=&quot;btn-type009&quot;&gt;
+                            &lt;span class=&quot;ico-type06-arr01&quot;&gt;&lt;/span&gt;
+                        &lt;/span&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;politics&quot; data-nav-section=&quot;politics&quot;&gt;
+                        &lt;a class=&quot;on&quot; href=&quot;#none&quot;&gt;&#51221;&#52824;&lt;/a&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn-type009 open&quot;&gt;&lt;!-- open &#52628;&#44032;&#49884; &#47700;&#45684; &#45803;&#44592;&#47196; &#45432;&#52636; --&gt;
+                            &lt;i class=&quot;ico-type06-arr01&quot;&gt;&#47700;&#45684; &#50676;&#44592;/&#45803;&#44592;&lt;/i&gt;
+                        &lt;/button&gt;
+                        &lt;ul class=&quot;menu01&quot;&gt;
+
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51204;&#52404;&#45684;&#49828;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#45824;&#53685;&#47161;&#49892;/&#52509;&#47532;&#49892;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#44397;&#54924;/&#51221;&#45817;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#50808;&#44368;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#44397;&#48169;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;nk&quot; data-nav-section=&quot;nk&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#48513;&#54620;&lt;/a&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn-type009&quot;&gt;&lt;!-- open &#52628;&#44032;&#49884; &#47700;&#45684; &#45803;&#44592;&#47196; &#45432;&#52636; --&gt;
+                            &lt;i class=&quot;ico-type06-arr01&quot;&gt;&#47700;&#45684; &#50676;&#44592;/&#45803;&#44592;&lt;/i&gt;
+                        &lt;/button&gt;
+                        &lt;ul class=&quot;menu01&quot;&gt;
+
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51204;&#52404;&#45684;&#49828;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#54617;&#49696;/&#50672;&#44396;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#48513;&#54620; &#50508;&#50500;&#48372;&#44592;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51064;&#47932;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#48708;&#51452;&#50620;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;NK NOW&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;economy&quot; data-nav-section=&quot;economy&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#44221;&#51228;&lt;/a&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn-type009&quot;&gt;&lt;!-- open &#52628;&#44032;&#49884; &#47700;&#45684; &#45803;&#44592;&#47196; &#45432;&#52636; --&gt;
+                            &lt;i class=&quot;ico-type06-arr01&quot;&gt;&#47700;&#45684; &#50676;&#44592;/&#45803;&#44592;&lt;/i&gt;
+                        &lt;/button&gt;
+                        &lt;ul class=&quot;menu01&quot;&gt;
+
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51204;&#52404;&#45684;&#49828;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#44221;&#51228;/&#51221;&#52293;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#44552;&#50997;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#48512;&#46041;&#49328;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#52712;&#50629;/&#52285;&#50629;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#49548;&#48708;&#51088;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;market&quot; data-nav-section=&quot;market&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#47560;&#53011; +&lt;span class=&quot;ico-type08-new01&quot;&gt;&lt;i class=&quot;ir-txt01&quot;&gt;new&lt;/i&gt;&lt;/span&gt;&lt;/a&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn-type009&quot;&gt;&lt;!-- open &#52628;&#44032;&#49884; &#47700;&#45684; &#45803;&#44592;&#47196; &#45432;&#52636; --&gt;
+                            &lt;i class=&quot;ico-type06-arr01&quot;&gt;&#47700;&#45684; &#50676;&#44592;/&#45803;&#44592;&lt;/i&gt;
+                        &lt;/button&gt;
+                        &lt;ul class=&quot;menu01&quot;&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51204;&#52404;&#45684;&#49828;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#44397;&#45236;&#51452;&#49885;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#54644;&#50808;&#51452;&#49885;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#52292;&#44428;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#54144;&#46300;/ETF&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#44544;&#47196;&#48268;&#49884;&#51109;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51613;&#44428;/&#50868;&#50857;&#49324;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#47532;&#54252;&#53944;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#44277;&#49884;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;industry&quot; data-nav-section=&quot;industry&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#49328;&#50629;&lt;/a&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn-type009&quot;&gt;&lt;!-- open &#52628;&#44032;&#49884; &#47700;&#45684; &#45803;&#44592;&#47196; &#45432;&#52636; --&gt;
+                            &lt;i class=&quot;ico-type06-arr01&quot;&gt;&#47700;&#45684; &#50676;&#44592;/&#45803;&#44592;&lt;/i&gt;
+                        &lt;/button&gt;
+                        &lt;ul class=&quot;menu01&quot;&gt;
+
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51204;&#52404;&#45684;&#49828;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#49328;&#50629;/&#44592;&#50629;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51204;&#44592;&#51204;&#51088;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51473;&#54868;&#54617;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51088;&#46041;&#52264;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#44148;&#49444;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#50640;&#45320;&#51648;/&#51088;&#50896;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;IT/&#44284;&#54617;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#44172;&#51076;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#50976;&#53685;/&#49436;&#48708;&#49828;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51473;&#44592;/&#48292;&#52376;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#48148;&#51060;&#50724;/&#54764;&#49828;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#45453;&#47548;&#52629;&#49328;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#54644;&#50577;&#49688;&#49328;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;society&quot; data-nav-section=&quot;society&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#49324;&#54924;&lt;/a&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn-type009&quot;&gt;&lt;!-- open &#52628;&#44032;&#49884; &#47700;&#45684; &#45803;&#44592;&#47196; &#45432;&#52636; --&gt;
+                            &lt;i class=&quot;ico-type06-arr01&quot;&gt;&#47700;&#45684; &#50676;&#44592;/&#45803;&#44592;&lt;/i&gt;
+                        &lt;/button&gt;
+                        &lt;ul class=&quot;menu01&quot;&gt;
+
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51204;&#52404;&#45684;&#49828;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#49324;&#44148;/&#49324;&#44256;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#48277;&#50896;/&#44160;&#52272;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#44368;&#50977;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#48373;&#51648;/&#45432;&#46041;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#54872;&#44221;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#50668;&#49457;/&#50500;&#46041;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51116;&#50808;&#46041;&#54252;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#45796;&#47928;&#54868;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;local&quot; data-nav-section=&quot;local&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#51204;&#44397;&lt;/a&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn-type009&quot;&gt;&lt;!-- open &#52628;&#44032;&#49884; &#47700;&#45684; &#45803;&#44592;&#47196; &#45432;&#52636; --&gt;
+                            &lt;i class=&quot;ico-type06-arr01&quot;&gt;&#47700;&#45684; &#50676;&#44592;/&#45803;&#44592;&lt;/i&gt;
+                        &lt;/button&gt;
+                        &lt;ul class=&quot;menu01&quot;&gt;
+
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51204;&#52404;&#45684;&#49828;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#44221;&#44592;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51064;&#52380;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#48512;&#49328;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#50872;&#49328;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#44221;&#45224;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#45824;&#44396;/&#44221;&#48513;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#44305;&#51452;/&#51204;&#45224;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51204;&#48513;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#45824;&#51204;/&#52649;&#45224;/&#49464;&#51333;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#52649;&#48513;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#44053;&#50896;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51228;&#51452;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;intrnal&quot; data-nav-section=&quot;intrnal&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#49464;&#44228;&lt;/a&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn-type009&quot;&gt;&lt;!-- open &#52628;&#44032;&#49884; &#47700;&#45684; &#45803;&#44592;&#47196; &#45432;&#52636; --&gt;
+                            &lt;i class=&quot;ico-type06-arr01&quot;&gt;&#47700;&#45684; &#50676;&#44592;/&#45803;&#44592;&lt;/i&gt;
+                        &lt;/button&gt;
+                        &lt;ul class=&quot;menu01&quot;&gt;
+
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51204;&#52404;&#45684;&#49828;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#53945;&#54028;&#50896;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#48120;&#44397;/&#48513;&#48120;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51473;&#44397;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51068;&#48376;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#50500;&#49884;&#50500;/&#54840;&#51452;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#50976;&#47101;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51473;&#45224;&#48120;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51473;&#46041;/&#50500;&#54532;&#47532;&#52852;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#44397;&#51228;&#44592;&#44396;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;culture&quot; data-nav-section=&quot;culture&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#47928;&#54868;&lt;/a&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn-type009&quot;&gt;&lt;!-- open &#52628;&#44032;&#49884; &#47700;&#45684; &#45803;&#44592;&#47196; &#45432;&#52636; --&gt;
+                            &lt;i class=&quot;ico-type06-arr01&quot;&gt;&#47700;&#45684; &#50676;&#44592;/&#45803;&#44592;&lt;/i&gt;
+                        &lt;/button&gt;
+                        &lt;ul class=&quot;menu01&quot;&gt;
+
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51204;&#52404;&#45684;&#49828;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#52293;/&#47928;&#54617;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#47564;&#54868;/&#50937;&#53808;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51333;&#44368;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#44277;&#50672;/&#51204;&#49884;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#54617;&#49696;/&#47928;&#54868;&#51116;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#48120;&#46356;&#50612;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#50668;&#54665;/&#47112;&#51200;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#49373;&#54876;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;health&quot; data-nav-section=&quot;health&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#44148;&#44053;&lt;/a&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn-type009&quot;&gt;&lt;!-- open &#52628;&#44032;&#49884; &#47700;&#45684; &#45803;&#44592;&#47196; &#45432;&#52636; --&gt;
+                            &lt;i class=&quot;ico-type06-arr01&quot;&gt;&#47700;&#45684; &#50676;&#44592;/&#45803;&#44592;&lt;/i&gt;
+                        &lt;/button&gt;
+                        &lt;ul class=&quot;menu01&quot;&gt;
+
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51204;&#52404;&#45684;&#49828;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#54764;&#49828;&#45432;&#53944;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#50948;&#53364;&#47532; &#44148;&#44053;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#45908;&#44148;&#44053; &#50689;&#49345;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;ent&quot; data-nav-section=&quot;ent&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#50672;&#50696;&lt;/a&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn-type009&quot;&gt;&lt;!-- open &#52628;&#44032;&#49884; &#47700;&#45684; &#45803;&#44592;&#47196; &#45432;&#52636; --&gt;
+                            &lt;i class=&quot;ico-type06-arr01&quot;&gt;&#47700;&#45684; &#50676;&#44592;/&#45803;&#44592;&lt;/i&gt;
+                        &lt;/button&gt;
+                        &lt;ul class=&quot;menu01&quot;&gt;
+
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51204;&#52404;&#45684;&#49828;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#48169;&#49569;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#50689;&#54868;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#44032;&#50836;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#54644;&#50808;&#50672;&#50696;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;sports&quot; data-nav-section=&quot;sports&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#49828;&#54252;&#52768;&lt;/a&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn-type009&quot;&gt;&lt;!-- open &#52628;&#44032;&#49884; &#47700;&#45684; &#45803;&#44592;&#47196; &#45432;&#52636; --&gt;
+                            &lt;i class=&quot;ico-type06-arr01&quot;&gt;&#47700;&#45684; &#50676;&#44592;/&#45803;&#44592;&lt;/i&gt;
+                        &lt;/button&gt;
+                        &lt;ul class=&quot;menu01&quot;&gt;
+
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51204;&#52404;&#45684;&#49828;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#50556;&#44396;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#52629;&#44396;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#45453;&#44396;/&#48176;&#44396;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#44264;&#54532;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;opinion&quot; data-nav-section=&quot;opinion&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#50724;&#54588;&#45768;&#50616;&lt;/a&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn-type009&quot;&gt;&lt;!-- open &#52628;&#44032;&#49884; &#47700;&#45684; &#45803;&#44592;&#47196; &#45432;&#52636; --&gt;
+                            &lt;i class=&quot;ico-type06-arr01&quot;&gt;&#47700;&#45684; &#50676;&#44592;/&#45803;&#44592;&lt;/i&gt;
+                        &lt;/button&gt;
+                        &lt;ul class=&quot;menu01&quot;&gt;
+
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#50672;&#54633;&#49884;&#47200;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#45436;&amp;&#49444;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;people&quot; data-nav-section=&quot;people&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#49324;&#46988;&#46308;&lt;/a&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn-type009&quot;&gt;&lt;!-- open &#52628;&#44032;&#49884; &#47700;&#45684; &#45803;&#44592;&#47196; &#45432;&#52636; --&gt;
+                            &lt;i class=&quot;ico-type06-arr01&quot;&gt;&#47700;&#45684; &#50676;&#44592;/&#45803;&#44592;&lt;/i&gt;
+                        &lt;/button&gt;
+                        &lt;ul class=&quot;menu01&quot;&gt;
+
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51204;&#52404;&#45684;&#49828;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51064;&#49324;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#48512;&#44256;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#46041;&#51221;/&#44172;&#49884;&#54032;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;CEO&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51064;&#53552;&#48624;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;!-- layer : &#44592;&#53440; &#47700;&#45684; --&gt;
+            &lt;div class=&quot;nav-other01&quot;&gt;
+                &lt;ul class=&quot;nav-menu11&quot;&gt;
+                    &lt;li class=&quot;newsplus&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#45684;&#49828;+&lt;/a&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn-type009 open&quot;&gt;&lt;!-- open &#52628;&#44032;&#49884; &#47700;&#45684; &#45803;&#44592;&#47196; &#45432;&#52636; --&gt;
+                            &lt;i class=&quot;ico-type06-arr01&quot;&gt;&#47700;&#45684; &#50676;&#44592;/&#45803;&#44592;&lt;/i&gt;
+                        &lt;/button&gt;
+                        &lt;ul class=&quot;menu01&quot;&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot; class=&quot;on&quot;&gt;&#44288;&#49900;&#49324; &#45684;&#49828; &#54056;&#53412;&#51648;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51060;&#49884;&#44033; &#54756;&#46300;&#46972;&#51064;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;visual&quot;&gt;
+                        &lt;a href=&quot;#none&quot; class=&quot;on&quot;&gt;&#48708;&#51452;&#50620; &#45684;&#49828;&lt;/a&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn-type009 open&quot;&gt;&lt;!-- open &#52628;&#44032;&#49884; &#47700;&#45684; &#45803;&#44592;&#47196; &#45432;&#52636; --&gt;
+                            &lt;i class=&quot;ico-type06-arr01&quot;&gt;&#47700;&#45684; &#50676;&#44592;/&#45803;&#44592;&lt;/i&gt;
+                        &lt;/button&gt;
+                        &lt;ul class=&quot;menu01&quot;&gt;
+
+                            &lt;li&gt;&lt;a href=&quot;#none&quot; class=&quot;on&quot;&gt;&#50689;&#49345;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#54252;&#53664;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#54868;&#48372;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#44536;&#47000;&#54589;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;#D&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;theme&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#53580;&#47560;&#48324; &#45684;&#49828;&lt;/a&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn-type009 open&quot;&gt;&lt;!-- open &#52628;&#44032;&#49884; &#47700;&#45684; &#45803;&#44592;&#47196; &#45432;&#52636; --&gt;
+                            &lt;i class=&quot;ico-type06-arr01&quot;&gt;&#47700;&#45684; &#50676;&#44592;/&#45803;&#44592;&lt;/i&gt;
+                        &lt;/button&gt;
+                        &lt;ul class=&quot;menu01&quot;&gt;
+
+                            &lt;li&gt;&lt;a href=&quot;#none&quot; class=&quot;on&quot;&gt;&#53681;&#45684;&#49828;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#54635;&#45684;&#49828;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51452;&#50836;&#45684;&#49828;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#44596;&#44553;&#45684;&#49828;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#45800;&#46021;&#45684;&#49828;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#47566;&#51060; &#48376; &#45684;&#49828;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#50724;&#47000; &#47672;&#47928; &#45684;&#49828;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#44277;&#44048; &#47566;&#51008; &#45684;&#49828;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;lang&quot;&gt;
+                        &lt;strong&gt;&#50808;&#44397;&#50612; &#45684;&#49828;&lt;/strong&gt;
+                        &lt;ul class=&quot;menu01&quot;&gt;
+                            &lt;li class=&quot;en&quot;&gt;&lt;a href=&quot;#none&quot;&gt;English&lt;/a&gt;&lt;/li&gt;
+                            &lt;li class=&quot;zh cg&quot;&gt;&lt;a href=&quot;#none&quot;&gt;&#20013;&#25991;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li class=&quot;ja&quot;&gt;&lt;a href=&quot;#none&quot;&gt;&#26085;&#25991;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li class=&quot;ar&quot;&gt;&lt;a href=&quot;#none&quot;&gt;&#1593;&#1585;&#1576;&#1610;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li class=&quot;es&quot;&gt;&lt;a href=&quot;#none&quot;&gt;Espa&ntilde;ol&lt;/a&gt;&lt;/li&gt;
+                            &lt;li class=&quot;fr&quot;&gt;&lt;a href=&quot;#none&quot;&gt;Fran&ccedil;ais&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;product&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#45684;&#49828;&#49345;&#54408;&lt;/a&gt;
+                        &lt;ul class=&quot;menu01&quot;&gt;
+
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#54532;&#47532;&#48120;&#50628;&#45684;&#49828;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#45684;&#49828;&#47532;&#45908;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51064;&#53552;&#45367;&#47582;&#52644;&#54805;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#48372;&#46020;&#51088;&#47308; &#54644;&#50808;&#48176;&#54252;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#48372;&#46020;&#51088;&#47308; &#44397;&#45236;&#48176;&#54252;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;advertisement&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#44305;&#44256;&#50504;&#45236;&lt;/a&gt;
+                        &lt;ul class=&quot;menu01&quot;&gt;
+
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;KTX &#50676;&#52264;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;AREX &#44277;&#54637;&#52384;&#46020;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#47784;&#48148;&#51068;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;PC&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#52636;&#54032;&#47932;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;LED&#51204;&#44305;&#54032;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#49324;&#50629;&#51228;&#55092;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;sales&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#53080;&#53584;&#52768;&#54032;&#47588;&lt;/a&gt;
+                        &lt;ul class=&quot;menu01&quot;&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#48372;&#46020;&#51088;&#47308;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51060;&#47588;&#51652;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#44536;&#47000;&#54589;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#46041;&#50689;&#49345;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51064;&#47932;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;publication&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#52636;&#54032;&#47932;&lt;/a&gt;
+                        &lt;ul class=&quot;menu01&quot;&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#52636;&#54032;&#47932;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51060;&#47588;&#51652;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#50672;&#54633;&#50672;&#44048;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#50689;&#47928;&#50672;&#44048;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#45800;&#54665;&#48376;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#50900;&#44036; &#47560;&#51060;&#45908;&#49828;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;service&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#49436;&#48708;&#49828;&#50504;&#45236;&lt;/a&gt;
+                        &lt;ul class=&quot;menu01&quot;&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#49436;&#48708;&#49828; &#49548;&#44060;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#47784;&#48148;&#51068;&#50545; &#50504;&#45236;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;ul class=&quot;nav-menu12&quot;&gt;
+                    &lt;li class=&quot;safe&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#51116;&#45212;&#54252;&#53560;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;weather&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#45216;&#50472;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;reporter&quot;&gt;
+                        &lt;a href=&quot;#none&quot; class=&quot;on&quot;&gt;&#44592;&#51088;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;letter&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#45684;&#49828;&#47112;&#53552;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;games&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#45684;&#49828;&#44172;&#51076;&#51592;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;jebo&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#51228;&#48372;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;product&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#45684;&#49828;&#49345;&#54408;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;advertisement&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#44305;&#44256;&#50504;&#45236;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;sales&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#53080;&#53584;&#52768;&#54032;&#47588;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;customer&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#44256;&#44061;&#49468;&#53552;&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;ul class=&quot;nav-menu13&quot;&gt;
+                    &lt;li class=&quot;customer&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#44256;&#44061;&#49468;&#53552;&lt;/a&gt;
+                        &lt;ul class=&quot;menu01&quot;&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#44256;&#44061;&#49468;&#53552;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#51088;&#51452; &#47931;&#45716; &#51656;&#47928;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;&#44277;&#51648;&#49324;&#54637;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#none&quot;&gt;1:1 &#47928;&#51032;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;partner&quot;&gt;
+                        &lt;a href=&quot;#none&quot;&gt;&#44228;&#50557;&#49324;/&#51228;&#55092;&#47928;&#51032;&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;!-- //##&#52980;&#54252;&#45324;&#53944; &#46041;&#51068;&#54868; &#51204;&#52404;&#47700;&#45684;&#54392;&#53552;01 --&gt;
+
+            &lt;!-- ##&#52980;&#54252;&#45324;&#53944; &#46041;&#51068;&#54868; &#51204;&#52404;&#47700;&#45684;&#54392;&#53552;02 --&gt;
+            &lt;!-- layer : SNS --&gt;
+            &lt;div class=&quot;nav-menu63&quot;&gt;
+                &lt;strong class=&quot;tit&quot;&gt;SNS&lt;/strong&gt;
+                &lt;p class=&quot;txt01&quot;&gt;&#45796;&#50577;&#54620; &#52292;&#45328;&#50640;&#49436; &#50672;&#54633;&#45684;&#49828;&#47484; &#47564;&#45208;&#48372;&#49464;&#50836;!&lt;/p&gt;
+                &lt;a href=&quot;#none&quot; class=&quot;btn-type006 fb&quot; target=&quot;_blank&quot; title=&quot;&#49352;&#52285;&quot; rel=&quot;nofollow&quot;&gt;&lt;span class=&quot;ir-txt01&quot;&gt;&#50672;&#54633;&#45684;&#49828; &#54168;&#51060;&#49828;&#48513;&lt;/span&gt;&lt;/a&gt;
+                &lt;a href=&quot;#none&quot; class=&quot;btn-type006 ins&quot; target=&quot;_blank&quot; title=&quot;&#49352;&#52285;&quot; rel=&quot;nofollow&quot;&gt;&lt;span class=&quot;ir-txt01&quot;&gt;&#50672;&#54633;&#45684;&#49828; &#51064;&#49828;&#53440;&#44536;&#47016;&lt;/span&gt;&lt;/a&gt;
+                &lt;a href=&quot;#none&quot; class=&quot;btn-type006 ytb&quot; target=&quot;_blank&quot; title=&quot;&#49352;&#52285;&quot; rel=&quot;nofollow&quot;&gt;&lt;span class=&quot;ir-txt01&quot;&gt;&#50672;&#54633;&#45684;&#49828; &#51064;&#49828;&#53440;&#44536;&#47016;&lt;/span&gt;&lt;/a&gt;
+                &lt;a href=&quot;#none&quot; class=&quot;btn-type006 tw&quot; target=&quot;_blank&quot; title=&quot;&#49352;&#52285;&quot; rel=&quot;nofollow&quot;&gt;&lt;span class=&quot;ir-txt01&quot;&gt;&#50672;&#54633;&#45684;&#49828; &#53944;&#50948;&#53552;&lt;/span&gt;&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;!-- //##&#52980;&#54252;&#45324;&#53944; &#46041;&#51068;&#54868; &#51204;&#52404;&#47700;&#45684;&#54392;&#53552;02 --&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- #### //&#51204;&#52404;&#47700;&#45684; : popup-whole-menu01 --&gt;
+
+    &lt;!-- #### &#44160;&#49353; &#47112;&#51060;&#50612; &#54045;&#50629; : popup-search01 --&gt;
+    &lt;div class=&quot;popup-search01&quot;&gt;
+        &lt;div class=&quot;search-zone01 active open-list&quot;&gt; &lt;!-- &#54756;&#45908; &#44160;&#49353; &#53364;&#47533; active &#52628;&#44032;, &#44160;&#49353;&#50612; &#51077;&#47141; open-list &#52628;&#44032; --&gt;
+            &lt;fieldset&gt;
+                &lt;legend&gt;&#45684;&#49828; &#44160;&#49353;&#50612; &#51077;&#47141; &#50577;&#49885;&lt;/legend&gt;
+                &lt;div class=&quot;search-type01&quot;&gt; &lt;!-- input &#44160;&#49353;&#50612; &#51077;&#47141;&#49884; active &#52628;&#44032; btn-clear01 : block &#52376;&#47532; &#46120;--&gt;
+                    &lt;label for=&quot;keywordSrch01&quot; class=&quot;ir-txt01&quot;&gt;&#53685;&#54633; &#44160;&#49353;&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;keywordSrch01&quot; class=&quot;input01&quot; placeholder=&quot;&#44160;&#49353;&#50612;&#47484; &#51077;&#47141;&#54616;&#49464;&#50836;.&quot;&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn-type013 btn-clear01&quot;&gt;
+                        &lt;span class=&quot;ir-txt01&quot;&gt;&#49325;&#51228;&lt;/span&gt;
+                    &lt;/button&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn-type012 search01&quot;&gt;
+                        &lt;span class=&quot;ir-txt01&quot;&gt;&#44160;&#49353;&lt;/span&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/fieldset&gt;
+            &lt;div class=&quot;search-auto&quot;&gt;
+                    &lt;div class=&quot;title-con01&quot;&gt;
+                        &lt;strong class=&quot;title-type006&quot;&gt;&lt;p class=&quot;tit01&quot;&gt;&#52572;&#44540; &#44160;&#49353;&#50612;&lt;/p&gt;&lt;/strong&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn-type206&quot;&gt;&lt;span class=&quot;txt01&quot;&gt;&#51204;&#52404; &#49325;&#51228;&lt;/span&gt;&lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;ul class=&quot;list-search01&quot;&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#none&quot;&gt;&lt;span class=&quot;ico-type06-time01&quot;&gt;&lt;i class=&quot;ir-txt01&quot;&gt;&#52572;&#44540;&#44160;&#49353;&#50612;&lt;/i&gt;&lt;/span&gt;&lt;span class=&quot;txt01&quot;&gt;&#51109;&#47560;&#51109;&#47560;&#51109;&#47560;&#51109;&#47560;&#51109;&#47560;&#51109;&#47560;&#51109;&#47560;&#51109;&#47560;&#51109;&#47560;&#51109;&#47560;&#51109;&#47560;&#51109;&#47560;&#51109;&#47560;&#51109;&#47560;&#51109;&#47560;&#51109;&#47560;&#51109;&#47560;&#51109;&#47560;&#51109;&#47560;&#51109;&#47560;&#51109;&#47560;&#51109;&#47560;&#51109;&#47560;&#51109;&#47560;&lt;/span&gt;&lt;/a&gt;
+                            &lt;button type=&quot;button&quot; class=&quot;btn-type017 delete01&quot;&gt;&lt;span class=&quot;ir-txt01&quot;&gt;&#49325;&#51228;&lt;/span&gt;&lt;/button&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#none&quot;&gt;&lt;span class=&quot;ico-type06-time01&quot;&gt;&lt;i class=&quot;ir-txt01&quot;&gt;&#52572;&#44540;&#44160;&#49353;&#50612;&lt;/i&gt;&lt;/span&gt;&lt;span class=&quot;txt01&quot;&gt;&#45824;&#54620;&#48124;&#44397;&lt;/span&gt;&lt;/a&gt;
+                            &lt;button type=&quot;button&quot; class=&quot;btn-type017 delete01&quot;&gt;&lt;span class=&quot;ir-txt01&quot;&gt;&#49325;&#51228;&lt;/span&gt;&lt;/button&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#none&quot;&gt;&lt;span class=&quot;ico-type06-time01&quot;&gt;&lt;i class=&quot;ir-txt01&quot;&gt;&#52572;&#44540;&#44160;&#49353;&#50612;&lt;/i&gt;&lt;/span&gt;&lt;span class=&quot;txt01&quot;&gt;&#46021;&#46020;&lt;/span&gt;&lt;/a&gt;
+                            &lt;button type=&quot;button&quot; class=&quot;btn-type017 delete01&quot;&gt;&lt;span class=&quot;ir-txt01&quot;&gt;&#49325;&#51228;&lt;/span&gt;&lt;/button&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#none&quot;&gt;&lt;span class=&quot;ico-type06-search01&quot;&gt;&lt;i class=&quot;ir-txt01&quot;&gt;&#44160;&#49353;&lt;/i&gt;&lt;/span&gt;&lt;span class=&quot;txt01&quot;&gt;&lt;em&gt;&#51109;&#47560;&lt;/em&gt;&lt;/span&gt;&lt;/a&gt;
+                            &lt;button type=&quot;button&quot; class=&quot;btn-type017 go01&quot;&gt;&lt;span class=&quot;ir-txt01&quot;&gt;&#48148;&#47196;&#44032;&#44592;&lt;/span&gt;&lt;/button&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#none&quot;&gt;&lt;span class=&quot;ico-type06-search01&quot;&gt;&lt;i class=&quot;ir-txt01&quot;&gt;&#44160;&#49353;&lt;/i&gt;&lt;/span&gt;&#51109;&#47579;&#48708;&lt;/a&gt;
+                            &lt;button type=&quot;button&quot; class=&quot;btn-type017 go01&quot;&gt;&lt;span class=&quot;ir-txt01&quot;&gt;&#48148;&#47196;&#44032;&#44592;&lt;/span&gt;&lt;/button&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#none&quot;&gt;&lt;span class=&quot;ico-type06-search01&quot;&gt;&lt;i class=&quot;ir-txt01&quot;&gt;&#44160;&#49353;&lt;/i&gt;&lt;/span&gt;&lt;span class=&quot;txt01&quot;&gt;&lt;em&gt;&#51109;&#47560;&lt;/em&gt;&#52384;&lt;/span&gt;&lt;/a&gt;
+                            &lt;button type=&quot;button&quot; class=&quot;btn-type017 go01&quot;&gt;&lt;span class=&quot;ir-txt01&quot;&gt;&#48148;&#47196;&#44032;&#44592;&lt;/span&gt;&lt;/button&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#none&quot;&gt;&lt;span class=&quot;ico-type06-search01&quot;&gt;&lt;i class=&quot;ir-txt01&quot;&gt;&#44160;&#49353;&lt;/i&gt;&lt;/span&gt;&lt;span class=&quot;txt01&quot;&gt;&lt;em&gt;&#51109;&#47560;&lt;/em&gt;&#48708;&lt;/span&gt;&lt;/a&gt;
+                            &lt;button type=&quot;button&quot; class=&quot;btn-type017 go01&quot;&gt;&lt;span class=&quot;ir-txt01&quot;&gt;&#48148;&#47196;&#44032;&#44592;&lt;/span&gt;&lt;/button&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#none&quot;&gt;&lt;span class=&quot;ico-type06-search01&quot;&gt;&lt;i class=&quot;ir-txt01&quot;&gt;&#44160;&#49353;&lt;/i&gt;&lt;/span&gt;&lt;span class=&quot;txt01&quot;&gt;&lt;em&gt;&#51109;&#47560;&lt;/em&gt;&#49884;&#51089;&lt;/span&gt;&lt;/a&gt;
+                            &lt;button type=&quot;button&quot; class=&quot;btn-type017 go01&quot;&gt;&lt;span class=&quot;ir-txt01&quot;&gt;&#48148;&#47196;&#44032;&#44592;&lt;/span&gt;&lt;/button&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#none&quot;&gt;&lt;span class=&quot;ico-type06-search01&quot;&gt;&lt;i class=&quot;ir-txt01&quot;&gt;&#44160;&#49353;&lt;/i&gt;&lt;/span&gt;&lt;span class=&quot;txt01&quot;&gt;&lt;em&gt;&#51109;&#47560;&lt;/em&gt;&#51204;&#49440;&lt;/span&gt;&lt;/a&gt;
+                            &lt;button type=&quot;button&quot; class=&quot;btn-type017 go01&quot;&gt;&lt;span class=&quot;ir-txt01&quot;&gt;&#48148;&#47196;&#44032;&#44592;&lt;/span&gt;&lt;/button&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#none&quot;&gt;&lt;span class=&quot;ico-type06-search01&quot;&gt;&lt;i class=&quot;ir-txt01&quot;&gt;&#44160;&#49353;&lt;/i&gt;&lt;/span&gt;&lt;span class=&quot;txt01&quot;&gt;&lt;em&gt;&#51109;&#47560;&lt;/em&gt; &#49324;&#51652;&lt;/span&gt;&lt;/a&gt;
+                            &lt;button type=&quot;button&quot; class=&quot;btn-type017 go01&quot;&gt;&lt;span class=&quot;ir-txt01&quot;&gt;&#48148;&#47196;&#44032;&#44592;&lt;/span&gt;&lt;/button&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#none&quot;&gt;&lt;span class=&quot;ico-type06-search01&quot;&gt;&lt;i class=&quot;ir-txt01&quot;&gt;&#44160;&#49353;&lt;/i&gt;&lt;/span&gt; &lt;span class=&quot;txt01&quot;&gt;&lt;em&gt;&#51109;&#47560;&lt;/em&gt; &#45824;&#48708;&lt;/span&gt;&lt;/a&gt;
+                            &lt;button type=&quot;button&quot; class=&quot;btn-type017 go01&quot;&gt;&lt;span class=&quot;ir-txt01&quot;&gt;&#48148;&#47196;&#44032;&#44592;&lt;/span&gt;&lt;/button&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#none&quot;&gt;&lt;span class=&quot;ico-type06-search01&quot;&gt;&lt;i class=&quot;ir-txt01&quot;&gt;&#44160;&#49353;&lt;/i&gt;&lt;/span&gt;&lt;span class=&quot;txt01&quot;&gt;&lt;em&gt;&#51109;&#47560;&lt;/em&gt; &#44592;&#44036;&lt;/span&gt;&lt;/a&gt;
+                            &lt;button type=&quot;button&quot; class=&quot;btn-type017 go01&quot;&gt;&lt;span class=&quot;ir-txt01&quot;&gt;&#48148;&#47196;&#44032;&#44592;&lt;/span&gt;&lt;/button&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#none&quot;&gt;&lt;span class=&quot;ico-type06-search01&quot;&gt;&lt;i class=&quot;ir-txt01&quot;&gt;&#44160;&#49353;&lt;/i&gt;&lt;/span&gt;&lt;span class=&quot;txt01&quot;&gt;&lt;em&gt;&#51109;&#47560;&lt;/em&gt; &#54588;&#54644;&lt;/span&gt;&lt;/a&gt;
+                            &lt;button type=&quot;button&quot; class=&quot;btn-type017 go01&quot;&gt;&lt;span class=&quot;ir-txt01&quot;&gt;&#48148;&#47196;&#44032;&#44592;&lt;/span&gt;&lt;/button&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;div class=&quot;btns&quot;&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn-type205&quot;&gt;&lt;span class=&quot;txt01&quot; data-a11y-txt=&quot;&#51088;&#46041;&#50756;&#49457;&#44592;&#45733; &#45124;&#44592;;&#51088;&#46041;&#50756;&#49457;&#44592;&#45733; &#53020;&#44592;&quot;&gt;&#51088;&#46041;&#50756;&#49457; &#45124;&#44592;&lt;/span&gt;&lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;list-search02&quot;&gt;
+                        &lt;strong class=&quot;title-type008&quot;&gt;&lt;span class=&quot;tit01&quot;&gt;&#49892;&#49884;&#44036; &#51064;&#44592; &#44160;&#49353;&#50612;&lt;/span&gt;&lt;/strong&gt;
+                        &lt;ul class=&quot;list01&quot;&gt;
+                            &lt;li&gt;
+                                &lt;a href=&quot;#none&quot; class=&quot;txt01&quot;&gt;#&#51473;&#44397;&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href=&quot;#none&quot; class=&quot;txt01&quot;&gt;#SK&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href=&quot;#none&quot; class=&quot;txt01&quot;&gt;#&#48372;&#51060;&#49828;&#54588;&#49905;&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href=&quot;#none&quot; class=&quot;txt01&quot;&gt;#&#50672;&#44552;&#50672;&#44396;&#49548;&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href=&quot;#none&quot; class=&quot;txt01&quot;&gt;#&#44277;&#44288; &#45824;&#49688;&#49696;&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn-type004 close01&quot;&gt;
+            &lt;span class=&quot;ir-txt01&quot;&gt;&#51204;&#52404;&#47700;&#45684; &#45803;&#44592;&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;!-- #### //&#44160;&#49353; &#47112;&#51060;&#50612; &#54045;&#50629; : popup-search01 --&gt;
+&lt;/div&gt;
+&lt;/body&gt;</code></pre>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <%-include('../_templates/_aside.ejs', { name: 'navigation-drawer', }) %>
+                    <%-include('../_templates/_aside.ejs', { name: 'top-navigation', }) %>
                 </div>
             </div>
         </div>
