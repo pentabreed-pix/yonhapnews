@@ -2,6 +2,7 @@
     position: fixed;
     top: 0;
     width: 100%;
+    min-width: 172rem;
     height: 8rem;
     z-index: 999;
     transition: transform 0.5s cubic-bezier(.5,0,0,1);

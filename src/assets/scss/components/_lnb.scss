@@ -19,7 +19,7 @@
         padding-bottom: 12rem;
         &::after {
             position: absolute;
-            top: -12rem;
+            top: 0;
             right: 0px;
             height: calc(100% + 12rem);
             content: "";
