@@ -194,7 +194,7 @@ const defaultTask = gulp.series(clean, build, gulp.parallel("browserSync", watch
 
 const dev = gulp.series(build, gulp.parallel("browserSync", watchFiles));
 
-const deploy = gulp.series('ejs-prod', 'gh');
+const deploy = gulp.series('ejs-prod', 'gh', 'clean');
 
 module.exports = {
   clean,
