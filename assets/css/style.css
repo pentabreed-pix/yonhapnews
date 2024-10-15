@@ -460,6 +460,9 @@
 .data-list.design-04 > .data-item .data-body + .data-figure {
   margin-top: 2rem;
 }
+.data-list.design-04 > .data-item .data-body + .data-figure img + img {
+  margin-top: 2rem;
+}
 .data-list.design-04 > .data-item .data-figure img + .post-list {
   margin-top: 4rem;
 }
