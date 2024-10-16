@@ -138,13 +138,13 @@ gulp.task("movies", () => {
 });
 
 gulp.task("watch", function () {
-  gulp.watch(SRC_PATH.EJS + "/**/*.ejs", gulp.series("ejs", "build"));
-  gulp.watch(SRC_PATH.ASSETS.SCSS + "/**/*.scss", gulp.series("scss:compile", "build"));
-  gulp.watch(SRC_PATH.ASSETS.JS + "/**/*.js", gulp.series("js", "build"));
-  gulp.watch(SRC_PATH.ASSETS.IMAGES + "/**/*.+(png|jpg|jpeg|gif|ico)", gulp.series("images", "build"));
-  gulp.watch(SRC_PATH.ASSETS.IMAGES + "/**/*.svg", gulp.series("svg", "build"));
-  gulp.watch(SRC_PATH.ASSETS.FONTS + "/**/*.+(eot|otf|svg|ttf|woff|woff2)", gulp.series("fonts", "build"));
-  gulp.watch(SRC_PATH.ASSETS.MOVIES + "/*", gulp.series("movies", "build"));
+  gulp.watch(SRC_PATH.EJS + "/**/*.ejs", gulp.series("ejs"));
+  gulp.watch(SRC_PATH.ASSETS.SCSS + "/**/*.scss", gulp.series("scss:compile"));
+  gulp.watch(SRC_PATH.ASSETS.JS + "/**/*.js", gulp.series("js"));
+  gulp.watch(SRC_PATH.ASSETS.IMAGES + "/**/*.+(png|jpg|jpeg|gif|ico)", gulp.series("images"));
+  gulp.watch(SRC_PATH.ASSETS.IMAGES + "/**/*.svg", gulp.series("svg"));
+  gulp.watch(SRC_PATH.ASSETS.FONTS + "/**/*.+(eot|otf|svg|ttf|woff|woff2)", gulp.series("fonts"));
+  gulp.watch(SRC_PATH.ASSETS.MOVIES + "/*", gulp.series("movies"));
 });
 
 gulp.task("browserSync", function () {
@@ -159,7 +159,11 @@ gulp.task("browserSync", function () {
 });
 
 function clean() {
-    return del([DIST_FOLDER, ".publish"])
+    return del(DIST_FOLDER)
+}
+
+function cleanDeploy() {
+  return del(".publish")
 }
 
 gulp.task('gh', function () {
@@ -172,6 +176,11 @@ const prepare = gulp.series(clean);
 const build = gulp.series(
     prepare,
     gulp.parallel("html", "ejs", "scss:compile", "js", "images", "svg", "fonts", "movies")
+);
+
+const buildProd = gulp.series(
+    prepare,
+    gulp.parallel("html", "ejs-prod", "scss:compile", "js", "images", "svg", "fonts", "movies")
 );
 
 function watchFiles() {
@@ -188,7 +197,7 @@ const defaultTask = gulp.series(clean, build, gulp.parallel("browserSync", watch
 
 const dev = gulp.series(build, gulp.parallel("browserSync", watchFiles));
 
-const deploy = gulp.series('ejs-prod', 'gh', 'clean');
+const deploy = gulp.series(buildProd, 'gh', cleanDeploy);
 
 module.exports = {
   clean,
