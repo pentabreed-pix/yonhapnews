@@ -138,13 +138,13 @@ gulp.task("movies", () => {
 });
 
 gulp.task("watch", function () {
-  gulp.watch(SRC_PATH.EJS + "/**/*.ejs", gulp.series("ejs"));
-  gulp.watch(SRC_PATH.ASSETS.SCSS + "/**/*.scss", gulp.series("scss:compile"));
-  gulp.watch(SRC_PATH.ASSETS.JS + "/**/*.js", gulp.series("js"));
-  gulp.watch(SRC_PATH.ASSETS.IMAGES + "/**/*.+(png|jpg|jpeg|gif|ico)", gulp.series("images"));
-  gulp.watch(SRC_PATH.ASSETS.IMAGES + "/**/*.svg", gulp.series("svg"));
-  gulp.watch(SRC_PATH.ASSETS.FONTS + "/**/*.+(eot|otf|svg|ttf|woff|woff2)", gulp.series("fonts"));
-  gulp.watch(SRC_PATH.ASSETS.MOVIES + "/*", gulp.series("movies"));
+  gulp.watch(SRC_PATH.EJS + "/**/*.ejs", gulp.series("ejs", "build"));
+  gulp.watch(SRC_PATH.ASSETS.SCSS + "/**/*.scss", gulp.series("scss:compile", "build"));
+  gulp.watch(SRC_PATH.ASSETS.JS + "/**/*.js", gulp.series("js", "build"));
+  gulp.watch(SRC_PATH.ASSETS.IMAGES + "/**/*.+(png|jpg|jpeg|gif|ico)", gulp.series("images", "build"));
+  gulp.watch(SRC_PATH.ASSETS.IMAGES + "/**/*.svg", gulp.series("svg", "build"));
+  gulp.watch(SRC_PATH.ASSETS.FONTS + "/**/*.+(eot|otf|svg|ttf|woff|woff2)", gulp.series("fonts", "build"));
+  gulp.watch(SRC_PATH.ASSETS.MOVIES + "/*", gulp.series("movies", "build"));
 });
 
 gulp.task("browserSync", function () {
