@@ -67,6 +67,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+  min-width: 172rem;
   height: 8rem;
   z-index: 999;
   transition: transform 0.5s cubic-bezier(0.5, 0, 0, 1);
@@ -182,7 +183,7 @@
 }
 #lnb .lnb-inner::after {
   position: absolute;
-  top: -12rem;
+  top: 0;
   right: 0px;
   height: calc(100% + 12rem);
   content: "";
@@ -333,17 +334,20 @@
   display: block;
   transition: 0.3s ease;
 }
-.quick-nav .nav-list .nav-item.term .anchor {
+.quick-nav .nav-list .nav-item.term > .anchor {
   padding: 0.6rem 1rem;
   color: rgb(136, 136, 136);
   font-weight: 500;
   font-size: 1.4rem;
 }
+.quick-nav .nav-list .nav-item.term.case-02 + .term {
+  margin-top: 0.8rem;
+}
 .quick-nav .nav-list .nav-item.desc {
   position: relative;
   margin-left: 1rem;
 }
-.quick-nav .nav-list .nav-item.desc .anchor {
+.quick-nav .nav-list .nav-item.desc > .anchor {
   padding: 0.4rem 0.8rem;
   margin: 0 0.7rem;
   border-radius: 0.2rem;
@@ -360,17 +364,14 @@
   left: 0;
   border-left: 1px solid rgb(233, 233, 233);
 }
-.quick-nav .nav-list .nav-item.desc + .term {
-  margin-top: 0.8rem;
-}
-.quick-nav .nav-list .nav-item.active.term.type-01 .anchor {
+.quick-nav .nav-list .nav-item.active.term.case-01 > .anchor {
   color: rgb(79, 111, 203);
   background-color: rgb(246, 248, 252);
 }
-.quick-nav .nav-list .nav-item.active.term.type-02 .anchor {
+.quick-nav .nav-list .nav-item.active.term.case-02 > .anchor {
   color: rgb(17, 17, 17);
 }
-.quick-nav .nav-list .nav-item.active.desc .anchor {
+.quick-nav .nav-list .nav-item.active.desc > .anchor {
   color: rgb(79, 111, 203);
   background-color: rgb(246, 248, 252);
 }
