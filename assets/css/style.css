@@ -949,6 +949,7 @@ sub {
 /* HOME */
 #wrap.home {
   position: relative;
+  min-width: 1720px;
 }
 #wrap.home .main {
   padding-bottom: 10rem;
