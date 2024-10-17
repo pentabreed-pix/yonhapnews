@@ -1198,6 +1198,10 @@ sub {
   font-size: 1.6rem;
   transition: all 0.3s ease-out;
 }
+#wrap.home .footer .footer-inner {
+  width: 98rem;
+  margin: 0 auto;
+}
 
 /**
  * Swiper 11.0.5
