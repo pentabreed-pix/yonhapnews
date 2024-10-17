@@ -1,7 +1,8 @@
-#wrap {
+#wrap:not(.home) {
     position: relative;
     min-width: 1720px;
     min-height: 100vh;
+
     .main {
         // min-height: calc(100vh - 10rem);
         min-height: 100vh;
@@ -33,7 +34,8 @@
                 }
                 .content-body {
                     width: 98rem;
-                    .section {
+                    .section:not(.design-01),
+                    .section:not(.visual) {
                         + .section {
                             padding-top: 8rem;
                         }
@@ -70,6 +72,286 @@
                                 display: flex;
                                 justify-content: space-between;
                                 align-items: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* HOME */
+#wrap.home {
+    position: relative;
+    .main {
+        padding-bottom: 10rem;
+        .local-body {
+            position: relative;
+            .content {
+                .content-inner {
+                    .content-body {
+                        .section {
+                            &.design-01 {
+                                display: flex;
+                                justify-content: center;
+                                padding: 16rem 0;
+
+                                .section-wrap {
+                                    max-width: 132rem;
+
+                                    .section-head {
+                                        text-align: center;
+                                        .section-subject {
+                                            .section-name {
+                                                color: color(gray,900);
+                                                @include font(large-6x, bold);
+                                            }
+                                            & + .section-summary {
+                                                margin-top: 1.2rem;
+                                            }
+                                        }
+                                        .section-summary {
+                                            color: color(gray,900);
+                                            @include font(small-2x, regular);
+                                        }
+                                        & + .section-body {
+                                            margin-top: 8rem;
+                                        }
+                                    }
+                                }
+                            }
+                            &.foundation {
+                                .post-list {
+                                    display: flex;
+                                    .post-item {
+                                        position: relative;
+
+                                        &:nth-child(1) .post-wrap {
+                                            background-image: url('../../assets/images/home/foundation-01.jpg');
+                                        }
+                                        &:nth-child(2) .post-wrap{
+                                            background-image: url('../../assets/images/home/foundation-02.jpg');
+                                        }
+                                        &:nth-child(3) .post-wrap{
+                                            background-image: url('../../assets/images/home/foundation-03.jpg');
+                                        }
+
+                                        .post-wrap {
+                                            display: flex;
+                                            width: 44rem;
+                                            height: 42rem;
+                                            padding: 1.6rem 1.8rem;
+                                            transition: all .3s ease-out;
+                                            .post-head {
+                                                position: relative;
+                                                z-index: 1;
+                                                color: color(gray,900);
+                                                @include font(small-1x, semibold);
+                                                transition: all .3s ease-out;
+                                            }
+                                            &:hover,
+                                            &.focus {
+                                                background-image: none;
+                                                background-color: color(primary, 100);
+                                                .post-head {
+                                                    color: color(gray,000);
+                                                }
+                                                &::after {
+                                                    content: '';
+                                                    position: absolute;
+                                                    right: 4.4rem;
+                                                    bottom: 4rem;
+                                                    display: block;
+                                                    width: 7.8rem;
+                                                    height: 7.4rem;
+                                                    background-image:  icon(go-view, color(gray, 000));
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &.components {
+                                background-color: #FAFBFF;
+                                .post-list {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    column-gap: 3rem;
+                                    row-gap: 4rem;
+
+                                    .post-item {
+                                        flex-grow: 0;
+                                        &:nth-child(1) .post-wrap .post-figure::after {
+                                            background-image: url('../../assets/images/home/components-01.jpg');
+                                        }
+                                        &:nth-child(2) .post-wrap .post-figure::after {
+                                            background-image: url('../../assets/images/home/components-02.jpg');
+                                        }
+                                        &:nth-child(3) .post-wrap .post-figure::after {
+                                            background-image: url('../../assets/images/home/components-03.jpg');
+                                        }
+                                        &:nth-child(4) .post-wrap .post-figure::after {
+                                            background-image: url('../../assets/images/home/components-04.jpg');
+                                        }
+                                        &:nth-child(5) .post-wrap .post-figure::after {
+                                            background-image: url('../../assets/images/home/components-05.jpg');
+                                        }
+                                        &:nth-child(6) .post-wrap .post-figure::after {
+                                            background-image: url('../../assets/images/home/components-06.jpg');
+                                        }
+                                        &:nth-child(7) .post-wrap .post-figure::after {
+                                            background-image: url('../../assets/images/home/components-07.jpg');
+                                        }
+                                        &:nth-child(8) .post-wrap .post-figure::after {
+                                            background-image: url('../../assets/images/home/components-08.jpg');
+                                        }
+
+
+                                        &:nth-child(1) .post-wrap:hover .post-figure::after {
+                                            background-image: url('../../assets/images/home/components-01-active.jpg');
+                                        }
+                                        &:nth-child(2) .post-wrap:hover .post-figure::after {
+                                            background-image: url('../../assets/images/home/components-02-active.jpg');
+                                        }
+                                        &:nth-child(3) .post-wrap:hover .post-figure::after {
+                                            background-image: url('../../assets/images/home/components-03-active.jpg');
+                                        }
+                                        &:nth-child(4) .post-wrap:hover .post-figure::after {
+                                            background-image: url('../../assets/images/home/components-04-active.jpg');
+                                        }
+                                        &:nth-child(5) .post-wrap:hover .post-figure::after {
+                                            background-image: url('../../assets/images/home/components-05-active.jpg');
+                                        }
+                                        &:nth-child(6) .post-wrap:hover .post-figure::after {
+                                            background-image: url('../../assets/images/home/components-06-active.jpg');
+                                        }
+                                        &:nth-child(7) .post-wrap:hover .post-figure::after {
+                                            background-image: url('../../assets/images/home/components-07-active.jpg');
+                                        }
+                                        &:nth-child(8) .post-wrap:hover .post-figure::after {
+                                            background-image: url('../../assets/images/home/components-08-active.jpg');
+                                        }
+                                        .post-wrap {
+                                            display: block;
+                                            width: 42rem;
+                                            .post-figure {
+                                                position: relative;
+                                                width: 100%;
+                                                height: 24rem;
+                                                &::after {
+                                                    content: '';
+                                                    position: absolute;
+                                                    top: 50%;
+                                                    left: 50%;
+                                                    transform: translate(-50%,-50%);
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    object-fit: cover;
+                                                    background-repeat: no-repeat;
+                                                    transition: all .3s ease-out;
+                                                }
+                                            }
+                                            .post-info {
+                                                width: 100%;
+                                                height: 14.4rem;
+                                                display: flex;
+                                                flex-direction: column;
+                                                padding: 1.6rem 2.4rem;
+                                                background-color: #fff;
+                                                .post-head {
+                                                    color: color(gray,900);
+                                                    @include font(small-1x, semibold);
+                                                    & + .post-body {
+                                                        margin-top: 0.4rem;
+                                                    }
+                                                }
+                                                .post-body {
+                                                    color: color(gray,600);
+                                                    @include font(small-4x, regular);
+                                                }
+                                            }
+
+                                        }
+                                    }
+                                }
+                            }
+                            &.guidelines {
+                                .data-list {
+                                    display: flex;
+                                    gap: 3rem;
+
+                                    .data-item {
+
+                                        &:nth-child(1) .data-wrap::before {
+                                            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' fill='none'%3E%3Ccircle cx='48' cy='27' r='14' fill='%234F6FCB'/%3E%3Ccircle cx='48' cy='73' r='14' fill='%23252D42'/%3E%3Ccircle cx='72' cy='50' r='14' fill='%232F4D9A'/%3E%3Ccircle cx='24' cy='50' r='14' fill='%2392C3F1'/%3E%3C/svg%3E");
+                                        }
+                                        &:nth-child(2) .data-wrap::before {
+                                            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' fill='none'%3E%3Cpath d='M50 5L60.3325 25.0553L81.8198 18.1802L74.9447 39.6675L95 50L74.9447 60.3325L81.8198 81.8198L60.3325 74.9447L50 95L39.6675 74.9447L18.1802 81.8198L25.0553 60.3325L5 50L25.0553 39.6675L18.1802 18.1802L39.6675 25.0553L50 5Z' fill='%23FD6D2F'/%3E%3Ccircle cx='50' cy='50' r='10' fill='%23FFEAB6'/%3E%3C/svg%3E");
+                                        }
+                                        &:nth-child(3) .data-wrap::before {
+                                            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' fill='none'%3E%3Ccircle cx='50' cy='50' r='41' fill='%23C7F2F8'/%3E%3Cpath d='M91 50C91 27.3563 72.6437 9 50 9L50 91C72.6437 91 91 72.6437 91 50Z' fill='%23009EB1'/%3E%3Ccircle cx='50' cy='50' r='10' fill='%235F1458'/%3E%3C/svg%3E");
+                                        }
+
+                                        &:nth-child(1) .data-wrap:hover::before {
+                                            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' fill='none'%3E%3Ccircle cx='48' cy='27' r='14' fill='white'/%3E%3Ccircle cx='48' cy='73' r='14' fill='white'/%3E%3Ccircle cx='72' cy='50' r='14' fill='white'/%3E%3Ccircle cx='24' cy='50' r='14' fill='white'/%3E%3C/svg%3E");
+                                        }
+                                        &:nth-child(2) .data-wrap:hover::before {
+                                            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' fill='none'%3E%3Cpath d='M50 5L60.3325 25.0553L81.8198 18.1802L74.9447 39.6675L95 50L74.9447 60.3325L81.8198 81.8198L60.3325 74.9447L50 95L39.6675 74.9447L18.1802 81.8198L25.0553 60.3325L5 50L25.0553 39.6675L18.1802 18.1802L39.6675 25.0553L50 5Z' fill='white'/%3E%3Ccircle cx='50' cy='50' r='10' fill='%234F6FCB'/%3E%3C/svg%3E");
+                                        }
+                                        &:nth-child(3) .data-wrap:hover::before{
+                                            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' fill='none'%3E%3Ccircle cx='50' cy='50' r='40.5' stroke='white'/%3E%3Cpath d='M91 50C91 27.3563 72.6437 9 50 9L50 91C72.6437 91 91 72.6437 91 50Z' fill='white'/%3E%3Ccircle cx='50' cy='50' r='9.5' fill='%234F6FCB' stroke='white'/%3E%3C/svg%3E");
+                                        }
+
+                                        .data-wrap {
+                                            display: flex;
+                                            flex-direction: column;
+                                            width: 42rem;
+                                            height: 42rem;
+                                            justify-content: space-between;
+                                            padding: 3.2rem;
+                                            border: 0.1rem solid #E9E9E9;
+                                            background-color: #fff;
+                                            transition: all .3s ease-out;
+
+                                            &:hover {
+                                                background-color: #4F6FCB;
+
+                                                .data-info {
+                                                    .data-head {
+                                                        color: color(gray,000);
+                                                    }
+                                                    .data-body {
+                                                        color: color(gray,000);
+                                                    }
+                                                }
+                                            }
+
+                                            &::before {
+                                                content: '';
+                                                width: 10rem;
+                                                height: 10rem;
+                                                transition: all .3s ease-out;
+                                            }
+
+                                            .data-info {
+                                                .data-head {
+                                                    color: color(gray,900);
+                                                    @include font(small-1x, semibold);
+                                                    transition: all .3s ease-out;
+                                                    & + .data-body {
+                                                        margin-top: 1.6rem;
+                                                    }
+                                                }
+                                                .data-body {
+                                                    color: color(gray,600);
+                                                    @include font(small-4x, regular);
+                                                    transition: all .3s ease-out;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
