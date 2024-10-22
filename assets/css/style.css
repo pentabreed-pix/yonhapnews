@@ -966,7 +966,7 @@ sub {
   display: flex;
   justify-content: space-between;
   background-color: #0068D1;
-  transition: height 1s ease;
+  transition: height 0.5s ease;
   overflow: hidden;
 }
 #wrap.home .main .local-body .content .content-inner .content-body .section.visual .section-wrap .section-head {
