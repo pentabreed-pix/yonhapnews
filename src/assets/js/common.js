@@ -182,12 +182,12 @@ function quickLink() {
 }
 
 window.onload = function() {
-    const sectionVisual = document.querySelector('.section.visual');
+    const sectionBody = document.querySelector('.section-wrap');
     const sectionHead = document.querySelector('.section-head');
 
     // sectionVisual은 0.5초 뒤에 활성화
     setTimeout(function() {
-      sectionVisual.classList.add('active');
+      sectionBody.classList.add('active');
     }, 500); // 0.5초 딜레이
 
     // sectionHead는 1.5초 뒤에 활성화
