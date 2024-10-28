@@ -94,13 +94,15 @@
                     .content-body {
                         .section {
                             &.visual {
-                                height: 100vh;
+                                //height: 100vh;
+                                min-height: 96.2rem;
 
                                 .section-wrap {
                                     width: 100%;
                                     height: 0;
                                     display: flex;
-                                    justify-content: space-between;
+                                    gap: 25.5rem;
+                                    justify-content: center;
                                     background-color: #0068D1;
                                     transition: height 0.5s ease; 
                                     overflow: hidden;
