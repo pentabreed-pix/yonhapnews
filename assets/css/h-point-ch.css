@@ -866,6 +866,9 @@ ins {
 .h-point-christmas .modal-display .modal.design1 .modal-area .modal-inform .modal-head + .modal-body {
   margin-top: 2.256vw;
 }
+.h-point-christmas .modal-display .modal.design1 .modal-area .modal-inform .modal-body {
+  min-height: 31.466vw;
+}
 .h-point-christmas .modal-display .modal.design1 .modal-area .modal-inform .modal-body .para {
   font-size: 4.8vw;
   font-weight: 400;
@@ -899,6 +902,6 @@ ins {
   top: 2vw;
 }
 .h-point-christmas .modal-display .modal.design1 .modal-area .modal-inform + .modal-fuc {
-  margin-top: 4.795vh;
+  margin-top: 10.666vw;
 }
 /*# sourceMappingURL=h-point-ch.css.map */
