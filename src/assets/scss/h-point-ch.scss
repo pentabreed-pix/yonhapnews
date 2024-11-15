@@ -177,6 +177,10 @@ ins {
             padding-bottom: 31.733vw;
             margin-top: -3vw;
             z-index: 98;
+
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
             .anchor-list {
                 position: absolute;
                 top: 57%;
@@ -192,32 +196,14 @@ ins {
                     height: 20.533vw;
                 }
             }
-            &::after {
-                content: '';
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center center;
-                transition: 0.3s ease;
-            }
             &.intro-section {
-                &::after {
-                    background-image: url('../../assets/images/h-point-christmas/contents-head.png');
-                }
+                background-image: url('../../assets/images/h-point-christmas/anchor-head-intro.png');
             }
             &.contents-section {
-                &::after {
-                    background-image: url('../../assets/images/h-point-christmas/contents-head.png');
-                }
+                background-image: url('../../assets/images/h-point-christmas/anchor-head-contents.png');
             }
             &.calendar-section {
-                &::after {
-                    background-image: url('../../assets/images/h-point-christmas/contents-head.png');
-                }
+                background-image: url('../../assets/images/h-point-christmas/anchor-head-calendar.png');
             }
         }
         &.contents {
