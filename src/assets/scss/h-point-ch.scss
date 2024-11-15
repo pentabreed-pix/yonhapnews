@@ -1,0 +1,547 @@
+//reset
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    line-height: 160%;
+    font-style: normal;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    word-break: keep-all;
+    touch-action: auto;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+}
+
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+em,
+i,
+cite,
+code,
+address {
+    font-weight: normal;
+    font-style: normal;
+}
+
+a,
+u,
+ins {
+    color: inherit;
+    text-decoration: none;
+}
+
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    border: 0;
+    white-space: nowrap;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    overflow: hidden;
+}
+
+//page css
+.h-point-christmas {
+    .wrap {
+        overflow: hidden;
+    }
+    .section {
+        &.intro {
+            position: relative;
+            width: 100%;
+            padding-bottom: 161.333%;
+            z-index: 99;
+            &::before {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: url('../../assets/images/h-point-christmas/intro-bg.png') no-repeat center center;
+                background-size: cover;
+            }
+            img {
+                display: block;
+                width: 100%;
+            }
+            .intro-figure {
+                position: absolute;
+                &.shawl {
+                    top: 0;
+                    left: 0;
+                    z-index: 9;
+                    width: 100%;
+                }
+                &.moon {
+                    top: 1.7%;
+                    left: 53.2%;
+                    width: 18.666%;
+                    transform: translateX(-50%);
+                    z-index: 10;
+                }
+                &.curtain {
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    // height: 92.597%;
+                    height: 100%;
+                    .curtain-item {
+                        position: absolute;
+                        top: 0;
+                        width: 50%;
+                        height: 100%;
+                        transition: 0.8s ease-in-out;
+                        &.left {
+                            left: -1%;
+                            transform-origin: bottom left;
+                            img {
+                                transform-origin: top left;
+                                animation: swaying-curtain1 2.5s infinite ease-in-out;
+                            }
+                        }
+                        &.right {
+                            right: -1%;
+                            transform-origin: bottom right;
+                            img {
+                                transform-origin: top right;
+                                animation: swaying-curtain2 2.5s infinite ease-in-out;
+                            }
+                        }
+                        img {
+                            will-change: transform;
+                            width: 107.5%;
+                            height: 100%;
+                        }
+                    }
+                    &.active1 {
+                        .curtain-item {
+                            &.left {
+                                transform: skewY(-1deg) skewX(5deg);
+                            }
+                            &.right {
+                                transform: skewY(1deg) skewX(-5deg);
+                            }
+                        }
+                    }
+                    &.active2 {
+                        .curtain-item {
+                            width: 25%;
+                            transition: 1.8s cubic-bezier(0.225, 0.545, 0.220, 0.660);
+                            &.left {
+                                left: -50%;
+                                transform: skewY(0deg) skewX(3deg);
+                            }
+                            &.right {
+                                right: -50%;
+                                transform: skewY(0deg) skewX(-3deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.contents {
+            position: relative;
+            width: 100%;
+            margin-top: -5.333%;
+            padding-bottom: 13.333%;
+            z-index: 98;
+            &::before {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: url('../../assets/images/h-point-christmas/contents-bg.png') no-repeat center center;
+                background-size: cover;
+            }
+            .section-head {
+                position: relative;
+                &::after {
+                    content: '';
+                    width: 100%;
+                    padding-bottom: 31.733%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: url('../../assets/images/h-point-christmas/contents-head.png') no-repeat center center;
+                    background-size: cover;
+                }
+                .section-subject {
+                    padding-top: calc(32.266% + 5.333%);
+                    width: 65.6%;
+                    margin: 0 auto;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            .section-body {
+                position: relative;
+                padding: 0 5.333%;
+                z-index: 1;
+                .data-list {
+                    .data-item {
+                        &:nth-child(2) {
+                            margin-top: 4.533%;
+                        }
+                        &:last-child {
+                            margin-top: 5.333%;
+                        }
+                    }
+                    .data-link {
+                        display: block;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        &.check {
+            position: relative;
+            width: 100%;
+            padding-bottom: 13.333vw;
+            &::before {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: url('../../assets/images/h-point-christmas/check-bg.png') no-repeat center center;
+                background-size: cover;
+            }
+            .section-head {
+                position: relative;
+                padding-top: 13.333%;
+                .section-subject {
+                    width: 85.866%;
+                    margin: 0 auto;
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+                + .section-body {
+                    margin-top: 30px;
+                }
+            }
+            .section-body {
+                width: 100%;
+                position: relative;
+                .calendar-wrap {
+                    width: 89.333vw;
+                    height: 0;
+                    padding-bottom: 212.8vw;
+                    margin: 0 auto;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background: url('../../assets/images/h-point-christmas/calendar-grid-bg.png') no-repeat top center;
+                        background-size: cover;
+                        pointer-events: none;
+                    }
+                    .calendar-head {
+                        position: absolute;
+                        top: 11.466vw;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 100%;
+                        z-index: 99;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        .subject {
+                            display: block;
+                            color: #FFF;
+                            font-size: 5.333vw;
+                            font-weight: 400;
+                            line-height: 150%;
+                            text-align: center;
+                            .accent {
+                                color: #FFEFA5;
+                                font-weight: 800;
+                                text-decoration: underline;
+                            }
+                            + .progress {
+                                margin-top: 5.333vw;
+                            }
+                        }
+                        .progress {
+                            width: 75.466vw;
+                            margin: 0 auto;
+                            .bar-wrap {
+                                height: 3.2vw;
+                                border-radius: 8vw;
+                                background-color: #641009;
+                                position: relative;
+                                &::after {
+                                    right: 1.066vw;
+                                }
+                                .bar-gauge {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: calc(100% / 3);
+                                    height: 3.2vw;
+                                    border-radius: 8vw;
+                                    background-color: #FFDE68;
+                                    &::after {
+                                        left: 1.066vw;
+                                    }
+                                    &::before {
+                                        content: '';
+                                        width: 7.2vw;
+                                        height: 8.8vw;
+                                        background: url('../../assets/images/h-point-christmas/progress-bear.png') no-repeat center center;
+                                        background-size: cover;
+                                        position: absolute;
+                                        top: 64%;
+                                        right: -4.266vw;
+                                        transform: translateY(-50%);
+                                    }
+                                }
+                                &::after,
+                                .bar-gauge::after {
+                                    content: '';
+                                    width: 1.6vw;
+                                    height: 1.6vw;
+                                    background: url('../../assets/images/h-point-christmas/progress-start.svg') no-repeat center center;
+                                    background-size: cover;
+                                    position: absolute;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                }
+                            }
+                            .date-wrap {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                .date {
+                                    &.start {
+                                        color: #FFF3A5;
+                                        font-size: 3.733vw; 
+                                        font-weight: 400;
+                                        line-height: 130%;
+                                    }
+                                    &.end {
+                                        color: #641009;
+                                        font-weight: 400;
+                                        line-height: 130%;
+                                        .num {
+                                            font-size: 4.266vw;
+                                        }
+                                        .day {
+                                            font-size: 3.733vw; 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .calendar-body {
+                        // width: 92.84%;
+                        // width: calc(100% - 6.4%);
+                        width: 82.933vw;
+                        display: grid;
+                        grid-template-columns: 12vw 18.4vw 11.2vw 17.333vw 3.733vw 20.266vw;
+                        grid-template-rows: 11.2vw repeat(3, 16vw) repeat(2, 11.2vw) repeat(3, 16vw) repeat(3, 11.2vw);
+                        grid-column-gap: 0px;
+                        grid-row-gap: 0px;
+                        margin: 0 auto;
+                        // padding-top: 46.442vw;
+                        padding-top: 46.6vw;
+                        .calendar-item {
+                            display: block;
+                            border: 2px solid #3F0B0B;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                            img {
+                                display: block;
+                                width: 100%;
+                            }
+                            &.on {
+                                border: 2px solid #5E190E;
+                            }
+
+                            //375기준에 맞춰서 height vw로!
+                            //grid-area: <start-row> / <start-column> / <end-row> / <end-column>;
+                            
+                            @for $i from 1 through 24 {
+                                &.item#{$i} {
+                                    background-image: url('../../assets/images/h-point-christmas/day-#{$i}-off.png');
+
+                                    &.on {
+                                        background-image: url('../../assets/images/h-point-christmas/day-#{$i}-on.png');
+                                    }
+                                }
+                            }
+
+                            &.item1 {
+                                grid-area: 1 / 1 / 2 / 4;
+                            }
+                            &.item2 {
+                                grid-area: 1 / 4 / 2 / 7;
+                            }
+        
+                            &.item3 {
+                                grid-area: 2 / 1 / 3 / 3;
+                            }
+        
+                            &.item4 {
+                                grid-area: 3 / 1 / 4 / 3;
+                            }
+        
+                            &.item5 {
+                                grid-area: 4 / 1 / 5 / 3;
+                            }
+        
+                            &.item6 {
+                                grid-area: 2 / 3 / 5 / 4;
+                            }
+        
+                            &.item7 {
+                                grid-area: 2 / 4 / 3 / 6;
+                            }
+        
+                            &.item8 {
+                                grid-area: 3 / 4 / 5 / 6;
+                            }
+        
+                            &.item9 {
+                                grid-area: 2 / 6 / 5 / 7;
+                            }
+        
+                            &.item10 {
+                                grid-area: 5 / 1 / 7 / 3;
+                            }
+        
+                            &.item11 {
+                                grid-area: 5 / 3 / 6 / 7;
+                            }
+        
+                            &.item12 {
+                                grid-area: 6 / 3 / 7 / 7;
+                            }
+        
+                            &.item13 {
+                                grid-area: 7 / 1 / 10 / 2;
+                            }
+        
+                            &.item14 {
+                                border: 2px solid #651111;
+                                &.on {
+                                    border: 2px solid #982716;
+                                }
+                            }
+        
+                            &.item15 {
+                                grid-area: 8 / 2 / 10 / 3;
+                            }
+        
+                            &.item16 {
+                                grid-area: 7 / 3 / 10 / 5;
+                            }
+        
+                            &.item17 {
+                                grid-area: 7 / 5 / 8 / 7;
+                            }
+        
+                            &.item18 {
+                                grid-area: 8 / 5 / 9 / 7;
+                            }
+        
+                            &.item19 {
+                                grid-area: 9 / 5 / 10 / 7;
+                            }
+        
+                            &.item20 {
+                                grid-area: 10 / 1 / 11 / 4;
+                            }
+        
+                            &.item21 {
+                                grid-area: 10 / 4 / 11 / 7;
+                            }
+        
+                            &.item22 {
+                                grid-area: 11 / 1 / 13 / 3;
+                            }
+        
+                            &.item23 {
+                                grid-area: 11 / 3 / 12 / 7;
+                            }
+        
+                            &.item24 {
+                                grid-area: 12 / 3 / 13 / 7;
+                            }
+                        }
+                    }
+                }
+                + .section-util {
+                    margin-top: 10.666%;
+                }
+            }
+            .section-util {
+                position: relative;
+                .btn {
+                    display: block;
+                    margin: 0 auto;
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        &.notice {
+            background-color: #131E22;
+            padding: 8% 5.333%;
+            .notice-list {
+                .list-item {
+                    padding-left: 10px;
+
+                }
+            }
+        }
+    }
+
+    @keyframes swaying-curtain1 {
+        0% {transform: rotate(-0.2deg);}
+        50% {transform: rotate(0.2deg);}
+        100% {transform: rotate(-0.2deg);}
+    }
+    @keyframes swaying-curtain2 {
+        0% {transform: rotate(0.2deg);}
+        50% {transform: rotate(-0.2deg);}
+        100% {transform: rotate(0.2deg);}
+    }
+}
