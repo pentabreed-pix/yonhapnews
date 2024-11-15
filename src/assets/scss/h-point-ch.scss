@@ -5,7 +5,6 @@
     border: 0;
     background: transparent;
     color: inherit;
-    line-height: 160%;
     font-style: normal;
     box-sizing: border-box;
     word-wrap: break-word;
@@ -70,6 +69,9 @@ ins {
 
 //page css
 .h-point-christmas {
+    &.modal-show {
+        overflow: hidden;
+    }
     .section {
         &.intro {
             position: relative;
@@ -178,6 +180,7 @@ ins {
             margin-top: -3vw;
             z-index: 98;
 
+            background-image: url('../../assets/images/h-point-christmas/anchor-head-off.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
@@ -651,5 +654,185 @@ ins {
         0% {transform: rotate(0.15deg);}
         50% {transform: rotate(-0.15deg);}
         100% {transform: rotate(0.15deg);}
+    }
+
+    //팝업
+    .modal-display {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.9);
+        pointer-events: none;
+        z-index: 9999;
+        &.show {
+            display: block;
+        }
+        .modal {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            &.design1 {
+                .modal-inner {
+                    width: 91.466vw;
+                    height: 92.317vh;
+                    border: 2px solid #F0DFA9;
+                    border-radius: 4px;
+                    position: relative;
+                    background: url('../../assets/images/h-point-christmas/modal-bg-color.png') no-repeat center center;
+                    background-size: cover;
+                    pointer-events: auto;
+
+                    //팝업 내용 길어서 넣음
+                    overflow: hidden;
+                    overflow-y: auto;
+                    padding-bottom: 8.462vh;
+                    &::before {
+                        content: "";
+                        width: 100%;
+                        height: 49.6vw;
+                        background: url(../../assets/images/h-point-christmas/modal-shawl.png) no-repeat center center;
+                        background-size: cover;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 1;
+                    }
+                    &::after {
+                        content: "";
+                        width: 100%;
+                        height: 57.866vw;
+                        background: url(../../assets/images/h-point-christmas/modal-bg-star.png) no-repeat center center;
+                        background-size: cover;
+                        position: absolute;
+                        top: 30.666vw;
+                        left: 0;
+                        z-index: 1;
+                    }
+                }
+                .modal-area {
+                    display: none;
+                    position: relative;
+                    z-index: 99;
+                    &.on {
+                        display: block;
+                    }
+                    .modal-wrap {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                    }
+                    //선물상자
+                    &.gift-box {
+                        .modal-figure {
+                            .gift-btn {
+                                display: block;
+                                width: 47.466vw;
+                                height: 35.2vw;
+                                margin-top: 44.266vw;
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            + .modal-inform {
+                                margin-top: 14.4vw;
+                            }
+                        }
+                    }
+                    //포인트 당첨 : 축하합니다! (이미지마다 위치가 달라서 수정 필요해보임)
+                    //vh : 709기준
+                    &.case1 {
+                        .modal-figure {
+                            width: 100%;
+                            margin-top: 17.207vh;
+                            img {
+                                width: 100%;
+                            }
+                            + .modal-inform {
+                                margin-top: 10.437vh;
+                                + .modal-fuc {
+                                    margin-top: 4.795vh;
+                                }
+                            }
+                        }
+                        .modal-fuc {
+                            .fuc-btn {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 74.666vw;
+                                padding: 4.266vw;
+                                border-radius: 100px;
+                                border: 1px solid #FFF5B1;
+                                background: linear-gradient(0deg, #9A150F 0%, #9A150F 100%), linear-gradient(92deg, #CBAC64 13.18%, #BC8641 90.15%);
+                                .btn-text {
+                                    text-align: center;
+                                    font-size: 5.333vw;
+                                    font-weight: 400;
+                                    line-height: 150%;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                    .modal-inform {
+                        .modal-head {
+                            .modal-subject {
+                                display: block;
+                                font-size: 6.933vw;
+                                font-weight: 800;
+                                line-height: 150%;
+                                color: #fff;
+                                text-align: center;
+                            }
+                            + .modal-body {
+                                margin-top: 2.256vw;
+                            }
+                        }
+                        .modal-body {
+                            .para {
+                                font-size: 4.8vw;
+                                font-weight: 400;
+                                line-height: 150%;
+                                color: #DDD;
+                                text-align: center;
+                            }
+                            .bullet-list {
+                                width: 75.733vw;
+                                padding: 4.266vw;
+                                background-color: rgba(0, 0, 0, 0.3);
+                                .bullet-item {
+                                    position: relative;
+                                    padding-left: 2.133vw;
+                                    font-size: 3.466vw;
+                                    line-height: 150%;
+                                    color: #DDD;
+                                    + .bullet-item {
+                                        margin-top: 1.6vw;
+                                    }
+                                    &::before {
+                                        content: '';
+                                        width: 0.8vw;
+                                        height: 0.8vw;
+                                        border-radius: 100%;
+                                        background-color: #DDD;
+                                        position: absolute;
+                                        left: 0;
+                                        top: 2vw;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
