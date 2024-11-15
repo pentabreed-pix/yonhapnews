@@ -775,7 +775,6 @@ ins {
   pointer-events: auto;
   overflow: hidden;
   overflow-y: auto;
-  padding-bottom: 8.462vh;
 }
 .h-point-christmas .modal-display .modal.design1 .modal-inner::before {
   content: "";
