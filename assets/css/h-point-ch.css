@@ -1,0 +1,641 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  line-height: 160%;
+  font-style: normal;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  word-break: keep-all;
+  touch-action: auto;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+em,
+i,
+cite,
+code,
+address {
+  font-weight: normal;
+  font-style: normal;
+}
+
+a,
+u,
+ins {
+  color: inherit;
+  text-decoration: none;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+}
+
+.h-point-christmas .wrap {
+  overflow: hidden;
+}
+.h-point-christmas .section.intro {
+  position: relative;
+  width: 100%;
+  padding-bottom: 161.333%;
+  z-index: 99;
+}
+.h-point-christmas .section.intro::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../../assets/images/h-point-christmas/intro-bg.png") no-repeat center center;
+  background-size: cover;
+}
+.h-point-christmas .section.intro img {
+  display: block;
+  width: 100%;
+}
+.h-point-christmas .section.intro .intro-figure {
+  position: absolute;
+}
+.h-point-christmas .section.intro .intro-figure.shawl {
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+}
+.h-point-christmas .section.intro .intro-figure.moon {
+  top: 1.7%;
+  left: 53.2%;
+  width: 18.666%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.h-point-christmas .section.intro .intro-figure.curtain {
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.h-point-christmas .section.intro .intro-figure.curtain .curtain-item {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  transition: 0.8s ease-in-out;
+}
+.h-point-christmas .section.intro .intro-figure.curtain .curtain-item.left {
+  left: -1%;
+  transform-origin: bottom left;
+}
+.h-point-christmas .section.intro .intro-figure.curtain .curtain-item.left img {
+  transform-origin: top left;
+  animation: swaying-curtain1 2.5s infinite ease-in-out;
+}
+.h-point-christmas .section.intro .intro-figure.curtain .curtain-item.right {
+  right: -1%;
+  transform-origin: bottom right;
+}
+.h-point-christmas .section.intro .intro-figure.curtain .curtain-item.right img {
+  transform-origin: top right;
+  animation: swaying-curtain2 2.5s infinite ease-in-out;
+}
+.h-point-christmas .section.intro .intro-figure.curtain .curtain-item img {
+  will-change: transform;
+  width: 107.5%;
+  height: 100%;
+}
+.h-point-christmas .section.intro .intro-figure.curtain.active1 .curtain-item.left {
+  transform: skewY(-1deg) skewX(5deg);
+}
+.h-point-christmas .section.intro .intro-figure.curtain.active1 .curtain-item.right {
+  transform: skewY(1deg) skewX(-5deg);
+}
+.h-point-christmas .section.intro .intro-figure.curtain.active2 .curtain-item {
+  width: 25%;
+  transition: 1.8s cubic-bezier(0.225, 0.545, 0.22, 0.66);
+}
+.h-point-christmas .section.intro .intro-figure.curtain.active2 .curtain-item.left {
+  left: -50%;
+  transform: skewY(0deg) skewX(3deg);
+}
+.h-point-christmas .section.intro .intro-figure.curtain.active2 .curtain-item.right {
+  right: -50%;
+  transform: skewY(0deg) skewX(-3deg);
+}
+.h-point-christmas .section.contents {
+  position: relative;
+  width: 100%;
+  margin-top: -5.333%;
+  padding-bottom: 13.333%;
+  z-index: 98;
+}
+.h-point-christmas .section.contents::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../../assets/images/h-point-christmas/contents-bg.png") no-repeat center center;
+  background-size: cover;
+}
+.h-point-christmas .section.contents .section-head {
+  position: relative;
+}
+.h-point-christmas .section.contents .section-head::after {
+  content: "";
+  width: 100%;
+  padding-bottom: 31.733%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../../assets/images/h-point-christmas/contents-head.png") no-repeat center center;
+  background-size: cover;
+}
+.h-point-christmas .section.contents .section-head .section-subject {
+  padding-top: 37.599%;
+  width: 65.6%;
+  margin: 0 auto;
+}
+.h-point-christmas .section.contents .section-head .section-subject img {
+  width: 100%;
+}
+.h-point-christmas .section.contents .section-body {
+  position: relative;
+  padding: 0 5.333%;
+  z-index: 1;
+}
+.h-point-christmas .section.contents .section-body .data-list .data-item:nth-child(2) {
+  margin-top: 4.533%;
+}
+.h-point-christmas .section.contents .section-body .data-list .data-item:last-child {
+  margin-top: 5.333%;
+}
+.h-point-christmas .section.contents .section-body .data-list .data-link {
+  display: block;
+}
+.h-point-christmas .section.contents .section-body .data-list .data-link img {
+  width: 100%;
+}
+.h-point-christmas .section.check {
+  position: relative;
+  width: 100%;
+  padding-bottom: 13.333vw;
+}
+.h-point-christmas .section.check::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../../assets/images/h-point-christmas/check-bg.png") no-repeat center center;
+  background-size: cover;
+}
+.h-point-christmas .section.check .section-head {
+  position: relative;
+  padding-top: 13.333%;
+}
+.h-point-christmas .section.check .section-head .section-subject {
+  width: 85.866%;
+  margin: 0 auto;
+}
+.h-point-christmas .section.check .section-head .section-subject img {
+  display: block;
+  width: 100%;
+}
+.h-point-christmas .section.check .section-head + .section-body {
+  margin-top: 30px;
+}
+.h-point-christmas .section.check .section-body {
+  width: 100%;
+  position: relative;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap {
+  width: 89.333vw;
+  height: 0;
+  padding-bottom: 212.8vw;
+  margin: 0 auto;
+  position: relative;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url("../../assets/images/h-point-christmas/calendar-grid-bg.png") no-repeat top center;
+  background-size: cover;
+  pointer-events: none;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-head {
+  position: absolute;
+  top: 11.466vw;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-head .subject {
+  display: block;
+  color: #FFF;
+  font-size: 5.333vw;
+  font-weight: 400;
+  line-height: 150%;
+  text-align: center;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-head .subject .accent {
+  color: #FFEFA5;
+  font-weight: 800;
+  text-decoration: underline;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-head .subject + .progress {
+  margin-top: 5.333vw;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-head .progress {
+  width: 75.466vw;
+  margin: 0 auto;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-head .progress .bar-wrap {
+  height: 3.2vw;
+  border-radius: 8vw;
+  background-color: #641009;
+  position: relative;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-head .progress .bar-wrap::after {
+  right: 1.066vw;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-head .progress .bar-wrap .bar-gauge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 33.3333333333%;
+  height: 3.2vw;
+  border-radius: 8vw;
+  background-color: #FFDE68;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-head .progress .bar-wrap .bar-gauge::after {
+  left: 1.066vw;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-head .progress .bar-wrap .bar-gauge::before {
+  content: "";
+  width: 7.2vw;
+  height: 8.8vw;
+  background: url("../../assets/images/h-point-christmas/progress-bear.png") no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  top: 64%;
+  right: -4.266vw;
+  transform: translateY(-50%);
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-head .progress .bar-wrap::after,
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-head .progress .bar-wrap .bar-gauge::after {
+  content: "";
+  width: 1.6vw;
+  height: 1.6vw;
+  background: url("../../assets/images/h-point-christmas/progress-start.svg") no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-head .progress .date-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-head .progress .date-wrap .date.start {
+  color: #FFF3A5;
+  font-size: 3.733vw;
+  font-weight: 400;
+  line-height: 130%;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-head .progress .date-wrap .date.end {
+  color: #641009;
+  font-weight: 400;
+  line-height: 130%;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-head .progress .date-wrap .date.end .num {
+  font-size: 4.266vw;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-head .progress .date-wrap .date.end .day {
+  font-size: 3.733vw;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body {
+  width: 82.933vw;
+  display: grid;
+  grid-template-columns: 12vw 18.4vw 11.2vw 17.333vw 3.733vw 20.266vw;
+  grid-template-rows: 11.2vw repeat(3, 16vw) repeat(2, 11.2vw) repeat(3, 16vw) repeat(3, 11.2vw);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: 0 auto;
+  padding-top: 46.6vw;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item {
+  display: block;
+  border: 2px solid #3F0B0B;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item img {
+  display: block;
+  width: 100%;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.on {
+  border: 2px solid #5E190E;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item1 {
+  background-image: url("../../assets/images/h-point-christmas/day-1-off.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item1.on {
+  background-image: url("../../assets/images/h-point-christmas/day-1-on.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item2 {
+  background-image: url("../../assets/images/h-point-christmas/day-2-off.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item2.on {
+  background-image: url("../../assets/images/h-point-christmas/day-2-on.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item3 {
+  background-image: url("../../assets/images/h-point-christmas/day-3-off.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item3.on {
+  background-image: url("../../assets/images/h-point-christmas/day-3-on.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item4 {
+  background-image: url("../../assets/images/h-point-christmas/day-4-off.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item4.on {
+  background-image: url("../../assets/images/h-point-christmas/day-4-on.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item5 {
+  background-image: url("../../assets/images/h-point-christmas/day-5-off.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item5.on {
+  background-image: url("../../assets/images/h-point-christmas/day-5-on.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item6 {
+  background-image: url("../../assets/images/h-point-christmas/day-6-off.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item6.on {
+  background-image: url("../../assets/images/h-point-christmas/day-6-on.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item7 {
+  background-image: url("../../assets/images/h-point-christmas/day-7-off.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item7.on {
+  background-image: url("../../assets/images/h-point-christmas/day-7-on.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item8 {
+  background-image: url("../../assets/images/h-point-christmas/day-8-off.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item8.on {
+  background-image: url("../../assets/images/h-point-christmas/day-8-on.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item9 {
+  background-image: url("../../assets/images/h-point-christmas/day-9-off.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item9.on {
+  background-image: url("../../assets/images/h-point-christmas/day-9-on.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item10 {
+  background-image: url("../../assets/images/h-point-christmas/day-10-off.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item10.on {
+  background-image: url("../../assets/images/h-point-christmas/day-10-on.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item11 {
+  background-image: url("../../assets/images/h-point-christmas/day-11-off.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item11.on {
+  background-image: url("../../assets/images/h-point-christmas/day-11-on.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item12 {
+  background-image: url("../../assets/images/h-point-christmas/day-12-off.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item12.on {
+  background-image: url("../../assets/images/h-point-christmas/day-12-on.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item13 {
+  background-image: url("../../assets/images/h-point-christmas/day-13-off.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item13.on {
+  background-image: url("../../assets/images/h-point-christmas/day-13-on.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item14 {
+  background-image: url("../../assets/images/h-point-christmas/day-14-off.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item14.on {
+  background-image: url("../../assets/images/h-point-christmas/day-14-on.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item15 {
+  background-image: url("../../assets/images/h-point-christmas/day-15-off.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item15.on {
+  background-image: url("../../assets/images/h-point-christmas/day-15-on.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item16 {
+  background-image: url("../../assets/images/h-point-christmas/day-16-off.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item16.on {
+  background-image: url("../../assets/images/h-point-christmas/day-16-on.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item17 {
+  background-image: url("../../assets/images/h-point-christmas/day-17-off.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item17.on {
+  background-image: url("../../assets/images/h-point-christmas/day-17-on.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item18 {
+  background-image: url("../../assets/images/h-point-christmas/day-18-off.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item18.on {
+  background-image: url("../../assets/images/h-point-christmas/day-18-on.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item19 {
+  background-image: url("../../assets/images/h-point-christmas/day-19-off.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item19.on {
+  background-image: url("../../assets/images/h-point-christmas/day-19-on.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item20 {
+  background-image: url("../../assets/images/h-point-christmas/day-20-off.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item20.on {
+  background-image: url("../../assets/images/h-point-christmas/day-20-on.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item21 {
+  background-image: url("../../assets/images/h-point-christmas/day-21-off.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item21.on {
+  background-image: url("../../assets/images/h-point-christmas/day-21-on.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item22 {
+  background-image: url("../../assets/images/h-point-christmas/day-22-off.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item22.on {
+  background-image: url("../../assets/images/h-point-christmas/day-22-on.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item23 {
+  background-image: url("../../assets/images/h-point-christmas/day-23-off.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item23.on {
+  background-image: url("../../assets/images/h-point-christmas/day-23-on.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item24 {
+  background-image: url("../../assets/images/h-point-christmas/day-24-off.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item24.on {
+  background-image: url("../../assets/images/h-point-christmas/day-24-on.png");
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item1 {
+  grid-area: 1/1/2/4;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item2 {
+  grid-area: 1/4/2/7;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item3 {
+  grid-area: 2/1/3/3;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item4 {
+  grid-area: 3/1/4/3;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item5 {
+  grid-area: 4/1/5/3;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item6 {
+  grid-area: 2/3/5/4;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item7 {
+  grid-area: 2/4/3/6;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item8 {
+  grid-area: 3/4/5/6;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item9 {
+  grid-area: 2/6/5/7;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item10 {
+  grid-area: 5/1/7/3;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item11 {
+  grid-area: 5/3/6/7;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item12 {
+  grid-area: 6/3/7/7;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item13 {
+  grid-area: 7/1/10/2;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item14 {
+  border: 2px solid #651111;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item14.on {
+  border: 2px solid #982716;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item15 {
+  grid-area: 8/2/10/3;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item16 {
+  grid-area: 7/3/10/5;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item17 {
+  grid-area: 7/5/8/7;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item18 {
+  grid-area: 8/5/9/7;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item19 {
+  grid-area: 9/5/10/7;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item20 {
+  grid-area: 10/1/11/4;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item21 {
+  grid-area: 10/4/11/7;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item22 {
+  grid-area: 11/1/13/3;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item23 {
+  grid-area: 11/3/12/7;
+}
+.h-point-christmas .section.check .section-body .calendar-wrap .calendar-body .calendar-item.item24 {
+  grid-area: 12/3/13/7;
+}
+.h-point-christmas .section.check .section-body + .section-util {
+  margin-top: 10.666%;
+}
+.h-point-christmas .section.check .section-util {
+  position: relative;
+}
+.h-point-christmas .section.check .section-util .btn {
+  display: block;
+  margin: 0 auto;
+}
+.h-point-christmas .section.check .section-util .btn img {
+  display: block;
+  width: 100%;
+}
+.h-point-christmas .section.notice {
+  background-color: #131E22;
+  padding: 8% 5.333%;
+}
+.h-point-christmas .section.notice .notice-list .list-item {
+  padding-left: 10px;
+}
+@keyframes swaying-curtain1 {
+  0% {
+    transform: rotate(-0.2deg);
+  }
+  50% {
+    transform: rotate(0.2deg);
+  }
+  100% {
+    transform: rotate(-0.2deg);
+  }
+}
+@keyframes swaying-curtain2 {
+  0% {
+    transform: rotate(0.2deg);
+  }
+  50% {
+    transform: rotate(-0.2deg);
+  }
+  100% {
+    transform: rotate(0.2deg);
+  }
+}
+/*# sourceMappingURL=h-point-ch.css.map */
