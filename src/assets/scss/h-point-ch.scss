@@ -9,7 +9,7 @@
     font-style: normal;
     box-sizing: border-box;
     word-wrap: break-word;
-    word-break: keep-all;
+    word-break: break-all;
     touch-action: auto;
     -webkit-tap-highlight-color: transparent !important;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
@@ -18,6 +18,19 @@
 *:before,
 *:after {
     box-sizing: inherit;
+}
+
+html,
+body {
+    font-family: "HGGGothicssi", sans-serif;
+    letter-spacing: 0;
+    -webkit-overflow-scrolling: touch;
+    -moz-overflow-scrolling: touch;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -o-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
 
 ul,
@@ -108,13 +121,13 @@ ins {
                         top: 0;
                         width: 50%;
                         height: 100%;
-                        transition: 0.8s ease-in-out;
+                        transition: 0.7s ease-in;
                         &.left {
                             left: -1%;
                             transform-origin: bottom left;
                             img {
                                 transform-origin: top left;
-                                animation: swaying-curtain1 2.5s infinite ease-in-out;
+                                animation: swaying-curtain1 2s infinite linear;
                             }
                         }
                         &.right {
@@ -122,7 +135,7 @@ ins {
                             transform-origin: bottom right;
                             img {
                                 transform-origin: top right;
-                                animation: swaying-curtain2 2.5s infinite ease-in-out;
+                                animation: swaying-curtain2 2s infinite linear;
                             }
                         }
                         img {
@@ -134,17 +147,18 @@ ins {
                     &.active1 {
                         .curtain-item {
                             &.left {
-                                transform: skewY(-1deg) skewX(5deg);
+                                transform: skewY(-1deg) skewX(9deg);
                             }
                             &.right {
-                                transform: skewY(1deg) skewX(-5deg);
+                                transform: skewY(1deg) skewX(-9deg);
                             }
                         }
                     }
                     &.active2 {
                         .curtain-item {
-                            width: 25%;
-                            transition: 1.8s cubic-bezier(0.225, 0.545, 0.220, 0.660);
+                            width: 20%;
+                            // transition: 3s cubic-bezier(0.225, 0.545, 0.220, 0.660);
+                            transition: 2.5s ease;
                             &.left {
                                 left: -50%;
                                 transform: skewY(0deg) skewX(3deg);
@@ -217,10 +231,10 @@ ins {
                 }
             }
         }
-        &.check {
+        &.calendar {
             position: relative;
             width: 100%;
-            padding-bottom: 13.333vw;
+            padding-bottom: 11.733vw;
             &::before {
                 content: '';
                 width: 100%;
@@ -228,14 +242,25 @@ ins {
                 position: absolute;
                 top: 0;
                 left: 0;
-                background: url('../../assets/images/h-point-christmas/check-bg.png') no-repeat center center;
+                background: url('../../assets/images/h-point-christmas/calendar-bg.png') no-repeat center center;
                 background-size: cover;
+            }
+            &::after {
+                content: '';
+                width: 100%;
+                height: 258.4vw;
+                position: absolute;
+                bottom: -6vw;
+                left: 0;
+                background: url('../../assets/images/h-point-christmas/calendar-friends.png') no-repeat center center;
+                background-size: cover;
+                pointer-events: none;
             }
             .section-head {
                 position: relative;
                 padding-top: 13.333%;
                 .section-subject {
-                    width: 85.866%;
+                    width: 86.666vw;
                     margin: 0 auto;
                     img {
                         display: block;
@@ -243,7 +268,7 @@ ins {
                     }
                 }
                 + .section-body {
-                    margin-top: 30px;
+                    margin-top: 8.533vw;
                 }
             }
             .section-body {
@@ -279,6 +304,19 @@ ins {
                         align-items: center;
                         justify-content: center;
                         flex-direction: column;
+                        .tip {
+                            width: 65.866vw;
+                            height: 12.8vw;
+
+                            position: absolute;
+                            top: -12vw;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            img {
+                                width: 100%;
+                                display: block;
+                            }
+                        }
                         .subject {
                             display: block;
                             color: #FFF;
@@ -289,7 +327,7 @@ ins {
                             .accent {
                                 color: #FFEFA5;
                                 font-weight: 800;
-                                text-decoration: underline;
+                                border-bottom: 1px solid #FFEFA5;
                             }
                             + .progress {
                                 margin-top: 5.333vw;
@@ -310,7 +348,7 @@ ins {
                                     position: absolute;
                                     top: 0;
                                     left: 0;
-                                    width: calc(100% / 3);
+                                    // width: calc(100% / 3);
                                     height: 3.2vw;
                                     border-radius: 8vw;
                                     background-color: #FFDE68;
@@ -340,6 +378,9 @@ ins {
                                     top: 50%;
                                     transform: translateY(-50%);
                                 }
+                                + .date-wrap {
+                                    margin-top: 1.6vw;
+                                }
                             }
                             .date-wrap {
                                 display: flex;
@@ -354,13 +395,14 @@ ins {
                                     }
                                     &.end {
                                         color: #641009;
-                                        font-weight: 400;
                                         line-height: 130%;
                                         .num {
                                             font-size: 4.266vw;
+                                            font-weight: 800;
                                         }
                                         .day {
                                             font-size: 3.733vw; 
+                                            font-weight: 600;
                                         }
                                     }
                                 }
@@ -368,18 +410,17 @@ ins {
                         }
                     }
                     .calendar-body {
-                        // width: 92.84%;
-                        // width: calc(100% - 6.4%);
-                        width: 82.933vw;
-                        display: grid;
-                        grid-template-columns: 12vw 18.4vw 11.2vw 17.333vw 3.733vw 20.266vw;
-                        grid-template-rows: 11.2vw repeat(3, 16vw) repeat(2, 11.2vw) repeat(3, 16vw) repeat(3, 11.2vw);
-                        grid-column-gap: 0px;
-                        grid-row-gap: 0px;
-                        margin: 0 auto;
-                        // padding-top: 46.442vw;
-                        padding-top: 46.6vw;
-                        .calendar-item {
+                        .day-list {
+                            width: 82.933vw;
+                            display: grid;
+                            grid-template-columns: 12vw 18.4vw 11.2vw 17.333vw 3.733vw 20.266vw;
+                            grid-template-rows: 11.2vw repeat(3, 16vw) repeat(2, 11.2vw) repeat(3, 16vw) repeat(3, 11.2vw);
+                            grid-column-gap: 0px;
+                            grid-row-gap: 0px;
+                            margin: 0 auto;
+                            padding-top: 46.6vw;
+                        }
+                        .day-item {
                             display: block;
                             border: 2px solid #3F0B0B;
                             background-size: cover;
@@ -507,41 +548,79 @@ ins {
                     }
                 }
                 + .section-util {
-                    margin-top: 10.666%;
+                    margin-top: 9.066vw;
                 }
             }
             .section-util {
                 position: relative;
+                z-index: 1;
                 .btn {
                     display: block;
+                    position: relative;
                     margin: 0 auto;
-                    img {
+                    width: 89.333vw;
+                    height: 18.133vw;
+                    .btn-text {
+                        font-size: 5.333vw;
+                        font-weight: 800;
+                        line-height: 150%;
+                        text-align: center;
+                        color: #FFF;
+                        width: 100%;
+
+                        position: absolute;
+                        top: 46%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                    }
+                    &::after {
+                        content: '';
                         display: block;
                         width: 100%;
+                        height: 100%;
+                        background: url('../../assets/images/h-point-christmas/check-button.png') no-repeat center center;
+                        background-size: cover;
                     }
                 }
             }
         }
         &.notice {
             background-color: #131E22;
-            padding: 8% 5.333%;
+            padding: 8vw 5.333vw;
             .notice-list {
                 .list-item {
-                    padding-left: 10px;
-
+                    position: relative;
+                    padding-left: 2.666vw;
+                    font-weight: 400;
+                    font-size: 3.466vw;
+                    line-height: 130%;
+                    color: #BBB;
+                    + .list-item {
+                        margin-top: 2.666vw;
+                    }
+                    &::before {
+                        content: '';
+                        width: 1.066vw;
+                        height: 1.066vw;
+                        position: absolute;
+                        top: 1.733vw;
+                        left: 0;
+                        background-color: #bbb;
+                        border-radius: 100%;
+                    }
                 }
             }
         }
     }
 
     @keyframes swaying-curtain1 {
-        0% {transform: rotate(-0.2deg);}
-        50% {transform: rotate(0.2deg);}
-        100% {transform: rotate(-0.2deg);}
+        0% {transform: rotate(-0.15deg);}
+        50% {transform: rotate(0.15deg);}
+        100% {transform: rotate(-0.15deg);}
     }
     @keyframes swaying-curtain2 {
-        0% {transform: rotate(0.2deg);}
-        50% {transform: rotate(-0.2deg);}
-        100% {transform: rotate(0.2deg);}
+        0% {transform: rotate(0.15deg);}
+        50% {transform: rotate(-0.15deg);}
+        100% {transform: rotate(0.15deg);}
     }
 }

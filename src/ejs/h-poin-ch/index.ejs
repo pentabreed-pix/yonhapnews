@@ -9,12 +9,13 @@
 	<title>H포인트 크리스마스 이벤트</title>
 	<!-- <link rel="shortcut icon" href="./../../assets/images/bui/favicon.ico"> -->
 	<link rel="stylesheet" type="text/css" href="../assets/css/h-point-ch.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/h-point-ch-font.css">
 	<script src="../assets/js/jquery.js"></script>
 
 	<script>
 		document.addEventListener('DOMContentLoaded', function() {
 			introAni();
-			clickCalendarDay();
+			// clickCalendarDay();
 		});
 
 		//intro animation
@@ -23,24 +24,11 @@
 
 			setTimeout(() => {
 				curtainImg.classList.add('active1')
-			}, 1000);
+			}, 900);
 			setTimeout(() => {
 				curtainImg.classList.add('active2')
-			}, 3000);
+			}, 1200);
 		}
-
-		// //클릭 on, off : on 클래스가 붙으면 calendar-item의 이미지, css가 바뀝니다.
-		// function clickCalendarDay() {
-		// 	const calendarDays = document.querySelectorAll('.calendar-wrap .calendar-body .calendar-item');
-
-		// 	calendarDays.forEach(calendarDay => {
-		// 		if(calendarDay) {
-		// 			calendarDay.addEventListener("click", function() {
-		// 				calendarDay.classList.toggle("on");
-		// 			})
-		// 		}
-		// 	});
-		// }
 	</script>
 </head>
 
@@ -73,6 +61,7 @@
 			</div>
 			<div class="section-body">
 				<ul class="data-list">
+					<!-- 앱 링크 이동 배너 -->
 					<li class="data-item">
 						<a href="https://www.h-point.co.kr/cma/invite.nhd?scheme=mgzCtgr?ctgrId=010" class="data-link">
 							<img src="../assets/images/h-point-christmas/contents-item-a.png" alt="# 1. 사운드 갤러리 크리스마스 ×더현대서울 현대백화점의 크리스마스 이야기">
@@ -88,18 +77,23 @@
 							<img src="../assets/images/h-point-christmas/contents-item-c.png" alt="# 3. 오디오북 크리스마스 이야기 어디까지 들어봤니? 소리로 읽는 행복한 크리스마스">
 						</a>
 					</li>
+					<!-- //앱 링크 이동 배너 -->
 				</ul>
 			</div>
 		</div>
-		<div class="section check">
+		<div class="section calendar">
 			<div class="section-head">
 				<div class="section-subject">
-					<img src="../assets/images/h-point-christmas/check-head-text.svg" alt="H.Point 크리스마스 어드벤트 캘린더 매일 출석하며 채워나가는 크리스마스 달력! 매일 달라지는 혜택과 더불어 1천만P 당첨 선물을 준비했어요 설레는 크리스마스로의 여정에 참여해보는 건 어떨까요">
+					<img src="../assets/images/h-point-christmas/calendar-head-text.png" alt="H.Point 크리스마스 어드벤트 캘린더. 매일 출석할수록 쌓여가는 크리스마스 혜택!
+                    H.Point에서 매일 다른 서프라이즈 선물을 준비했어요.포인트와 쿠폰 그리고 1천만P 당첨의 기회까지 출석체크하고 오늘의 선물 박스를 열어보세요. #1만_플러스포인트 #100P #20%할인권  #메가박스팝콘_500원 #10,000,000P_주인공을_찾습니다.">
 				</div>
-			</div>
+            </div>
 			<div class="section-body">
 				<div class="calendar-wrap">
 					<div class="calendar-head">
+                        <div class="tip">
+                            <img src="../assets/images/h-point-christmas/calendar-tip.png" alt="TIP 출석을 많이 할 수록 당첨 확률이 올라가요!">
+                        </div>
 						<!-- 고객 응모 현황 -->
 						<em class="subject">
 							<span class="name accent">김현백</span>님의<br> 
@@ -110,7 +104,7 @@
 						<div class="progress">
 							<div class="bar-wrap">
 								<!-- 채워지는 게이지 -->
-								<div class="bar-gauge"></div>
+								<div class="bar-gauge" style="width: calc(100% / 24);"></div>
 								<!-- //채워지는 게이지 -->
 							</div>
 							<div class="date-wrap">
@@ -122,46 +116,52 @@
 						</div>
 						<!-- //프로그래스바 -->
 					</div>
+					<!-- 출석체크 캘린더 : on 클래스가 붙으면 day-item의 이미지, css가 바뀝니다. -->
 					<div class="calendar-body">
-						<a href="javascript:void(0)" class="calendar-item item1 on"></a>
-						<a href="javascript:void(0)" class="calendar-item item2"></a>
-						<a href="javascript:void(0)" class="calendar-item item3"></a>
-						<a href="javascript:void(0)" class="calendar-item item4"></a>
-						<a href="javascript:void(0)" class="calendar-item item5"></a>
-						<a href="javascript:void(0)" class="calendar-item item6"></a>
-						<a href="javascript:void(0)" class="calendar-item item7"></a>
-						<a href="javascript:void(0)" class="calendar-item item8"></a>
-						<a href="javascript:void(0)" class="calendar-item item9 on"></a>
-						<a href="javascript:void(0)" class="calendar-item item10"></a>
-						<a href="javascript:void(0)" class="calendar-item item11"></a>
-						<a href="javascript:void(0)" class="calendar-item item12"></a>
-						<a href="javascript:void(0)" class="calendar-item item13"></a>
-						<a href="javascript:void(0)" class="calendar-item item14"></a>
-						<a href="javascript:void(0)" class="calendar-item item15"></a>
-						<a href="javascript:void(0)" class="calendar-item item16 on"></a>
-						<a href="javascript:void(0)" class="calendar-item item17"></a>
-						<a href="javascript:void(0)" class="calendar-item item18"></a>
-						<a href="javascript:void(0)" class="calendar-item item19"></a>
-						<a href="javascript:void(0)" class="calendar-item item20 on"></a>
-						<a href="javascript:void(0)" class="calendar-item item21"></a>
-						<a href="javascript:void(0)" class="calendar-item item22"></a>
-						<a href="javascript:void(0)" class="calendar-item item23"></a>
-						<a href="javascript:void(0)" class="calendar-item item24 on"></a>
+						<ul class="day-list">
+							<li class="day-item item1 on"></li>
+							<li class="day-item item2"></li>
+							<li class="day-item item3"></li>
+							<li class="day-item item4"></li>
+							<li class="day-item item5"></li>
+							<li class="day-item item6"></li>
+							<li class="day-item item7"></li>
+							<li class="day-item item8"></li>
+							<li class="day-item item9 on"></li>
+							<li class="day-item item10"></li>
+							<li class="day-item item11"></li>
+							<li class="day-item item12"></li>
+							<li class="day-item item13"></li>
+							<li class="day-item item14"></li>
+							<li class="day-item item15"></li>
+							<li class="day-item item16 on"></li>
+							<li class="day-item item17"></li>
+							<li class="day-item item18"></li>
+							<li class="day-item item19"></li>
+							<li class="day-item item20 on"></li>
+							<li class="day-item item21"></li>
+							<li class="day-item item22"></li>
+							<li class="day-item item23"></li>
+							<li class="day-item item24 on"></li>
+						</ul>
 					</div>
+					<!-- //출석체크 캘린더 -->
 				</div>
 			</div>
+            <!-- 출석 체크 버튼 -->
 			<div class="section-util">
 				<a href="javascript:void(0)" class="btn">
-					<img src="../assets/images/h-point-christmas/check-button.svg" alt="출석 체크하기">
+                    <span class="btn-text">12월 19일 출석 체크하기</span>
 				</a>
 			</div>
+            <!-- //출석 체크 버튼 -->
 		</div>
 		<div class="section notice">
 			<div class="section-inner">
 				<ul class="notice-list">
-					<li class="list-item">본 이벤트는 진행 기간동안만 참여 가능합니다. (진행일자: 12/1~24)</li>
+					<li class="list-item">본 이벤트는 진행 기간동안만 참여 가능합니다.<br> (진행일자: 12/1~24)</li>
 					<li class="list-item">출석체크는 당일 1일 1회 참여 가능하며, 지난일자의 출석 체크는 불가합니다.</li>
-					<li class="list-item">출석일이 많을 수록 1천만P 당첨 확률이 올라갑니다. (출석일 1일 = 응모권 1개)</li>
+					<li class="list-item">출석일이 많을 수록 1천만P 당첨 확률이 올라갑니다.<br> (출석일 1일 = 응모권 1개)</li>
 					<li class="list-item">1천만P 당첨은 12월 31일 개별 통보 및 안내 예정입니다.</li>
 					<li class="list-item">행사 내용 및 일정은 내부 사정으로 일부 변경될 수 있습니다.</li>
 					<li class="list-item">혜택 별 자세한 내용은 각 혜택 내 독소조항 참고 바랍니다.</li>
