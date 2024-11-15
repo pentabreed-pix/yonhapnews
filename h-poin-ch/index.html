@@ -7,7 +7,7 @@
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>H포인트 크리스마스 이벤트</title>
-    <!-- <link rel="shortcut icon" href=""> -->
+    <!-- <link rel="shortcut icon" href="./../../assets/images/bui/favicon.ico"> -->
     <link rel="stylesheet" type="text/css" href="../assets/css/h-point-ch.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/h-point-ch-font.css">
     <script src="../assets/js/jquery.js"></script>
@@ -15,8 +15,8 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             introAni();
-            clickAnchorSmooth();
             scrollAnchorBtnActive();
+            clickAnchorSmooth();
         });
 
         //인트로 애니
@@ -31,7 +31,7 @@
             }, 900);
         }
 
-        //앵커 클릭 이동
+        //앵커 클릭
         function clickAnchorSmooth() {
             document.querySelectorAll('.section.anchor-area .anchor-item[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
@@ -51,26 +51,35 @@
             });
         }
 
-        //스크롤 앵커 active
-        function initializeScrollTracking() {
+        //앵커 스크롤
+        function scrollAnchorBtnActive() {
             const sections = document.querySelectorAll(".section");
             const anchorArea = document.querySelector(".anchor-area");
+            const offsetVw = 20; // 활성화 위치를 더 위로 설정하는 보정 값 (단위: vw)
 
-            function updateActiveClass(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        anchorArea.className = `section anchor-area ${entry.target.id}`;
+            function setActiveSection() {
+                let activeSectionId = null;
+                const offsetPx = (window.innerWidth * offsetVw) / 100; // vw 단위를 px로 변환
+                const scrollTop = window.scrollY + offsetPx; // 스크롤 위치에 변환된 offset 추가
+
+                sections.forEach(function(section) {
+                    const sectionTop = section.offsetTop; // 섹션의 페이지 상단 위치
+                    const sectionHeight = section.offsetHeight;
+
+                    // 스크롤이 섹션의 시작점 - offset에 닿으면 활성화
+                    if (scrollTop >= sectionTop && scrollTop < sectionTop + sectionHeight) {
+                        activeSectionId = section.id;
                     }
                 });
+
+                // anchor-area 클래스 업데이트
+                if (activeSectionId) {
+                    anchorArea.className = `section anchor-area ${activeSectionId}`;
+                }
             }
 
-            const observerOptions = {
-                root: null, // 뷰포트를 기준으로 관찰
-                threshold: 0.5 // 섹션의 50% 이상이 보이면 감지
-            };
-
-            const observer = new IntersectionObserver(updateActiveClass, observerOptions);
-            sections.forEach(section => observer.observe(section));
+            // 스크롤 이벤트에 setActiveSection 연결
+            window.addEventListener("scroll", setActiveSection);
         }
     </script>
 </head>
