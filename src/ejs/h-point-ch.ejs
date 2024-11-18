@@ -7,16 +7,16 @@
 	<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>H포인트 크리스마스 이벤트</title>
-	<!-- <link rel="shortcut icon" href="./../../assets/images/bui/favicon.ico"> -->
-	<link rel="stylesheet" type="text/css" href="../assets/css/h-point-ch.css">
-	<link rel="stylesheet" type="text/css" href="../assets/css/h-point-ch-font.css">
-	<script src="../assets/js/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="/assets/css/h-point-ch.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/h-point-ch-font.css">
+	<script src="/assets/js/jquery.js"></script>
 
 	<script>
 		document.addEventListener('DOMContentLoaded', function() {
 			introAni();
 			scrollAnchorBtnActive();
 			clickAnchorSmooth();
+			progressBar();
 		});
 
 		//인트로 애니
@@ -81,6 +81,27 @@
 			// 스크롤 이벤트에 setActiveSection 연결
 			window.addEventListener("scroll", setActiveSection);
 		}
+
+		//progressBar 채우기
+		function progressBar() {
+			const progressBar = document.querySelector(".bar-gauge");
+			const items = document.querySelectorAll(".calendar-body .day-list .day-item");
+			const totalItems = items.length;
+			let activeItems = 0;
+
+			// 각 li를 순회하면서 on 클래스가 있는지 확인
+			items.forEach((item) => {
+				if (item.classList.contains("on")) {
+				activeItems++; // on 클래스가 있으면 activeItems 증가
+				}
+			});
+
+			// 계산하여 width 설정
+			const progressWidth = (activeItems / totalItems) * 100;
+
+			// width를 인라인 스타일로 삽입
+			progressBar.setAttribute("style", `width: ${progressWidth}%;`);
+		}
 	</script>
 </head>
 
@@ -90,17 +111,17 @@
 			<em class="section-head blind">HARRY'S CHRISTMAS 출석체크 이벤트</em>
 			<div class="section-body">
 				<div class="intro-figure shawl">
-					<img src="../assets/images/h-point-christmas/intro-shawl.png" alt="">
+					<img src="/assets/images/h-point-christmas/intro-shawl.png" alt="">
 				</div>
 				<div class="intro-figure moon">
-					<img src="../assets/images/h-point-christmas/intro-moon.png" alt="">
+					<img src="/assets/images/h-point-christmas/intro-moon.png" alt="">
 				</div>
 				<div class="intro-figure curtain">
 					<div class="curtain-item left">
-						<img src="../assets/images/h-point-christmas/intro-curtain-left.png" alt="">
+						<img src="/assets/images/h-point-christmas/intro-curtain-left.png" alt="">
 					</div>
 					<div class="curtain-item right">
-						<img src="../assets/images/h-point-christmas/intro-curtain-right.png" alt="">
+						<img src="/assets/images/h-point-christmas/intro-curtain-right.png" alt="">
 					</div>
 				</div>
 			</div>
@@ -115,7 +136,7 @@
 		<div class="section contents" id="contents-section">
 			<div class="section-head">
 				<div class="section-subject">
-					<img src="../assets/images/h-point-christmas/contents-head-text.svg" alt="내 손안에서 펼쳐지는 크리스마스 이야기 H.Point와 함께 크리스마스의 다양한 콘텐츠를 즐겨보세요.">
+					<img src="/assets/images/h-point-christmas/contents-head-text.svg" alt="내 손안에서 펼쳐지는 크리스마스 이야기 H.Point와 함께 크리스마스의 다양한 콘텐츠를 즐겨보세요.">
 				</div>
 			</div>
 			<div class="section-body">
@@ -123,17 +144,17 @@
 					<!-- 앱 링크 이동 배너 -->
 					<li class="data-item">
 						<a href="https://www.h-point.co.kr/cma/invite.nhd?scheme=mgzCtgr?ctgrId=010" class="data-link">
-							<img src="../assets/images/h-point-christmas/contents-item-a.png" alt="# 1. 사운드 갤러리 크리스마스 ×더현대서울 현대백화점의 크리스마스 이야기">
+							<img src="/assets/images/h-point-christmas/contents-item-a.png" alt="# 1. 사운드 갤러리 크리스마스 ×더현대서울 현대백화점의 크리스마스 이야기">
 						</a>
 					</li>
 					<li class="data-item">
 						<a href="https://www.h-point.co.kr/cma/invite.nhd?scheme=mgzCtgr?ctgrId=006018" class="data-link">
-							<img src="../assets/images/h-point-christmas/contents-item-b.png" alt="# 2. Edit. H 연말과 크리스마스의 분위기를 물씬 느낄 수 있는 공간 추천">
+							<img src="/assets/images/h-point-christmas/contents-item-b.png" alt="# 2. Edit. H 연말과 크리스마스의 분위기를 물씬 느낄 수 있는 공간 추천">
 						</a>
 					</li>
 					<li class="data-item">
 						<a href="https://www.h-point.co.kr/cma/invite.nhd?scheme=evntPtc?eventId=298707" class="data-link">
-							<img src="../assets/images/h-point-christmas/contents-item-c.png" alt="# 3. 오디오북 크리스마스 이야기 어디까지 들어봤니? 소리로 읽는 행복한 크리스마스">
+							<img src="/assets/images/h-point-christmas/contents-item-c.png" alt="# 3. 오디오북 크리스마스 이야기 어디까지 들어봤니? 소리로 읽는 행복한 크리스마스">
 						</a>
 					</li>
 					<!-- //앱 링크 이동 배너 -->
@@ -143,27 +164,26 @@
 		<div class="section calendar" id="calendar-section">
 			<div class="section-head">
 				<div class="section-subject">
-					<img src="../assets/images/h-point-christmas/calendar-head-text.png" alt="H.Point 크리스마스 어드벤트 캘린더. 매일 출석할수록 쌓여가는 크리스마스 혜택!
-                    H.Point에서 매일 다른 서프라이즈 선물을 준비했어요.포인트와 쿠폰 그리고 1천만P 당첨의 기회까지 출석체크하고 오늘의 선물 박스를 열어보세요. #1만_플러스포인트 #100P #20%할인권  #메가박스팝콘_500원 #10,000,000P_주인공을_찾습니다.">
+					<img src="/assets/images/h-point-christmas/calendar-head-text.png" alt="H.Point 크리스마스 어드벤트 캘린더. 매일 출석할수록 쌓여가는 크리스마스 혜택! H.Point에서 매일 다른 서프라이즈 선물을 준비했어요.포인트와 쿠폰 그리고 1천만P 당첨의 기회까지 출석체크하고 오늘의 선물 박스를 열어보세요. #1만_플러스포인트 #100P #20%할인권 #메가박스팝콘_500원 #1천만P_주인공을_찾습니다.">
 				</div>
             </div>
 			<div class="section-body">
 				<div class="calendar-wrap">
 					<div class="calendar-head">
                         <div class="tip">
-                            <img src="../assets/images/h-point-christmas/calendar-tip.png" alt="TIP 출석을 많이 할 수록 당첨 확률 UP! UP!매일 출석하고 행운의 주인공이 되어보세요!">
+                            <img src="/assets/images/h-point-christmas/calendar-tip.png" alt="TIP. 출석을 많이 할 수록 당첨 확률 UP! UP! 매일 출석하고 행운의 주인공이 되어보세요! 매일 8시부터 참여가 가능해요">
                         </div>
 						<!-- 고객 응모 현황 -->
 						<em class="subject">
-							<span class="name accent">고객</span>님의<br> 
+							<span class="name accent">고객님</span>의<br> 
 							1천만P 당첨 <span class="accent">응모권 현황</span>
 						</em>
 						<!-- //고객 응모 현황 -->
 						<!-- 프로그래스바 -->
 						<div class="progress">
 							<div class="bar-wrap">
-								<!-- 채워지는 게이지 -->
-								<div class="bar-gauge" style="width: 20.833%;"></div>
+								<!-- 채워지는 게이지 : progressBar 스크립트로 width값 삽입 -->
+								<div class="bar-gauge"></div>
 								<!-- //채워지는 게이지 -->
 							</div>
 							<div class="date-wrap">
@@ -181,10 +201,10 @@
 					<div class="calendar-body">
 						<ul class="day-list">
 							<li class="day-item item1 on"></li>
-							<li class="day-item item2"></li>
-							<li class="day-item item3"></li>
+							<li class="day-item item2 on"></li>
+							<li class="day-item item3 on"></li>
 							<li class="day-item item4"></li>
-							<li class="day-item item5"></li>
+							<li class="day-item item5 on"></li>
 							<li class="day-item item6"></li>
 							<li class="day-item item7"></li>
 							<li class="day-item item8"></li>
@@ -234,12 +254,12 @@
 		<div class="modal-display" id="modalDisplay">
 			<div class="modal design1">
 				<div class="modal-inner">
-					<!-- 오늘 출석체크 성공 -->
+					<!-- 출석체크 성공 선물 상자 팝업 -->
 					<div class="modal-area gift-box" id="checkModal">
 						<div class="modal-wrap">
 							<div class="modal-figure">
 								<a href="" class="gift-btn">
-									<img src="../assets/images/h-point-christmas/modal-gift-box.png" alt="">
+									<img src="/assets/images/h-point-christmas/modal-gift-box.png" alt="">
 								</a>
 							</div>
 							<div class="modal-inform">
@@ -247,18 +267,17 @@
 									<span class="modal-subject">오늘 출석체크 성공!</span>
 								</div>
 								<div class="modal-body">
-									<p class="para">선물 상자를 눌러서<br> 오늘의 혜택을 확인해보세요</p>
+									<p class="para">선물을 가져오고 있어요!<br> 잠시만 기다려주세요!</p>
 								</div>
 							</div>
 						</div>
 					</div>
-					<!-- 오늘 출석체크 성공 -->
-					<!-------- 선물 상자를 클릭한 후 -------->
-					<!-- 당첨 팝업 -->
+					<!-- 출석체크 성공 선물 상자 팝업-->
+					<!-- 최신 버전 필요 팝업 -->
 					<div class="modal-area case1" id="pointModal">
 						<div class="modal-wrap">
 							<div class="modal-figure">
-								<img src="../assets/images/h-point-christmas/point-1000.png" alt="">
+								<img src="/assets/images/h-point-christmas/point-1000.png" alt="">
 							</div>
 							<div class="modal-inform">
 								<div class="modal-head">
@@ -272,7 +291,108 @@
 								</div>
 							</div>
 							<div class="modal-fuc">
-								<a href="https://www.h-point.co.kr/cma/invite.nhd?scheme=myPnt" class="fuc-btn">
+								<a href="../h-point-ch/index.html" class="fuc-btn">
+									<span class="btn-text">혜택받기</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- //최신 버전 필요 팝업 -->
+					<!-- 마케팅 수신 미동의 팝업 -->
+					<div class="modal-area case1" id="pointModal">
+						<div class="modal-wrap">
+							<div class="modal-figure">
+								<img src="/assets/images/h-point-christmas/point-1000.png" alt="">
+							</div>
+							<div class="modal-inform">
+								<div class="modal-head">
+									<span class="modal-subject">축하합니다!</span>
+								</div>
+								<div class="modal-body">
+									<ul class="bullet-list">
+										<li class="bullet-item">지급된 포인트는 캐시백, 선물하기, 전환 등은 불가합니다.</li>
+										<li class="bullet-item">하단 등록하기 버튼을 통해 H.Point App에서 등록하셔야 정상사용이 가능합니다.</li>
+									</ul>
+								</div>
+							</div>
+							<div class="modal-fuc">
+								<a href="../h-point-ch/index.html" class="fuc-btn">
+									<span class="btn-text">혜택받기</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- //마케팅 수신 미동의 팝업 -->
+					<!----------------------------------- 출석체크 성공 선물 상자가 나오고  ----------------------------------->
+					<!-- 꽝! 팝업 -->
+					<div class="modal-area case1" id="pointModal">
+						<div class="modal-wrap">
+							<div class="modal-figure">
+								<img src="/assets/images/h-point-christmas/point-1000.png" alt="">
+							</div>
+							<div class="modal-inform">
+								<div class="modal-head">
+									<span class="modal-subject">축하합니다!</span>
+								</div>
+								<div class="modal-body">
+									<ul class="bullet-list">
+										<li class="bullet-item">지급된 포인트는 캐시백, 선물하기, 전환 등은 불가합니다.</li>
+										<li class="bullet-item">하단 등록하기 버튼을 통해 H.Point App에서 등록하셔야 정상사용이 가능합니다.</li>
+									</ul>
+								</div>
+							</div>
+							<div class="modal-fuc">
+								<a href="../h-point-ch/index.html" class="fuc-btn">
+									<span class="btn-text">혜택받기</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- //꽝! 팝업 -->
+					<!-- 중복 참여시 팝업 -->
+					<div class="modal-area case1" id="pointModal">
+						<div class="modal-wrap">
+							<div class="modal-figure">
+								<img src="/assets/images/h-point-christmas/point-1000.png" alt="">
+							</div>
+							<div class="modal-inform">
+								<div class="modal-head">
+									<span class="modal-subject">축하합니다!</span>
+								</div>
+								<div class="modal-body">
+									<ul class="bullet-list">
+										<li class="bullet-item">지급된 포인트는 캐시백, 선물하기, 전환 등은 불가합니다.</li>
+										<li class="bullet-item">하단 등록하기 버튼을 통해 H.Point App에서 등록하셔야 정상사용이 가능합니다.</li>
+									</ul>
+								</div>
+							</div>
+							<div class="modal-fuc">
+								<a href="../h-point-ch/index.html" class="fuc-btn">
+									<span class="btn-text">혜택받기</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- //중복 참여시 팝업 -->
+					<!-- 당첨 팝업 : 1일차 -->
+					<div class="modal-area case1" id="pointModal">
+						<div class="modal-wrap">
+							<div class="modal-figure">
+								<img src="/assets/images/h-point-christmas/point-1000.png" alt="">
+							</div>
+							<div class="modal-inform">
+								<div class="modal-head">
+									<span class="modal-subject">축하합니다!</span>
+								</div>
+								<div class="modal-body">
+									<ul class="bullet-list">
+										<li class="bullet-item">지급된 포인트는 캐시백, 선물하기, 전환 등은 불가합니다.</li>
+										<li class="bullet-item">하단 등록하기 버튼을 통해 H.Point App에서 등록하셔야 정상사용이 가능합니다.</li>
+									</ul>
+								</div>
+							</div>
+							<div class="modal-fuc">
+								<a href="../h-point-ch/index.html" class="fuc-btn">
 									<span class="btn-text">혜택받기</span>
 								</a>
 							</div>

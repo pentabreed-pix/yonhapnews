@@ -199,14 +199,31 @@ ins {
                     height: 20.533vw;
                 }
             }
+            &::after {
+                content: '';
+                width: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                position: absolute;
+                display: block;
+                top: 0;
+                height: 100%;
+            }
             &.intro-section {
-                background-image: url('../../assets/images/h-point-christmas/anchor-head-intro.png');
+                &::after {
+                    background-image: url('../../assets/images/h-point-christmas/anchor-head-intro.png');
+                }
             }
             &.contents-section {
-                background-image: url('../../assets/images/h-point-christmas/anchor-head-contents.png');
+                &::after {
+                    background-image: url('../../assets/images/h-point-christmas/anchor-head-contents.png');
+                }
             }
             &.calendar-section {
-                background-image: url('../../assets/images/h-point-christmas/anchor-head-calendar.png');
+                &::after {
+                    background-image: url('../../assets/images/h-point-christmas/anchor-head-calendar.png');
+                }
             }
         }
         &.contents {
@@ -297,7 +314,7 @@ ins {
                     }
                 }
                 + .section-body {
-                    margin-top: 8.533vw;
+                    margin-top: 40vw;
                 }
             }
             .section-body {
@@ -323,7 +340,7 @@ ins {
                     }
                     .calendar-head {
                         position: absolute;
-                        top: 11.466vw;
+                        top: -29.333vw;
                         left: 50%;
                         transform: translateX(-50%);
                         width: 100%;
@@ -334,13 +351,9 @@ ins {
                         justify-content: center;
                         flex-direction: column;
                         .tip {
-                            width: 64.266vw;
-                            height: 18.133vw;
-
-                            position: absolute;
-                            top: -17.2vw;
-                            left: 50%;
-                            transform: translateX(-50%);
+                            width: 74.4vw;
+                            position: relative;
+                            margin: 0 auto;
                             img {
                                 width: 100%;
                                 display: block;
@@ -353,6 +366,7 @@ ins {
                             font-weight: 400;
                             line-height: 150%;
                             text-align: center;
+                            margin-top: 13.333vw;
                             .accent {
                                 color: #FFEFA5;
                                 font-weight: 800;
@@ -645,17 +659,6 @@ ins {
         }
     }
 
-    @keyframes swaying-curtain1 {
-        0% {transform: rotate(-0.15deg);}
-        50% {transform: rotate(0.15deg);}
-        100% {transform: rotate(-0.15deg);}
-    }
-    @keyframes swaying-curtain2 {
-        0% {transform: rotate(0.15deg);}
-        50% {transform: rotate(-0.15deg);}
-        100% {transform: rotate(0.15deg);}
-    }
-
     //팝업
     .modal-display {
         display: none;
@@ -712,7 +715,7 @@ ins {
                         height: 57.866vw;
                         background: url(../../assets/images/h-point-christmas/modal-bg-star.png) no-repeat center center;
                         background-size: cover;
-                        top: 30.666vw;
+                        top: 47.466vw;
                         left: 0;
                     }
                 }
@@ -729,9 +732,10 @@ ins {
                         .modal-figure {
                             position: absolute;
                             // top: 23.413vh; // 166/709*100
-                            top: 44.266vw; // 166/375*100
+                            top: 60.266vw; // 166/375*100
                             left: 50%;
                             transform: translateX(-50%);
+                            animation: box-vibration 0.3s ease infinite alternate;
                             .gift-btn {
                                 display: block;
                                 width: 47.466vw;
@@ -741,6 +745,9 @@ ins {
                                     height: 100%;
                                 }
                             }
+                        }
+                        .modal-inform {
+                            margin-top: 119.733vw; //449/375*100
                         }
                     }
 
@@ -786,7 +793,7 @@ ins {
                     }
                     .modal-inform {
                         // margin-top: 54.866vh;
-                        margin-top: 101.333vw; //380/375*100
+                        margin-top: 103.733vw; //389/375*100
                         .modal-head {
                             .modal-subject {
                                 display: block;
@@ -797,13 +804,13 @@ ins {
                                 text-align: center;
                             }
                             + .modal-body {
-                                margin-top: 2.256vw;
+                                margin-top: 6.4vw;
                             }
                         }
                         .modal-body {
                             min-height: 31.466vw;
                             .para {
-                                font-size: 4.8vw;
+                                font-size: 4.266vw;
                                 font-weight: 400;
                                 line-height: 150%;
                                 color: #DDD;
@@ -841,6 +848,27 @@ ins {
                     }
                 }
             }
+        }
+    }
+    @keyframes swaying-curtain1 {
+        0% {transform: rotate(-0.15deg);}
+        50% {transform: rotate(0.15deg);}
+        100% {transform: rotate(-0.15deg);}
+    }
+    @keyframes swaying-curtain2 {
+        0% {transform: rotate(0.15deg);}
+        50% {transform: rotate(-0.15deg);}
+        100% {transform: rotate(0.15deg);}
+    }
+    @keyframes box-vibration {
+        // from {
+        //     transform: translateX(-50%) rotate(2deg);
+        // }
+        // to {
+        //     transform: translateX(-50%) rotate(-2deg);
+        // }
+        100%{
+            top: translateX(-50%) -20px;
         }
     }
 }
