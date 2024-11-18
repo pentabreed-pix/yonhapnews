@@ -17,6 +17,7 @@
             introAni();
             scrollAnchorBtnActive();
             clickAnchorSmooth();
+            progressBar();
         });
 
         //인트로 애니
@@ -80,6 +81,27 @@
 
             // 스크롤 이벤트에 setActiveSection 연결
             window.addEventListener("scroll", setActiveSection);
+        }
+
+        //progressBar 채우기
+        function progressBar() {
+            const progressBar = document.querySelector(".bar-gauge");
+            const items = document.querySelectorAll(".calendar-body .day-list .day-item");
+            const totalItems = items.length;
+            let activeItems = 0;
+
+            // 각 li를 순회하면서 on 클래스가 있는지 확인
+            items.forEach((item) => {
+                if (item.classList.contains("on")) {
+                    activeItems++; // on 클래스가 있으면 activeItems 증가
+                }
+            });
+
+            // 계산하여 width 설정
+            const progressWidth = (activeItems / totalItems) * 100;
+
+            // width를 인라인 스타일로 삽입
+            progressBar.setAttribute("style", `width: ${progressWidth}%;`);
         }
     </script>
 </head>
@@ -163,7 +185,7 @@
                         <div class="progress">
                             <div class="bar-wrap">
                                 <!-- 채워지는 게이지 -->
-                                <div class="bar-gauge" style="width: 20.833%;"></div>
+                                <div class="bar-gauge"></div>
                                 <!-- //채워지는 게이지 -->
                             </div>
                             <div class="date-wrap">
@@ -181,10 +203,10 @@
                     <div class="calendar-body">
                         <ul class="day-list">
                             <li class="day-item item1 on"></li>
-                            <li class="day-item item2"></li>
-                            <li class="day-item item3"></li>
+                            <li class="day-item item2 on"></li>
+                            <li class="day-item item3 on"></li>
                             <li class="day-item item4"></li>
-                            <li class="day-item item5"></li>
+                            <li class="day-item item5 on"></li>
                             <li class="day-item item6"></li>
                             <li class="day-item item7"></li>
                             <li class="day-item item8"></li>
@@ -272,7 +294,7 @@
                                 </div>
                             </div>
                             <div class="modal-fuc">
-                                <a href="https://www.h-point.co.kr/cma/invite.nhd?scheme=myPnt" class="fuc-btn">
+                                <a href="../h-point-ch/index.html" class="fuc-btn">
                                     <span class="btn-text">혜택받기</span>
                                 </a>
                             </div>

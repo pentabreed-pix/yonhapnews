@@ -719,28 +719,6 @@ ins {
   background-color: #bbb;
   border-radius: 100%;
 }
-@keyframes swaying-curtain1 {
-  0% {
-    transform: rotate(-0.15deg);
-  }
-  50% {
-    transform: rotate(0.15deg);
-  }
-  100% {
-    transform: rotate(-0.15deg);
-  }
-}
-@keyframes swaying-curtain2 {
-  0% {
-    transform: rotate(0.15deg);
-  }
-  50% {
-    transform: rotate(-0.15deg);
-  }
-  100% {
-    transform: rotate(0.15deg);
-  }
-}
 .h-point-christmas .modal-display {
   display: none;
   position: fixed;
@@ -794,7 +772,7 @@ ins {
   height: 57.866vw;
   background: url(../../assets/images/h-point-christmas/modal-bg-star.png) no-repeat center center;
   background-size: cover;
-  top: 30.666vw;
+  top: 47.466vw;
   left: 0;
 }
 .h-point-christmas .modal-display .modal.design1 .modal-area {
@@ -807,9 +785,10 @@ ins {
 }
 .h-point-christmas .modal-display .modal.design1 .modal-area.gift-box .modal-figure {
   position: absolute;
-  top: 44.266vw;
+  top: 60.266vw;
   left: 50%;
   transform: translateX(-50%);
+  animation: box-vibration 0.3s ease infinite alternate;
 }
 .h-point-christmas .modal-display .modal.design1 .modal-area.gift-box .modal-figure .gift-btn {
   display: block;
@@ -819,6 +798,9 @@ ins {
 .h-point-christmas .modal-display .modal.design1 .modal-area.gift-box .modal-figure .gift-btn img {
   width: 100%;
   height: 100%;
+}
+.h-point-christmas .modal-display .modal.design1 .modal-area.gift-box .modal-inform {
+  margin-top: 119.733vw;
 }
 .h-point-christmas .modal-display .modal.design1 .modal-area.case1 .modal-figure {
   width: 100%;
@@ -853,7 +835,7 @@ ins {
   flex-direction: column;
 }
 .h-point-christmas .modal-display .modal.design1 .modal-area .modal-inform {
-  margin-top: 101.333vw;
+  margin-top: 103.733vw;
 }
 .h-point-christmas .modal-display .modal.design1 .modal-area .modal-inform .modal-head .modal-subject {
   display: block;
@@ -864,7 +846,7 @@ ins {
   text-align: center;
 }
 .h-point-christmas .modal-display .modal.design1 .modal-area .modal-inform .modal-head + .modal-body {
-  margin-top: 2.256vw;
+  margin-top: 6.4vw;
 }
 .h-point-christmas .modal-display .modal.design1 .modal-area .modal-inform .modal-body {
   min-height: 31.466vw;
@@ -903,5 +885,32 @@ ins {
 }
 .h-point-christmas .modal-display .modal.design1 .modal-area .modal-inform + .modal-fuc {
   margin-top: 10.666vw;
+}
+@keyframes swaying-curtain1 {
+  0% {
+    transform: rotate(-0.15deg);
+  }
+  50% {
+    transform: rotate(0.15deg);
+  }
+  100% {
+    transform: rotate(-0.15deg);
+  }
+}
+@keyframes swaying-curtain2 {
+  0% {
+    transform: rotate(0.15deg);
+  }
+  50% {
+    transform: rotate(-0.15deg);
+  }
+  100% {
+    transform: rotate(0.15deg);
+  }
+}
+@keyframes box-vibration {
+  100% {
+    top: translateX(-50%) -20px;
+  }
 }
 /*# sourceMappingURL=h-point-ch.css.map */
