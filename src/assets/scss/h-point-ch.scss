@@ -54,6 +54,10 @@ ins {
     text-decoration: none;
 }
 
+button {
+    font-family: inherit;
+}
+
 .blind {
     position: absolute;
     width: 1px;
@@ -681,6 +685,7 @@ ins {
             justify-content: center;
             width: 100%;
             height: 100%;
+            position: relative;
             &.design1 {
                 .modal-inner {
                     width: 91.466vw;
@@ -697,28 +702,268 @@ ins {
                     overflow-y: auto;
                     // padding-bottom: 8.462vh;
                     padding-bottom: 5vw;
-                    &::before,
-                    &::after {
+                    &::before {
                         content: "";
                         width: 100%;
                         position: absolute;
                         z-index: 1;
-                    }
-                    &::before {
                         height: 49.6vw;
                         background: url(../../assets/images/h-point-christmas/modal-shawl.png) no-repeat center center;
                         background-size: cover;
                         top: 0;
                         left: 0;
                     }
+                    &.close-btn {
+
+                    }
+                }
+                .modal-area {
+                    //별 bg
                     &::after {
+                        content: "";
+                        width: 100%;
+                        position: absolute;
+                        z-index: 1;
                         height: 57.866vw;
                         background: url(../../assets/images/h-point-christmas/modal-bg-star.png) no-repeat center center;
                         background-size: cover;
-                        top: 47.466vw;
                         left: 0;
                     }
+                    //선물상자
+                    &.gift-box {
+                        .modal-figure {
+                            position: absolute; 
+                            top: 52.533vw; // 166/375*100
+                            left: 50%;
+                            transform: translateX(-50%);
+                            display: block;
+                            width: 100%;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        .modal-inform {
+                            margin-top: 112vw;
+                            .modal-head {
+                                + .modal-body {
+                                    margin-top: 6.4vw !important;
+                                }
+                            }
+                        }
+                        &::after {
+                            top: 39.733vw;
+                        }
+                    }
+
+                    //당첨 팝업
+                    //vh : 709기준
+                    &.case1 {
+                        .modal-figure {
+                            position: absolute;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        .modal-inform {
+                            .modal-head {
+                                + .modal-body {
+                                    margin-top: 3.2vw;
+                                }
+                            }
+                        }
+                        
+                        //골드 포인트
+                        &.type1 {
+                            .modal-figure {
+                                width: 42.133vw;
+                                top: 33.6vw;
+                            }
+                            &::after {
+                                top: 30.4vw;
+                            }
+                            &::before {
+                                content: "";
+                                width: 65.6vw;
+                                height: 49.066vw;
+                                position: absolute;
+                                top: 30.933vw;
+                                left: 14.4vw;
+                                background: url(../../assets/images/h-point-christmas/modal-poin-gold-bg.png) no-repeat center center;
+                                background-size: cover;
+                                z-index: 999;
+                            }
+                        }
+
+                        //레드 포인트
+                        &.type2 {
+                            .modal-figure {
+                                width: 58.666vw;
+                                top: 37.066vw;
+                            }
+                            &::after {
+                                top: 28vw;
+                            }
+                            &::before {
+                                content: "";
+                                width: 78.933vw;
+                                height: 55.733vw;
+                                position: absolute;
+                                top: 24.533vw;
+                                left: 5.866vw;
+                                background: url(../../assets/images/h-point-christmas/modal-poin-red-bg.png) no-repeat center center;
+                                background-size: cover;
+                                z-index: 999;
+                            }
+                        }
+
+                        //레드 포인트
+                        &.type3 {
+                            .modal-figure {
+                                width: 44.8vw;
+                                top: 22.666vw;
+                            }
+                            &::after {
+                                top: 24.266vw;
+                            }
+                            &::before {
+                                content: "";
+                                width: 72.533vw;
+                                height: 55.733vw;
+                                position: absolute;
+                                top: 25.866vw;
+                                left: 7.733vw;
+                                background: url(../../assets/images/h-point-christmas/modal-poin-letter-bg.png) no-repeat center center;
+                                background-size: cover;
+                                z-index: 999;
+                            }
+                        }
+                    }
+
+                    //꽝! 팝업
+                    &.case2 {
+                        .modal-figure {
+                            width: 38.133vw;
+                            position: absolute;
+                            top: 30.666vw;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        .modal-inform {
+                            .modal-head {
+                                + .modal-body {
+                                    margin-top: 10.666vw;
+                                }
+                            }
+                        }
+                        &::after {
+                            top: 29.6vw;
+                        }
+                    }
+
+                    //중복 참여시 팝업
+                    &.case3 {
+                        .modal-figure {
+                            width: 43.2vw;
+                            position: absolute;
+                            top: 32.266vw;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        .modal-inform {
+                            .modal-head {
+                                + .modal-body {
+                                    margin-top: 10.666vw;
+                                }
+                            }
+                        }
+                        &::after {
+                            top: 29.6vw;
+                        }
+                    }
+                    .modal-inform {
+                        margin-top: 85.333vw; //389/375*100
+                        .modal-body {
+                            &:has(.para) {
+                                min-height: 21.066vw;
+                            }
+                            &:has(.bullet-list) {
+                                min-height: 53.333vw;
+                            }
+                        }
+                        &:has(.para) {
+                            + .modal-fuc {
+                                // margin-top: 28vw;
+                                margin-top: 15vw;
+                            }
+                        }
+                        &:has(.bullet-list) {
+                            + .modal-fuc {
+                                margin-top: 3.733vw;
+                            }
+                        }
+                    }
+                    .modal-fuc {
+                        .fuc-btn {
+                            &.type2 {
+                                position: fixed;
+                                top: 0 !important;
+                                right: 7.466vw;
+                            }
+                        }
+                    }
                 }
+            }
+            &.design2 {
+                .modal-inner {
+                    width: 91.466vw;
+                    padding: 11.466vw 0 8vw;
+                    border: 2px solid #F0DFA9;
+                    border-radius: 8px;
+                    position: relative;
+                    background: url('../../assets/images/h-point-christmas/modal-bg-color2.png') no-repeat center center;
+                    background-size: cover;
+                    pointer-events: auto;
+
+                    &::after {
+                        content: '';
+                        width: 26.4vw;
+                        height: 27.466vw;
+                        background: url(../../assets/images/h-point-christmas/modal-update.png) no-repeat center center;
+                        background-size: cover;
+                        position: absolute;
+                        top: -16.8vw;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                    
+                    .modal-inform {
+                        + .modal-fuc {
+                            margin-top: 6.4vw;
+                        }
+                    }
+                    .modal-fuc {
+                        .fuc-btn {
+                            &.type2 {
+                                position: absolute;
+                                top: -20vw !important;
+                                right: 3.2vw;
+                            }
+                        }
+                    }
+                }
+            }
+
+            //공통
+            .modal-inner {
                 .modal-area {
                     display: none;
                     position: relative;
@@ -726,74 +971,15 @@ ins {
                     &.on {
                         display: block;
                     }
-                    
-                    //선물상자
-                    &.gift-box {
-                        .modal-figure {
-                            position: absolute;
-                            // top: 23.413vh; // 166/709*100
-                            top: 60.266vw; // 166/375*100
-                            left: 50%;
-                            transform: translateX(-50%);
-                            animation: box-vibration 0.3s ease infinite alternate;
-                            .gift-btn {
-                                display: block;
-                                width: 47.466vw;
-                                height: 35.2vw;
-                                img {
-                                    width: 100%;
-                                    height: 100%;
-                                }
-                            }
-                        }
-                        .modal-inform {
-                            margin-top: 119.733vw; //449/375*100
-                        }
-                    }
-
-                    //포인트 당첨 : 축하합니다! (이미지마다 위치가 달라서 수정 필요해보임)
-                    //vh : 709기준
-                    &.case1 {
-                        .modal-figure {
-                            width: 100%;
-                            position: absolute;
-                            // top: 17.207vh;
-                            top: 32.533vw; // 122/375*100
-                            left: 50%;
-                            transform: translateX(-50%);
-                            img {
-                                width: 100%;
-                            }
-                        }
-                        .modal-fuc {
-                            .fuc-btn {
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                width: 74.666vw;
-                                padding: 4.266vw;
-                                border-radius: 100px;
-                                border: 1px solid #FFF5B1;
-                                background: linear-gradient(0deg, #9A150F 0%, #9A150F 100%), linear-gradient(92deg, #CBAC64 13.18%, #BC8641 90.15%);
-                                .btn-text {
-                                    text-align: center;
-                                    font-size: 5.333vw;
-                                    font-weight: 400;
-                                    line-height: 150%;
-                                    color: #fff;
-                                }
-                            }
-                        }
-                    }
-
                     .modal-wrap {
                         display: flex;
                         align-items: center;
                         flex-direction: column;
                     }
+                    .modal-figure {
+                        z-index: 99;
+                    }
                     .modal-inform {
-                        // margin-top: 54.866vh;
-                        margin-top: 103.733vw; //389/375*100
                         .modal-head {
                             .modal-subject {
                                 display: block;
@@ -803,27 +989,44 @@ ins {
                                 color: #fff;
                                 text-align: center;
                             }
-                            + .modal-body {
-                                margin-top: 6.4vw;
-                            }
                         }
                         .modal-body {
-                            min-height: 31.466vw;
                             .para {
-                                font-size: 4.266vw;
+                                font-size: 4.266vw; //16px
                                 font-weight: 400;
                                 line-height: 150%;
                                 color: #DDD;
                                 text-align: center;
+                                .accent {
+                                    font-size: 4.8vw; //18px
+                                    font-weight: 800;
+                                    color: #FFECA9;
+                                    border-bottom: 1px solid #FFECA9;
+                                }
+                                &.type1 {
+                                    padding-right: 5.333vw;
+                                    position: relative;
+                                    &::after {
+                                        content: "";
+                                        width: 4.266vw;
+                                        height: 4.266vw;
+                                        position: absolute;
+                                        top: 0.8vw;
+                                        right: 1vw;
+                                        background: url(../../assets/images/h-point-christmas/para-type1-imoji.png) no-repeat center center;
+                                        padding: 1.466vw 0;
+                                        background-size: contain;
+                                    }
+                                }
                             }
                             .bullet-list {
-                                width: 75.733vw;
+                                width: 74.666vw;
                                 padding: 4.266vw;
                                 background-color: rgba(0, 0, 0, 0.3);
                                 .bullet-item {
                                     position: relative;
                                     padding-left: 2.133vw;
-                                    font-size: 3.466vw;
+                                    font-size: 3.2vw;
                                     line-height: 150%;
                                     color: #DDD;
                                     + .bullet-item {
@@ -842,8 +1045,64 @@ ins {
                                 }
                             }
                         }
-                        + .modal-fuc {
-                            margin-top: 10.666vw;
+                    }
+                    .modal-fuc {
+                        .fuc-btn {
+                            &.type1 {
+                                display: flex; 
+                                align-items: center;
+                                justify-content: center;
+                                width: 74.666vw;
+                                height: 17.6vw;
+                                position: relative;
+                                &::after {
+                                    content: '';
+                                    width: 100%;
+                                    height: 100%;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    background: url(../../assets/images/h-point-christmas/modal-fuc-bg.png) no-repeat center center;
+                                    background-size: contain;
+                                }
+                                .btn-text {
+                                    position: absolute;
+                                    top: 45%;
+                                    left: 50%;
+                                    transform: translate(-50%,-50%);
+                                    text-align: center;
+                                    font-size: 5.333vw;
+                                    font-weight: 600;
+                                    line-height: 150%;
+                                    color: #fff;
+                                    z-index: 1;
+                                    white-space: nowrap;
+                                }
+                                &.check {
+                                    .btn-text {
+                                        padding-left: 6.933vw;
+                                        &::after {
+                                            content: '';
+                                            width: 4.8vw;
+                                            height: 4.8vw;
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 0;
+                                            transform: translateY(-50%);
+                                            background: url(../../assets/images/h-point-christmas/modal-check-box.svg) no-repeat center center;
+                                            background-size: cover;
+                                        }
+                                    }
+                                }
+                            }
+                            &.type2 {
+                                width: 5.333vw;
+                                height: 5.333vw;
+                                // width: 20px;
+                                // height: 20px;
+                                background: url(../../assets/images/h-point-christmas/modal-close.svg) no-repeat center center;
+                                background-size: contain;
+                            }
                         }
                     }
                 }
@@ -859,16 +1118,5 @@ ins {
         0% {transform: rotate(0.15deg);}
         50% {transform: rotate(-0.15deg);}
         100% {transform: rotate(0.15deg);}
-    }
-    @keyframes box-vibration {
-        // from {
-        //     transform: translateX(-50%) rotate(2deg);
-        // }
-        // to {
-        //     transform: translateX(-50%) rotate(-2deg);
-        // }
-        100%{
-            top: translateX(-50%) -20px;
-        }
     }
 }
