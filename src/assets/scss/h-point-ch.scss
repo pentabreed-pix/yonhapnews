@@ -221,18 +221,18 @@ button {
                                     animation: move-item-ani1 2.5s infinite ease-out;
                                 }
                                 &.balloon {
-                                    animation: move-item-ani2 2s ease-out;
+                                    animation: move-item-ani2 3s ease-out;
                                 }
                                 &.monkey {
-                                    animation: move-item-ani3 2s infinite;
+                                    animation: move-item-ani3 2s infinite ease;
                                     transform-origin: center bottom;
                                 }
                                 &.tiger {
-                                    animation: move-item-ani4 4s infinite ease;
+                                    animation: move-item-ani4 4s infinite ease-out;
                                     transform-origin: center bottom;
                                 }
                                 &.giraffe {
-                                    animation: move-item-ani5 5s infinite ease-out;
+                                    animation: move-item-ani5 3s infinite ease-out;
                                     transform-origin: center bottom;
                                 }
                                 &.rabbit {
@@ -241,11 +241,11 @@ button {
                                 }
                                 @keyframes move-item-ani1 {
                                     0% {transform: translateY(0) scaleX(1);}
-                                    50% {transform: translateY(-10vw) scaleX(0.99);}
+                                    50% {transform: translateY(-15vw) scaleX(0.99);}
                                     100% {transform: translateY(0) scaleX(1);}
                                 }
                                 @keyframes move-item-ani2 {
-                                    0% {transform: translateY(30vw);}
+                                    0% {transform: translateY(40vw);}
                                     100% {transform: translateY(0);}
                                 }
                                 @keyframes move-item-ani3 {
@@ -254,9 +254,9 @@ button {
                                     100% {transform: rotate(0);}
                                 }
                                 @keyframes move-item-ani4 {
-                                    0% {transform: rotate(-0.5deg);}
-                                    50% {transform: rotate(10deg);}
-                                    100% {transform: rotate(-0.5deg);}
+                                    0% {transform: rotate(0) translateX(0);}
+                                    50% {transform: rotate(2deg) translateX(2vw);}
+                                    100% {transform: rotate(0) translateX(0);}
                                 }
                                 @keyframes move-item-ani5 {
                                     0% {transform: rotate(0);}
