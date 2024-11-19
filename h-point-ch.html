@@ -21,13 +21,19 @@
 
         //인트로 애니
         function introAni() {
-            const curtainImg = document.querySelector('.curtain');
+            const curtainImg = document.querySelector('.intro .intro-figure.curtain');
+            const moveItemImg = document.querySelector('.intro .intro-figure.move-item');
+
             setTimeout(() => {
                 curtainImg.classList.add('active1')
                 setTimeout(() => {
                     curtainImg.classList.add('active2')
                 }, 500);
             }, 800);
+
+            setTimeout(() => {
+                moveItemImg.classList.add('active1')
+            }, 1500);
         }
 
         //앵커 클릭
@@ -121,6 +127,28 @@
                     </div>
                     <div class="curtain-item right">
                         <img src="./assets/images/h-point-christmas/intro-curtain-right.png" alt="">
+                    </div>
+                </div>
+                <div class="intro-figure move-item">
+                    <div class="item-list">
+                        <div class="item bear">
+                            <img src="./assets/images/h-point-christmas/intro-item-a.png" alt="">
+                        </div>
+                        <div class="item balloon">
+                            <img src="./assets/images/h-point-christmas/intro-item-b.png" alt="">
+                        </div>
+                        <div class="item monkey">
+                            <img src="./assets/images/h-point-christmas/intro-item-c.png" alt="">
+                        </div>
+                        <div class="item tiger">
+                            <img src="./assets/images/h-point-christmas/intro-item-d.png" alt="">
+                        </div>
+                        <div class="item giraffe">
+                            <img src="./assets/images/h-point-christmas/intro-item-e.png" alt="">
+                        </div>
+                        <div class="item rabbit">
+                            <img src="./assets/images/h-point-christmas/intro-item-f.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -258,7 +286,23 @@
                     <div class="modal-area gift-box" id="giftBoxModal">
                         <div class="modal-wrap">
                             <div class="modal-figure">
-                                <img src="./assets/images/h-point-christmas/modal-gift-box.png" alt="">
+                                <div class="figure-list">
+                                    <div class="figure-item item1">
+                                        <img src="./assets/images/h-point-christmas/modal-gift-box.gif" alt="">
+                                    </div>
+                                    <div class="figure-item item2">
+                                        <img src="./assets/images/h-point-christmas/modal-gift-obj-a.png" alt="">
+                                    </div>
+                                    <div class="figure-item item3">
+                                        <img src="./assets/images/h-point-christmas/modal-gift-obj-b.png" alt="">
+                                    </div>
+                                    <div class="figure-item item4">
+                                        <img src="./assets/images/h-point-christmas/modal-gift-obj-c.png" alt="">
+                                    </div>
+                                    <div class="figure-item item5">
+                                        <img src="./assets/images/h-point-christmas/modal-gift-obj-d.png" alt="">
+                                    </div>
+                                </div>
                             </div>
                             <div class="modal-inform">
                                 <div class="modal-head">
