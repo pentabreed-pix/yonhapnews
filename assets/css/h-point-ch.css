@@ -761,7 +761,9 @@ button {
 }
 .h-point-christmas .modal-display .modal.design1 .modal-inner {
   width: 91.466vw;
-  height: 92.317vh;
+  height: calc(100vh - 16vw);
+  margin-top: 8vw;
+  margin-bottom: 8vw;
   border: 2px solid #F0DFA9;
   border-radius: 4px;
   position: relative;
@@ -783,7 +785,11 @@ button {
   top: 0;
   left: 0;
 }
-.h-point-christmas .modal-display .modal.design1 .modal-area::after {
+.h-point-christmas .modal-display .modal.design1 .modal-inner.layout1 {
+  height: calc(100vh - 22.133vw);
+  margin-top: 14.133vw;
+}
+.h-point-christmas .modal-display .modal.design1 .modal-area:not(.day-24)::after {
   content: "";
   width: 100%;
   position: absolute;
@@ -1041,24 +1047,6 @@ button {
   background-size: cover;
   z-index: 999;
 }
-.h-point-christmas .modal-display .modal.design1 .modal-area.day-24 .modal-figure {
-  width: 42.133vw;
-  top: 33.6vw;
-}
-.h-point-christmas .modal-display .modal.design1 .modal-area.day-24::after {
-  top: 30.4vw;
-}
-.h-point-christmas .modal-display .modal.design1 .modal-area.day-24::before {
-  content: "";
-  width: 65.6vw;
-  height: 49.066vw;
-  position: absolute;
-  top: 30.933vw;
-  left: 14.4vw;
-  background: url(../../assets/images/h-point-christmas/modal-poin-gold-bg.png) no-repeat center center;
-  background-size: cover;
-  z-index: 999;
-}
 .h-point-christmas .modal-display .modal.design1 .modal-area.day-2 .modal-figure {
   width: 58.666vw;
   top: 37.066vw;
@@ -1257,6 +1245,115 @@ button {
   background-size: cover;
   z-index: 999;
 }
+.h-point-christmas .modal-display .modal.design1 .modal-area.day-24 {
+  background: url(../../assets/images/h-point-christmas/modal-day-24-bg-d.png) no-repeat top center;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  padding-bottom: 7vw;
+}
+.h-point-christmas .modal-display .modal.design1 .modal-area.day-24::after {
+  content: "";
+  width: 91.466vw;
+  height: 43.2vw;
+  background: url(../../assets/images/h-point-christmas/modal-day-24-bg-c.png) no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  top: 69.066vw;
+}
+.h-point-christmas .modal-display .modal.design1 .modal-area.day-24 .modal-wrap {
+  padding-top: 18.933vw;
+  position: relative;
+}
+.h-point-christmas .modal-display .modal.design1 .modal-area.day-24 .modal-wrap::before {
+  content: "";
+  width: 12.266vw;
+  height: 26.933vw;
+  position: absolute;
+  top: 46.133vw;
+  left: 0;
+  background: url(../../assets/images/h-point-christmas/modal-day-24-bg-a.png) no-repeat center center;
+  background-size: cover;
+  animation: swing-up-down 5s infinite ease;
+}
+.h-point-christmas .modal-display .modal.design1 .modal-area.day-24 .modal-wrap::after {
+  content: "";
+  width: 12.8vw;
+  height: 23.2vw;
+  position: absolute;
+  top: 112.266vw;
+  right: 0;
+  background: url(../../assets/images/h-point-christmas/modal-day-24-bg-b.png) no-repeat center center;
+  background-size: cover;
+  animation: swing-up-down 4s infinite ease;
+}
+.h-point-christmas .modal-display .modal.design1 .modal-area.day-24 .modal-head {
+  width: 100%;
+}
+.h-point-christmas .modal-display .modal.design1 .modal-area.day-24 .modal-head img {
+  width: 100%;
+}
+.h-point-christmas .modal-display .modal.design1 .modal-area.day-24 .modal-head img + .summary {
+  margin-top: 5.333vw;
+}
+.h-point-christmas .modal-display .modal.design1 .modal-area.day-24 .modal-head .summary {
+  font-size: 3.733vw;
+  line-height: 150%;
+  color: #FFF;
+  text-align: center;
+}
+.h-point-christmas .modal-display .modal.design1 .modal-area.day-24 .modal-head .summary .accent {
+  font-weight: 800;
+  color: #F1D262;
+  border-bottom: 1px solid #F1D262;
+}
+.h-point-christmas .modal-display .modal.design1 .modal-area.day-24 .modal-head .summary + .summary {
+  margin-top: 4.266vw;
+}
+.h-point-christmas .modal-display .modal.design1 .modal-area.day-24 .modal-head + .modal-figure {
+  margin-top: 8vw;
+}
+.h-point-christmas .modal-display .modal.design1 .modal-area.day-24 .modal-figure {
+  position: relative;
+  transform: unset;
+  top: unset;
+  left: unset;
+  width: 34.666vw;
+  height: 34.666vw;
+  margin: 0 auto;
+}
+.h-point-christmas .modal-display .modal.design1 .modal-area.day-24 .modal-figure + .modal-body {
+  margin-top: 9.066vw;
+}
+.h-point-christmas .modal-display .modal.design1 .modal-area.day-24 .modal-body {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 2.133vw 3.2vw;
+  width: 74.666vw;
+  margin: 0 auto;
+}
+.h-point-christmas .modal-display .modal.design1 .modal-area.day-24 .modal-body .bullet-list .bullet-item {
+  font-size: 2.933vw;
+  color: #DDDDDD;
+  line-height: 150%;
+  padding-left: 2.133vw;
+  position: relative;
+}
+.h-point-christmas .modal-display .modal.design1 .modal-area.day-24 .modal-body .bullet-list .bullet-item::before {
+  content: "";
+  width: 0.8vw;
+  height: 0.8vw;
+  border-radius: 100%;
+  background-color: #DDDDDD;
+  position: absolute;
+  left: 0;
+  top: 2vw;
+}
+.h-point-christmas .modal-display .modal.design1 .modal-area.day-24 .modal-body .bullet-list .bullet-item + .bullet-item {
+  margin-top: 1.066vw;
+}
+.h-point-christmas .modal-display .modal.design1 .modal-area.day-24 .modal-body + .modal-fuc {
+  margin-top: 6.4vw;
+}
 .h-point-christmas .modal-display .modal.design1 .modal-area.boom-popup .modal-figure {
   width: 38.133vw;
   position: absolute;
@@ -1306,7 +1403,7 @@ button {
 }
 .h-point-christmas .modal-display .modal.design1 .modal-area .modal-fuc .fuc-btn.type2 {
   position: fixed;
-  top: 0 !important;
+  top: 5.5vw !important;
   right: 7.466vw;
 }
 .h-point-christmas .modal-display .modal.design2 .modal-inner {
@@ -1466,6 +1563,51 @@ button {
   background: url(../../assets/images/h-point-christmas/modal-close.svg) no-repeat center center;
   background-size: contain;
 }
+.h-point-christmas .modal-display .modal .modal-inner .modal-area .modal-fuc .fuc-btn.type3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 83.733vw;
+  height: 18.266vw;
+  position: relative;
+}
+.h-point-christmas .modal-display .modal .modal-inner .modal-area .modal-fuc .fuc-btn.type3::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(../../assets/images/h-point-christmas/modal-fuc-bg-b.png) no-repeat center center;
+  background-size: contain;
+}
+.h-point-christmas .modal-display .modal .modal-inner .modal-area .modal-fuc .fuc-btn.type3 .btn-text {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 5.333vw;
+  font-weight: 600;
+  line-height: 150%;
+  color: #fff;
+  z-index: 1;
+  white-space: nowrap;
+}
+.h-point-christmas .modal-display .modal .modal-inner .modal-area .modal-fuc .fuc-btn.type3.check .btn-text {
+  padding-left: 6.933vw;
+}
+.h-point-christmas .modal-display .modal .modal-inner .modal-area .modal-fuc .fuc-btn.type3.check .btn-text::after {
+  content: "";
+  width: 4.8vw;
+  height: 4.8vw;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: url(../../assets/images/h-point-christmas/modal-check-box.svg) no-repeat center center;
+  background-size: cover;
+}
 @keyframes swaying-curtain1 {
   0% {
     transform: rotate(-0.15deg);
@@ -1486,6 +1628,17 @@ button {
   }
   100% {
     transform: rotate(0.15deg);
+  }
+}
+@keyframes swing-up-down {
+  0% {
+    transform: translateY(-4vw);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-4vw);
   }
 }
 /*# sourceMappingURL=h-point-ch.css.map */
