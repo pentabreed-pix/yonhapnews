@@ -27,7 +27,7 @@
 				setTimeout(() => {
 					curtainImg.classList.add('active2')
 				}, 500);
-			}, 900);
+			}, 800);
 		}
 
 		//앵커 클릭
@@ -177,7 +177,7 @@
                         </div>
 						<!-- 고객 응모 현황 -->
 						<em class="subject">
-							<span class="name accent">고객님</span>의<br> 
+							<span class="name accent">회원님</span>의<br> 
 							1천만P 당첨 <span class="accent">응모권 현황</span>
 						</em>
 						<!-- //고객 응모 현황 -->
@@ -255,7 +255,7 @@
 		<!-- 팝업창 -->
 		<div class="modal-display" id="modalDisplay">
 			<!------------------------- 당첨 팝업 : design1 ------------------------->
-			<div class="modal design1 on">
+			<div class="modal design1">
 				<div class="modal-inner">
 					<!-- 출석체크 성공 선물 상자 팝업 -->
 					<div class="modal-area gift-box" id="giftBoxModal">
@@ -266,7 +266,7 @@
 							<div class="modal-inform">
 								<div class="modal-head">
 									<span class="modal-subject">오늘 출석체크 성공!</span>
-								</div>
+								</div> 
 								<div class="modal-body">
 									<p class="para">선물을 가져오고 있어요!<br> 잠시만 기다려주세요!</p>
 								</div>
@@ -296,7 +296,10 @@
 								</div>
 							</div>
 							<div class="modal-fuc">
-								<a href="javascript:void(0)" class="fuc-btn type1 close">
+								<a href="javascript:void(0)" class="fuc-btn type2 close">
+                                    <span class="btn-text blind">팝업 닫기</span>
+                                </a>
+								<a href="javascript:void(0)" class="fuc-btn type1">
 									<span class="btn-text">확인</span>
 								</a>
 							</div>
@@ -325,9 +328,9 @@
 						</div>
 					</div>
 					<!-- //중복 참여시 팝업 -->
-					<!--------- 당첨 데일리 팝업 : 클래스마다 이미지 src 달라짐 (modal-area.day-1 -> modal-day-1.png) --------->
-					<!-- 당첨 팝업 : 1일차 (골드)-->
-                    <!-- <div class="modal-area day-1 on" id="day1Modal">
+					<!--------- 당첨 데일리 팝업 : 클래스마다 이미지,CSS,modal-body 내용 달라짐 --------->
+					<!-- 당첨 팝업 1일 ~ 23일 -->
+                    <!-- <div class="modal-area day-1" id="day1Modal">
                         <div class="modal-wrap">
                             <div class="modal-figure">
                                 <img src="./assets/images/h-point-christmas/modal-day-1.png" alt="">
@@ -349,56 +352,32 @@
                             </div>
                         </div>
                     </div> -->
-                    <!-- //당첨 팝업 : 1일차 -->
-                    <!-- 당첨 팝업 : 2일차 (레드)-->
-                    <div class="modal-area day-2 " id="day2Modal">
+                    <!-- //당첨 팝업 -->
+					<!-- 24일 팝업 -->
+					<div class="modal-area day-24" id="day24Modal">
                         <div class="modal-wrap">
-                            <div class="modal-figure" id="modalImg">
-                                <img src="" alt="" id="modalImg">
-                            </div>
-                            <div class="modal-inform">
-                                <div class="modal-head">
-                                    <span class="modal-subject">축하합니다!</span>
-                                </div>
-                                <div class="modal-body" id="modalBody">
-
-                                </div>
-                            </div>
+							<div class="modal-head">
+								<img src="./assets/images/h-point-christmas/modal-day-24-text.png" alt="">
+								<p class="summary">1천만P 당첨의 주인공은<br> <span class="accent">12/31(월) 앱에서 확인</span>할 수 있어요.</p>
+								<p class="summary">H.Point와 함께 따뜻한 연말 보내세요</p>
+							</div>
+							<div class="modal-figure">
+								<img src="./assets/images/h-point-christmas/modal-day-24.png" alt="">
+							</div>
+							<div class="modal-body">
+							</div>
                             <div class="modal-fuc">
                                 <a href="javascript:void(0)" class="fuc-btn type2 close">
                                     <span class="btn-text blind">팝업 닫기</span>
                                 </a>
-                                <a href="javascript:void(0)" class="fuc-btn type1 close">
-                                    <span class="btn-text">혜택받기</span>
+                                <a href="javascript:void(0)" class="fuc-btn type3">
+                                    <span class="btn-text">확인하기</span>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <!-- //당첨 팝업 : 2일차 -->
-                    <!-- 당첨 팝업 : 5일차 (편지봉투)-->
-                    <!-- <div class="modal-area day-5" id="day5Modal">
-                        <div class="modal-wrap">
-                            <div class="modal-figure">
-                                <img src="./assets/images/h-point-christmas/modal-day-5.png" alt="">
-                            </div>
-                            <div class="modal-inform">
-                                <div class="modal-head">
-                                    <span class="modal-subject">축하합니다!</span>
-                                </div>
-                                <div class="modal-body">
-                                </div>
-                            </div>
-                            <div class="modal-fuc">
-                                <a href="javascript:void(0)" class="fuc-btn type2 close">
-                                    <span class="btn-text blind">팝업 닫기</span>
-                                </a>
-                                <a href="javascript:void(0)" class="fuc-btn type1 close">
-                                    <span class="btn-text">혜택받기</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- //당첨 팝업 : 5일차 -->
+					<!-- //24일 팝업 -->
+                    
 				</div>
 			</div>
 			<!------------------------- 당첨 팝업 ------------------------->
@@ -477,6 +456,7 @@
 				openDayModal(); 	// 당첨모달
 			})
 
+			// close 버튼 클릭
 			modalCloseBtn.addEventListener("click", function() {
 				closeModal();
 			})
@@ -497,6 +477,7 @@
 			function openBoomModal() {
 				openModal();
 				boomModal.classList.add("on");
+				updateModalInnerStyles1(boomModal);
 			}
 
 			// 중복참여모달
@@ -509,6 +490,7 @@
 			function openDayModal() {
 				openModal();
 				giftBoxOpen();
+				updateModalInnerStyles2(dayModal);
 			}
 
 			// 팝업 열기
@@ -573,6 +555,52 @@
 				}
 			});
 
+			// 닫기 버튼 생길 때 modal-inner 스타일 변경
+			function updateModalInnerStyles1(modalElement) {
+				const modalInner = modalElement.closest(".modal").querySelector(".modal-inner");
+				if (modalElement.classList.contains("on")) {
+					// `on` 클래스가 이미 있을 때 스타일 변경
+					modalInner.style.height = "calc(100vh - 22.133vw)";
+					modalInner.style.marginTop = "14.133vw";
+				} else {
+					modalInner.style.height = ""; // 기본값
+					modalInner.style.marginTop = ""; // 기본값
+				}
+			}
+
+			// 닫기 버튼 생길 때 당첨모달 상단 modal-inner 스타일 변경
+			function updateModalInnerStyles2(modalElement) {
+				// 'on' 클래스 추가 감지
+				const observer = new MutationObserver(mutations => {
+					mutations.forEach(mutation => {
+						if (mutation.attributeName === "class") {
+							const modalInner = modalElement.closest(".modal").querySelector(".modal-inner");
+							if (modalElement.classList.contains("on")) {
+								// `on` 클래스가 추가되었을 때 스타일 변경
+								modalInner.style.height = "calc(100vh - 22.133vw)"; // 원하는 높이로 변경
+								modalInner.style.marginTop = "14.133vw"; // 원하는 margin-top으로 변경
+								// day-24 클래스를 가지고 있을 경우 border 스타일 unset
+								if (modalElement.classList.contains("day-24")) {
+									modalInner.style.border = "unset";
+									modalInner.style.paddingBottom = "unset";
+								} else {
+									modalInner.style.border = ""; // 기본 스타일 복원
+									modalInner.style.paddingBottom = "";
+								}
+							} else {
+								// `on` 클래스가 제거되었을 때 원래 스타일 복원
+								modalInner.style.height = "";
+								modalInner.style.marginTop = "";
+								modalInner.style.border = "";
+								modalInner.style.paddingBottom = "";
+							}
+						}
+					});
+				});
+				// MutationObserver 설정
+				observer.observe(modalElement, { attributes: true });
+			}
+
 			// day-? 별로 .modal-body안에 삽입되는 내용
 			function modalBodyInnerText() {
 				document.querySelectorAll('.modal-area').forEach(modalArea => {
@@ -592,8 +620,7 @@
 						modalArea.classList.contains('day-18') ||
 						modalArea.classList.contains('day-20') ||
 						modalArea.classList.contains('day-21') ||
-						modalArea.classList.contains('day-22') ||
-						modalArea.classList.contains('day-24')
+						modalArea.classList.contains('day-22') 
 					) {modalBody.innerHTML = `
 							<ul class="bullet-list">
 								<li class="bullet-item">지급된 혜택은 선물하기/전환/캐시백 등은 불가 합니다.</li>
@@ -715,6 +742,17 @@
 							</ul>
 						`;
 					}
+					// 24 경우 삽입할 내용
+					if (modalArea.classList.contains('day-24') ) {
+						modalBody.innerHTML = `
+							<ul class="bullet-list">
+								<li class="bullet-item">지급된 혜택은 선물하기/전환/캐시백 등은 불가 합니다.</li>
+								<li class="bullet-item">포인트는 자동으로 적립되며, H.Point APP에서 확인 가능 합니다.</li>
+								<li class="bullet-item">하단의 혜택받기 클릭 시 H.Point 적립된 포인트를 확인 하실 수 있습니다.</li>
+								<li class="bullet-item">당첨 여부는 12월 31일(월) 개별 안내 예정입니다.</li>
+							</ul>
+						`;
+					}
 				});
 			}
 
@@ -731,7 +769,7 @@
 						const dayValue = dayClass.split("-")[1]; // day-5 -> "5"
 						
 						// modal-area 내 img 요소 선택
-						const img = modal.querySelector("img");
+						const img = modal.querySelector(".modal-figure img");
 						
 						if (img) {
 							// 이미지 경로 동적으로 설정
@@ -741,7 +779,9 @@
 					}
 				});
 			}
+
 		});
+
 	</script>
 </body>
 </html>
