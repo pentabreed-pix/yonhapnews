@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>H포인트 크리스마스 이벤트</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/h-point-ch.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/h-point-ch-font.css">
+    <script src="./assets/js/jquery.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            introAni();
+            scrollAnchorBtnActive();
+            clickAnchorSmooth();
+            progressBar();
+            imgNamingClass();
+        });
+
+        //인트로 애니
+        function introAni() {
+            const curtainImg = document.querySelector('.curtain');
+            setTimeout(() => {
+                curtainImg.classList.add('active1')
+                setTimeout(() => {
+                    curtainImg.classList.add('active2')
+                }, 500);
+            }, 900);
+        }
+
+        //앵커 클릭
+        function clickAnchorSmooth() {
+            document.querySelectorAll('.section.anchor-area .anchor-item[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const target = document.querySelector(this.getAttribute('href'));
+                    const targetPosition = target.getBoundingClientRect().top + window.scrollY; // 타겟 섹션의 절대 위치
+                    const vwUnit = window.innerWidth / 100; // 1vw에 해당하는 픽셀 값
+                    const offset = this.getAttribute('href') === '#calendar-section' ? -18 * vwUnit : 0; // 오프셋 조정 (예: -5vw)
+                    const finalPosition = targetPosition + offset; // 최종 스크롤 위치 계산
+
+                    window.scrollTo({
+                        top: finalPosition,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        }
+
+        //앵커 스크롤
+        function scrollAnchorBtnActive() {
+            const sections = document.querySelectorAll(".section");
+            const anchorArea = document.querySelector(".anchor-area");
+            const offsetVw = 20; // 활성화 위치를 더 위로 설정하는 보정 값 (단위: vw)
+
+            function setActiveSection() {
+                let activeSectionId = null;
+                const offsetPx = (window.innerWidth * offsetVw) / 100; // vw 단위를 px로 변환
+                const scrollTop = window.scrollY + offsetPx; // 스크롤 위치에 변환된 offset 추가
+
+                sections.forEach(function(section) {
+                    const sectionTop = section.offsetTop; // 섹션의 페이지 상단 위치
+                    const sectionHeight = section.offsetHeight;
+
+                    // 스크롤이 섹션의 시작점 - offset에 닿으면 활성화
+                    if (scrollTop >= sectionTop && scrollTop < sectionTop + sectionHeight) {
+                        activeSectionId = section.id;
+                    }
+                });
+
+                // anchor-area 클래스 업데이트
+                if (activeSectionId) {
+                    anchorArea.className = `section anchor-area ${activeSectionId}`;
+                }
+            }
+
+            // 스크롤 이벤트에 setActiveSection 연결
+            window.addEventListener("scroll", setActiveSection);
+        }
+
+        //progressBar 채우기
+        function progressBar() {
+            const progressBar = document.querySelector(".bar-gauge");
+            const items = document.querySelectorAll(".calendar-body .day-list .day-item");
+            const totalItems = items.length;
+            let activeItems = 0;
+
+            // 각 li를 순회하면서 on 클래스가 있는지 확인
+            items.forEach((item) => {
+                if (item.classList.contains("on")) {
+                    activeItems++; // on 클래스가 있으면 activeItems 증가
+                }
+            });
+
+            // 계산하여 width 설정
+            const progressWidth = (activeItems / totalItems) * 100;
+
+            // width를 인라인 스타일로 삽입
+            progressBar.setAttribute("style", `width: ${progressWidth}%;`);
+        }
+
+        //클래스 day-? 추출 후 이미지 파일명 설정
+        function imgNamingClass() {
+            const modalAreas = document.querySelectorAll(".modal-area.case1");
+
+            modalAreas.forEach(modal => {
+                // modal-area 요소의 클래스 중 day-? 추출
+                const dayClass = Array.from(modal.classList).find(cls => cls.startsWith("day-"));
+
+                if (dayClass) {
+                    // day-?의 값을 추출
+                    const dayValue = dayClass.split("-")[1]; // day-5 -> "5"
+
+                    // modal-area 내 img 요소 선택
+                    const img = modal.querySelector("img");
+
+                    if (img) {
+                        // 이미지 경로 동적으로 설정
+                        img.src = `./assets/images/h-point-christmas/modal-${dayClass}.png`;
+                        img.alt = `Day ${dayValue}`;
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+
+<body class="h-point-christmas" id="body">
+    <div id="wrap" class="wrap">
+        <div class="section intro" id="intro-section">
+            <em class="section-head blind">HARRY'S CHRISTMAS 출석체크 이벤트</em>
+            <div class="section-body">
+                <div class="intro-figure shawl">
+                    <img src="./assets/images/h-point-christmas/intro-shawl.png" alt="">
+                </div>
+                <div class="intro-figure moon">
+                    <img src="./assets/images/h-point-christmas/intro-moon.png" alt="">
+                </div>
+                <div class="intro-figure curtain">
+                    <div class="curtain-item left">
+                        <img src="./assets/images/h-point-christmas/intro-curtain-left.png" alt="">
+                    </div>
+                    <div class="curtain-item right">
+                        <img src="./assets/images/h-point-christmas/intro-curtain-right.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section anchor-area intro-section">
+            <div class="anchor-list">
+                <a href="#intro-section" class="anchor-item"></a>
+                <a href="#contents-section" class="anchor-item"></a>
+                <a href="#calendar-section" class="anchor-item"></a>
+            </div>
+        </div>
+        <div class="section contents" id="contents-section">
+            <div class="section-head">
+                <div class="section-subject">
+                    <img src="./assets/images/h-point-christmas/contents-head-text.svg" alt="내 손안에서 펼쳐지는 크리스마스 이야기 H.Point와 함께 크리스마스의 다양한 콘텐츠를 즐겨보세요.">
+                </div>
+            </div>
+            <div class="section-body">
+                <ul class="data-list">
+                    <!-- 앱 링크 이동 배너 -->
+                    <li class="data-item">
+                        <a href="https://www.h-point.co.kr/cma/invite.nhd?scheme=mgzCtgr?ctgrId=010" class="data-link">
+                            <img src="./assets/images/h-point-christmas/contents-item-a.png" alt="# 1. 사운드 갤러리 크리스마스 ×더현대서울 현대백화점의 크리스마스 이야기">
+                        </a>
+                    </li>
+                    <li class="data-item">
+                        <a href="https://www.h-point.co.kr/cma/invite.nhd?scheme=mgzCtgr?ctgrId=006018" class="data-link">
+                            <img src="./assets/images/h-point-christmas/contents-item-b.png" alt="# 2. Edit. H 연말과 크리스마스의 분위기를 물씬 느낄 수 있는 공간 추천">
+                        </a>
+                    </li>
+                    <li class="data-item">
+                        <a href="https://www.h-point.co.kr/cma/invite.nhd?scheme=evntPtc?eventId=298707" class="data-link">
+                            <img src="./assets/images/h-point-christmas/contents-item-c.png" alt="# 3. 오디오북 크리스마스 이야기 어디까지 들어봤니? 소리로 읽는 행복한 크리스마스">
+                        </a>
+                    </li>
+                    <!-- //앱 링크 이동 배너 -->
+                </ul>
+            </div>
+        </div>
+        <div class="section calendar" id="calendar-section">
+            <div class="section-head">
+                <div class="section-subject">
+                    <img src="./assets/images/h-point-christmas/calendar-head-text.png" alt="H.Point 크리스마스 어드벤트 캘린더. 매일 출석할수록 쌓여가는 크리스마스 혜택! H.Point에서 매일 다른 서프라이즈 선물을 준비했어요.포인트와 쿠폰 그리고 1천만P 당첨의 기회까지 출석체크하고 오늘의 선물 박스를 열어보세요. #1만_플러스포인트 #100P #20%할인권 #메가박스팝콘_500원 #1천만P_주인공을_찾습니다.">
+                </div>
+            </div>
+            <div class="section-body">
+                <div class="calendar-wrap">
+                    <div class="calendar-head">
+                        <div class="tip">
+                            <img src="./assets/images/h-point-christmas/calendar-tip.png" alt="TIP. 출석을 많이 할 수록 당첨 확률 UP! UP! 매일 출석하고 행운의 주인공이 되어보세요! 매일 8시부터 참여가 가능해요">
+                        </div>
+                        <!-- 고객 응모 현황 -->
+                        <em class="subject">
+                            <span class="name accent">고객님</span>의<br>
+                            1천만P 당첨 <span class="accent">응모권 현황</span>
+                        </em>
+                        <!-- //고객 응모 현황 -->
+                        <!-- 프로그래스바 -->
+                        <div class="progress">
+                            <div class="bar-wrap">
+                                <!-- 채워지는 게이지 : progressBar 스크립트로 width값 삽입 -->
+                                <div class="bar-gauge"></div>
+                                <!-- //채워지는 게이지 -->
+                            </div>
+                            <div class="date-wrap">
+                                <span class="date start">
+                                    <span class="num">0</span><span class="day">장</span>
+                                </span>
+                                <span class="date end">
+                                    <span class="num">24</span><span class="day">장</span>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- //프로그래스바 -->
+                    </div>
+                    <!-- 출석체크 캘린더 : on 클래스가 붙으면 day-item의 이미지, css가 바뀝니다. -->
+                    <div class="calendar-body">
+                        <ul class="day-list">
+                            <li class="day-item item1 on"></li>
+                            <li class="day-item item2 on"></li>
+                            <li class="day-item item3 on"></li>
+                            <li class="day-item item4"></li>
+                            <li class="day-item item5 on"></li>
+                            <li class="day-item item6"></li>
+                            <li class="day-item item7"></li>
+                            <li class="day-item item8"></li>
+                            <li class="day-item item9 on"></li>
+                            <li class="day-item item10"></li>
+                            <li class="day-item item11"></li>
+                            <li class="day-item item12"></li>
+                            <li class="day-item item13"></li>
+                            <li class="day-item item14"></li>
+                            <li class="day-item item15"></li>
+                            <li class="day-item item16 on"></li>
+                            <li class="day-item item17"></li>
+                            <li class="day-item item18"></li>
+                            <li class="day-item item19"></li>
+                            <li class="day-item item20 on"></li>
+                            <li class="day-item item21"></li>
+                            <li class="day-item item22"></li>
+                            <li class="day-item item23"></li>
+                            <li class="day-item item24 on"></li>
+                        </ul>
+                    </div>
+                    <!-- //출석체크 캘린더 -->
+                </div>
+            </div>
+            <!-- 출석 체크 버튼 : 팝업창 뜸 -->
+            <div class="section-util">
+                <a href="javascript:void(0)" class="btn">
+                    <span class="btn-text">출석 체크하기</span>
+                </a>
+            </div>
+            <!-- //출석 체크 버튼 -->
+        </div>
+        <div class="section notice">
+            <div class="section-inner">
+                <ul class="notice-list">
+                    <li class="list-item">본 이벤트는 진행 기간동안만 참여 가능합니다.<br> (진행일자: 12월 1일 ~ 24일)</li>
+                    <li class="list-item">출석체크는 당일 1일 1회 참여 가능하며, 지난일자의 출석 체크는 불가합니다.</li>
+                    <li class="list-item">출석일이 많을 수록 1천만P 당첨 확률이 올라갑니다.<br> (출석일 1일 = 응모권 1개)</li>
+                    <li class="list-item">1천만P 당첨은 12월 31일 개별 통보 및 안내 예정입니다.</li>
+                    <li class="list-item">행사 내용 및 일정은 내부 사정으로 일부 변경될 수 있습니다.</li>
+                    <li class="list-item">혜택 별 자세한 내용은 각 혜택 내 독소조항 참고 바랍니다.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 팝업창 -->
+        <div class="modal-display" id="modalDisplay">
+            <!------------------------- 당첨 팝업 : design1 ------------------------->
+            <div class="modal design1">
+                <div class="modal-inner">
+                    <!-- 출석체크 성공 선물 상자 팝업 -->
+                    <div class="modal-area gift-box" id="giftBoxModal">
+                        <div class="modal-wrap">
+                            <div class="modal-figure">
+                                <img src="./assets/images/h-point-christmas/modal-gift-box.png" alt="">
+                            </div>
+                            <div class="modal-inform">
+                                <div class="modal-head">
+                                    <span class="modal-subject">오늘 출석체크 성공!</span>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="para">선물을 가져오고 있어요!<br> 잠시만 기다려주세요!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 출석체크 성공 선물 상자 팝업-->
+                    <!----------------- 출석체크 성공 선물 상자가 나오고 ----------------->
+                    <!-- 꽝! 팝업 -->
+                    <div class="modal-area boom-popup" id="boomModal">
+                        <div class="modal-wrap">
+                            <div class="modal-figure">
+                                <img src="./assets/images/h-point-christmas/modal-boom.png" alt="">
+                            </div>
+                            <div class="modal-inform">
+                                <div class="modal-head">
+                                    <span class="modal-subject">다음 기회에!</span>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="para">
+                                        오늘의 혜택 쿠폰이 모두 소진되었습니다.<br>
+                                        아쉬운 마음을 담아 <span class="accent">‘5P’</span>를 준비했어요!<br>
+                                    </p>
+                                    <p class="para type1">
+                                        <span class="accent">내일 08:00시</span>에 다시 도전해보세요
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="modal-fuc">
+                                <a href="javascript:void(0)" class="fuc-btn type1 close">
+                                    <span class="btn-text">확인</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //꽝! 팝업 -->
+                    <!-- 중복 참여시 팝업(case3) -->
+                    <div class="modal-area overlap-popup" id="overlapModal">
+                        <div class="modal-wrap">
+                            <div class="modal-figure">
+                                <img src="./assets/images/h-point-christmas/modal-overlap.png" alt="">
+                            </div>
+                            <div class="modal-inform">
+                                <div class="modal-head">
+                                    <span class="modal-subject">참여 기회는 하루에 한번!</span>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="para">내일 다시 새로운 혜택을<br> 만나보세요!</p>
+                                </div>
+                            </div>
+                            <div class="modal-fuc">
+                                <a href="javascript:void(0)" class="fuc-btn type1 close">
+                                    <span class="btn-text">확인</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //중복 참여시 팝업 -->
+                    <!--------- 당첨 데일리 팝업 : 클래스마다 이미지 src 달라짐 (modal-area.day-1 -> modal-day-1.png) --------->
+                    <!-- 당첨 팝업(case1.type1) : 1일차 (골드)-->
+                    <div class="modal-area day-1" id="day1Modal">
+                        <div class="modal-wrap">
+                            <div class="modal-figure">
+                                <img src="./assets/images/h-point-christmas/modal-day-1.png" alt="">
+                            </div>
+                            <div class="modal-inform">
+                                <div class="modal-head">
+                                    <span class="modal-subject">축하합니다!</span>
+                                </div>
+                                <div class="modal-body">
+                                    <ul class="bullet-list">
+                                        <li class="bullet-item">지급된 혜택은 선물하기/전환/캐시백 등은 불가 합니다.</li>
+                                        <li class="bullet-item">포인트는 자동으로 적립되며, H.Point APP에서 확인 가능합니다.</li>
+                                        <li class="bullet-item">하단의 혜택받기 클릭 시 H.Point 적립된 포인트를 확인하실 수 있습니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-fuc">
+                                <a href="javascript:void(0)" class="fuc-btn type2 close">
+                                    <span class="btn-text blind">팝업 닫기</span>
+                                </a>
+                                <a href="javascript:void(0)" class="fuc-btn type1 close">
+                                    <span class="btn-text">혜택받기</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //당첨 팝업 : 1일차 -->
+                    <!-- 당첨 팝업(case1.type2) : 2일차 (레드)-->
+                    <div class="modal-area day-2" id="day2Modal">
+                        <div class="modal-wrap">
+                            <div class="modal-figure">
+                                <img src="./assets/images/h-point-christmas/modal-day-2.png" alt="">
+                            </div>
+                            <div class="modal-inform">
+                                <div class="modal-head">
+                                    <span class="modal-subject">축하합니다!</span>
+                                </div>
+                                <div class="modal-body">
+                                    <ul class="bullet-list">
+                                        <li class="bullet-item">본 쿠폰은 20만원 이상 구매 시, 사용 가능합니다.</li>
+                                        <li class="bullet-item">지급된 혜택은 선물하기/전환/캐시백 등은 불가 합니다.</li>
+                                        <li class="bullet-item">혜택별 사용처/사용기준이 상이하므로, 사용 전 반드시 확인 바랍니다.</li>
+                                        <li class="bullet-item">지급된 혜택의 세부 내용은 하단의 혜택받기 버튼을 통해 확인 가능합니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-fuc">
+                                <a href="javascript:void(0)" class="fuc-btn type2 close">
+                                    <span class="btn-text blind">팝업 닫기</span>
+                                </a>
+                                <a href="javascript:void(0)" class="fuc-btn type1 close">
+                                    <span class="btn-text">혜택받기</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //당첨 팝업 : 2일차 -->
+                    <!-- 당첨 팝업(case1.type2) : 5일차 (편지봉투)-->
+                    <div class="modal-area day-5" id="day2Modal">
+                        <div class="modal-wrap">
+                            <div class="modal-figure">
+                                <img src="./assets/images/h-point-christmas/modal-day-4.png" alt="">
+                            </div>
+                            <div class="modal-inform">
+                                <div class="modal-head">
+                                    <span class="modal-subject">축하합니다!</span>
+                                </div>
+                                <div class="modal-body">
+                                    <ul class="bullet-list">
+                                        <li class="bullet-item">본 쿠폰은 선착순 5,000명 한정 쿠폰입니다.</li>
+                                        <li class="bullet-item">5만원 이상 구매 시, 사용 가능합니다.</li>
+                                        <li class="bullet-item">지급된 혜택은 선물하기/전환/캐시백 등은 불가 합니다.</li>
+                                        <li class="bullet-item">혜택별 사용처/사용기준이 상이하므로, 사용 전 반드시 확인 바랍니다.</li>
+                                        <li class="bullet-item">지급된 혜택의 세부 내용은 하단의 혜택받기 버튼을 통해 확인 가능합니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-fuc">
+                                <a href="javascript:void(0)" class="fuc-btn type2 close">
+                                    <span class="btn-text blind">팝업 닫기</span>
+                                </a>
+                                <a href="javascript:void(0)" class="fuc-btn type1 close">
+                                    <span class="btn-text">혜택받기</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //당첨 팝업 : 5일차 -->
+                </div>
+            </div>
+            <!------------------------- 당첨 팝업 ------------------------->
+
+            <!------------------------- 최신 버전 필요 / 마케팅 수신 동의 팝업(선물 상자 보이지 않고 바로 뜨는 팝업) : design2 ------------------------->
+            <div class="modal design2">
+                <div class="modal-inner">
+                    <!-- 최신 버전 필요 팝업 -->
+                    <div class="modal-area newversion-popup" id="newVersionModal">
+                        <div class="modal-wrap">
+                            <div class="modal-inform">
+                                <div class="modal-body">
+                                    <p class="para">
+                                        이벤트 참여를 위해<br> 최신 버전의 앱이 필요합니다.<br> 지금 업데이트하고 다양한 혜택을 만나보세요.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="modal-fuc">
+                                <a href="javascript:void(0)" class="fuc-btn type1">
+                                    <span class="btn-text">앱 업데이트 하기</span>
+                                </a>
+                                <a href="javascript:void(0)" class="fuc-btn type2 close">
+                                    <span class="btn-text blind">팝업 닫기</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //최신 버전 필요 팝업 -->
+                    <!-- 마케팅 수신 미동의 팝업 -->
+                    <div class="modal-area agree-popup" id="agreeModal">
+                        <div class="modal-wrap">
+                            <div class="modal-inform">
+                                <div class="modal-body">
+                                    <p class="para">
+                                        이벤트 참여를 위해<br> 마케팅 수신 동의가 필요합니다.<br> 동의하시면 최신 혜택과 소식을 편리하게<br> 받아보실 수 있습니다.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="modal-fuc">
+                                <a href="javascript:void(0)" class="fuc-btn type1 check">
+                                    <span class="btn-text">마케팅 수신 동의</span>
+                                </a>
+                                <a href="javascript:void(0)" class="fuc-btn type2 close">
+                                    <span class="btn-text blind">팝업 닫기</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //마케팅 수신 미동의 팝업 -->
+                </div>
+            </div>
+            <!-- 최신 버전 필요, 마케팅 수신 동의 팝업 -->
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            const _BODY = document.body; // body 
+
+            const attendanceBtn = document.querySelector(".calendar .section-util .btn"); // 출석체크 버튼
+            const modalCloseBtn = document.querySelector(".modal .modal-area .fuc-btn.close"); // 모달 닫기 버튼
+            const modalDisplay = document.getElementById("modalDisplay"); // 전체 모달 감싸는 ID
+            const giftBoxModal = document.getElementById("giftBoxModal"); // 선물상자 모달 ID
+            const boomModal = document.getElementById("boomModal"); // 꽝 모달 ID
+            const dayModal = document.querySelector('[id*="day"]'); // 당첨 모달 ID
+            const newVersionModal = document.getElementById("newVersionModal"); // 버전업 ID
+            const agreeModal = document.getElementById("agreeModal"); // 수신동의 ID
+            const overlapModal = document.getElementById("overlapModal"); // 중복참여 ID
+
+            attendanceBtn.addEventListener("click", function() {
+                // openNewVersionModal();	// 버전업모달
+                // openAgreeModal();	// 동의모달
+                // openBoomModal();	// 꽝모달
+                // openOverlapModal();	// 중복참여모달
+                openDayModal(); // 당첨모달
+            })
+
+            modalCloseBtn.addEventListener("click", function() {
+                closeModal();
+            })
+
+            // 버전업모달
+            function openNewVersionModal() {
+                openModal();
+                newVersionModal.classList.add("on");
+            }
+
+            // 동의모달
+            function openAgreeModal() {
+                openModal();
+                agreeModal.classList.add("on");
+            }
+
+            // 꽝모달
+            function openBoomModal() {
+                openModal();
+                boomModal.classList.add("on");
+            }
+
+            // 중복참여모달
+            function openOverlapModal() {
+                openModal();
+                overlapModal.classList.add("on");
+            }
+
+            // 당첨모달
+            function openDayModal() {
+                openModal();
+                giftBoxOpen();
+            }
+
+            // 팝업 열기
+            function openModal() {
+                modalDisplay.classList.add("show"); // 모달 열기
+                _BODY.classList.add("modal-show"); // body 스크롤 막기
+
+                document.querySelectorAll('.modal-area').forEach(area => {
+                    area.addEventListener('classAdded', function() {
+                        // 가장 가까운 상위 modal 요소 찾기
+                        const closestModal = area.closest('.modal');
+                        if (closestModal) {
+                            closestModal.classList.add('on');
+                        }
+                    });
+
+                    // MutationObserver로 클래스 추가 감지
+                    const observer = new MutationObserver(mutations => {
+                        mutations.forEach(mutation => {
+                            if (mutation.attributeName === 'class') {
+                                if (area.classList.contains('on')) {
+                                    const event = new Event('classAdded');
+                                    area.dispatchEvent(event);
+                                }
+                            }
+                        });
+                    });
+
+                    observer.observe(area, {
+                        attributes: true
+                    });
+                });
+            }
+
+            // 팝업 닫기
+            function closeModal() {
+                modalDisplay.classList.remove("show"); // 모달 닫기
+                _BODY.classList.remove("modal-show"); // body 다시 스크롤 되도록
+
+                const activeModal = document.querySelector(".modal-area.on");
+                if (activeModal) {
+                    activeModal.classList.remove("on");
+                }
+            }
+
+            // 선물상자가 2000ms 노출된 후 다음 모달창 나옴
+            function giftBoxOpen() {
+                giftBoxModal.classList.add("on");
+
+                setTimeout(() => {
+                    giftBoxModal.classList.remove("on"); // giftBoxModal 숨김
+                    dayModal.classList.add("on"); // modal-area 표시
+                }, 2000);
+            }
+
+            // 닫기 버튼 클릭 이벤트
+            modalDisplay.addEventListener("click", function(e) {
+                // on 클래스가 붙은 .modal-area 안의 .fuc-btn.close만 처리
+                const activeModal = document.querySelector(".modal-area.on");
+                if (activeModal && e.target.closest(".fuc-btn.close") && activeModal.contains(e.target)) {
+                    e.preventDefault(); // a 태그 기본 동작 방지
+                    closeModal();
+                    console.log("닫기 버튼 클릭! 모달 닫힘!");
+                }
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>
