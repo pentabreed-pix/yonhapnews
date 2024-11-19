@@ -680,12 +680,15 @@ button {
             display: block;
         }
         .modal {
-            display: flex;
+            display: none;
             align-items: center;
             justify-content: center;
             width: 100%;
             height: 100%;
             position: relative;
+            &.on {
+                display: flex;
+            }
             &.design1 {
                 .modal-inner {
                     width: 91.466vw;

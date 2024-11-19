@@ -17,12 +17,12 @@
 			scrollAnchorBtnActive();
 			clickAnchorSmooth();
 			progressBar();
+			imgNamingClass();
 		});
 
 		//인트로 애니
 		function introAni() {
 			const curtainImg = document.querySelector('.curtain');
-
 			setTimeout(() => {
 				curtainImg.classList.add('active1')
 				setTimeout(() => {
@@ -102,6 +102,30 @@
 			// width를 인라인 스타일로 삽입
 			progressBar.setAttribute("style", `width: ${progressWidth}%;`);
 		}
+
+		//클래스 day-? 추출 후 이미지 파일명 설정
+        function imgNamingClass() {
+            const modalAreas = document.querySelectorAll(".modal-area.case1");
+
+            modalAreas.forEach(modal => {
+                // modal-area 요소의 클래스 중 day-? 추출
+                const dayClass = Array.from(modal.classList).find(cls => cls.startsWith("day-"));
+                
+                if (dayClass) {
+                    // day-?의 값을 추출
+                    const dayValue = dayClass.split("-")[1]; // day-5 -> "5"
+                    
+                    // modal-area 내 img 요소 선택
+                    const img = modal.querySelector("img");
+                    
+                    if (img) {
+                        // 이미지 경로 동적으로 설정
+                        img.src = `/assets/images/h-point-christmas/modal-${dayClass}.png`;
+                        img.alt = `Day ${dayValue}`;
+                    }
+                }
+            });
+        }
 	</script>
 </head>
 
@@ -251,12 +275,12 @@
 		</div>
 
 		<!-- 팝업창 -->
-		<div class="modal-display" id="modalDisplay"> 
+		<div class="modal-display" id="modalDisplay">
 			<!------------------------- 당첨 팝업 : design1 ------------------------->
-			<div class="modal design1" style="display: none;">
+			<div class="modal design1">
 				<div class="modal-inner">
 					<!-- 출석체크 성공 선물 상자 팝업(gift-box) -->
-					<div class="modal-area gift-box" id="checkModal">
+					<div class="modal-area gift-box" id="giftBoxModal">
 						<div class="modal-wrap">
 							<div class="modal-figure">
 								<img src="/assets/images/h-point-christmas/modal-gift-box.png" alt="">
@@ -323,41 +347,102 @@
 						</div>
 					</div>
 					<!-- //중복 참여시 팝업 -->
-					<!--------- 24일 동안의 팝업 : 클래스마다 이미지 src 달라짐 (modal-area.day-1 -> modal-day-1.png) --------->
-					<!-- 당첨 팝업(case1) : 1일차 -->
-					<div class="modal-area case1 type1 day-1 " id="dayModal1">
-						<div class="modal-wrap">
-							<div class="modal-figure">
-								<img src="/assets/images/h-point-christmas/modal-day-1.png" alt="">
-							</div>
-							<div class="modal-inform">
-								<div class="modal-head">
-									<span class="modal-subject">축하합니다!</span>
-								</div>
-								<div class="modal-body">
-									<ul class="bullet-list">
-										<li class="bullet-item">지급된 혜택은 선물하기/전환/캐시백 등은 불가 합니다.</li>
-										<li class="bullet-item">포인트는 자동으로 적립되며, H.Point APP에서 확인 가능합니다.</li>
-										<li class="bullet-item">하단의 혜택받기 클릭 시 H.Point 적립된 포인트를 확인하실 수 있습니다.</li>
-									</ul>
-								</div>
-							</div>
-							<div class="modal-fuc">
-								<a href="javascript:void(0)" class="fuc-btn type2 close">
-									<span class="btn-text blind">팝업 닫기</span>
-								</a>
-								<a href="javascript:void(0)" class="fuc-btn type1 close">
-									<span class="btn-text">혜택받기</span>
-								</a>
-							</div>
-						</div>
-					</div>
-					<!-- //당첨 팝업 : 1일차 -->
+					<!--------- 당첨 데일리 팝업 : 클래스마다 이미지 src 달라짐 (modal-area.day-1 -> modal-day-1.png) --------->
+					<!-- 당첨 팝업(case1.type1) : 1일차 (골드)-->
+                    <div class="modal-area case1 type1 day-1 " id="day1Modal">
+                        <div class="modal-wrap">
+                            <div class="modal-figure">
+                                <img src="/assets/images/h-point-christmas/modal-day-1.png" alt="">
+                            </div>
+                            <div class="modal-inform">
+                                <div class="modal-head">
+                                    <span class="modal-subject">축하합니다!</span>
+                                </div>
+                                <div class="modal-body">
+                                    <ul class="bullet-list">
+                                        <li class="bullet-item">지급된 혜택은 선물하기/전환/캐시백 등은 불가 합니다.</li>
+                                        <li class="bullet-item">포인트는 자동으로 적립되며, H.Point APP에서 확인 가능합니다.</li>
+                                        <li class="bullet-item">하단의 혜택받기 클릭 시 H.Point 적립된 포인트를 확인하실 수 있습니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-fuc">
+                                <a href="javascript:void(0)" class="fuc-btn type2 close">
+                                    <span class="btn-text blind">팝업 닫기</span>
+                                </a>
+                                <a href="javascript:void(0)" class="fuc-btn type1 close">
+                                    <span class="btn-text">혜택받기</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //당첨 팝업 : 1일차 -->
+                    <!-- 당첨 팝업(case1.type2) : 2일차 (레드)-->
+                    <div class="modal-area case1 type2 day-2" id="day2Modal">
+                        <div class="modal-wrap">
+                            <div class="modal-figure">
+                                <img src="/assets/images/h-point-christmas/modal-day-2.png" alt="">
+                            </div>
+                            <div class="modal-inform">
+                                <div class="modal-head">
+                                    <span class="modal-subject">축하합니다!</span>
+                                </div>
+                                <div class="modal-body">
+                                    <ul class="bullet-list">
+                                        <li class="bullet-item">본 쿠폰은 20만원 이상 구매 시, 사용 가능합니다.</li>
+                                        <li class="bullet-item">지급된 혜택은 선물하기/전환/캐시백 등은 불가 합니다.</li>
+                                        <li class="bullet-item">혜택별 사용처/사용기준이 상이하므로, 사용 전 반드시 확인 바랍니다.</li>
+                                        <li class="bullet-item">지급된 혜택의 세부 내용은 하단의 혜택받기 버튼을 통해 확인 가능합니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-fuc">
+                                <a href="javascript:void(0)" class="fuc-btn type2 close">
+                                    <span class="btn-text blind">팝업 닫기</span>
+                                </a>
+                                <a href="javascript:void(0)" class="fuc-btn type1 close">
+                                    <span class="btn-text">혜택받기</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //당첨 팝업 : 2일차 -->
+                    <!-- 당첨 팝업(case1.type2) : 5일차 (편지봉투)-->
+                    <div class="modal-area case1 type3 day-5 " id="day2Modal">
+                        <div class="modal-wrap">
+                            <div class="modal-figure">
+                                <img src="/assets/images/h-point-christmas/modal-day-4.png" alt="">
+                            </div>
+                            <div class="modal-inform">
+                                <div class="modal-head">
+                                    <span class="modal-subject">축하합니다!</span>
+                                </div>
+                                <div class="modal-body">
+                                    <ul class="bullet-list">
+                                        <li class="bullet-item">본 쿠폰은 선착순 5,000명 한정 쿠폰입니다.</li>
+                                        <li class="bullet-item">5만원 이상 구매 시, 사용 가능합니다.</li>
+                                        <li class="bullet-item">지급된 혜택은 선물하기/전환/캐시백 등은 불가 합니다.</li>
+                                        <li class="bullet-item">혜택별 사용처/사용기준이 상이하므로, 사용 전 반드시 확인 바랍니다.</li>
+                                        <li class="bullet-item">지급된 혜택의 세부 내용은 하단의 혜택받기 버튼을 통해 확인 가능합니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-fuc">
+                                <a href="javascript:void(0)" class="fuc-btn type2 close">
+                                    <span class="btn-text blind">팝업 닫기</span>
+                                </a>
+                                <a href="javascript:void(0)" class="fuc-btn type1 close">
+                                    <span class="btn-text">혜택받기</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //당첨 팝업 : 5일차 -->
 				</div>
 			</div>
 			<!------------------------- 당첨 팝업 ------------------------->
 
-			<!------------------------- 최신 버전 필요 / 마케팅 수신 동의 팝업 : design2 ------------------------->
+			<!------------------------- 최신 버전 필요 / 마케팅 수신 동의 팝업(선물 상자 보이지 않고 바로 뜨는 팝업) : design2 ------------------------->
 			<div class="modal design2">
 				<div class="modal-inner">
 					<!-- 최신 버전 필요 팝업 -->
@@ -409,31 +494,93 @@
 	</div>
 	<script>
 		$(document).ready(function() {
-			const _BODY = document.body; // body 요소
-			const attendanceBtn = document.querySelector(".section-util .btn"); // 출석 체크 버튼
-			const modalDisplay = document.getElementById("modalDisplay"); // 전체 모달 디스플레이
-			const checkModal = document.getElementById("checkModal"); // 선물 상자 팝업
-			const dayModal1 = document.getElementById("dayModal1"); // 당첨 팝업 (일단 1일차 팝업 ID로 테스트)
-			const newVersionModal = document.getElementById("newVersionModal"); // 당첨 팝업 (최신버전 필요 팝업 테스트)
-			const inputCheck = document.querySelector("fuc-btn.check")
+			const _BODY = document.body; // body 
+
+			const attendanceBtn = document.querySelector(".calendar .section-util .btn"); // 출석체크 버튼
+			const modalCloseBtn = document.querySelector(".modal .modal-area .fuc-btn.close"); // 모달 닫기 버튼
+			const modalDisplay = document.getElementById("modalDisplay"); // 전체 모달 감싸는 ID
+			const giftBoxModal = document.getElementById("giftBoxModal"); // 선물상자 모달 ID
+			const boomModal = document.getElementById("boomModal"); // 꽝 모달 ID
+			const dayModal = document.querySelector('[id*="day"]'); // 당첨 모달 ID
+			const newVersionModal = document.getElementById("newVersionModal"); // 버전업 ID
+			const agreeModal = document.getElementById("agreeModal"); // 수신동의 ID
+			const overlapModal = document.getElementById("overlapModal"); // 중복참여 ID
+
+			attendanceBtn.addEventListener("click", function() {
+				// openNewVersionModal();	// 버전업모달
+				// openAgreeModal();	// 동의모달
+				// openBoomModal();	// 꽝모달
+				// openOverlapModal();	// 중복참여모달
+				openDayModal(); 	// 당첨모달
+			})
+
+			modalCloseBtn.addEventListener("click", function() {
+				closeModal();
+			})
+
+			// 버전업모달
+			function openNewVersionModal() {
+				openModal();
+				newVersionModal.classList.add("on");
+			}
+
+			// 동의모달
+			function openAgreeModal() {
+				openModal();
+				agreeModal.classList.add("on");
+			}
+
+			// 꽝모달
+			function openBoomModal() {
+				openModal();
+				boomModal.classList.add("on");
+			}
+
+			// 중복참여모달
+			function openOverlapModal() {
+				openModal();
+				overlapModal.classList.add("on");
+			}
+
+			// 당첨모달
+			function openDayModal() {
+				openModal();
+				giftBoxOpen();
+			}
 
 			// 팝업 열기
 			function openModal() {
-				modalDisplay.classList.add("show"); // 'show' 클래스 추가
-				_BODY.classList.add("modal-show"); // 'modal-show' 클래스 추가 (배경 스크롤 막기)
-				checkModal.classList.add("on"); // 'on' 클래스 추가하여 modal-area 노출
-				newVersionModal.classList.add("on"); //
+				modalDisplay.classList.add("show"); // 모달 열기
+				_BODY.classList.add("modal-show"); // body 스크롤 막기
 
-				// 선물상자가 2000ms 노출된 후 다음 모달창 나옴
-				setTimeout(() => {
-					checkModal.classList.remove("on"); // checkModal 숨김
-					dayModal1.classList.add("on"); // modal-area 표시
-				}, 2000);
+				document.querySelectorAll('.modal-area').forEach(area => {
+					area.addEventListener('classAdded', function () {
+						// 가장 가까운 상위 modal 요소 찾기
+						const closestModal = area.closest('.modal');
+						if (closestModal) {
+							closestModal.classList.add('on');
+						}
+					});
+
+					// MutationObserver로 클래스 추가 감지
+					const observer = new MutationObserver(mutations => {
+						mutations.forEach(mutation => {
+							if (mutation.attributeName === 'class') {
+								if (area.classList.contains('on')) {
+									const event = new Event('classAdded');
+									area.dispatchEvent(event);
+								}
+							}
+						});
+					});
+
+					observer.observe(area, { attributes: true });
+				});
 			}
 
 			// 팝업 닫기
 			function closeModal() {
-				modalDisplay.classList.remove("show"); // 'show' 클래스 제거
+				modalDisplay.classList.remove("show"); // 모달 닫기
 				_BODY.classList.remove("modal-show"); // body 다시 스크롤 되도록
 				
 				const activeModal = document.querySelector(".modal-area.on");
@@ -442,10 +589,15 @@
 				}
 			}
 
-			// 출석체크하기 버튼 클릭
-			attendanceBtn.addEventListener("click", function () {
-				openModal();
-			});
+			// 선물상자가 2000ms 노출된 후 다음 모달창 나옴
+			function giftBoxOpen() {
+				giftBoxModal.classList.add("on");
+
+				setTimeout(() => {
+					giftBoxModal.classList.remove("on"); // giftBoxModal 숨김
+					dayModal1.classList.add("on"); // modal-area 표시
+				}, 2000);
+			}
 
 			// 닫기 버튼 클릭 이벤트
 			modalDisplay.addEventListener("click", function (e) {
@@ -457,6 +609,8 @@
 					console.log("닫기 버튼 클릭! 모달 닫힘!");
 				}
 			});
+
+			
 		});
 	</script>
 </body>
