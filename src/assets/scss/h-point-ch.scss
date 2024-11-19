@@ -120,12 +120,13 @@ button {
                     width: 100%;
                     // height: 92.597%;
                     height: 100%;
+                    z-index: 2;
                     .curtain-item {
                         position: absolute;
                         top: 0;
                         width: 50%;
                         height: 100%;
-                        transition: 0.7s ease-in;
+                        transition: 0.6s ease-in;
                         &.left {
                             left: -1%;
                             transform-origin: bottom left;
@@ -161,7 +162,7 @@ button {
                     &.active2 {
                         .curtain-item {
                             width: 20%;
-                            transition: 3s cubic-bezier(0.225, 0.545, 0.220, 0.660);
+                            transition: 2.5s cubic-bezier(0.225, 0.545, 0.220, 0.660);
                             // transition: 2.5s ease;
                             &.left {
                                 left: -50%;
@@ -170,6 +171,103 @@ button {
                             &.right {
                                 right: -50%;
                                 transform: skewY(0deg) skewX(-3deg);
+                            }
+                        }
+                    }
+                }
+                &.move-item {
+                    width: 100%;
+                    height: 100%;
+                    .item-list {
+                        .item {
+                            position: absolute;
+                            &.bear {
+                                width: 73.2vw;
+                                top: 61.733vw;
+                                left: 14.5vw;
+                            }
+                            &.balloon {
+                                width: 12vw;
+                                top: 61.866vw;
+                                right: 12.8vw;
+                            }
+                            &.monkey {
+                                width: 46.266vw;
+                                bottom: 8vw;
+                                z-index: 1;
+                                left: 2.5vw;
+                            }
+                            &.tiger {
+                                width: 57.2vw;
+                                bottom: 12.5vw;
+                                right: -21vw;
+                            }
+                            &.giraffe {
+                                width: 46vw;
+                                bottom: 11.5vw;
+                                left: -14.6vw;
+                            }
+                            &.rabbit {
+                                width: 40.4vw;
+                                bottom: 9vw;
+                                right: 2.5vw;
+                            }
+                        }
+                    }
+                    &.active1 {
+                        .item-list {
+                            .item {
+                                &.bear {
+                                    animation: move-item-ani1 2.5s infinite ease-out;
+                                }
+                                &.balloon {
+                                    animation: move-item-ani2 2s ease-out;
+                                }
+                                &.monkey {
+                                    animation: move-item-ani3 2s infinite;
+                                    transform-origin: center bottom;
+                                }
+                                &.tiger {
+                                    animation: move-item-ani4 4s infinite ease;
+                                    transform-origin: center bottom;
+                                }
+                                &.giraffe {
+                                    animation: move-item-ani5 5s infinite ease-out;
+                                    transform-origin: center bottom;
+                                }
+                                &.rabbit {
+                                    animation: move-item-ani6 2s infinite ease;
+                                    transform-origin: center bottom;
+                                }
+                                @keyframes move-item-ani1 {
+                                    0% {transform: translateY(0) scaleX(1);}
+                                    50% {transform: translateY(-10vw) scaleX(0.99);}
+                                    100% {transform: translateY(0) scaleX(1);}
+                                }
+                                @keyframes move-item-ani2 {
+                                    0% {transform: translateY(30vw);}
+                                    100% {transform: translateY(0);}
+                                }
+                                @keyframes move-item-ani3 {
+                                    0% {transform: rotate(0);}
+                                    50% {transform: rotate(-7deg);}
+                                    100% {transform: rotate(0);}
+                                }
+                                @keyframes move-item-ani4 {
+                                    0% {transform: rotate(-0.5deg);}
+                                    50% {transform: rotate(10deg);}
+                                    100% {transform: rotate(-0.5deg);}
+                                }
+                                @keyframes move-item-ani5 {
+                                    0% {transform: rotate(0);}
+                                    50% {transform: rotate(2deg);}
+                                    100% {transform: rotate(0);}
+                                }
+                                @keyframes move-item-ani6 {
+                                    0% {transform: rotate(0);}
+                                    50% {transform: rotate(3deg);}
+                                    100% {transform: rotate(0);}
+                                }
                             }
                         }
                     }
@@ -725,7 +823,7 @@ button {
                 }
                 .modal-area {
                     //별 bg
-                    &:not(.day-24) {
+                    &:not(.day-24):not(.gift-box) {
                         &::after {
                             content: "";
                             width: 100%;
@@ -741,7 +839,7 @@ button {
                     &.gift-box {
                         .modal-figure {
                             position: absolute; 
-                            top: 52.533vw; // 166/375*100
+                            top: 0;
                             left: 50%;
                             transform: translateX(-50%);
                             display: block;
@@ -750,6 +848,52 @@ button {
                                 width: 100%;
                                 height: 100%;
                             }
+                            .figure-list {
+                                .figure-item {
+                                    position: absolute;
+                                    &.item1 {
+                                        position: relative;
+                                        &::after {
+                                            content: "";
+                                            width: 100%;
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            height: 100%;
+                                            z-index: -1;
+                                            background-image:url('../../assets/images/h-point-christmas/modal-twinkle-bg.gif'), url('../../assets/images/h-point-christmas/modal-fireworks-bg.gif');
+                                            background-size: cover; 
+                                            background-position: center center;
+                                            background-repeat: no-repeat;
+                                        }
+                                    }
+                                    &.item2 {
+                                        top: 41.6vw;
+                                        left: 17vw;
+                                        width: 7.2vw;
+                                        animation: swing-up-down2 4s infinite ease-in-out;
+                                    }
+                                    &.item3 {
+                                        top: 41.6vw;
+                                        right: 12vw;
+                                        width: 12.266vw;
+                                        animation: swing-up-down2 4s infinite ease-in-out;
+                                    }
+                                    &.item4 {
+                                        top: 74.133vw;
+                                        left: 10.133vw;
+                                        width: 12.8vw;
+                                        animation: swing-up-down3 4s infinite ease-in-out;
+                                    }
+                                    &.item5 {
+                                        top: 84.8vw;
+                                        right: 15.733vw;
+                                        width: 4.533vw;
+                                        animation: swing-up-down3 4s infinite ease-in-out;
+                                    }
+                                }
+                            }
+                            
                         }
                         .modal-inform {
                             margin-top: 112vw;
@@ -803,7 +947,7 @@ button {
                                 position: absolute;
                                 top: 30.933vw;
                                 left: 14.4vw;
-                                background: url(../../assets/images/h-point-christmas/modal-poin-gold-bg.png) no-repeat center center;
+                                background: url(../../assets/images/h-point-christmas/modal-point-gold-bg.png) no-repeat center center;
                                 background-size: cover;
                                 z-index: 999;
                             }
@@ -826,7 +970,7 @@ button {
                                 position: absolute;
                                 top: 24.533vw;
                                 left: 5.866vw;
-                                background: url(../../assets/images/h-point-christmas/modal-poin-red-bg.png) no-repeat center center;
+                                background: url(../../assets/images/h-point-christmas/modal-point-red-bg.png) no-repeat center center;
                                 background-size: cover;
                                 z-index: 999;
                             }
@@ -849,7 +993,7 @@ button {
                                 position: absolute;
                                 top: 25.866vw;
                                 left: 7.733vw;
-                                background: url(../../assets/images/h-point-christmas/modal-poin-letter-bg.png) no-repeat center center;
+                                background: url(../../assets/images/h-point-christmas/modal-point-letter-bg.png) no-repeat center center;
                                 background-size: cover;
                                 z-index: 999;
                             }
@@ -1300,5 +1444,15 @@ button {
         0% {transform: translateY(-4vw);}
         50% {transform: translateY(0);}
         100% {transform: translateY(-4vw);}
+    }
+    @keyframes swing-up-down2 {
+        0% {transform: translateY(-3vw);}
+        50% {transform: translateY(0);}
+        100% {transform: translateY(-3vw);}
+    }
+    @keyframes swing-up-down3 {
+        0% {transform: translateY(0);}
+        50% {transform: translateY(-3vw);}
+        100% {transform: translateY(0);}
     }
 }
