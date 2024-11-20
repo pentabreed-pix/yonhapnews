@@ -45,7 +45,7 @@
                     const target = document.querySelector(this.getAttribute('href'));
                     const targetPosition = target.getBoundingClientRect().top + window.scrollY; // 타겟 섹션의 절대 위치
                     const vwUnit = window.innerWidth / 100; // 1vw에 해당하는 픽셀 값
-                    const offset = this.getAttribute('href') === '#calendar-section' ? -18 * vwUnit : 0; // 오프셋 조정 (예: -5vw)
+                    const offset = -20 * vwUnit; // 오프셋 조정 (예: -5vw)
                     const finalPosition = targetPosition + offset; // 최종 스크롤 위치 계산
 
                     window.scrollTo({
@@ -60,7 +60,7 @@
         function scrollAnchorBtnActive() {
             const sections = document.querySelectorAll(".section");
             const anchorArea = document.querySelector(".anchor-area");
-            const offsetVw = 20; // 활성화 위치를 더 위로 설정하는 보정 값 (단위: vw)
+            const offsetVw = 22; // 활성화 위치를 더 위로 설정하는 보정 값 (단위: vw)
 
             function setActiveSection() {
                 let activeSectionId = null;
