@@ -70,6 +70,9 @@ button {
   overflow: hidden;
 }
 
+.h-point-christmas .wrap {
+  overflow: hidden;
+}
 .h-point-christmas.modal-show {
   overflow: hidden;
 }
@@ -78,7 +81,6 @@ button {
   width: 100%;
   padding-bottom: 161.333%;
   z-index: 99;
-  overflow: hidden;
 }
 .h-point-christmas .section.intro::before {
   content: "";
@@ -116,8 +118,8 @@ button {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 100%;
-  z-index: 2;
+  height: 100vh;
+  z-index: 100;
 }
 .h-point-christmas .section.intro .intro-figure.curtain .curtain-item {
   position: absolute;
