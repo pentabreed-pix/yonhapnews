@@ -185,6 +185,16 @@ button {
                                 width: 73.2vw;
                                 top: 61.733vw;
                                 left: 14.5vw;
+                                .img-shadow {
+                                    position: absolute;
+                                    top: 56vw;
+                                    left: 2.3vw;
+                                    z-index: 0;
+                                }
+                                .img-bear {
+                                    position: relative;
+                                    z-index: 1;
+                                }
                             }
                             &.balloon {
                                 width: 12vw;
@@ -218,7 +228,12 @@ button {
                         .item-list {
                             .item {
                                 &.bear {
-                                    animation: move-item-ani1 2.5s infinite ease-out;
+                                    .img-shadow {
+                                        animation: move-item-ani7 2.5s infinite ease-out;
+                                    }
+                                    .img-bear {
+                                        animation: move-item-ani1 2.5s infinite ease-out;
+                                    }
                                 }
                                 &.balloon {
                                     animation: move-item-ani2 3s ease-out;
@@ -239,6 +254,7 @@ button {
                                     animation: move-item-ani6 2s infinite ease;
                                     transform-origin: center bottom;
                                 }
+
                                 @keyframes move-item-ani1 {
                                     0% {transform: translateY(0) scaleX(1);}
                                     50% {transform: translateY(-15vw) scaleX(0.99);}
@@ -267,6 +283,11 @@ button {
                                     0% {transform: rotate(0);}
                                     50% {transform: rotate(3deg);}
                                     100% {transform: rotate(0);}
+                                }
+                                @keyframes move-item-ani7 {
+                                    0% {opacity: 1; transform: scale(1);}
+                                    50% {opacity: 0.6; transform: scale(0.95);}
+                                    100% {opacity: 1; transform: scale(1);}
                                 }
                             }
                         }
@@ -790,8 +811,6 @@ button {
             &.design1 {
                 .modal-inner {
                     width: 91.466vw;
-                    height: calc(100vh - 16vw);
-                    margin-top: 8vw;
                     margin-bottom: 8vw;
                     border: 2px solid #F0DFA9;
                     border-radius: 4px;
@@ -799,6 +818,8 @@ button {
                     background: url('../../assets/images/h-point-christmas/modal-bg-color.png') no-repeat center center;
                     background-size: cover;
                     pointer-events: auto;
+                    height: calc(100vh - 22.133vw);
+                    margin-top: 14.133vw;
 
                     //팝업 내용 길어서 넣음
                     overflow: hidden;
