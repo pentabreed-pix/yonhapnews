@@ -177,6 +177,16 @@ button {
   top: 61.733vw;
   left: 14.5vw;
 }
+.h-point-christmas .section.intro .intro-figure.move-item .item-list .item.bear .img-shadow {
+  position: absolute;
+  top: 56vw;
+  left: 2.3vw;
+  z-index: 0;
+}
+.h-point-christmas .section.intro .intro-figure.move-item .item-list .item.bear .img-bear {
+  position: relative;
+  z-index: 1;
+}
 .h-point-christmas .section.intro .intro-figure.move-item .item-list .item.balloon {
   width: 12vw;
   top: 61.866vw;
@@ -203,7 +213,10 @@ button {
   bottom: 9vw;
   right: 2.5vw;
 }
-.h-point-christmas .section.intro .intro-figure.move-item.active1 .item-list .item.bear {
+.h-point-christmas .section.intro .intro-figure.move-item.active1 .item-list .item.bear .img-shadow {
+  animation: move-item-ani7 2.5s infinite ease-out;
+}
+.h-point-christmas .section.intro .intro-figure.move-item.active1 .item-list .item.bear .img-bear {
   animation: move-item-ani1 2.5s infinite ease-out;
 }
 .h-point-christmas .section.intro .intro-figure.move-item.active1 .item-list .item.balloon {
@@ -286,6 +299,20 @@ button {
   }
   100% {
     transform: rotate(0);
+  }
+}
+@keyframes move-item-ani7 {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 .h-point-christmas .section.anchor-area {
