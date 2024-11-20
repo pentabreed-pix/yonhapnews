@@ -912,8 +912,6 @@ button {
 }
 .h-point-christmas .modal-display .modal.design1 .modal-inner {
   width: 91.466vw;
-  height: calc(100vh - 16vw);
-  margin-top: 8vw;
   margin-bottom: 8vw;
   border: 2px solid #F0DFA9;
   border-radius: 4px;
@@ -921,6 +919,8 @@ button {
   background: url("../../assets/images/h-point-christmas/modal-bg-color.png") no-repeat center center;
   background-size: cover;
   pointer-events: auto;
+  height: calc(100vh - 22.133vw);
+  margin-top: 14.133vw;
   overflow: hidden;
   overflow-y: auto;
   padding-bottom: 5vw;

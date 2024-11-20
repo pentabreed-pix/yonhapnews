@@ -578,14 +578,14 @@
                 }
             }
 
-            // 선물상자가 2000ms 노출된 후 다음 모달창 나옴
+            // 선물상자가 3000ms 노출된 후 다음 모달창 나옴
             function giftBoxOpen() {
                 giftBoxModal.classList.add("on");
 
                 setTimeout(() => {
                     giftBoxModal.classList.remove("on"); // giftBoxModal 숨김
                     dayModal.classList.add("on"); // modal-area 표시
-                }, 2000);
+                }, 3000);
             }
 
             // 닫기 버튼 클릭 이벤트
@@ -600,17 +600,17 @@
             });
 
             // 닫기 버튼 생길 때 modal-inner 스타일 변경
-            function updateModalInnerStyles1(modalElement) {
-                const modalInner = modalElement.closest(".modal").querySelector(".modal-inner");
-                if (modalElement.classList.contains("on")) {
-                    // `on` 클래스가 이미 있을 때 스타일 변경
-                    modalInner.style.height = "calc(100vh - 22.133vw)";
-                    modalInner.style.marginTop = "14.133vw";
-                } else {
-                    modalInner.style.height = ""; // 기본값
-                    modalInner.style.marginTop = ""; // 기본값
-                }
-            }
+            // function updateModalInnerStyles1(modalElement) {
+            // 	const modalInner = modalElement.closest(".modal").querySelector(".modal-inner");
+            // 	if (modalElement.classList.contains("on")) {
+            // 		// `on` 클래스가 이미 있을 때 스타일 변경
+            // 		modalInner.style.height = "calc(100vh - 22.133vw)";
+            // 		modalInner.style.marginTop = "14.133vw";
+            // 	} else {
+            // 		modalInner.style.height = ""; // 기본값
+            // 		modalInner.style.marginTop = ""; // 기본값
+            // 	}
+            // }
 
             // 닫기 버튼 생길 때 당첨모달 상단 modal-inner 스타일 변경
             function updateModalInnerStyles2(modalElement) {
