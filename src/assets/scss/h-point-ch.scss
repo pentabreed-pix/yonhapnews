@@ -82,15 +82,14 @@ button {
             width: 100%;
             padding-bottom: 161.333%;
             z-index: 99;
-            overflow: hidden;
             &::before {
-                content: '';
-                width: 100%;
-                height: 100%;
                 position: absolute;
                 top: 0;
                 left: 0;
+                width: 100%;
+                height: 100%;
                 background: url('../../assets/images/h-point-christmas/intro-bg.png') no-repeat center center;
+                content: '';
                 background-size: cover;
             }
             img {
@@ -99,11 +98,12 @@ button {
             }
             .intro-figure {
                 position: absolute;
+                overflow: hidden;
                 &.shawl {
                     top: 0;
                     left: 0;
-                    z-index: 9;
                     width: 100%;
+                    z-index: 9;
                 }
                 &.moon {
                     top: 1.7%;
@@ -113,14 +113,15 @@ button {
                     z-index: 10;
                 }
                 &.curtain {
+                    display: flex;
                     top: 0;
                     left: 0;
-                    display: flex;
-                    align-items: center;
                     width: 100%;
                     // height: 92.597%;
-                    height: 100%;
+                    height: 100dvh;
+                    align-items: center;
                     z-index: 2;
+                    pointer-events: none;
                     .curtain-item {
                         position: absolute;
                         top: 0;
@@ -131,22 +132,22 @@ button {
                             left: -1%;
                             transform-origin: bottom left;
                             img {
-                                transform-origin: top left;
                                 animation: swaying-curtain1 2s infinite linear;
+                                transform-origin: top left;
                             }
                         }
                         &.right {
                             right: -1%;
                             transform-origin: bottom right;
                             img {
-                                transform-origin: top right;
                                 animation: swaying-curtain2 2s infinite linear;
+                                transform-origin: top right;
                             }
                         }
                         img {
-                            will-change: transform;
                             width: 107.5%;
                             height: 100%;
+                            will-change: transform;
                         }
                     }
                     &.active1 {
@@ -182,9 +183,9 @@ button {
                         .item {
                             position: absolute;
                             &.bear {
-                                width: 73.2vw;
                                 top: 61.733vw;
                                 left: 14.5vw;
+                                width: 73.2vw;
                                 .img-shadow {
                                     position: absolute;
                                     top: 56vw;
@@ -197,30 +198,30 @@ button {
                                 }
                             }
                             &.balloon {
-                                width: 12vw;
                                 top: 61.866vw;
                                 right: 12.8vw;
+                                width: 12vw;
                             }
                             &.monkey {
-                                width: 46.266vw;
                                 bottom: 8vw;
-                                z-index: 1;
                                 left: 2.5vw;
+                                width: 46.266vw;
+                                z-index: 1;
                             }
                             &.tiger {
-                                width: 57.2vw;
-                                bottom: 12.5vw;
                                 right: -21vw;
+                                bottom: 12.5vw;
+                                width: 57.2vw;
                             }
                             &.giraffe {
-                                width: 46vw;
                                 bottom: 11.5vw;
                                 left: -14.6vw;
+                                width: 46vw;
                             }
                             &.rabbit {
-                                width: 40.4vw;
-                                bottom: 9vw;
                                 right: 2.5vw;
+                                bottom: 9vw;
+                                width: 40.4vw;
                             }
                         }
                     }
@@ -308,11 +309,11 @@ button {
             background-repeat: no-repeat;
             background-position: center center;
             .anchor-list {
+                display: flex;
                 position: absolute;
                 top: 57%;
                 left: 50%;
                 transform: translate(-50%,-50%);
-                display: flex;
                 align-items: center;
                 justify-content: space-between;
                 z-index: 99;
@@ -323,15 +324,15 @@ button {
                 }
             }
             &::after {
-                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
                 width: 100%;
+                height: 100%;
+                content: '';
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center center;
-                position: absolute;
-                display: block;
-                top: 0;
-                height: 100%;
             }
             &.intro-section {
                 &::after {
@@ -356,23 +357,23 @@ button {
             margin-top: -8%;
             z-index: 97;
             &::before {
-                content: '';
-                width: 100%;
-                height: 100%;
                 position: absolute;
                 top: 0;
                 left: 0;
+                width: 100%;
+                height: 100%;
                 background: url('../../assets/images/h-point-christmas/calendar-bg.png') no-repeat center center;
+                content: '';
                 background-size: cover;
             }
             &::after {
-                content: '';
-                width: 100%;
-                height: 262.266vw;
                 position: absolute;
                 bottom: -9.5vw;
                 left: 0;
+                width: 100%;
+                height: 262.266vw;
                 background: url('../../assets/images/h-point-christmas/calendar-friends.png') no-repeat center center;
+                content: '';
                 background-size: cover;
                 pointer-events: none;
             }
@@ -392,52 +393,52 @@ button {
                 }
             }
             .section-body {
-                width: 100%;
                 position: relative;
+                width: 100%;
                 .calendar-wrap {
+                    position: relative;
                     width: 89.333vw;
                     height: 0;
-                    padding-bottom: 212.8vw;
                     margin: 0 auto;
-                    position: relative;
+                    padding-bottom: 212.8vw;
                     &::after {
-                        content: '';
-                        width: 100%;
-                        height: 100%;
                         position: absolute;
                         top: 0;
                         left: 50%;
-                        transform: translateX(-50%);
+                        width: 100%;
+                        height: 100%;
                         background: url('../../assets/images/h-point-christmas/calendar-grid-bg.png') no-repeat top center;
+                        content: '';
+                        transform: translateX(-50%);
                         background-size: cover;
                         pointer-events: none;
                     }
                     .calendar-head {
+
+                        display: flex;
                         position: absolute;
                         top: -29.333vw;
                         left: 50%;
-                        transform: translateX(-50%);
                         width: 100%;
+                        transform: translateX(-50%);
                         z-index: 99;
-
-                        display: flex;
                         align-items: center;
                         justify-content: center;
                         flex-direction: column;
                         .tip {
-                            width: 74.4vw;
                             position: relative;
+                            width: 74.4vw;
                             margin: 0 auto;
                             img {
-                                width: 100%;
                                 display: block;
+                                width: 100%;
                             }
                         }
                         .subject {
                             display: block;
                             color: #FFF;
-                            font-size: 5.333vw;
                             font-weight: 400;
+                            font-size: 5.333vw;
                             line-height: 150%;
                             text-align: center;
                             margin-top: 13.333vw;
@@ -454,12 +455,12 @@ button {
                             
                             
                             .bar-wrap {
+                                position: relative;
                                 width: 74.933vw;
                                 height: 3.2vw;
                                 margin: 0 auto;
                                 border-radius: 8vw;
                                 background-color: #641009;
-                                position: relative;
                                 &::after {
                                     right: 1.066vw;
                                 }
@@ -475,26 +476,26 @@ button {
                                         left: 1.066vw;
                                     }
                                     &::before {
-                                        content: '';
-                                        width: 7.2vw;
-                                        height: 8.8vw;
-                                        background: url('../../assets/images/h-point-christmas/progress-bear.png') no-repeat center center;
-                                        background-size: cover;
                                         position: absolute;
                                         top: 64%;
                                         right: -4.266vw;
+                                        width: 7.2vw;
+                                        height: 8.8vw;
+                                        background: url('../../assets/images/h-point-christmas/progress-bear.png') no-repeat center center;
+                                        content: '';
+                                        background-size: cover;
                                         transform: translateY(-50%);
                                     }
                                 }
                                 &::after,
                                 .bar-gauge::after {
-                                    content: '';
+                                    position: absolute;
+                                    top: 50%;
                                     width: 1.6vw;
                                     height: 1.6vw;
                                     background: url('../../assets/images/h-point-christmas/progress-start.svg') no-repeat center center;
+                                    content: '';
                                     background-size: cover;
-                                    position: absolute;
-                                    top: 50%;
                                     transform: translateY(-50%);
                                 }
                                 + .date-wrap {
@@ -507,9 +508,9 @@ button {
                                 justify-content: space-between;
                                 .date {
                                     &.start {
-                                        color: #FFF3A5;
-                                        font-size: 3.733vw; 
+                                        color: #FFF3A5; 
                                         font-weight: 400;
+                                        font-size: 3.733vw;
                                         line-height: 130%;
                                     }
                                     &.end {
@@ -517,12 +518,12 @@ button {
                                         line-height: 130%;
                                     }
                                     .num {
-                                        font-size: 4.266vw;
                                         font-weight: 800;
+                                        font-size: 4.266vw;
                                     }
-                                    .day {
-                                        font-size: 3.733vw; 
+                                    .day { 
                                         font-weight: 600;
+                                        font-size: 3.733vw;
                                     }
                                 }
                             }
@@ -530,13 +531,13 @@ button {
                     }
                     .calendar-body {
                         .day-list {
-                            width: 82.933vw;
                             display: grid;
+                            width: 82.933vw;
+                            margin: 0 auto;
                             grid-template-columns: 12vw 18.4vw 11.2vw 17.333vw 3.733vw 20.266vw;
                             grid-template-rows: 11.2vw repeat(3, 16vw) repeat(2, 11.2vw) repeat(3, 16vw) repeat(3, 11.2vw);
                             grid-column-gap: 0px;
                             grid-row-gap: 0px;
-                            margin: 0 auto;
                             padding-top: 46.6vw;
                         }
                         .day-item {
@@ -676,28 +677,28 @@ button {
                 .btn {
                     display: block;
                     position: relative;
-                    margin: 0 auto;
                     width: 89.333vw;
                     height: 18.133vw;
+                    margin: 0 auto;
                     .btn-text {
-                        font-size: 5.333vw;
-                        font-weight: 800;
-                        line-height: 150%;
-                        text-align: center;
-                        color: #FFF;
-                        width: 100%;
 
                         position: absolute;
                         top: 46%;
                         left: 50%;
+                        width: 100%;
+                        color: #FFF;
+                        font-weight: 800;
+                        font-size: 5.333vw;
+                        line-height: 150%;
+                        text-align: center;
                         transform: translate(-50%,-50%);
                     }
                     &::after {
-                        content: '';
                         display: block;
                         width: 100%;
                         height: 100%;
                         background: url('../../assets/images/h-point-christmas/check-button.png') no-repeat center center;
+                        content: '';
                         background-size: cover;
                     }
                 }
@@ -709,22 +710,22 @@ button {
             padding-bottom: 13.333%;
             z-index: 97;
             &::before {
-                content: '';
-                width: 100%;
-                height: 100%;
                 position: absolute;
                 top: 0;
                 left: 0;
+                width: 100%;
+                height: 100%;
                 background: url('../../assets/images/h-point-christmas/contents-bg.png') no-repeat center center;
+                content: '';
                 background-size: cover;
             }
             .section-head {
                 position: relative;
                 
                 .section-subject {
-                    padding-top: 13.335%;
                     width: 65.6%;
                     margin: 0 auto;
+                    padding-top: 13.335%;
                     img {
                         width: 100%;
                     }
@@ -753,27 +754,27 @@ button {
             }
         }
         &.notice {
-            background-color: #131E22;
             padding: 8vw 5.333vw;
+            background-color: #131E22;
             z-index: 97;
             .notice-list {
                 .list-item {
                     position: relative;
-                    padding-left: 2.666vw;
+                    color: #BBB;
                     font-weight: 400;
                     font-size: 3.466vw;
                     line-height: 130%;
-                    color: #BBB;
+                    padding-left: 2.666vw;
                     + .list-item {
                         margin-top: 2.666vw;
                     }
                     &::before {
-                        content: '';
-                        width: 1.066vw;
-                        height: 1.066vw;
                         position: absolute;
                         top: 1.733vw;
                         left: 0;
+                        width: 1.066vw;
+                        height: 1.066vw;
+                        content: '';
                         background-color: #bbb;
                         border-radius: 100%;
                     }
@@ -800,25 +801,25 @@ button {
         }
         .modal {
             display: none;
-            align-items: center;
-            justify-content: center;
+            position: relative;
             width: 100%;
             height: 100%;
-            position: relative;
+            align-items: center;
+            justify-content: center;
             &.on {
                 display: flex;
             }
             &.design1 {
                 .modal-inner {
-                    width: 91.466vw;
-                    margin-bottom: 8vw;
-                    border: 2px solid #F0DFA9;
-                    border-radius: 4px;
                     position: relative;
+                    width: 91.466vw;
+                    height: calc(100vh - 22.133vw);
+                    border: 2px solid #F0DFA9;
                     background: url('../../assets/images/h-point-christmas/modal-bg-color.png') no-repeat center center;
+                    margin-bottom: 8vw;
+                    border-radius: 4px;
                     background-size: cover;
                     pointer-events: auto;
-                    height: calc(100vh - 22.133vw);
                     margin-top: 14.133vw;
 
                     //팝업 내용 길어서 넣음
@@ -827,15 +828,15 @@ button {
                     // padding-bottom: 8.462vh;
                     padding-bottom: 5vw;
                     &::before {
-                        content: "";
-                        width: 100%;
                         position: absolute;
-                        z-index: 1;
-                        height: 49.6vw;
-                        background: url(../../assets/images/h-point-christmas/modal-shawl.png) no-repeat center center;
-                        background-size: cover;
                         top: 0;
                         left: 0;
+                        width: 100%;
+                        height: 49.6vw;
+                        background: url(../../assets/images/h-point-christmas/modal-shawl.png) no-repeat center center;
+                        content: "";
+                        z-index: 1;
+                        background-size: cover;
                     }
                     &.layout1 {
                         height: calc(100vh - 22.133vw);
@@ -849,25 +850,25 @@ button {
                     //별 bg
                     &:not(.day-24):not(.gift-box) {
                         &::after {
-                            content: "";
-                            width: 100%;
                             position: absolute;
-                            z-index: 1;
+                            left: 0;
+                            width: 100%;
                             height: 57.866vw;
                             background: url(../../assets/images/h-point-christmas/modal-bg-star.png) no-repeat center center;
+                            content: "";
+                            z-index: 1;
                             background-size: cover;
-                            left: 0;
                         }
                     }
                     //선물상자
                     &.gift-box {
                         .modal-figure {
+                            display: block;
                             position: absolute; 
                             top: 0;
                             left: 50%;
-                            transform: translateX(-50%);
-                            display: block;
                             width: 100%;
+                            transform: translateX(-50%);
                             img {
                                 width: 100%;
                                 height: 100%;
@@ -878,12 +879,12 @@ button {
                                     &.item1 {
                                         position: relative;
                                         &::after {
-                                            content: "";
-                                            width: 100%;
                                             position: absolute;
                                             top: 0;
                                             left: 0;
+                                            width: 100%;
                                             height: 100%;
+                                            content: "";
                                             z-index: -1;
                                             background-image:url('../../assets/images/h-point-christmas/modal-twinkle-bg.gif'), url('../../assets/images/h-point-christmas/modal-fireworks-bg.gif');
                                             background-size: cover; 
@@ -958,20 +959,20 @@ button {
                     @each $day in $days1 {
                         &.day-#{$day} {
                             .modal-figure {
-                                width: 42.133vw;
                                 top: 33.6vw;
+                                width: 42.133vw;
                             }
                             &::after {
                                 top: 30.4vw;
                             }
                             &::before {
-                                content: "";
-                                width: 65.6vw;
-                                height: 49.066vw;
                                 position: absolute;
                                 top: 30.933vw;
                                 left: 14.4vw;
+                                width: 65.6vw;
+                                height: 49.066vw;
                                 background: url(../../assets/images/h-point-christmas/modal-point-gold-bg.png) no-repeat center center;
+                                content: "";
                                 background-size: cover;
                                 z-index: 999;
                             }
@@ -981,20 +982,20 @@ button {
                     @each $day in $days2 {
                         &.day-#{$day} {
                             .modal-figure {
-                                width: 58.666vw;
                                 top: 37.066vw;
+                                width: 58.666vw;
                             }
                             &::after {
                                 top: 28vw;
                             }
                             &::before {
-                                content: "";
-                                width: 78.933vw;
-                                height: 55.733vw;
                                 position: absolute;
                                 top: 24.533vw;
                                 left: 5.866vw;
+                                width: 78.933vw;
+                                height: 55.733vw;
                                 background: url(../../assets/images/h-point-christmas/modal-point-red-bg.png) no-repeat center center;
+                                content: "";
                                 background-size: cover;
                                 z-index: 999;
                             }
@@ -1004,20 +1005,20 @@ button {
                     @each $day in $days3 {
                         &.day-#{$day} {
                             .modal-figure {
-                                width: 44.8vw;
                                 top: 22.666vw;
+                                width: 44.8vw;
                             }
                             &::after {
                                 top: 24.266vw;
                             }
                             &::before {
-                                content: "";
-                                width: 72.533vw;
-                                height: 55.733vw;
                                 position: absolute;
                                 top: 25.866vw;
                                 left: 7.733vw;
+                                width: 72.533vw;
+                                height: 55.733vw;
                                 background: url(../../assets/images/h-point-christmas/modal-point-letter-bg.png) no-repeat center center;
+                                content: "";
                                 background-size: cover;
                                 z-index: 999;
                             }
@@ -1025,44 +1026,44 @@ button {
                     }
 
                     &.day-24 {
+                        position: relative;
+                        width: 100%;
                         background: url(../../assets/images/h-point-christmas/modal-day-24-bg-d.png) no-repeat top center;
                         background-size: cover;
-                        width: 100%;
-                        position: relative;
                         padding-bottom: 7vw;
                         &::after {
-                            content: '';
+                            position: absolute;
+                            top: 69.066vw;
                             width: 91.466vw;
                             height: 43.2vw;
                             background: url(../../assets/images/h-point-christmas/modal-day-24-bg-c.png) no-repeat center center;
+                            content: '';
                             background-size: cover;
-                            position: absolute;
-                            top: 69.066vw;
                         }
                         .modal-wrap {
-                            padding-top: 18.933vw;
                             position: relative;
+                            padding-top: 18.933vw;
                             &::before {
-                                content: '';
-                                width: 12.266vw;
-                                height: 26.933vw;
                                 position: absolute;
                                 top: 46.133vw;
                                 left: 0;
+                                width: 12.266vw;
+                                height: 26.933vw;
                                 background: url(../../assets/images/h-point-christmas/modal-day-24-bg-a.png) no-repeat center center;
-                                background-size: cover;
+                                content: '';
                                 animation: swing-up-down 5s infinite ease;
+                                background-size: cover;
                             }
                             &::after {
-                                content: '';
-                                width: 12.8vw;
-                                height: 23.2vw;
                                 position: absolute;
                                 top: 112.266vw;
                                 right: 0;
+                                width: 12.8vw;
+                                height: 23.2vw;
                                 background: url(../../assets/images/h-point-christmas/modal-day-24-bg-b.png) no-repeat center center;
-                                background-size: cover;
+                                content: '';
                                 animation: swing-up-down 4s infinite ease;
+                                background-size: cover;
                             }
                         }
                         .modal-head {
@@ -1074,13 +1075,13 @@ button {
                                 }
                             }
                             .summary {
+                                color: #FFF;
                                 font-size: 3.733vw;
                                 line-height: 150%;
-                                color: #FFF;
                                 text-align: center;
                                 .accent {
-                                    font-weight: 800;
                                     color: #F1D262;
+                                    font-weight: 800;
                                     border-bottom: 1px solid #F1D262;
                                 }
                                 + .summary {
@@ -1093,37 +1094,37 @@ button {
                         }
                         .modal-figure {
                             position: relative;
-                            transform: unset;
                             top: unset;
                             left: unset;
                             width: 34.666vw;
                             height: 34.666vw;
                             margin: 0 auto;
+                            transform: unset;
                             + .modal-body {
                                 margin-top: 9.066vw;
                             }
                         }
                         .modal-body {
-                            background-color: rgba(0, 0, 0, 0.3);
-                            padding: 2.133vw 3.2vw;
                             width: 74.666vw;
+                            padding: 2.133vw 3.2vw;
                             margin: 0 auto;
+                            background-color: rgba(0, 0, 0, 0.3);
                             .bullet-list {
                                 .bullet-item {
-                                    font-size: 2.933vw;
+                                    position: relative;
                                     color: #DDDDDD;
+                                    font-size: 2.933vw;
                                     line-height: 150%;
                                     padding-left: 2.133vw;
-                                    position: relative;
                                     &::before {
-                                        content: '';
+                                        position: absolute;
+                                        top: 2vw;
+                                        left: 0;
                                         width: 0.8vw;
                                         height: 0.8vw;
+                                        content: '';
                                         border-radius: 100%;
                                         background-color: #DDDDDD;
-                                        position: absolute;
-                                        left: 0;
-                                        top: 2vw;
                                     }
                                     + .bullet-item {
                                         margin-top: 1.066vw;
@@ -1139,10 +1140,10 @@ button {
                     //꽝! 팝업
                     &.boom-popup {
                         .modal-figure {
-                            width: 38.133vw;
                             position: absolute;
                             top: 30.666vw;
                             left: 50%;
+                            width: 38.133vw;
                             transform: translateX(-50%);
                             img {
                                 width: 100%;
@@ -1163,10 +1164,10 @@ button {
                     //중복 참여시 팝업
                     &.overlap-popup {
                         .modal-figure {
-                            width: 43.2vw;
                             position: absolute;
                             top: 32.266vw;
                             left: 50%;
+                            width: 43.2vw;
                             transform: translateX(-50%);
                             img {
                                 width: 100%;
@@ -1218,24 +1219,24 @@ button {
             }
             &.design2 {
                 .modal-inner {
+                    position: relative;
                     width: 91.466vw;
                     padding: 11.466vw 0 8vw;
                     border: 2px solid #F0DFA9;
-                    border-radius: 8px;
-                    position: relative;
                     background: url('../../assets/images/h-point-christmas/modal-bg-color2.png') no-repeat center center;
+                    border-radius: 8px;
                     background-size: cover;
                     pointer-events: auto;
 
                     &::after {
-                        content: '';
-                        width: 26.4vw;
-                        height: 27.466vw;
-                        background: url(../../assets/images/h-point-christmas/modal-update.png) no-repeat center center;
-                        background-size: cover;
                         position: absolute;
                         top: -16.8vw;
                         left: 50%;
+                        width: 26.4vw;
+                        height: 27.466vw;
+                        background: url(../../assets/images/h-point-christmas/modal-update.png) no-repeat center center;
+                        content: '';
+                        background-size: cover;
                         transform: translateX(-50%);
                     }
                     .modal-area {
@@ -1281,38 +1282,38 @@ button {
                         .modal-head {
                             .modal-subject {
                                 display: block;
-                                font-size: 6.933vw;
-                                font-weight: 800;
-                                line-height: 150%;
                                 color: #fff;
+                                font-weight: 800;
+                                font-size: 6.933vw;
+                                line-height: 150%;
                                 text-align: center;
                             }
                         }
                         .modal-body {
                             .para {
-                                font-size: 4.266vw; //16px
-                                font-weight: 400;
-                                line-height: 150%;
                                 color: #DDD;
+                                font-weight: 400;
+                                font-size: 4.266vw; //16px
+                                line-height: 150%;
                                 text-align: center;
                                 .accent {
-                                    font-size: 4.8vw; //18px
-                                    font-weight: 800;
                                     color: #FFECA9;
+                                    font-weight: 800;
+                                    font-size: 4.8vw; //18px
                                     border-bottom: 1px solid #FFECA9;
                                 }
                                 &.type1 {
-                                    padding-right: 5.333vw;
                                     position: relative;
+                                    padding-right: 5.333vw;
                                     &::after {
-                                        content: "";
-                                        width: 4.266vw;
-                                        height: 4.266vw;
                                         position: absolute;
                                         top: 0.8vw;
                                         right: 1vw;
-                                        background: url(../../assets/images/h-point-christmas/para-type1-imoji.png) no-repeat center center;
+                                        width: 4.266vw;
+                                        height: 4.266vw;
                                         padding: 1.466vw 0;
+                                        background: url(../../assets/images/h-point-christmas/para-type1-imoji.png) no-repeat center center;
+                                        content: "";
                                         background-size: contain;
                                     }
                                 }
@@ -1323,22 +1324,22 @@ button {
                                 background-color: rgba(0, 0, 0, 0.3);
                                 .bullet-item {
                                     position: relative;
-                                    padding-left: 2.133vw;
+                                    color: #DDD;
                                     font-size: 3.2vw;
                                     line-height: 150%;
-                                    color: #DDD;
+                                    padding-left: 2.133vw;
                                     + .bullet-item {
                                         margin-top: 1.6vw;
                                     }
                                     &::before {
-                                        content: '';
+                                        position: absolute;
+                                        top: 2vw;
+                                        left: 0;
                                         width: 0.8vw;
                                         height: 0.8vw;
+                                        content: '';
                                         border-radius: 100%;
                                         background-color: #DDD;
-                                        position: absolute;
-                                        left: 0;
-                                        top: 2vw;
                                     }
                                 }
                             }
@@ -1347,47 +1348,47 @@ button {
                     .modal-fuc {
                         .fuc-btn {
                             &.type1 {
-                                display: flex; 
+                                display: flex;
+                                position: relative;
+                                width: 74.666vw;
+                                height: 17.6vw; 
                                 align-items: center;
                                 justify-content: center;
-                                width: 74.666vw;
-                                height: 17.6vw;
-                                position: relative;
                                 &::after {
-                                    content: '';
-                                    width: 100%;
-                                    height: 100%;
                                     position: absolute;
                                     top: 0;
                                     left: 0;
+                                    width: 100%;
+                                    height: 100%;
                                     background: url(../../assets/images/h-point-christmas/modal-fuc-bg.png) no-repeat center center;
+                                    content: '';
                                     background-size: contain;
                                 }
                                 .btn-text {
                                     position: absolute;
                                     top: 45%;
                                     left: 50%;
-                                    transform: translate(-50%,-50%);
-                                    text-align: center;
-                                    font-size: 5.333vw;
-                                    font-weight: 600;
-                                    line-height: 150%;
                                     color: #fff;
-                                    z-index: 1;
+                                    font-weight: 600;
+                                    font-size: 5.333vw;
+                                    line-height: 150%;
+                                    text-align: center;
                                     white-space: nowrap;
+                                    transform: translate(-50%,-50%);
+                                    z-index: 1;
                                 }
                                 &.check {
                                     .btn-text {
                                         padding-left: 6.933vw;
                                         &::after {
-                                            content: '';
-                                            width: 4.8vw;
-                                            height: 4.8vw;
                                             position: absolute;
                                             top: 50%;
                                             left: 0;
-                                            transform: translateY(-50%);
+                                            width: 4.8vw;
+                                            height: 4.8vw;
                                             background: url(../../assets/images/h-point-christmas/modal-check-box.svg) no-repeat center center;
+                                            content: '';
+                                            transform: translateY(-50%);
                                             background-size: cover;
                                         }
                                     }
@@ -1402,47 +1403,47 @@ button {
                                 background-size: contain;
                             }
                             &.type3 {
-                                display: flex; 
+                                display: flex;
+                                position: relative;
+                                width: 83.733vw;
+                                height: 18.266vw; 
                                 align-items: center;
                                 justify-content: center;
-                                width: 83.733vw;
-                                height: 18.266vw;
-                                position: relative;
                                 &::after {
-                                    content: '';
-                                    width: 100%;
-                                    height: 100%;
                                     position: absolute;
                                     top: 0;
                                     left: 0;
+                                    width: 100%;
+                                    height: 100%;
                                     background: url(../../assets/images/h-point-christmas/modal-fuc-bg-b.png) no-repeat center center;
+                                    content: '';
                                     background-size: contain;
                                 }
                                 .btn-text {
                                     position: absolute;
                                     top: 45%;
                                     left: 50%;
-                                    transform: translate(-50%,-50%);
-                                    text-align: center;
-                                    font-size: 5.333vw;
-                                    font-weight: 600;
-                                    line-height: 150%;
                                     color: #fff;
-                                    z-index: 1;
+                                    font-weight: 600;
+                                    font-size: 5.333vw;
+                                    line-height: 150%;
+                                    text-align: center;
                                     white-space: nowrap;
+                                    transform: translate(-50%,-50%);
+                                    z-index: 1;
                                 }
                                 &.check {
                                     .btn-text {
                                         padding-left: 6.933vw;
                                         &::after {
-                                            content: '';
-                                            width: 4.8vw;
-                                            height: 4.8vw;
                                             position: absolute;
                                             top: 50%;
                                             left: 0;
-                                            transform: translateY(-50%);
+                                            width: 4.8vw;
+                                            height: 4.8vw;
                                             background: url(../../assets/images/h-point-christmas/modal-check-box.svg) no-repeat center center;
+                                            content: '';
+                                            transform: translateY(-50%);
                                             background-size: cover;
                                         }
                                     }
