@@ -396,7 +396,7 @@
                     </div>
                     <!-- //당첨 팝업 -->
 					<!-- 24일 팝업 -->
-					<!-- <div class="modal-area day-24" id="day24Modal">
+					<div class="modal-area day-24" id="day24Modal">
                         <div class="modal-wrap">
 							<div class="modal-head">
 								<img src="./assets/images/h-point-christmas/modal-day-24-text.png" alt="">
@@ -417,7 +417,7 @@
                                 </a>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
 					<!-- //24일 팝업 -->
                     
 				</div>
@@ -486,6 +486,7 @@
 			const giftBoxModal = document.getElementById("giftBoxModal"); // 선물상자 모달 ID
 			const boomModal = document.getElementById("boomModal"); // 꽝 모달 ID
 			const dayModal = document.querySelector('[id*="day"]'); // 당첨 모달 ID
+			const day24Modal = document.getElementById('day24Modal'); // 24일 당첨 모달 ID (마지막날)
 			const newVersionModal = document.getElementById("newVersionModal"); // 버전업 ID
 			const agreeModal = document.getElementById("agreeModal"); // 수신동의 ID
 			const overlapModal = document.getElementById("overlapModal"); // 중복참여 ID
@@ -495,7 +496,8 @@
 				// openAgreeModal();	// 동의모달
 				// openBoomModal();	// 꽝모달
 				// openOverlapModal();	// 중복참여모달
-				openDayModal(); 	// 당첨모달
+				// openDayModal(); 	// 당첨모달
+				openDay24Modal(); 	// 24일 당첨모달
 			})
 
 			// close 버튼 클릭
@@ -532,7 +534,11 @@
 			function openDayModal() {
 				openModal();
 				giftBoxOpen();
-				updateModalInnerStyles2(dayModal);
+			}
+			// 24일 마지막날 당첨모달
+			function openDay24Modal() {
+				openModal();
+				giftBoxOpen();
 			}
 
 			// 팝업 열기
@@ -586,6 +592,16 @@
 				}, 3000);
 			}
 
+			// 선물상자가 3000ms 노출된 후 다음 모달창 나옴 (24일 마지막날)
+			function giftBoxOpen() {
+				giftBoxModal.classList.add("on");
+
+				setTimeout(() => {
+					giftBoxModal.classList.remove("on"); // giftBoxModal 숨김
+					day24Modal.classList.add("on"); // modal-area 표시
+				}, 3000);
+			}
+
 			// 닫기 버튼 클릭 이벤트
 			modalDisplay.addEventListener("click", function (e) {
 				// on 클래스가 붙은 .modal-area 안의 .fuc-btn.close만 처리
@@ -596,52 +612,6 @@
 					console.log("닫기 버튼 클릭! 모달 닫힘!");
 				}
 			});
-
-			// 닫기 버튼 생길 때 modal-inner 스타일 변경
-			// function updateModalInnerStyles1(modalElement) {
-			// 	const modalInner = modalElement.closest(".modal").querySelector(".modal-inner");
-			// 	if (modalElement.classList.contains("on")) {
-			// 		// `on` 클래스가 이미 있을 때 스타일 변경
-			// 		modalInner.style.height = "calc(100vh - 22.133vw)";
-			// 		modalInner.style.marginTop = "14.133vw";
-			// 	} else {
-			// 		modalInner.style.height = ""; // 기본값
-			// 		modalInner.style.marginTop = ""; // 기본값
-			// 	}
-			// }
-
-			// 닫기 버튼 생길 때 당첨모달 상단 modal-inner 스타일 변경
-			function updateModalInnerStyles2(modalElement) {
-				// 'on' 클래스 추가 감지
-				const observer = new MutationObserver(mutations => {
-					mutations.forEach(mutation => {
-						if (mutation.attributeName === "class") {
-							const modalInner = modalElement.closest(".modal").querySelector(".modal-inner");
-							if (modalElement.classList.contains("on")) {
-								// `on` 클래스가 추가되었을 때 스타일 변경
-								modalInner.style.height = "calc(100vh - 22.133vw)"; // 원하는 높이로 변경
-								modalInner.style.marginTop = "14.133vw"; // 원하는 margin-top으로 변경
-								// day-24 클래스를 가지고 있을 경우 border 스타일 unset
-								if (modalElement.classList.contains("day-24")) {
-									modalInner.style.border = "unset";
-									modalInner.style.paddingBottom = "unset";
-								} else {
-									modalInner.style.border = ""; // 기본 스타일 복원
-									modalInner.style.paddingBottom = "";
-								}
-							} else {
-								// `on` 클래스가 제거되었을 때 원래 스타일 복원
-								modalInner.style.height = "";
-								modalInner.style.marginTop = "";
-								modalInner.style.border = "";
-								modalInner.style.paddingBottom = "";
-							}
-						}
-					});
-				});
-				// MutationObserver 설정
-				observer.observe(modalElement, { attributes: true });
-			}
 
 			// day-? 별로 .modal-body안에 삽입되는 내용
 			function modalBodyInnerText() {
