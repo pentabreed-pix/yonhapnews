@@ -76,6 +76,14 @@ button {
     &.modal-show {
         overflow: hidden;
     }
+    .wrap {
+        &.old-ver { //구버전 고객을 위한
+            margin-top: 13.333vw;
+            .section.anchor-area {
+                top: 13.333vw;
+            }
+        }
+    }
     .section {
         &.intro {
             position: relative;
@@ -781,6 +789,56 @@ button {
                 }
             }
         }
+        &.loading {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            .loading-figure {
+                width: 15vw;
+                height: 15vw;
+                img {
+                    width: 100%;
+                }
+            }
+            &.on {
+                display: flex;
+            }
+        }
+        &.old-version {
+            display: none;
+            width: 100%;
+            height: 13.333vw;
+            background-color: #fff;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4vw 5.333vw;
+            &.on {
+                display: flex;
+                position: fixed;
+                top: 0;
+                z-index: 999;
+            }
+            .btn {
+                width: 5.333vw;
+                height: 5.333vw;
+
+                &.back-btn {
+                    background: url('../../assets/images/h-point-christmas/old-back-btn.svg') no-repeat center center;
+                    background-size: cover;
+                }
+                &.hamburger-btn {
+                    background: url('../../assets/images/h-point-christmas/old-menu-btn.svg') no-repeat center center;
+                    background-size: cover;
+                }
+            }
+        }
     }
 
     //팝업
@@ -1398,7 +1456,7 @@ button {
                                 height: 5.333vw;
                                 // width: 20px;
                                 // height: 20px;
-                                background: url(../../assets/images/h-point-christmas/modal-close.svg) no-repeat center center;
+                                background: url(../../assets/images/h-point-christmas/modal-close-btn.svg) no-repeat center center;
                                 background-size: contain;
                             }
                             &.type3 {

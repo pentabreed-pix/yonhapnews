@@ -19,7 +19,7 @@
 			progressBar();
 		});
 
-		//인트로 애니
+		//인트로 UI
 		function introAni() {
 			const curtainImg = document.querySelector('.intro .intro-figure.curtain');
 			const moveItemImg = document.querySelector('.intro .intro-figure.move-item');
@@ -36,7 +36,7 @@
 			}, 1500);
 		}
 
-		//앵커 클릭
+		//앵커 클릭 UI
 		function clickAnchorSmooth() {
 			document.querySelectorAll('.section.anchor-area .anchor-item[href^="#"]').forEach(anchor => {
 				anchor.addEventListener('click', function (e) {
@@ -56,7 +56,7 @@
 			});
 		}
 
-		//앵커 스크롤
+		//앵커 스크롤 UI
 		function scrollAnchorBtnActive() {
 			const sections = document.querySelectorAll(".section");
 			const anchorArea = document.querySelector(".anchor-area");
@@ -87,7 +87,7 @@
 			window.addEventListener("scroll", setActiveSection);
 		}
 
-		//progressBar 채우기
+		//progressBar 채우기 UI
 		function progressBar() {
 			const progressBar = document.querySelector(".bar-gauge");
 			const items = document.querySelectorAll(".calendar-body .day-list .day-item");
@@ -112,6 +112,17 @@
 
 <body class="h-point-christmas" id="body">
 	<div id="wrap" class="wrap">
+		<!-- 구버전 사용자를 위한 뒤로가기, 햄버거메뉴 버튼 : on 클래스가 붙으면 노출됨니다.-->
+		<div class="section old-version" id="old-version">
+			<button class="btn back-btn">
+				<div class="btn-text blind">뒤로가기</div>
+			</button>
+			<button class="btn hamburger-btn">
+				<div class="btn-text blind">햄버거메뉴</div>
+			</button>
+		</div>
+		<!-- //구버전 사용자를 위한 뒤로가기, 햄버거메뉴 버튼 -->
+		<!-- 인트로 -->
 		<div class="section intro" id="intro-section">
 			<em class="section-head blind">HARRY'S CHRISTMAS 출석체크 이벤트</em>
 			<div class="section-body">
@@ -154,6 +165,8 @@
 				</div>
 			</div>
 		</div>
+		<!-- 인트로 -->
+		<!-- 앵커 -->
 		<div class="section anchor-area intro-section">
 			<div class="anchor-list">
 				<a href="#intro-section" class="anchor-item"></a>
@@ -161,6 +174,8 @@
 				<a href="#contents-section" class="anchor-item"></a>
 			</div>
 		</div>
+		<!-- //앵커 -->
+		<!-- 캘린더 -->
 		<div class="section calendar" id="calendar-section">
 			<div class="section-head">
 				<div class="section-subject">
@@ -237,6 +252,8 @@
 			</div>
             <!-- //출석 체크 버튼 -->
 		</div>
+		<!-- //캘린더 -->
+		<!-- 컨텐츠 -->
 		<div class="section contents" id="contents-section">
 			<div class="section-head">
 				<div class="section-subject">
@@ -265,6 +282,8 @@
 				</ul>
 			</div>
 		</div>
+		<!-- //컨텐츠 -->
+		<!-- 최하단 공지 -->
 		<div class="section notice">
 			<div class="section-inner">
 				<ul class="notice-list">
@@ -277,7 +296,15 @@
 				</ul>
 			</div>
 		</div>
-
+		<!-- //최하단 공지 -->
+		<!-- 팝업 늦게 열릴 시 로딩중 화면 노출 : on 클래스 붙으면 노출됩니다-->
+		<div class="section loading" id="loading">
+			<div class="loading-figure">
+				<img src="./assets/images/h-point-christmas/loading.gif" alt="# 3. 오디오북 크리스마스 이야기 어디까지 들어봤니? 소리로 읽는 행복한 크리스마스">
+			</div>
+		</div>
+		<!-- //팝업 늦게 열릴 시 로딩중 화면 노출 -->
+		
 		<!-- 팝업창 -->
 		<div class="modal-display" id="modalDisplay">
 			<!------------------------- 당첨 팝업 : design1 ------------------------->
@@ -475,11 +502,10 @@
 		</div>
 	</div>
 	<script>
+		// 팝업 스크립트
 		$(document).ready(function() {
-			modalBodyInnerText();
-			imgNamingClass();
-
 			const _BODY = document.body; // body 
+			const _WRAP = document.querySelector(".wrap"); // wrap
 			const attendanceBtn = document.querySelector(".calendar .section-util .btn"); // 출석체크 버튼
 			const modalCloseBtn = document.querySelector(".modal .modal-area .fuc-btn.close"); // 모달 닫기 버튼
 			const modalDisplay = document.getElementById("modalDisplay"); // 전체 모달 감싸는 ID
@@ -490,15 +516,24 @@
 			const newVersionModal = document.getElementById("newVersionModal"); // 버전업 ID
 			const agreeModal = document.getElementById("agreeModal"); // 수신동의 ID
 			const overlapModal = document.getElementById("overlapModal"); // 중복참여 ID
+			const loadingModal = document.getElementById("loading") // 로딩중 화면
+			const oldVersionBtn = document.getElementById("old-version") // 구버전 사용자를 위한 버튼
 
 			attendanceBtn.addEventListener("click", function() {
+				modalBodyInnerText(); // day-? 별로 modal-body안에 다른 내용 삽입
+				imgNamingClass(); // 클래스 day-? 추출 후 이미지 파일명 설정
+
 				// openNewVersionModal();	// 버전업모달
 				// openAgreeModal();	// 동의모달
 				// openBoomModal();	// 꽝모달
 				// openOverlapModal();	// 중복참여모달
 				// openDayModal(); 	// 당첨모달
 				openDay24Modal(); 	// 24일 당첨모달
+				// loadingMarkShow(); // 로딩중 화면
 			})
+
+			// 구버전 사용자를 위한 버튼 노출
+			// oldVersionBtnShow(); 
 
 			// close 버튼 클릭
 			modalCloseBtn.addEventListener("click", function() {
@@ -521,7 +556,6 @@
 			function openBoomModal() {
 				openModal();
 				boomModal.classList.add("on");
-				updateModalInnerStyles1(boomModal);
 			}
 
 			// 중복참여모달
@@ -538,8 +572,22 @@
 			// 24일 마지막날 당첨모달
 			function openDay24Modal() {
 				openModal();
-				giftBoxOpen();
+				giftBoxOpen24();
+				updateModalInnerStyles(day24Modal);
 			}
+			// 로딩중 화면
+			function loadingMarkShow() {
+				loadingModal.classList.add("on");
+			}
+			// 구버전 사용자를 위한 버튼
+			function oldVersionBtnShow() {
+				oldVersionBtn.classList.add("on");
+				if (wrap && !wrap.classList.contains("old-ver")) {
+					wrap.classList.add("old-ver");
+				}
+			}
+
+			//////////////////////////////////////////팝업 기능/////////////////////////////////////////////
 
 			// 팝업 열기
 			function openModal() {
@@ -593,7 +641,7 @@
 			}
 
 			// 선물상자가 3000ms 노출된 후 다음 모달창 나옴 (24일 마지막날)
-			function giftBoxOpen() {
+			function giftBoxOpen24() {
 				giftBoxModal.classList.add("on");
 
 				setTimeout(() => {
@@ -609,9 +657,38 @@
 				if (activeModal && e.target.closest(".fuc-btn.close") && activeModal.contains(e.target)) {
 					e.preventDefault(); // a 태그 기본 동작 방지
 					closeModal();
-					console.log("닫기 버튼 클릭! 모달 닫힘!");
+					// console.log("닫기 버튼 클릭! 모달 닫힘!");
 				}
 			});
+
+			// 24일 팝업 노출 시 main-inner 스타일 변경
+            function updateModalInnerStyles(modalElement) {
+                // 'on' 클래스 추가 감지
+                const observer = new MutationObserver(mutations => {
+                    mutations.forEach(mutation => {
+                        if (mutation.attributeName === "class") {
+                            const modalInner = modalElement.closest(".modal").querySelector(".modal-inner");
+                            if (modalElement.classList.contains("on")) {
+                                // day-24 클래스를 가지고 있을 경우 border 스타일 unset
+                                if (modalElement.classList.contains("day-24")) {
+                                    modalInner.style.border = "unset";
+                                    modalInner.style.paddingBottom = "unset";
+                                } else {
+                                    modalInner.style.border = ""; // 기본 스타일 복원
+                                    modalInner.style.paddingBottom = "";
+                                }
+                            } else {
+                                modalInner.style.border = "";
+                                modalInner.style.paddingBottom = "";
+                            }
+                        }
+                    });
+                });
+                // MutationObserver 설정
+                observer.observe(modalElement, {
+                    attributes: true
+                });
+            }
 
 			// day-? 별로 .modal-body안에 삽입되는 내용
 			function modalBodyInnerText() {
