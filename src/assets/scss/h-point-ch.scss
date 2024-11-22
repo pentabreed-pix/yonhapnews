@@ -88,7 +88,7 @@ button {
         &.intro {
             position: relative;
             width: 100%;
-            padding-bottom: 161.333%;
+            padding-bottom: 177.6%;
             z-index: 99;
             &::before {
                 position: absolute;
@@ -191,9 +191,9 @@ button {
                         .item {
                             position: absolute;
                             &.bear {
-                                top: 61.733vw;
-                                left: 14.5vw;
-                                width: 73.2vw;
+                                top: 87.466vw;
+                                right: 3.466vw;
+                                width: 68.8vw;
                                 .img-shadow {
                                     position: absolute;
                                     top: 56vw;
@@ -266,7 +266,7 @@ button {
 
                                 @keyframes move-item-ani1 {
                                     0% {transform: translateY(0) scaleX(1);}
-                                    50% {transform: translateY(-15vw) scaleX(0.99);}
+                                    50% {transform: translateY(-18vw) scaleX(0.99);}
                                     100% {transform: translateY(0) scaleX(1);}
                                 }
                                 @keyframes move-item-ani2 {
