@@ -73,10 +73,16 @@ button {
 .h-point-christmas.modal-show {
   overflow: hidden;
 }
+.h-point-christmas .wrap.old-ver {
+  margin-top: 13.333vw;
+}
+.h-point-christmas .wrap.old-ver .section.anchor-area {
+  top: 13.333vw;
+}
 .h-point-christmas .section.intro {
   position: relative;
   width: 100%;
-  padding-bottom: 161.333%;
+  padding-bottom: 177.6%;
   z-index: 99;
 }
 .h-point-christmas .section.intro::before {
@@ -174,9 +180,9 @@ button {
   position: absolute;
 }
 .h-point-christmas .section.intro .intro-figure.move-item .item-list .item.bear {
-  top: 61.733vw;
-  left: 14.5vw;
-  width: 73.2vw;
+  top: 87.466vw;
+  right: 3.466vw;
+  width: 68.8vw;
 }
 .h-point-christmas .section.intro .intro-figure.move-item .item-list .item.bear .img-shadow {
   position: absolute;
@@ -244,7 +250,7 @@ button {
     transform: translateY(0) scaleX(1);
   }
   50% {
-    transform: translateY(-15vw) scaleX(0.99);
+    transform: translateY(-18vw) scaleX(0.99);
   }
   100% {
     transform: translateY(0) scaleX(1);
@@ -884,6 +890,55 @@ button {
   background-color: #bbb;
   border-radius: 100%;
 }
+.h-point-christmas .section.loading {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+}
+.h-point-christmas .section.loading .loading-figure {
+  width: 15vw;
+  height: 15vw;
+}
+.h-point-christmas .section.loading .loading-figure img {
+  width: 100%;
+}
+.h-point-christmas .section.loading.on {
+  display: flex;
+}
+.h-point-christmas .section.old-version {
+  display: none;
+  width: 100%;
+  height: 13.333vw;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4vw 5.333vw;
+}
+.h-point-christmas .section.old-version.on {
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+.h-point-christmas .section.old-version .btn {
+  width: 5.333vw;
+  height: 5.333vw;
+}
+.h-point-christmas .section.old-version .btn.back-btn {
+  background: url("../../assets/images/h-point-christmas/old-back-btn.svg") no-repeat center center;
+  background-size: cover;
+}
+.h-point-christmas .section.old-version .btn.hamburger-btn {
+  background: url("../../assets/images/h-point-christmas/old-menu-btn.svg") no-repeat center center;
+  background-size: cover;
+}
 .h-point-christmas .modal-display {
   display: none;
   position: fixed;
@@ -894,7 +949,6 @@ button {
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.9);
-  pointer-events: none;
   z-index: 9999;
 }
 .h-point-christmas .modal-display.show {
@@ -1758,7 +1812,7 @@ button {
 .h-point-christmas .modal-display .modal .modal-inner .modal-area .modal-fuc .fuc-btn.type2 {
   width: 5.333vw;
   height: 5.333vw;
-  background: url(../../assets/images/h-point-christmas/modal-close.svg) no-repeat center center;
+  background: url(../../assets/images/h-point-christmas/modal-close-btn.svg) no-repeat center center;
   background-size: contain;
 }
 .h-point-christmas .modal-display .modal .modal-inner .modal-area .modal-fuc .fuc-btn.type3 {
