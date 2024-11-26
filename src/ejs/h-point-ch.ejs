@@ -347,9 +347,9 @@
 								</div>
 							</div>
 							<div class="modal-fuc">
-								<a href="javascript:void(0)" class="fuc-btn type2 close">
+								<!-- <a href="javascript:void(0)" class="fuc-btn type2 close">
                                     <span class="btn-text blind">팝업 닫기</span>
-                                </a>
+                                </a> -->
 								<a href="javascript:void(0)" class="fuc-btn type1">
 									<span class="btn-text">확인</span>
 								</a>
@@ -394,9 +394,9 @@
                                 </div>
                             </div>
                             <div class="modal-fuc">
-                                <a href="javascript:void(0)" class="fuc-btn type2 close">
+                                <!-- <a href="javascript:void(0)" class="fuc-btn type2 close">
                                     <span class="btn-text blind">팝업 닫기</span>
-                                </a>
+                                </a> -->
                                 <a href="javascript:void(0)" class="fuc-btn type1 close">
                                     <span class="btn-text">혜택받기</span>
                                 </a>
@@ -418,9 +418,9 @@
 							<div class="modal-body">
 							</div>
                             <div class="modal-fuc">
-                                <a href="javascript:void(0)" class="fuc-btn type2 close">
+                                <!-- <a href="javascript:void(0)" class="fuc-btn type2 close">
                                     <span class="btn-text blind">팝업 닫기</span>
-                                </a>
+                                </a> -->
                                 <a href="javascript:void(0)" class="fuc-btn type3">
                                     <span class="btn-text">확인하기</span>
                                 </a>
@@ -428,8 +428,7 @@
                         </div>
                     </div>
 					<!-- //24일 팝업 -->
-                    
-				</div>
+                </div>
 			</div>
 			<!------------------------- 당첨 팝업 ------------------------->
 
@@ -487,7 +486,7 @@
 		const _BODY = document.body; // body 
 		const _WRAP = document.querySelector(".wrap"); // wrap
 		const attendanceBtn = document.querySelector(".calendar .section-util .btn"); // 출석체크 버튼
-		const modalCloseBtn = document.querySelector(".modal .modal-area .fuc-btn.close"); // 모달 닫기 버튼
+		const modalCloseBtn = document.querySelector(".fuc-btn.close"); // 모달 닫기 버튼
 		const modalDisplay = document.getElementById("modalDisplay"); // 전체 모달 감싸는 ID
 		const giftBoxModal = document.getElementById("giftBoxModal"); // 선물상자 모달 ID
 		const boomModal = document.getElementById("boomModal"); // 꽝 모달 ID
@@ -500,7 +499,7 @@
 		const oldVersionBtn = document.getElementById("old-version") // 구버전 사용자를 위한 버튼
 
 		// 구버전 사용자를 위한 버튼 노출
-		oldVersionBtnShow(); 
+		// oldVersionBtnShow(); 
 
 		// 버전업모달
 		function openNewVersionModal() {
@@ -828,10 +827,10 @@
 				modalBodyInnerText(); // day-? 별로 modal-body안에 다른 내용 삽입
 				imgNamingClass(); // 클래스 day-? 추출 후 이미지 파일명 설정
 
-				// openNewVersionModal();	// 버전업모달
+				openNewVersionModal();	// 버전업모달
 				// openAgreeModal();	// 동의모달
 				// openBoomModal();	// 꽝모달
-				openOverlapModal();	// 중복참여모달
+				// openOverlapModal();	// 중복참여모달
 				// openDayModal(); 	// 당첨모달
 				// openDay24Modal(); 	// 24일 당첨모달
 				// loadingMarkShow(); // 로딩중 화면

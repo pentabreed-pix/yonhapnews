@@ -870,19 +870,17 @@ button {
                 .modal-inner {
                     position: relative;
                     width: 91.466vw;
-                    height: calc(100vh - 22.133vw);
+                    // height: calc(100vh - 22.133vw);
+                    height: 92.187vh;
                     border: 2px solid #F0DFA9;
-                    background: url('../../assets/images/h-point-christmas/modal-bg-color.png') no-repeat center center;
-                    margin-bottom: 8vw;
+                    background: url(../../assets/images/h-point-christmas/modal-bg-color.png) no-repeat center center;
                     border-radius: 4px;
                     background-size: cover;
                     pointer-events: auto;
-                    margin-top: 14.133vw;
 
                     //팝업 내용 길어서 넣음
                     overflow: hidden;
                     overflow-y: auto;
-                    // padding-bottom: 8.462vh;
                     padding-bottom: 5vw;
                     &::before {
                         position: absolute;
