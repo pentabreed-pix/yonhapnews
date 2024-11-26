@@ -968,14 +968,12 @@ button {
 .h-point-christmas .modal-display .modal.design1 .modal-inner {
   position: relative;
   width: 91.466vw;
-  height: calc(100vh - 22.133vw);
+  height: 92.187vh;
   border: 2px solid #F0DFA9;
-  background: url("../../assets/images/h-point-christmas/modal-bg-color.png") no-repeat center center;
-  margin-bottom: 8vw;
+  background: url(../../assets/images/h-point-christmas/modal-bg-color.png) no-repeat center center;
   border-radius: 4px;
   background-size: cover;
   pointer-events: auto;
-  margin-top: 14.133vw;
   overflow: hidden;
   overflow-y: auto;
   padding-bottom: 5vw;

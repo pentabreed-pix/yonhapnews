@@ -449,9 +449,9 @@
                                 <a href="javascript:void(0)" class="fuc-btn type1">
                                     <span class="btn-text">앱 업데이트 하기</span>
                                 </a>
-                                <!-- <a href="javascript:void(0)" class="fuc-btn type2 close">
-									<span class="btn-text blind">팝업 닫기</span>
-								</a> -->
+                                <a href="javascript:void(0)" class="fuc-btn type2 close">
+                                    <span class="btn-text blind">팝업 닫기</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -486,7 +486,7 @@
         const _BODY = document.body; // body 
         const _WRAP = document.querySelector(".wrap"); // wrap
         const attendanceBtn = document.querySelector(".calendar .section-util .btn"); // 출석체크 버튼
-        const modalCloseBtn = document.querySelector(".modal .modal-area .fuc-btn.close"); // 모달 닫기 버튼
+        const modalCloseBtn = document.querySelector(".fuc-btn.close"); // 모달 닫기 버튼
         const modalDisplay = document.getElementById("modalDisplay"); // 전체 모달 감싸는 ID
         const giftBoxModal = document.getElementById("giftBoxModal"); // 선물상자 모달 ID
         const boomModal = document.getElementById("boomModal"); // 꽝 모달 ID
@@ -499,7 +499,7 @@
         const oldVersionBtn = document.getElementById("old-version") // 구버전 사용자를 위한 버튼
 
         // 구버전 사용자를 위한 버튼 노출
-        oldVersionBtnShow();
+        // oldVersionBtnShow(); 
 
         // 버전업모달
         function openNewVersionModal() {
@@ -830,8 +830,8 @@
                 modalBodyInnerText(); // day-? 별로 modal-body안에 다른 내용 삽입
                 imgNamingClass(); // 클래스 day-? 추출 후 이미지 파일명 설정
 
-                // openNewVersionModal();	// 버전업모달
-                openAgreeModal(); // 동의모달
+                openNewVersionModal(); // 버전업모달
+                // openAgreeModal();	// 동의모달
                 // openBoomModal();	// 꽝모달
                 // openOverlapModal();	// 중복참여모달
                 // openDayModal(); 	// 당첨모달
